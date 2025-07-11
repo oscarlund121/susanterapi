@@ -36,7 +36,7 @@ const SessionForloeb = () => {
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">
           {steps.map((step, index) => (
-            <div key={index} className="space-y-4">
+            <div key={index} className="space-y-4 bg-white/50 backdrop-blur-sm p-6 border border-gray-100/50">
               <div className="text-2xl font-light text-gray-400">{step.nummer}</div>
               <h3 className="text-lg font-light text-gray-800">{step.titel}</h3>
               <p className="text-sm text-gray-600 leading-relaxed">{step.beskrivelse}</p>

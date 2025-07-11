@@ -28,15 +28,15 @@ function HoverIcon({ label, icon, link }) {
   return (
     <a
       href={link}
-      className="group relative flex items-center text-white transition-all duration-300"
+      className="group relative flex items-center text-white transition-all duration-500"
     >
       {/* Label */}
-      <span className="absolute right-full mr-4 bg-white text-gray-800 px-3 py-1 text-xs font-light opacity-0 translate-x-2 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-300 whitespace-nowrap tracking-wide">
+      <span className="absolute right-full mr-6 bg-white/95 backdrop-blur-sm text-gray-800 px-4 py-2 text-xs font-light opacity-0 translate-x-3 group-hover:opacity-100 group-hover:translate-x-0 transition-all duration-500 whitespace-nowrap tracking-wide shadow-lg border border-gray-100">
         {label}
       </span>
 
       {/* Icon */}
-      <div className="bg-white/10 backdrop-blur-sm border border-white/20 text-white p-2 hover:bg-white/20 transition-all duration-300">
+      <div className="bg-white/15 backdrop-blur-md border border-white/25 text-white p-3 hover:bg-white/25 transition-all duration-500 shadow-lg hover:shadow-xl hover:scale-105">
         {icon}
       </div>
     </a>

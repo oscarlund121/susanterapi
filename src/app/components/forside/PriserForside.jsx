@@ -26,30 +26,32 @@ const PriserForside = () => {
           </div>
 
           {/* Højre side - Prisliste */}
-          <div className="space-y-4">
-            {priser.map((pris, index) => (
-              <div key={index} className="flex justify-between items-center py-4 border-b border-gray-200">
-                <div>
-                  <div className="text-gray-800 font-light">{pris.type}</div>
-                  <div className="text-sm text-gray-500">{pris.varighed}</div>
+          <div className="bg-white/70 backdrop-blur-sm p-8 border border-gray-100/50">
+            <div className="space-y-1">
+              {priser.map((pris, index) => (
+                <div key={index} className="flex justify-between items-center py-5 border-b border-gray-100/60 last:border-b-0 hover:bg-gray-50/30 transition-all duration-300 px-4 -mx-4">
+                  <div>
+                    <div className="text-gray-800 font-light tracking-wide">{pris.type}</div>
+                    <div className="text-xs text-gray-500 mt-1">{pris.varighed}</div>
+                  </div>
+                  <div className="text-lg font-light text-gray-800 bg-gray-50 px-4 py-2">{pris.pris}</div>
                 </div>
-                <div className="text-lg font-light text-gray-800">{pris.pris}</div>
-              </div>
-            ))}
+              ))}
+            </div>
           </div>
         </div>
 
         {/* Praktisk info */}
-        <div className="mt-20 pt-16 border-t border-gray-200">
-          <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-lg font-light text-gray-800 mb-4">Booking</h3>
+        <div className="mt-20 pt-16">
+          <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div className="bg-white/50 backdrop-blur-sm p-6 border border-gray-100/50">
+              <h3 className="text-lg font-light text-gray-800 mb-4 tracking-wide">Booking</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Send en SMS til 25 39 25 39 eller skriv en e-mail til susanalbertsen69@gmail.com
               </p>
             </div>
-            <div>
-              <h3 className="text-lg font-light text-gray-800 mb-4">Afbudsregler</h3>
+            <div className="bg-white/50 backdrop-blur-sm p-6 border border-gray-100/50">
+              <h3 className="text-lg font-light text-gray-800 mb-4 tracking-wide">Afbudsregler</h3>
               <p className="text-sm text-gray-600 leading-relaxed">
                 Afbud meldes senest dagen før kl. 17.00. Ved for sent afbud opkræves fuldt honorar.
               </p>

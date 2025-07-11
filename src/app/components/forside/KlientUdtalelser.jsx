@@ -15,7 +15,7 @@ const KlientUdtalelser = () => {
   ];
 
   return (
-    <section className="py-32 bg-gray-50">
+    <section className="py-32 bg-white">
       <div className="max-w-6xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Venstre side - Titel */}
@@ -27,15 +27,20 @@ const KlientUdtalelser = () => {
           </div>
 
           {/* Højre side - Udtalelser */}
-          <div className="space-y-12">
+          <div className="space-y-8">
             {udtalelser.map((udtalelse, index) => (
-              <div key={index} className="border-l-2 border-gray-200 pl-8 py-6">
-                <blockquote className="text-gray-700 leading-relaxed mb-6 italic">
-                  "{udtalelse.tekst}"
-                </blockquote>
-                <div className="text-sm">
-                  <div className="font-light text-gray-800">{udtalelse.navn}</div>
-                  <div className="text-gray-500">{udtalelse.baggrund}</div>
+              <div key={index} className="bg-white/80 backdrop-blur-sm p-8 border border-gray-100/50">
+                <div className="mb-6">
+                  <div className="w-8 h-8 bg-gradient-to-br from-gray-100 to-gray-200 flex items-center justify-center mb-4">
+                    <span className="text-gray-400 text-sm">"</span>
+                  </div>
+                  <blockquote className="text-gray-700 leading-relaxed italic text-[15px] lg:text-base">
+                    {udtalelse.tekst}
+                  </blockquote>
+                </div>
+                <div className="pt-4 border-t border-gray-100/60">
+                  <div className="font-light text-gray-800 tracking-wide">{udtalelse.navn}</div>
+                  <div className="text-xs text-gray-500 mt-1">{udtalelse.baggrund}</div>
                 </div>
               </div>
             ))}
@@ -43,17 +48,18 @@ const KlientUdtalelser = () => {
         </div>
 
         {/* Call to action */}
-        <div className="mt-20 pt-16 border-t border-gray-200">
+        <div className="mt-20 pt-16">
           <div className="text-center">
-            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Vil du også opleve transformation? Jeg hjælper dig gerne med at finde 
               vej til mere glæde, frihed og lethed i livet.
             </p>
             <a 
               href="/kontakt" 
-              className="inline-block border border-gray-800 text-gray-800 px-8 py-3 hover:bg-gray-800 hover:text-white transition-colors duration-300"
+              className="inline-flex items-center gap-3 bg-gray-800 text-white px-8 py-4 hover:bg-gray-700 hover:shadow-lg transition-all duration-500 font-light tracking-wide group"
             >
-              Book din første session
+              <span>Book din første session</span>
+              <span className="transform transition-transform group-hover:translate-x-1 text-sm opacity-70 group-hover:opacity-100">→</span>
             </a>
           </div>
         </div>

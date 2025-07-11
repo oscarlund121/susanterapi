@@ -21,7 +21,7 @@ const HjaelpeMedSektion = () => {
   ];
 
   return (
-    <section className="py-32 bg-gray-50">
+    <section className="py-32 bg-white">
       <div className="max-w-6xl mx-auto px-8">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-start">
           {/* Venstre side - Titel */}
@@ -40,11 +40,12 @@ const HjaelpeMedSektion = () => {
             </p>
 
             {/* Problem områder */}
-            <div>
-              <h3 className="text-lg font-light mb-8 text-gray-800">Jeg arbejder ofte med:</h3>
-              <div className="grid grid-cols-2 gap-x-8 gap-y-4">
+            <div className="bg-white/70 backdrop-blur-sm p-8 border border-gray-100/50 shadow-lg">
+              <h3 className="text-lg font-light mb-8 text-gray-800 tracking-wide">Jeg arbejder ofte med:</h3>
+              <div className="grid grid-cols-1 gap-3">
                 {problemområder.map((problem, index) => (
-                  <div key={index} className="text-gray-600 text-sm py-2 border-b border-gray-200">
+                  <div key={index} className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60 hover:bg-gray-100/60 transition-all duration-300">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
                     {problem}
                   </div>
                 ))}
@@ -53,15 +54,16 @@ const HjaelpeMedSektion = () => {
 
             {/* Call to action */}
             <div className="pt-8">
-              <p className="text-gray-600 mb-6">
+              <p className="text-gray-600 mb-6 leading-relaxed">
                 En terapisession hos mig er en samtale, hvor vi sammen finder frem til 
                 det du ønsker at arbejde med.
               </p>
               <a 
                 href="/kontakt" 
-                className="inline-block border border-gray-800 text-gray-800 px-8 py-3 hover:bg-gray-800 hover:text-white transition-colors duration-300"
+                className="inline-flex items-center gap-3 bg-gray-800 text-white px-8 py-4 hover:bg-gray-700 hover:shadow-lg transition-all duration-500 font-light tracking-wide group"
               >
-                Book session
+                <span>Book session</span>
+                <span className="transform transition-transform group-hover:translate-x-1 text-sm opacity-70 group-hover:opacity-100">→</span>
               </a>
             </div>
           </div>

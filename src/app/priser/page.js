@@ -60,29 +60,29 @@ export default function PriserPage() {
             Priser
           </h1>
           <p className="text-xl font-light text-gray-600 max-w-2xl leading-relaxed">
-            Vælg den pakke der passer bedst til dine behov. Alle priser er inklusiv moms.
+            Alle priser er inklusiv moms. Jeg har ingen overenskomst med sygesikringen.
           </p>
         </div>
 
         {/* Hovedpriser */}
         <section className="mb-24 lg:mb-32">
           <h2 className="text-3xl lg:text-4xl font-light mb-16 lg:mb-20 text-gray-800">Individuelle sessioner</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
             {prispakker.map((pakke, index) => (
-              <div key={index} className="space-y-6">
-                <div className="space-y-2">
-                  <div className="flex items-baseline gap-4">
-                    <h3 className="text-2xl font-light text-gray-800">{pakke.type}</h3>
-                    {pakke.populaer && (
-                      <span className="text-sm font-light text-gray-400 tracking-wide">MEST POPULÆRE</span>
-                    )}
+              <div key={index} className={`p-8 border border-gray-100/50 bg-white/70 backdrop-blur-sm ${pakke.populaer ? 'ring-2 ring-gray-300' : ''}`}>
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <div className="flex items-center justify-between">
+                      <h3 className="text-2xl font-light text-gray-800 tracking-wide">{pakke.type}</h3>
+                      {pakke.populaer && <span className="text-xs font-light text-gray-500 bg-gray-100 px-3 py-1">POPULÆR</span>}
+                    </div>
+                    <div className="text-4xl font-light text-gray-800">{pakke.pris}</div>
+                    <div className="text-gray-600 font-light">{pakke.varighed}</div>
                   </div>
-                  <div className="text-4xl font-light text-gray-800">{pakke.pris}</div>
-                  <div className="text-gray-600 font-light">{pakke.varighed}</div>
+                  <p className="text-gray-600 font-light leading-relaxed">
+                    {pakke.beskrivelse}
+                  </p>
                 </div>
-                <p className="text-gray-600 font-light leading-relaxed">
-                  {pakke.beskrivelse}
-                </p>
               </div>
             ))}
           </div>
@@ -91,44 +91,86 @@ export default function PriserPage() {
         {/* Specialpriser */}
         <section className="mb-24 lg:mb-32">
           <h2 className="text-3xl lg:text-4xl font-light mb-16 lg:mb-20 text-gray-800">Specialpriser</h2>
-          <div className="grid grid-cols-1 lg:grid-cols-3 gap-16 lg:gap-20">
+          <div className="grid grid-cols-1 lg:grid-cols-3 gap-8">
             {specialpriser.map((special, index) => (
-              <div key={index} className="space-y-6">
-                <div className="space-y-2">
-                  <h3 className="text-2xl font-light text-gray-800">{special.type}</h3>
-                  <div className="text-3xl font-light text-gray-800">{special.pris}</div>
-                  <div className="text-gray-600 font-light">{special.varighed}</div>
+              <div key={index} className="p-8 border border-gray-100/50 bg-white/50 backdrop-blur-sm">
+                <div className="space-y-6">
+                  <div className="space-y-2">
+                    <h3 className="text-2xl font-light text-gray-800 tracking-wide">{special.type}</h3>
+                    <div className="text-3xl font-light text-gray-800">{special.pris}</div>
+                    <div className="text-gray-600 font-light">{special.varighed}</div>
+                  </div>
+                  <p className="text-gray-600 font-light leading-relaxed">{special.beskrivelse}</p>
                 </div>
-                <p className="text-gray-600 font-light leading-relaxed">{special.beskrivelse}</p>
               </div>
             ))}
           </div>
         </section>
 
         {/* Praktisk info */}
-        <section className="py-24 lg:py-32 bg-gray-50">
-          <div className="max-w-4xl mx-auto px-8">
+        <section className="py-24 lg:py-32">
+          <div className="max-w-4xl mx-auto">
             <h2 className="text-3xl lg:text-4xl font-light mb-16 lg:mb-20 text-gray-800">Praktisk information</h2>
-            <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-20">
-              <div className="space-y-8">
-                <h3 className="text-2xl font-light text-gray-800">Afbudsregler</h3>
-                <div className="space-y-4 text-gray-600 font-light">
-                  <div className="py-3 border-b border-gray-200">Afbud meldes senest dagen før kl. 17.00</div>
-                  <div className="py-3 border-b border-gray-200">Afbud sker over telefon eller SMS</div>
-                  <div className="py-3 border-b border-gray-200">Ved for sent afbud opkræves fuldt honorar</div>
-                  <div className="py-3 border-b border-gray-200">Ved udeblivelse opkræves fuldt honorar</div>
+            <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
+              <div className="bg-white/70 backdrop-blur-sm p-8 border border-gray-100/50">
+                <h3 className="text-2xl font-light text-gray-800 mb-8 tracking-wide">Afbudsregler</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    Afbud meldes senest dagen før kl. 17.00
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    Afbud sker over telefon eller SMS
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    Ved for sent afbud opkræves fuldt honorar
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    Ved udeblivelse opkræves fuldt honorar
+                  </div>
                 </div>
               </div>
-              <div className="space-y-8">
-                <h3 className="text-2xl font-light text-gray-800">Betalingsinformation</h3>
-                <div className="space-y-4 text-gray-600 font-light">
-                  <div className="py-3 border-b border-gray-200">Betaling sker efter hver session</div>
-                  <div className="py-3 border-b border-gray-200">MobilePay eller kontant betaling</div>
-                  <div className="py-3 border-b border-gray-200">Ingen overenskomst med sygesikringen</div>
-                  <div className="py-3 border-b border-gray-200">Alle priser er inklusiv moms</div>
+              <div className="bg-white/70 backdrop-blur-sm p-8 border border-gray-100/50">
+                <h3 className="text-2xl font-light text-gray-800 mb-8 tracking-wide">Betalingsinformation</h3>
+                <div className="space-y-3">
+                  <div className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    Betaling sker efter hver session
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    MobilePay eller kontant betaling
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    Ingen overenskomst med sygesikringen
+                  </div>
+                  <div className="flex items-center gap-3 text-gray-600 text-sm py-3 px-4 bg-gray-50/60">
+                    <div className="w-2 h-2 bg-gray-300 rounded-full"></div>
+                    Alle priser er inklusiv moms
+                  </div>
                 </div>
               </div>
             </div>
+          </div>
+        </section>
+
+        {/* CTA sektion */}
+        <section className="py-16">
+          <div className="text-center">
+            <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
+              Klar til at tage det første skridt? Book din session i dag.
+            </p>
+            <a 
+              href="/kontakt" 
+              className="inline-flex items-center gap-3 bg-gray-800 text-white px-8 py-4 hover:bg-gray-700 hover:shadow-lg transition-all duration-500 font-light tracking-wide group"
+            >
+              <span>Book session</span>
+              <span className="transform transition-transform group-hover:translate-x-1 text-sm opacity-70 group-hover:opacity-100">→</span>
+            </a>
           </div>
         </section>
       </div>

@@ -23,10 +23,10 @@ const Hero = () => {
           <div className="absolute bottom-8 right-8 lg:bottom-12 lg:right-12">
             <a 
               href="/kontakt" 
-              className="group bg-white text-gray-800 px-6 py-3 shadow-md hover:shadow-lg transition-all duration-300 flex items-center gap-2 font-light text-sm tracking-wide"
+              className="group bg-white/95 backdrop-blur-sm text-gray-800 px-8 py-4 shadow-lg hover:shadow-xl hover:bg-white transition-all duration-500 flex items-center gap-3 font-light text-sm tracking-wide border border-gray-100"
             >
               <span>BOOK SESSION</span>
-              <span className="transform transition-transform group-hover:translate-x-1 text-xs">→</span>
+              <span className="transform transition-transform group-hover:translate-x-1 text-xs opacity-70 group-hover:opacity-100">→</span>
             </a>
           </div>
           
@@ -46,10 +46,10 @@ const Hero = () => {
               <div>
                 <a 
                   href="/ydelser" 
-                  className="inline-flex items-center text-white/70 hover:text-white font-light text-sm tracking-wide group transition-all duration-300"
+                  className="inline-flex items-center text-white/80 hover:text-white font-light text-sm tracking-wide group transition-all duration-500 bg-white/10 backdrop-blur-sm px-6 py-3 border border-white/20 hover:bg-white/20"
                 >
                   <span>LÆSE MERE</span>
-                  <span className="ml-3 transform transition-transform group-hover:translate-x-1 text-xs">→</span>
+                  <span className="ml-3 transform transition-transform group-hover:translate-x-1 text-xs opacity-70 group-hover:opacity-100">→</span>
                 </a>
               </div>
             </div>
