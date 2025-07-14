@@ -1,3 +1,9 @@
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import Container from '../components/ui/Container';
+import SectionHeader from '../components/ui/SectionHeader';
+import Grid from '../components/ui/Grid';
+
 export default function YdelserPage() {
   const ydelser = [
     {
@@ -69,7 +75,7 @@ export default function YdelserPage() {
             <div key={index} className="space-y-8 py-12 px-8">
               <div className="space-y-4">
                 <div className="space-y-2">
-                  <span className="inline-block text-xs font-light text-gray-400 tracking-[0.2em] bg-gray-100/60 px-4 py-2">
+                  <span className="inline-block text-xs font-light text-gray-400 tracking-widest bg-gray-100/60 px-4 py-2">
                     {String(index + 1).padStart(2, '0')}
                   </span>
                   <h3 className="text-2xl lg:text-3xl font-light text-gray-800 tracking-wide">{ydelse.title}</h3>
@@ -86,7 +92,7 @@ export default function YdelserPage() {
                   ))}
                 </div>
               </div>
-              <div className="w-12 h-[1px] bg-gradient-to-r from-gray-300 to-transparent"></div>
+              <div className="w-12 h-px bg-gradient-to-r from-gray-300 to-transparent"></div>
             </div>
           ))}
         </div>
@@ -131,13 +137,9 @@ export default function YdelserPage() {
               Vil du opleve transformation? Jeg hjælper dig gerne med at finde 
               vej til mere glæde, frihed og lethed i livet.
             </p>
-            <a 
-              href="/kontakt" 
-              className="inline-flex items-center gap-3 bg-gray-800 text-white px-8 py-4 hover:bg-gray-700 hover:shadow-lg transition-all duration-500 font-light tracking-wide group"
-            >
-              <span>Book din første session</span>
-              <span className="transform transition-transform group-hover:translate-x-1 text-sm opacity-70 group-hover:opacity-100">→</span>
-            </a>
+            <Button href="/kontakt">
+              Book din første session
+            </Button>
           </div>
         </section>
       </div>

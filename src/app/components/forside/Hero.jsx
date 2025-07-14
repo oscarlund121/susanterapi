@@ -19,8 +19,15 @@ const Hero = () => {
             priority
           />
           
-          {/* Book knap i bunden til højre */}
-          <div className="absolute bottom-8 right-8 lg:bottom-12 lg:right-12">
+          {/* Knapper i bunden til højre */}
+          <div className="absolute bottom-8 right-8 lg:bottom-12 lg:right-12 flex gap-4">
+            <a 
+              href="/ydelser" 
+              className="inline-flex items-center text-white/80 hover:text-white font-light text-sm tracking-wide group transition-all duration-500 bg-white/10 backdrop-blur-sm px-6 py-3 border border-white/20 hover:bg-white/20"
+            >
+              <span>LÆSE MERE</span>
+              <span className="ml-3 transform transition-transform group-hover:translate-x-1 text-xs opacity-70 group-hover:opacity-100">→</span>
+            </a>
             <a 
               href="/kontakt" 
               className="group bg-white/95 backdrop-blur-sm text-gray-800 px-8 py-4 shadow-lg hover:shadow-xl hover:bg-white transition-all duration-500 flex items-center gap-3 font-light text-sm tracking-wide border border-gray-100"
@@ -41,17 +48,6 @@ const Hero = () => {
                 Min vision er, sammen med klienten at skabe en ønsket forandring, 
                 med mere glæde, frihed og lethed i livet – ansvarligt, kærligt og anerkendende.
               </p>
-              
-              {/* Diskret sekundær knap */}
-              <div>
-                <a 
-                  href="/ydelser" 
-                  className="inline-flex items-center text-white/80 hover:text-white font-light text-sm tracking-wide group transition-all duration-500 bg-white/10 backdrop-blur-sm px-6 py-3 border border-white/20 hover:bg-white/20"
-                >
-                  <span>LÆSE MERE</span>
-                  <span className="ml-3 transform transition-transform group-hover:translate-x-1 text-xs opacity-70 group-hover:opacity-100">→</span>
-                </a>
-              </div>
             </div>
           </div>
         </div>

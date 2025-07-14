@@ -1,3 +1,9 @@
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import Container from '../components/ui/Container';
+import SectionHeader from '../components/ui/SectionHeader';
+import Grid from '../components/ui/Grid';
+
 export default function PriserPage() {
   const prispakker = [
     {
@@ -164,13 +170,9 @@ export default function PriserPage() {
             <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto leading-relaxed">
               Klar til at tage det første skridt? Book din session i dag.
             </p>
-            <a 
-              href="/kontakt" 
-              className="inline-flex items-center gap-3 bg-gray-800 text-white px-8 py-4 hover:bg-gray-700 hover:shadow-lg transition-all duration-500 font-light tracking-wide group"
-            >
-              <span>Book session</span>
-              <span className="transform transition-transform group-hover:translate-x-1 text-sm opacity-70 group-hover:opacity-100">→</span>
-            </a>
+            <Button href="/kontakt">
+              Book session
+            </Button>
           </div>
         </section>
       </div>

@@ -1,3 +1,8 @@
+import Button from '../components/ui/Button';
+import Card from '../components/ui/Card';
+import Container from '../components/ui/Container';
+import SectionHeader from '../components/ui/SectionHeader';
+
 export default function KontaktPage() {
   return (
     <main className="min-h-screen bg-white pt-24">
@@ -113,20 +118,19 @@ export default function KontaktPage() {
               </div>
 
               <div className="space-y-4">
-                <a 
+                <Button 
                   href="tel:+4525392539" 
-                  className="inline-flex items-center gap-3 bg-gray-800 text-white px-8 py-4 hover:bg-gray-700 hover:shadow-lg transition-all duration-500 font-light tracking-wide group w-full justify-center"
+                  className="w-full justify-center"
                 >
-                  <span>Ring nu: 25 39 25 39</span>
-                  <span className="transform transition-transform group-hover:translate-x-1 text-sm opacity-70 group-hover:opacity-100">→</span>
-                </a>
-                <a 
+                  Ring nu: 25 39 25 39
+                </Button>
+                <Button 
+                  variant="secondary"
                   href="mailto:susanalbertsen69@gmail.com" 
-                  className="inline-flex items-center gap-3 border border-gray-800 text-gray-800 px-8 py-4 hover:bg-gray-800 hover:text-white transition-all duration-500 font-light tracking-wide group w-full justify-center"
+                  className="w-full justify-center"
                 >
-                  <span>Send e-mail</span>
-                  <span className="transform transition-transform group-hover:translate-x-1 text-sm opacity-70 group-hover:opacity-100">→</span>
-                </a>
+                  Send e-mail
+                </Button>
               </div>
             </div>
           </div>
