@@ -57,34 +57,71 @@ const HjaelpeMedTabs = () => {
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8 w-full items-start">
             {/* Venstre: Alle kategorier og lister */}
             <div className="space-y-16 w-full">
-              {kategorier.map((kategori, kIndex) => (
-                <div key={kIndex} className="flex flex-col gap-8 w-full items-start pl-4">
-                  <h3 className="text-2xl font-light text-gray-800 mb-2 tracking-wide leading-tight w-full">
-                    {kategori.navn}
-                  </h3>
-                  <p className="text-gray-500 italic mb-6 text-base w-full">
-                    {kategori.beskrivelse}
-                  </p>
-                  <div className="flex flex-col gap-8 w-full items-start">
-                    {kategori.problemer.map((problem, problemIndex) => {
-                      // Staggered margin og rotation
-                      const stagger = problemIndex % 2 === 0 ? 'ml-8' : 'mr-8';
-                      const rotations = ['rotate-[-2deg]', 'rotate-[1deg]', 'rotate-[3deg]', 'rotate-[-4deg]', 'rotate-[2deg]'];
-                      return (
-                        <div
-                          key={problemIndex}
-                          className={`bg-white rounded-2xl py-4 px-8 text-center w-full max-w-md shadow-none ${stagger} ${rotations[problemIndex % rotations.length]} animate-fadein`}
-                          style={{ animationDelay: `${problemIndex * 120}ms` }}
-                        >
-                          <span className="text-gray-600 font-light tracking-wide text-base w-full">
-                            {problem}
-                          </span>
-                        </div>
-                      );
-                    })}
-                  </div>
-                </div>
-              ))}
+              {/* Følelser */}
+              <div className="flex flex-col gap-8 w-full items-start pl-4">
+                <h3 className="text-2xl font-light text-gray-800 mb-2 tracking-wide leading-tight w-full">Følelser</h3>
+                <p className="text-gray-500 italic mb-6 text-base w-full">Når følelser bliver overvældende eller svære at håndtere i hverdagen</p>
+                <ul className="flex flex-col gap-4 w-full items-start">
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Angst og fobier</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Vrede og frustration</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Tristhed/depression</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Følelsesmæssig ustabilitet</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Sorg og tab</span></li>
+                </ul>
+                <div className="w-full h-[2px] bg-black my-6 rounded-full" />
+              </div>
+              {/* Stress */}
+              <div className="flex flex-col gap-8 w-full items-start pl-4">
+                <h3 className="text-2xl font-light text-gray-800 mb-2 tracking-wide leading-tight w-full">Stress</h3>
+                <p className="text-gray-500 italic mb-6 text-base w-full">Når kroppen og sindet er udmattet og har brug for hvile</p>
+                <ul className="flex flex-col gap-4 w-full items-start">
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Stress og udbrændthed</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Søvnproblemer</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Tankemylder</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Præstationsangst</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Udmattelse</span></li>
+                </ul>
+                <div className="w-full h-[2px] bg-black my-6 rounded-full" />
+              </div>
+              {/* Selvværd */}
+              <div className="flex flex-col gap-8 w-full items-start pl-4">
+                <h3 className="text-2xl font-light text-gray-800 mb-2 tracking-wide leading-tight w-full">Selvværd</h3>
+                <p className="text-gray-500 italic mb-6 text-base w-full">Når du kæmper med at finde og acceptere dig selv som du er</p>
+                <ul className="flex flex-col gap-4 w-full items-start">
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Lavt selvværd</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Usikkerhed</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Fastlåsthed</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Sensitivitet</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Selvkritik</span></li>
+                </ul>
+                <div className="w-full h-[2px] bg-black my-6 rounded-full" />
+              </div>
+              {/* Relationer */}
+              <div className="flex flex-col gap-8 w-full items-start pl-4">
+                <h3 className="text-2xl font-light text-gray-800 mb-2 tracking-wide leading-tight w-full">Relationer</h3>
+                <p className="text-gray-500 italic mb-6 text-base w-full">Når forbindelser til andre bliver vanskelige eller smertefulde</p>
+                <ul className="flex flex-col gap-4 w-full items-start">
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Parforhold problemer</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Familiekonflikter</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Social angst</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Ensomhed</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Kommunikation</span></li>
+                </ul>
+                <div className="w-full h-[2px] bg-black my-6 rounded-full" />
+              </div>
+              {/* Traumer */}
+              <div className="flex flex-col gap-8 w-full items-start pl-4">
+                <h3 className="text-2xl font-light text-gray-800 mb-2 tracking-wide leading-tight w-full">Traumer</h3>
+                <p className="text-gray-500 italic mb-6 text-base w-full">Når tidligere oplevelser påvirker dit nuværende liv negativt</p>
+                <ul className="flex flex-col gap-4 w-full items-start">
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Traumer</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">ADHD</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Chok og kriser</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Skolefravær</span></li>
+                  <li className="bg-white rounded-2xl py-4 px-8 text-left w-full max-w-md shadow-none border border-gray-200"><span className="text-gray-600 font-light tracking-wide text-base w-full">Uforklarlige reaktioner</span></li>
+                </ul>
+                <div className="w-full h-[2px] bg-black my-6 rounded-full" />
+              </div>
             </div>
             {/* Højre: 4 billeder i grid, billede 2 til højre */}
             <div className="grid grid-cols-2 grid-rows-4 gap-x-16 gap-y-16 w-full h-full">

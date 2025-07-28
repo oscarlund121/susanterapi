@@ -26,7 +26,7 @@ export default function RootLayout({ children }) {
         className={`${workSans.variable} ${ebGaramond.variable} antialiased`}
       >
         <div className="grid grid-cols-4">
-          <div className="col-1">
+          <div className="col-span-1">
             <Header />
           </div>
           <main className="col-span-3">

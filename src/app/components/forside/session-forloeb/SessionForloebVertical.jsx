@@ -59,11 +59,11 @@ const SessionForloebVertical = () => {
     <section className="py-32 lg:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-8">
         {/* Header */}
-        <div className="text-center mb-20">
+        <div className="text-left mb-20">
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-800 leading-tight tracking-wide mb-8">
             Hvordan foregår en session?
           </h2>
-          <p className="text-lg font-light text-gray-600 leading-relaxed max-w-3xl mx-auto">
+          <p className="text-lg font-light text-gray-600 leading-relaxed max-w-3xl">
             En fleksibel tilgang hvor du bestemmer tempoet og dybden
           </p>
         </div>

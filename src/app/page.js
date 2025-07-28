@@ -2,29 +2,18 @@ import Image from 'next/image';
 import Hero from './components/forside/Hero';
 // Tjenester varianter
 import TjenesterSektion from './components/forside/tjenester/TjenesterSektion';
-import TjenesterBase from './components/forside/tjenester/TjenesterBase';
-import TjenesterGrid from './components/forside/tjenester/TjenesterGrid';
-import TjenesterMinimal from './components/forside/tjenester/TjenesterMinimal';
-import TjenesterFlow from './components/forside/tjenester/TjenesterFlow';
-
+import TjenesterModern from './components/forside/tjenester/TjenesterModern';
 // Hjælpe Med varianter
-import HjaelpeMedSektion from './components/forside/hjaelpe-med/HjaelpeMedSektion';
-import HjaelpeMedCards from './components/forside/hjaelpe-med/HjaelpeMedCards';
-import HjaelpeMedAccordion from './components/forside/hjaelpe-med/HjaelpeMedAccordion';
+
 import HjaelpeMedTabs from './components/forside/hjaelpe-med/HjaelpeMedTabs';
-import HjaelpeMedList from './components/forside/hjaelpe-med/HjaelpeMedList';
+
 
 // Session Forløb varianter
-import SessionForloeb from './components/forside/session-forloeb/SessionForloeb';
-import SessionForloebSteps from './components/forside/session-forloeb/SessionForloebSteps';
-import SessionForloebMinimal from './components/forside/session-forloeb/SessionForloebMinimal';
+
 import SessionForloebVertical from './components/forside/session-forloeb/SessionForloebVertical';
 
 // Klient Udtalelser varianter
-import KlientUdtalelser from './components/forside/klient-udtalelser/KlientUdtalelser';
-import KlientUdtalelserBase from './components/forside/klient-udtalelser/KlientUdtalelserBase';
-import KlientUdtalelserGrid from './components/forside/klient-udtalelser/KlientUdtalelserGrid';
-import KlientUdtalelserMinimal from './components/forside/klient-udtalelser/KlientUdtalelserMinimal';
+
 
 // Priser varianter
 import PriserForside from './components/forside/priser/PriserForside';
@@ -44,6 +33,7 @@ export default function Home() {
       {/* =========== VALGTE KOMPONENTER (DSE review gennemført) =========== */}
       
       {/* Tjenester sektion - VALGT: TjenesterSektion (Original) */}
+      
       <TjenesterSektion />
       
   

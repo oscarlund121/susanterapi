@@ -148,11 +148,11 @@ const MetodeHorizontal = () => {
     <section ref={sectionRef} className="py-32 lg:py-40 bg-white">
       <div className="max-w-7xl mx-auto px-8">
         {/* Header */}
-        <div className="text-center mb-24">
+        <div className="text-left mb-24">
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-800 leading-tight tracking-wide mb-8">
             Min tilgang - Horizontal
           </h2>
-          <p className="text-lg font-light text-gray-600 leading-relaxed max-w-2xl mx-auto">
+          <p className="text-lg font-light text-gray-600 leading-relaxed max-w-2xl">
             En rejse gennem terapiprocessen - fra første kontakt til varig transformation
           </p>
         </div>
@@ -312,7 +312,7 @@ const MetodeHorizontal = () => {
         </div>
 
         {/* Quote */}
-        <div className="mt-24 lg:mt-32 text-center">
+        <div className="mt-24 lg:mt-32 text-left">
           <blockquote className="text-2xl lg:text-3xl font-light text-gray-600 leading-relaxed mb-6 italic max-w-3xl mx-auto">
             "Vi kan kun skabe varig transformationer i os selv, hvis vi gør det ud fra 
             ren ubetinget kærlighed."

@@ -7,8 +7,8 @@ import { LuHexagon } from "react-icons/lu";
 
 const Header = () => {
   return (
-    <div className="flex flex-col items-center mt-10 ">
-      <nav className="fixed place-items-center bg-white z-30">
+    <div className="flex flex-col h-screen shadow-sm   items-center sticky top-0">
+      <nav className=" place-items-center z-30 ">
         <LuHexagon
           size={70}
           className=" text-black rotate-[30deg]"

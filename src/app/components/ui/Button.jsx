@@ -13,10 +13,11 @@ const Button = ({
   const baseClasses = "inline-flex items-center gap-3 font-light tracking-wide group transition-all duration-500";
   
   const variants = {
-    primary: "bg-gray-800 text-white hover:bg-gray-700 hover:shadow-lg",
+    primary: "bg-gray-800 text-white hover:bg-white hover:shadow-lg hover:text-gray-800 hover:border-gray-800",
     secondary: "border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white",
     ghost: "text-white/80 hover:text-white bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20",
-    light: "bg-white/95 backdrop-blur-sm text-gray-800 shadow-lg hover:shadow-xl hover:bg-white border border-gray-100"
+    light: "bg-white/95 backdrop-blur-sm text-gray-800 shadow-lg hover:shadow-xl hover:bg-white border border-gray-100",
+    inverted: "bg-white text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white hover:border-white"
   };
   
   const sizes = {
