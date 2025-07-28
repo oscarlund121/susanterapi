@@ -7,14 +7,14 @@ import Button from "../../ui/Button";
 
 const HjaelpeMedTabs = () => {
   return (
-    <section className="py-0 lg:py-0 bg-white w-full">
+    <section>
       <div className="w-full">
         {/* Header */}
-        <div className="mb-12 w-full text-left pl-4">
-          <h2 className="text-4xl lg:text-5xl font-light   tracking-[0.02em] mb-6">
+        <div className="mb-20 w-full text-left pl-4">
+          <h2 className="text-4xl lg:text-5xl font-light mb-6">
             Hvad kan jeg hjælpe med?
           </h2>
-          <p className="text-lg font-light text-gray-500  mb-8 max-w-2xl">
+          <p className="text-lg italic font-light text-gray-500  mb-8 max-w-2xl">
             Kender du fornemmelsen af ikke at føle dig anerkendt som den du er,
             eller fastlåst i en situation? Jeg hjælper børn, unge og voksne med
             at komme videre.
@@ -32,7 +32,7 @@ const HjaelpeMedTabs = () => {
                   <h3 className="text-2xl pl-4 font-light mb-2 tracking-wide  w-full">
                     Følelser
                   </h3>
-                  <p className="pl-4 text-gray-500 italic mb-6 text-base w-full">
+                  <p className="pl-4 text-gray-500 italic mb-6 text-lg w-full">
                     Når følelser bliver overvældende eller svære at håndtere i
                     hverdagen
                   </p>
@@ -69,7 +69,7 @@ const HjaelpeMedTabs = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex flex-col items-end justify-start pl-32">
+                <div className="pl-32">
                   <Image
                     src="/images/wheat.jpg"
                     alt="Om mig"
@@ -86,7 +86,7 @@ const HjaelpeMedTabs = () => {
                   <h3 className="text-2xl font-light  mb-2 tracking-wide pl-4  w-full">
                     Stress
                   </h3>
-                  <p className="text-gray-500 italic pl-4 mb-6 text-base w-full">
+                  <p className="text-gray-500 italic pl-4 mb-6 text-lg w-full">
                     Når kroppen og sindet er udmattet og har brug for hvile
                   </p>
                   <ul className="flex flex-col w-full border-y divide-y  ">
@@ -138,7 +138,7 @@ const HjaelpeMedTabs = () => {
                   <h3 className="text-2xl font-light  mb-2 tracking-wide pl-4  w-full">
                     Selvværd
                   </h3>
-                  <p className="text-gray-500 italic pl-4 mb-6 text-base ">
+                  <p className="text-gray-500 italic pl-4 mb-6 text-lg ">
                     Når du kæmper med at finde og acceptere dig selv som du er
                   </p>
                   <ul className="flex flex-col w-full border-y divide-y  ">
@@ -190,7 +190,7 @@ const HjaelpeMedTabs = () => {
                   <h3 className="text-2xl font-light  mb-2 tracking-wide pl-4 w-full">
                     Relationer
                   </h3>
-                  <p className="text-gray-500 pl-4 italic mb-6 text-base w-full">
+                  <p className="text-gray-500 pl-4 italic mb-6 text-lg w-full">
                     Når forbindelser til andre bliver vanskelige eller
                     smertefulde
                   </p>
@@ -243,7 +243,7 @@ const HjaelpeMedTabs = () => {
                   <h3 className="text-2xl font-light pl-4  mb-2 tracking-wide  w-full">
                     Traumer
                   </h3>
-                  <p className="text-gray-500 italic pl-4 mb-6 text-base w-full">
+                  <p className="text-gray-500 italic pl-4 mb-6 text-lg w-full">
                     Når tidligere oplevelser påvirker dit nuværende liv negativt
                   </p>
                   <ul className="flex flex-col w-full border-y divide-y  ">

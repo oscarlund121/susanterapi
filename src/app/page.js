@@ -64,7 +64,7 @@ export default function Home() {
       {/* Om mig sektion */}
       <ImageTextSection
         title="Om mig"
-        imageSrc="/images/om-mig.png"
+        imageSrc="/images/hand-on-chest.jpg"
         imageAlt="Susan Albertsen - Psykoterapeut"
       >
         <div className="space-y-8">
