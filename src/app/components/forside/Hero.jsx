@@ -38,16 +38,10 @@ const Hero = () => (
 
           {/* Buttons */}
           <div className="absolute flex gap-4 lg:flex-row flex-col right-4 bottom-4 lg:right-8 lg:bottom-8">
-            <Button
-              variant="default"
-              className="font-medium tracking-wide rounded-lg px-8 py-4 text-base bg-[#2c3e50] text-white border-2 border-[#2c3e50] hover:bg-[#34495e] hover:border-[#34495e] hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-            >
+            <Button variant="inverted">
               LÆS MERE
             </Button>
-            <Button
-              variant="outline"
-              className="font-medium tracking-wide rounded-lg px-8 py-4 text-base bg-white/90 text-[#2c3e50] border-2 border-white/90 backdrop-blur-lg hover:bg-white hover:border-white hover:shadow-lg hover:-translate-y-0.5 transition-all duration-300"
-            >
+            <Button variant="primary">
               BOOK SESSION
             </Button>
           </div>
