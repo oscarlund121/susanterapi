@@ -282,7 +282,7 @@ const HjaelpeMedTabs = () => {
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block "
+                    className="object-cover rounded-l-full md:border-t-40 md:border-b-40 md:border-l-40 border-t-20 border-b-20 border-l-20 border-gray-200 block "
                   />
                 </div>
               </div>
