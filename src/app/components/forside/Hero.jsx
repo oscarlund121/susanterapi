@@ -20,23 +20,31 @@ const Hero = () => (
           {/* Text overlay */}
           <div className="absolute p-8  lg:p-12">
             <div>
-              <h1 className="italic text-white font-bold mb-12 tracking-tight leading-tight text-[clamp(3rem,5vw,4rem)]">
-                Velkommen til terapi hos
-                <span className="inline-block bg-white/50 text-[#2c3e50] px-4 py-2">
-                  Susan Albertsen
-                </span>
+              <h1 className="italic text-white font-bold text-[clamp(3rem,5vw,4rem)]">
+                Velkommen til terapi hos  
               </h1>
-              <h2 className="italic font-light text-[#2c3e50] mb-2 text-[clamp(2rem,4vw,2.5rem)]">
-                <span /* className="inline-block bg-white/50 px-4 py-2" */>
+              <h1 className="text-black font-bold mb-12 md:mb-20 text-[clamp(3rem,5vw,4rem)]">
+                
+                  Susan Albertsen
+              
+              </h1>
+              <h2 className="italic font-light text-black mb-2 text-[clamp(2rem,4vw,2.5rem)]">
+                <span className="rounded-tr-4xl rounded-bl-4xl inline-block bg-white/50 px-4 py-2">
                   Chok- & traumeforløsning
                 </span>
               </h2>
-              <h2 className="italic font-light text-white mb-2 text-[clamp(2rem,4vw,2.5rem)] px-4 ">
-                Psykoterapi
-              </h2>
               <br />
-              <h2 className="italic font-light text-white text-[clamp(2rem,4vw,2.5rem)] px-4 ">
-                Mentalisering
+              <h2 className="italic font-light mb-2 text-white text-[clamp(2rem,4vw,2.5rem)]  ">
+                <span className="rounded-tl-4xl rounded-br-4xl
+                inline-block bg-black/50 px-4 py-2">
+                  Mentalisering
+                </span>
+              </h2>
+               <br />
+              <h2 className="italic font-light text-white text-[clamp(2rem,4vw,2.5rem)] ">
+                <span className="rounded-tl-4xl rounded-br-4xl inline-block bg-black/50 px-4 py-2">
+                  Psykoterapi
+                </span>
               </h2>
             </div>
           </div>
