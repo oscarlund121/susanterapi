@@ -16,7 +16,7 @@ const TjenesterSektion = () => (
         {/* Psykoterapi */}
         <div className="lg:mr-auto lg:ml-0 lg:max-w-2xl">
           <div className="mb-8 text-left">
-            <span className="text-6xl lg:text-7xl font-extralight text-gray-600 tracking-wider drop-shadow-md">
+            <span className="text-6xl lg:text-7xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider drop-shadow-md">
               01
             </span>
           </div>
@@ -36,7 +36,7 @@ const TjenesterSektion = () => (
         {/* Chok- og traumeforløsning */}
         <div className="lg:ml-auto lg:mr-0 lg:max-w-2xl lg:text-right">
           <div className="mb-8 lg:text-right">
-            <span className="text-6xl lg:text-7xl font-extralight text-gray-600 tracking-wider drop-shadow-md">
+            <span className="text-6xl lg:text-7xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider drop-shadow-md">
               02
             </span>
           </div>
@@ -56,7 +56,7 @@ const TjenesterSektion = () => (
         {/* Meditation */}
         <div className="lg:mr-auto lg:ml-0 lg:max-w-2xl">
           <div className="mb-8 text-left">
-            <span className="text-6xl lg:text-7xl font-extralight text-gray-600 tracking-wider drop-shadow-md">
+            <span className="text-6xl lg:text-7xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider drop-shadow-md">
               03
             </span>
           </div>
@@ -76,7 +76,7 @@ const TjenesterSektion = () => (
         {/* Familie- og parterapi */}
         <div className="lg:ml-auto lg:mr-0 lg:max-w-2xl lg:text-right">
           <div className="mb-8 lg:text-right">
-            <span className="text-6xl lg:text-7xl font-extralight text-gray-600 tracking-wider drop-shadow-md">
+            <span className="text-6xl lg:text-7xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider drop-shadow-md">
               04
             </span>
           </div>

@@ -312,13 +312,13 @@ const MetodeHorizontal = () => {
         </div>
 
         {/* Quote */}
-        <div className="mt-24 lg:mt-32 text-left">
-          <blockquote className="text-2xl lg:text-3xl font-light text-gray-600 leading-relaxed mb-6 italic max-w-3xl mx-auto">
+        <div className="mt-24 lg:mt-32 text-left flex flex-col">
+          <blockquote className="text-2xl lg:text-3xl font-light text-gray-600 leading-relaxed mb-6 italic max-w-3xl mx-auto text-center ">
             "Vi kan kun skabe varig transformationer i os selv, hvis vi gør det ud fra 
             ren ubetinget kærlighed."
           </blockquote>
-          <cite className="text-sm font-light text-gray-400 tracking-[0.15em] not-italic">
-            — KAREN AAES, ESSENTIELT INSTITUT
+          <cite className="text-sm font-light tracking-[0.15em] not-italic bg-gray-800/50 text-white block mx-auto px-4 py-2">
+          KAREN AAES, ESSENTIELT INSTITUT
           </cite>
         </div>
       </div>

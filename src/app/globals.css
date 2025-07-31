@@ -12,7 +12,7 @@
 
 body {
   background: #ffffff;
-  color: #171717;
+  color: black;
   font-family: var(--font-work-sans), Arial, Helvetica, sans-serif;
   margin: 0;
 }
@@ -250,3 +250,5 @@ p {
     @apply bg-background text-foreground;
   }
 }
+
+

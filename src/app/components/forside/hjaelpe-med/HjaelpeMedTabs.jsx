@@ -75,7 +75,7 @@ const HjaelpeMedTabs = () => {
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block "
+                    className="object-cover rounded-l-full md:border-t-40 md:border-b-40 md:border-l-40 border-t-10 border-b-10 border-l-10 border-gray-200 block"
                   />
                 </div>
               </div>
@@ -127,7 +127,10 @@ const HjaelpeMedTabs = () => {
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block"
+                    className="object-cover rounded-l-full 
+                    border-t-10 border-b-10 border-l-10 
+                      md:border-t-40 md:border-b-40 md:border-l-40
+                    border-gray-200 block"
                   />
                 </div>
               </div>
@@ -176,11 +179,12 @@ const HjaelpeMedTabs = () => {
                 <div className="col-span-1">
                   <div className="flex md:justify-center md:items-center md:h-full">
                     <Image
-                      src="/images/hand-on-chest-close.jpg"
+                      src="/images/susan-in-trees.jpg"
                       alt="Terapi-rum"
                       width={400}
                       height={500}
-                      className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block "
+                      className="object-cover rounded-l-full border-t-10 border-b-10 border-l-10 
+                      md:border-t-40 md:border-b-40 md:border-l-40 border-gray-800/50 block "
                     />
                   </div>
                 </div>
@@ -234,7 +238,7 @@ const HjaelpeMedTabs = () => {
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block "
+                    className="object-cover rounded-l-full md:border-t-40 md:border-b-40 md:border-l-40 border-t-10 border-b-10 border-l-10 border-gray-200 block"
                   />
                 </div>  
               </div>
@@ -257,7 +261,7 @@ const HjaelpeMedTabs = () => {
                       <span className="w-6 h-6 rounded-full bg-gray-300 inline-block mr-2" />
                     </li>
                     <li className="flex items-center justify-between w-full py-8 px-0 text-left">
-                      <span className="pl-4 font-light   text-md">
+                      <span className="pl-4 font-light  text-md">
                         Chok og kriser
                       </span>
                       <span className="w-6 h-6 rounded-full bg-gray-300 inline-block mr-2" />
