@@ -2,8 +2,8 @@
 import React from 'react';
 
 const TjenesterSektion = () => (
-  <section className="py-32 lg:py-40 bg-white">
-    <div className="max-w-6xl mx-auto px-8">
+  <section className="">
+    <div className="max-w-6xl mx-auto">
       {/* Titel */}
       <div className="mb-24 lg:mb-32">
         <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-800 leading-tight tracking-wide">
@@ -12,7 +12,7 @@ const TjenesterSektion = () => (
       </div>
 
       {/* Tjenester stack */}
-      <div className="space-y-24 lg:space-y-32">
+      <div className="">
         {/* Psykoterapi */}
         <div className="lg:mr-auto lg:ml-0 lg:max-w-2xl">
           <div className="mb-8 text-left">
