@@ -23,13 +23,13 @@ const HjaelpeMedTabs = () => {
 
         {/* Timeline/Flow */}
         <div className="relative w-full">
-          <div className="flex flex-col gap-5 w-full items-start">
+          <div className="flex flex-col gap-5 w-full items-center">
             {/* Kategorier med billeder til højre for hver */}
             <div className="space-y-16 w-full">
               {/* Følelser */}
-              <div className="flex flex-row items-start w-full">
-                <div className="flex flex-col gap-5 w-full items-start pl-0">
-                  <h3 className="text-2xl pl-4 font-light mb-2 tracking-wide  w-full">
+              <div className="grid grid-cols-3 gap-10">
+                <div className="col-span-2 gap-5 pl-0">
+                  <h3 className="text-2xl pl-4 font-light mb-2  w-full">
                     Følelser
                   </h3>
                   <p className="pl-4 text-gray-500 italic mb-6 text-lg w-full">
@@ -69,21 +69,20 @@ const HjaelpeMedTabs = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="pl-32">
+                <div className="col-span-1">
                   <Image
                     src="/images/wheat.jpg"
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover block"
-                    priority
+                     className="object-cover rounded-bl-4xl border-t-20 border-b-20 border-l-20 border-black block"
                   />
                 </div>
               </div>
               {/* Stress */}
-              <div className="flex flex-row items-start w-full">
-                <div className="flex flex-col gap-5 w-full items-start ">
-                  <h3 className="text-2xl font-light  mb-2 tracking-wide pl-4  w-full">
+              <div className="grid grid-cols-3 gap-10">
+                <div className="col-span-2 gap-5 pl-0 ">
+                  <h3 className="text-2xl font-light  mb-2  pl-4  w-full">
                     Stress
                   </h3>
                   <p className="text-gray-500 italic pl-4 mb-6 text-lg w-full">
@@ -122,20 +121,20 @@ const HjaelpeMedTabs = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex flex-col items-end justify-start pl-32">
+                <div className="col-span-1">
                   <Image
                     src="/images/purple-flower.jpg"
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover block"
+                    className="object-cover rounded-l-full border-t-20 border-b-20 border-l-20 border-gray-100 block"
                   />
                 </div>
               </div>
               {/* Selvværd */}
-              <div className="flex flex-row items-start w-full">
-                <div className="flex flex-col gap-5 w-full items-start">
-                  <h3 className="text-2xl font-light  mb-2 tracking-wide pl-4  w-full">
+              <div className="grid grid-cols-3 gap-10">
+                <div className="col-span-2 gap-5 pl-0">
+                  <h3 className="text-2xl font-light  mb-2  pl-4  w-full">
                     Selvværd
                   </h3>
                   <p className="text-gray-500 italic pl-4 mb-6 text-lg ">
@@ -174,20 +173,20 @@ const HjaelpeMedTabs = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex flex-col items-end justify-start pl-32">
+                <div className="col-span-1">
                   <Image
                     src="/images/hand-on-chest-close.jpg"
                     alt="Terapi-rum"
                     width={400}
                     height={500}
-                    className="object-cover block"
+                    className="object-cover rounded-l-full block"
                   />
                 </div>
               </div>
               {/* Relationer */}
-              <div className="flex flex-row items-start w-full">
-                <div className="flex flex-col gap-5 w-full items-start">
-                  <h3 className="text-2xl font-light  mb-2 tracking-wide pl-4 w-full">
+              <div className="grid grid-cols-3 gap-10">
+                <div className="col-span-2 gap-5 pl-0">
+                  <h3 className="text-2xl font-light  mb-2  pl-4 w-full">
                     Relationer
                   </h3>
                   <p className="text-gray-500 pl-4 italic mb-6 text-lg w-full">
@@ -227,20 +226,20 @@ const HjaelpeMedTabs = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex flex-col items-end justify-start pl-32">
+                <div className="col-span-1">
                   <Image
                     src="/images/om-mig.png"
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover block"
+                    className="object-cover rounded-l-full block"
                   />
                 </div>
               </div>
               {/* Traumer */}
-              <div className="flex flex-row items-start w-full">
-                <div className="flex flex-col gap-5 w-full items-start">
-                  <h3 className="text-2xl font-light pl-4  mb-2 tracking-wide  w-full">
+              <div className="grid grid-cols-3 gap-10">
+                <div className="col-span-2 gap-5 pl-0">
+                  <h3 className="text-2xl font-light pl-4  mb-2   w-full">
                     Traumer
                   </h3>
                   <p className="text-gray-500 italic pl-4 mb-6 text-lg w-full">
@@ -248,15 +247,11 @@ const HjaelpeMedTabs = () => {
                   </p>
                   <ul className="flex flex-col w-full border-y divide-y  ">
                     <li className="flex items-center justify-between w-full py-8 px-0 text-left">
-                      <span className="pl-4 font-light   text-md">
-                        Traumer
-                      </span>
+                      <span className="pl-4 font-light   text-md">Traumer</span>
                       <span className="w-6 h-6 rounded-full bg-gray-300 inline-block mr-2" />
                     </li>
                     <li className="flex items-center justify-between w-full py-8 px-0 text-left">
-                      <span className="pl-4 font-light   text-md">
-                        ADHD
-                      </span>
+                      <span className="pl-4 font-light   text-md">ADHD</span>
                       <span className="w-6 h-6 rounded-full bg-gray-300 inline-block mr-2" />
                     </li>
                     <li className="flex items-center justify-between w-full py-8 px-0 text-left">
@@ -279,13 +274,13 @@ const HjaelpeMedTabs = () => {
                     </li>
                   </ul>
                 </div>
-                <div className="flex flex-col items-end justify-start pl-32">
+                <div className="col-span-1">
                   <Image
                     src="/images/wheat.jpg"
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover block"
+                    className="object-cover rounded-l-full block"
                   />
                 </div>
               </div>
