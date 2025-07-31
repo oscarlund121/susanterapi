@@ -89,7 +89,7 @@ const Header = () => {
             >
               <LuX size={28} />
             </button>
-            <nav className="place-items-center z-30">
+            <nav className="flex flex-col items-center z-30">
               <LuHexagon
                 size={70}
                 className="text-black rotate-[30deg]"
