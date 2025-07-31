@@ -10,7 +10,7 @@ const HjaelpeMedTabs = () => {
     <section>
       <div className="w-full">
         {/* Header */}
-        <div className="mb-20 w-full text-left pl-4">
+        <div className="mb-40 w-full text-left pl-4">
           <h2 className="text-4xl lg:text-5xl font-light mb-6">
             Hvad kan jeg hjælpe med?
           </h2>
@@ -71,11 +71,11 @@ const HjaelpeMedTabs = () => {
                 </div>
                 <div className="col-span-1">
                   <Image
-                    src="/images/wheat.jpg"
+                    src="/images/tree-touch.jpg"
                     alt="Om mig"
                     width={400}
                     height={500}
-                     className="object-cover rounded-bl-4xl border-t-20 border-b-20 border-l-20 border-black block"
+                    className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block "
                   />
                 </div>
               </div>
@@ -127,7 +127,7 @@ const HjaelpeMedTabs = () => {
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover rounded-l-full border-t-20 border-b-20 border-l-20 border-gray-100 block"
+                    className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block"
                   />
                 </div>
               </div>
@@ -174,13 +174,15 @@ const HjaelpeMedTabs = () => {
                   </ul>
                 </div>
                 <div className="col-span-1">
-                  <Image
-                    src="/images/hand-on-chest-close.jpg"
-                    alt="Terapi-rum"
-                    width={400}
-                    height={500}
-                    className="object-cover rounded-l-full block"
-                  />
+                  <div className="flex md:justify-center md:items-center md:h-full">
+                    <Image
+                      src="/images/hand-on-chest-close.jpg"
+                      alt="Terapi-rum"
+                      width={400}
+                      height={500}
+                      className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block "
+                    />
+                  </div>
                 </div>
               </div>
               {/* Relationer */}
@@ -228,13 +230,13 @@ const HjaelpeMedTabs = () => {
                 </div>
                 <div className="col-span-1">
                   <Image
-                    src="/images/om-mig.png"
+                    src="/images/sand.jpg"
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover rounded-l-full block"
+                    className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block "
                   />
-                </div>
+                </div>  
               </div>
               {/* Traumer */}
               <div className="grid grid-cols-3 gap-10">
@@ -276,11 +278,11 @@ const HjaelpeMedTabs = () => {
                 </div>
                 <div className="col-span-1">
                   <Image
-                    src="/images/wheat.jpg"
+                    src="/images/sitting-closed.jpg"
                     alt="Om mig"
                     width={400}
                     height={500}
-                    className="object-cover rounded-l-full block"
+                    className="object-cover rounded-l-full border-t-40 border-b-40 border-l-40 border-gray-200 block "
                   />
                 </div>
               </div>

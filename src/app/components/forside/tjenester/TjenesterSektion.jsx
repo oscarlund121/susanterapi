@@ -2,8 +2,8 @@
 import React from 'react';
 
 const TjenesterSektion = () => (
-  <section className="">
-    <div className="max-w-6xl mx-auto">
+  <section >
+    <div className="px-4">
       {/* Titel */}
       <div className="mb-24 lg:mb-32">
         <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-800 leading-tight tracking-wide">

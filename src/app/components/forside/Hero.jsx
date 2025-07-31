@@ -5,7 +5,7 @@ const heroImage = '/images/hero-img.jpg';
 
 
 const Hero = () => (
-  <div className="relative w-full overflow-hidden bg-white min-h-screen">
+  <div className="relative w-full overflow-hidden !py-0 bg-white min-h-screen">
     {/* Fixed margin from header */}
     <div className="relative ml-8 lg:ml-12 xl:ml-16 2xl:ml-20">
       <div className="relative w-full h-[70vh] lg:h-[80vh] xl:h-[85vh]">
