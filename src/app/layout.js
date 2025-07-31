@@ -29,7 +29,7 @@ export default function RootLayout({ children }) {
             <div className=" lg:col-span-1">
               <Header />
             </div>
-          <main className="lg:col-span-3 py-3">
+          <main className="lg:col-span-3">
             {children}
           </main>
         </div>
