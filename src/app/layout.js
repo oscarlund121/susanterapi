@@ -31,9 +31,9 @@ export default function RootLayout({ children }) {
             </div>
           <main className="md:col-span-3">
             {children}
+        <Footer />
           </main>
         </div>
-        <Footer />
       </body>
     </html>
   );

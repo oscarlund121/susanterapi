@@ -1,6 +1,16 @@
 'use client'
 import React, { useState } from 'react';
 
+// HTML content for easy editing
+const sessionContent = {
+  header: {
+    title: "Hvordan foregår en session?",
+    subtitle: "En fleksibel tilgang hvor du bestemmer tempoet og dybden"
+  },
+  footer: `Min anbefaling er typisk <strong>2 til 10 sessioner</strong> afhængig af det du ønsker at arbejde med. 
+           Vi tager det helt i dit tempo.`
+};
+
 const SessionForloebVertical = () => {
   const [activeStep, setActiveStep] = useState(0);
 
@@ -61,10 +71,10 @@ const SessionForloebVertical = () => {
         {/* Header */}
         <div className="mb-10 md:mb-20 w-full text-left md:pl-4">
           <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light mb-6">
-            Hvordan foregår en session?
+            {sessionContent.header.title}
           </h2>
           <p className="text-base md:text-lg italic font-light text-gray-500 mb-8 max-w-2xl">
-            En fleksibel tilgang hvor du bestemmer tempoet og dybden
+            {sessionContent.header.subtitle}
           </p>
         </div>
 
@@ -92,7 +102,7 @@ const SessionForloebVertical = () => {
                     }`}
                   >
                     <div className="flex items-center gap-3 md:gap-4">
-                      <span className="text-lg md:text-xl font-extralight bg-gray-800 md:bg-gray-800/50 text-white px-2 tracking-wider">
+                      <span className="text-lg md:text-xl font-extralight bg-gray-800/50 md:bg-gray-800/50 text-white px-2 tracking-wider">
                         {step.nummer}
                       </span>
                       <div>
@@ -148,10 +158,10 @@ const SessionForloebVertical = () => {
 
         {/* Footer CTA */}
         <div className="text-left mt-12 w-full">
-          <p className="text-gray-500 pl-0 md:pl-4 w-full mb-8 font-light text-sm md:text-base">
-            Min anbefaling er typisk <strong>2 til 10 sessioner</strong> afhængig af det du ønsker at arbejde med. 
-            Vi tager det helt i dit tempo.
-          </p>
+          <div 
+            className="text-gray-500 pl-0 md:pl-4 w-full mb-8 font-light text-sm md:text-base"
+            dangerouslySetInnerHTML={{ __html: sessionContent.footer }}
+          />
         </div>
       </div>
     </section>

@@ -215,7 +215,7 @@ const MetodeHorizontal = () => {
                       <div className="bg-white p-6">
                         {/* Number */}
                         <div className="mb-4">
-                          <span className="text-3xl font-extralight text-black tracking-wider">
+                          <span className="text-3xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider">
                             {step.number}
                           </span>
                         </div>
@@ -317,7 +317,7 @@ const MetodeHorizontal = () => {
             "Vi kan kun skabe varig transformationer i os selv, hvis vi gør det ud fra 
             ren ubetinget kærlighed."
           </blockquote>
-          <cite className="text-sm font-light tracking-[0.15em] not-italic bg-gray-800/50 text-white block mx-auto px-4 py-2">
+          <cite className="text-xs font-light tracking-[0.15em] not-italic bg-gray-800/50 text-white block mx-auto px-4 py-2">
           KAREN AAES, ESSENTIELT INSTITUT
           </cite>
         </div>
