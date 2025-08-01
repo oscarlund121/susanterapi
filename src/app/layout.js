@@ -2,6 +2,8 @@ import { Geist, Geist_Mono, Work_Sans, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import Footer from "./components/layout/Footer";
+import FooterElegant from "./components/layout/FooterElegant";
+
 
 
 const workSans = Work_Sans({
@@ -31,7 +33,9 @@ export default function RootLayout({ children }) {
             </div>
           <main className="md:col-span-3">
             {children}
-        <Footer />
+       
+   {     <FooterElegant />}
+   
           </main>
         </div>
       </body>
