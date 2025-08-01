@@ -25,16 +25,16 @@ const HeroElegantMinimal = () => (
             <div className="text-center max-w-2xl px-4">
               
               {/* Pure essence - just the name */}
-              <div className="space-y-8 sm:space-y-8 md:space-y-12">
+              <div className="space-y-6 sm:space-y-8 md:space-y-12">
                 <div>
-                  <h1 className="text-white bg-black/50 font-extralight text-4xl sm:text-5xl md:text-6xl lg:text-7xl py-4 px-8">
+                  <h1 className="text-white font-light text-4xl sm:text-5xl md:text-6xl lg:text-7xl xl:text-8xl leading-tight tracking-wide">
                     Susan Albertsen
                   </h1>
                 </div>
                 
                 {/* Single focus point */}
                 <div>
-                  <p className="text-black bg-white/50 text-lg sm:text-xl md:text-2xl font-light tracking-widest inline-block px-4 py-2">
+                  <p className="text-white/80 text-lg sm:text-xl md:text-2xl font-light tracking-widest">
                     PSYKOTERAPI
                   </p>
                 </div>

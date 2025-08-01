@@ -92,7 +92,7 @@ const SessionForloebVertical = () => {
                     }`}
                   >
                     <div className="flex items-center gap-3 md:gap-4">
-                      <span className="text-lg md:text-xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider">
+                      <span className="text-lg md:text-xl font-extralight bg-gray-800 md:bg-gray-800/50 text-white px-2 tracking-wider">
                         {step.nummer}
                       </span>
                       <div>

@@ -24,11 +24,45 @@ export default function Home() {
     <main className="min-h-screen bg-white">
       {/* =========== DSE REVIEW: HERO SEKTION (ZEN VARIANTER) =========== */}
       
-  
-        <HeroElegantMinimal />
- 
+      {/* Original Hero */}
+      <div className="bg-gray-50">
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-light text-gray-600 mb-2">ORIGINAL - Hero</h3>
+        </div>
+        <Hero />
+      </div>
       
-   
+      {/* Elegant variant */}
+      <div className="bg-white">
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-light text-gray-600 mb-2">VARIANT 1 - HeroElegant (Zen-inspired bottom-left)</h3>
+        </div>
+        <HeroElegant />
+      </div>
+      
+      {/* Flow variant */}
+      <div className="bg-gray-50">
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-light text-gray-600 mb-2">VARIANT 2 - HeroElegantFlow (Vertical flow right-side)</h3>
+        </div>
+        <HeroElegantFlow />
+      </div>
+      
+      {/* Minimal variant */}
+      <div className="bg-white">
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-light text-gray-600 mb-2">VARIANT 3 - HeroElegantMinimal (Ultra-minimal center)</h3>
+        </div>
+        <HeroElegantMinimal />
+      </div>
+      
+      {/* Breathing variant */}
+      <div className="bg-gray-50">
+        <div className="p-4 text-center">
+          <h3 className="text-lg font-light text-gray-600 mb-2">VARIANT 4 - HeroElegantBreathing (Animated zen timing)</h3>
+        </div>
+        <HeroElegantBreathing />
+      </div>
       
       {/* =========== VALGTE KOMPONENTER (DSE review gennemført) =========== */}
       
