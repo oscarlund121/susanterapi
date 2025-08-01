@@ -56,99 +56,99 @@ const SessionForloebVertical = () => {
   ];
 
   return (
-    <section className="py-32 lg:py-40 bg-white">
-      <div className="max-w-7xl mx-auto px-8">
+    <section className="py-20 md:py-32">
+      <div className="w-full px-4 md:px-0">
         {/* Header */}
-        <div className="text-left mb-20">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-800 leading-tight tracking-wide mb-8">
+        <div className="mb-10 md:mb-20 w-full text-left md:pl-4">
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light mb-6">
             Hvordan foregår en session?
           </h2>
-          <p className="text-lg font-light text-gray-600 leading-relaxed max-w-3xl">
+          <p className="text-base md:text-lg italic font-light text-gray-500 mb-8 max-w-2xl">
             En fleksibel tilgang hvor du bestemmer tempoet og dybden
           </p>
         </div>
 
-        <div className="grid grid-cols-1 lg:grid-cols-4 gap-12">
-          {/* Steps Navigation - Vertikal på desktop */}
-          <div className="lg:col-span-1">
-            <div className="space-y-4 lg:space-y-6">
-              {sessionSteps.map((step, index) => (
-                <button
-                  key={index}
-                  onClick={() => setActiveStep(index)}
-                  className={`w-full text-left p-6 rounded-lg transition-all duration-300 border ${
-                    activeStep === index
-                      ? 'bg-gray-800 text-white border-gray-800 shadow-lg'
-                      : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50 hover:border-gray-300'
-                  }`}
-                >
-                  <div className="flex items-center gap-4">
-                    <span className={`text-2xl font-light ${
-                      activeStep === index ? 'text-white' : 'text-gray-400'
-                    }`}>
-                      {step.nummer}
-                    </span>
-                    <div>
-                      <h3 className="font-light tracking-wide text-lg mb-1">
-                        {step.titel}
-                      </h3>
-                      <p className={`text-xs tracking-[0.1em] uppercase ${
-                        activeStep === index ? 'text-gray-300' : 'text-gray-500'
-                      }`}>
-                        {step.varighed}
-                      </p>
-                    </div>
-                  </div>
-                </button>
-              ))}
+        {/* Timeline/Flow */}
+        <div className="relative w-full">
+          {/* Hero Image */}
+          <div className="w-full mb-12 md:mb-25">
+            <div className="w-full h-32 md:h-48 bg-gray-100 flex items-center justify-center">
+              <span className="text-gray-400 text-sm">Session Forløb Banner</span>
             </div>
           </div>
 
-          {/* Content Area */}
-          <div className="lg:col-span-3">
-            <div className="relative min-h-[500px]">
-              {sessionSteps.map((step, index) => (
-                <div
-                  key={index}
-                  className={`absolute inset-0 transition-all duration-500 ease-out ${
-                    activeStep === index 
-                      ? 'opacity-100 translate-y-0' 
-                      : 'opacity-0 translate-y-8 pointer-events-none'
-                  }`}
-                >
-                  <div className="bg-gray-50 p-12 rounded-lg h-full">
-                    <div className="mb-8">
-                      <div className="text-6xl font-light text-gray-300 mb-6">{step.nummer}</div>
-                      <h3 className="text-3xl font-light text-gray-800 mb-4 tracking-wide">
-                        {step.titel}
-                      </h3>
-                      <p className="text-sm text-gray-500 tracking-[0.1em] uppercase mb-6">
-                        {step.varighed}
-                      </p>
-                      <p className="text-xl text-gray-600 leading-relaxed mb-8">
-                        {step.beskrivelse}
-                      </p>
+          <div className="flex flex-col gap-5 w-full items-center ">
+            {/* Session steps navigation */}
+            <div className="w-full mb-8 md:mb-12">
+              <div className="grid grid-cols-2 lg:flex lg:flex-row gap-4 md:gap-6">
+                {sessionSteps.map((step, index) => (
+                  <button
+                    key={index}
+                    onClick={() => setActiveStep(index)}
+                    className={`md:flex-1 text-left p-4 md:p-6 transition-all duration-300 border-2 ${
+                      activeStep === index
+                        ? 'bg-gray-800 text-white border-gray-800'
+                        : 'bg-white text-gray-600 border-gray-200 hover:bg-gray-50 hover:border-gray-400'
+                    }`}
+                  >
+                    <div className="flex items-center gap-3 md:gap-4">
+                      <span className="text-lg md:text-xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider">
+                        {step.nummer}
+                      </span>
+                      <div>
+                        <h3 className="font-light text-sm md:text-base mb-1">
+                          {step.titel}
+                        </h3>
+                        <p className={`text-xs italic ${
+                          activeStep === index ? 'text-gray-300' : 'text-gray-500'
+                        }`}>
+                          {step.varighed}
+                        </p>
+                      </div>
                     </div>
+                  </button>
+                ))}
+              </div>
+            </div>
 
-                    <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
-                      {step.detaljer.map((detalje, detailIndex) => (
-                        <div key={detailIndex} className="flex items-start gap-3 text-gray-600">
-                          <div className="w-2 h-2 bg-gray-400 rounded-full mt-2 flex-shrink-0"></div>
-                          <span className="text-sm leading-relaxed">{detalje}</span>
-                        </div>
-                      ))}
-                    </div>
-                  </div>
+            {/* Active step content */}
+            <div className="w-full">
+              <div className="w-full max-w-4xl ">
+                {/* Nummer */}
+                <div className="mb-6 md:mb-8 text-left pl-0 md:pl-4">
+                  <span className="text-6xl lg:text-7xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider drop-shadow-md">
+                    {sessionSteps[activeStep].nummer}
+                  </span>
                 </div>
-              ))}
+                
+                <h3 className="text-xl md:text-2xl pl-0 md:pl-4 font-light mb-2 w-full">
+                  {sessionSteps[activeStep].titel}
+                </h3>
+                <p className="pl-0 md:pl-4 text-gray-500 italic mb-2 text-base md:text-lg w-full">
+                  {sessionSteps[activeStep].varighed}
+                </p>
+                <p className="pl-0 md:pl-4 text-gray-600 mb-6 text-base md:text-lg w-full">
+                  {sessionSteps[activeStep].beskrivelse}
+                </p>
+                
+                <ul className="flex flex-col w-full border-y divide-y">
+                  {sessionSteps[activeStep].detaljer.map((detalje, detailIndex) => (
+                    <li key={detailIndex} className="flex items-center justify-between w-full py-6 md:py-8 px-0 text-left">
+                      <span className="pl-0 md:pl-4 font-light text-sm md:text-md">
+                        {detalje}
+                      </span>
+                      <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-gray-300 inline-block mr-0 md:mr-2" />
+                    </li>
+                  ))}
+                </ul>
+              </div>
             </div>
           </div>
         </div>
 
-        {/* Footer */}
-        <div className="mt-20 text-center">
-          <div className="w-16 h-px bg-gray-200 mx-auto mb-8"></div>
-          <p className="text-lg text-gray-600 leading-relaxed max-w-3xl mx-auto">
+        {/* Footer CTA */}
+        <div className="text-left mt-12 w-full">
+          <p className="text-gray-500 pl-0 md:pl-4 w-full mb-8 font-light text-sm md:text-base">
             Min anbefaling er typisk <strong>2 til 10 sessioner</strong> afhængig af det du ønsker at arbejde med. 
             Vi tager det helt i dit tempo.
           </p>

@@ -149,10 +149,10 @@ const MetodeHorizontal = () => {
       <div className="max-w-7xl mx-auto px-8">
         {/* Header */}
         <div className="text-left mb-24">
-          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-800 leading-tight tracking-wide mb-8">
-            Min tilgang - Horizontal
+          <h2 className="text-4xl lg:text-5xl xl:text-6xl font-light black leading-tight tracking-wide mb-8">
+            Min tilgang
           </h2>
-          <p className="text-lg font-light text-gray-600 leading-relaxed max-w-2xl">
+          <p className="text-lg font-light text-gray-800 leading-relaxed max-w-2xl">
             En rejse gennem terapiprocessen - fra første kontakt til varig transformation
           </p>
         </div>
@@ -161,7 +161,7 @@ const MetodeHorizontal = () => {
         <div className="hidden md:block mb-16">
           <div className="relative w-full h-px bg-gray-200">
             <div 
-              className="absolute top-0 left-0 h-px bg-gray-400 transition-all duration-300 ease-out"
+              className="absolute top-0 left-0 h-px bg-black transition-all duration-300 ease-out"
               style={{ width: `${scrollProgress * 100}%` }}
             ></div>
           </div>
@@ -169,9 +169,9 @@ const MetodeHorizontal = () => {
             {terapiRejse.map((step, index) => (
               <div key={step.id} className="text-center">
                 <div className={`w-2 h-2 rounded-full mx-auto mb-2 transition-all duration-500 ${
-                  visibleSteps.has(index) ? 'bg-gray-400' : 'bg-gray-200'
+                  visibleSteps.has(index) ? 'bg-black' : 'bg-black'
                 }`}></div>
-                <span className="text-xs font-light text-gray-400 tracking-wider">
+                <span className="text-xs font-light text-black tracking-wider">
                   {step.number}
                 </span>
               </div>
@@ -187,7 +187,7 @@ const MetodeHorizontal = () => {
               {/* Vertical progress line */}
               <div className="relative flex flex-col items-center mr-8 flex-shrink-0 z-30">
                 {/* Full height line */}
-                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-px bg-gray-200 z-30" 
+                <div className="absolute top-6 left-1/2 transform -translate-x-1/2 w-px bg-black z-30" 
                      style={{ height: `calc(100% - 24px)` }}>
                   <div 
                     className="absolute top-0 left-0 w-px bg-gray-400 transition-all duration-300 ease-out z-30"
@@ -203,7 +203,7 @@ const MetodeHorizontal = () => {
                     {/* Progress dot */}
                     <div className="absolute -left-12 top-6 flex items-center justify-center z-40">
                       <div className={`w-3 h-3 rounded-full transition-all duration-500 border-2 border-white z-40 ${
-                        visibleSteps.has(index) ? 'bg-gray-400' : 'bg-gray-200'
+                        visibleSteps.has(index) ? 'bg-black' : 'bg-gray-200'
                       }`}></div>
                     </div>
                     
@@ -215,7 +215,7 @@ const MetodeHorizontal = () => {
                       <div className="bg-white p-6">
                         {/* Number */}
                         <div className="mb-4">
-                          <span className="text-3xl font-extralight text-gray-300 tracking-wider">
+                          <span className="text-3xl font-extralight text-black tracking-wider">
                             {step.number}
                           </span>
                         </div>
@@ -259,7 +259,7 @@ const MetodeHorizontal = () => {
           {/* Desktop: Horizontal scroll container */}
           <div 
             ref={scrollContainerRef}
-            className="hidden md:flex gap-8 lg:gap-12 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-gray-100 scrollbar-thumb-gray-300"
+            className="hidden md:flex gap-8 lg:gap-12 overflow-x-auto pb-4 scrollbar-thin scrollbar-track-black scrollbar-thumb-black"
             style={{ scrollbarWidth: 'thin' }}
           >
             {terapiRejse.map((step, index) => (
@@ -272,38 +272,38 @@ const MetodeHorizontal = () => {
                   <div className="bg-white p-8 lg:p-10 h-full">
                     {/* Number */}
                     <div className="mb-6">
-                      <span className="text-4xl lg:text-5xl font-extralight text-gray-300 tracking-wider">
+                      <span className="text-6xl lg:text-7xl font-extralight bg-gray-800/50 text-white px-2 tracking-wider drop-shadow-md">
                         {step.number}
                       </span>
                     </div>
 
                     {/* Phase */}
                     <div className="mb-4">
-                      <span className="text-xs font-light text-gray-400 tracking-[0.15em] uppercase">
+                      <span className="text-xs font-light text-gray-500 tracking-[0.15em] uppercase">
                         {step.phase}
                       </span>
                     </div>
 
                     {/* Title */}
-                    <h3 className="text-2xl lg:text-3xl font-light text-gray-800 mb-4 tracking-wide leading-tight">
+                    <h3 className="text-4xl lg:text-3xl font-light text-gray-800 mb-4 tracking-wide leading-tight">
                       {step.title}
                     </h3>
 
                     {/* Method badge */}
                     <div className="mb-6">
-                      <span className="text-sm text-gray-600 font-light tracking-wide">
+                      <span className="text-base text-gray-600 font-light tracking-wide">
                         {step.method}
                       </span>
                     </div>
 
                     {/* Description */}
-                    <p className="text-gray-600 leading-relaxed">
+                    <p className="text-black leading-relaxed">
                       {step.description}
                     </p>
 
                     {/* Subtle line */}
                     <div className="mt-8">
-                      <div className="w-12 h-px bg-gray-200"></div>
+                      <div className="w-12 h-px bg-black"></div>
                     </div>
                   </div>
                 </div>

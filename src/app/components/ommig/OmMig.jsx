@@ -19,7 +19,7 @@ const OmMig = () => {
           {/* Tekst til højre */}
           <div className="py-12 px-8 flex flex-col justify-center space-y-10">
             <div>
-              <h1 className="text-4xl font-light text-gray-800">
+              <h1 className="text-6xl font-light text-gray-800">
                 Om mig
               </h1>
             </div>

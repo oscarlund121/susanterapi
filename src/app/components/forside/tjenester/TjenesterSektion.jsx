@@ -28,8 +28,8 @@ const TjenesterSektion = () => (
               Gennem helhjertet terapi lærer du at give slip på destruktive følelser og fastlåsthed. Oplev frihed, glæde og en fornyet energi.
             </p>
           </div>
-          <div className="mt-12 lg:mr-auto">
-            <div className="w-16 h-px bg-gray-200"></div>
+          <div className="pt-12 pb-20 lg:mr-auto">
+            <div className="w-16 h-px bg-black"></div>
           </div>
         </div>
 
@@ -48,8 +48,8 @@ const TjenesterSektion = () => (
               EMDR metode til at forløse chok lagret i kroppen. Genvind balance og oplevelse af ro og kærlighed.
             </p>
           </div>
-          <div className="mt-12 lg:ml-auto">
-            <div className="w-16 h-px bg-gray-200"></div>
+          <div className="pt-12 pb-20 lg:ml-auto flex md:justify-end justify-start">
+            <div className="w-16 h-px bg-black"></div>
           </div>
         </div>
 
@@ -64,12 +64,12 @@ const TjenesterSektion = () => (
             <h3 className="text-3xl lg:text-4xl font-light text-gray-800 leading-tight tracking-wide">
               Meditation
             </h3>
-            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed max-w-lg">
+            <p className="text-lg lg:text-xl text-gray-600 leading-relaxed">
               Meditativ fordybelse for harmoni og balance. Kom bag om det bevidste sind og oplev intens forbindelse med din sjæl.
             </p>
           </div>
-          <div className="mt-12 lg:mr-auto">
-            <div className="w-16 h-px bg-gray-200"></div>
+          <div className="pt-12 pb-20 lg:mr-auto">
+            <div className="w-16 h-px bg-black"></div>
           </div>
         </div>
 
@@ -88,8 +88,8 @@ const TjenesterSektion = () => (
               Mentaliserende tilgang til relationer. Forstå dynamikker og skab sikkerhed i familien og parforhold.
             </p>
           </div>
-          <div className="mt-12 lg:ml-auto">
-            <div className="w-16 h-px bg-gray-200"></div>
+          <div className="pt-12 pb-20 lg:ml-auto flex md:justify-end justify-start ">
+            <div className="w-16 h-px bg-black"></div>
           </div>
         </div>
       </div>
