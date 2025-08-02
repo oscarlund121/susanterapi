@@ -25,17 +25,20 @@ const HjaelpeMedTabs = () => {
         <div className="relative w-full">
           <div className="flex flex-col gap-5 w-full items-center">
             {/* Kategorier med billeder til højre for hver */}
+            <div className="flex flex-cols">
+              <h3 className="text-xl md:text-2xl pl-0 md:pl-4 font-light mb-2 w-full">
+                Følelser
+              </h3>
+              <p className="pl-0 md:pl-4 text-gray-500 italic mb-6 text-base md:text-lg w-full">
+                Når følelser bliver overvældende eller svære at håndtere i
+                hverdagen
+              </p>
+            </div>
             <div className="space-y-12 md:space-y-16 w-full">
               {/* Følelser */}
+
               <div className="flex flex-col md:grid md:grid-cols-3  gap-8">
                 <div className="order-2 md:order-1 md:col-span-2 gap-5 pl-0">
-                  <h3 className="text-xl md:text-2xl pl-0 md:pl-4 font-light mb-2 w-full">
-                    Følelser
-                  </h3>
-                  <p className="pl-0 md:pl-4 text-gray-500 italic mb-6 text-base md:text-lg w-full">
-                    Når følelser bliver overvældende eller svære at håndtere i
-                    hverdagen
-                  </p>
                   <ul className="flex flex-col w-full border-y divide-y">
                     <li className="flex items-center justify-between w-full py-6 md:py-8 px-0 text-left">
                       <span className="pl-0 md:pl-4 font-light text-sm md:text-md">
@@ -71,13 +74,13 @@ const HjaelpeMedTabs = () => {
                 </div>
                 <div className="order-1 md:order-2 col-span-1 mb-4 md:mb-0">
                   <div className="flex md:justify-center md:items-center md:h-full">
-                  <Image
-                    src="/images/tree-touch.jpg"
-                    alt="Om mig"
-                    width={400}
-                    height={500}
-                    className="object-cover w-full h-100 md:h-auto block rounded-2xl md:rounded-l-full"
-                  />
+                    <Image
+                      src="/images/tree-touch.jpg"
+                      alt="Om mig"
+                      width={400}
+                      height={500}
+                      className="object-cover w-full h-100 md:h-auto block rounded-2xl md:rounded-l-full"
+                    />
                   </div>
                 </div>
               </div>
@@ -255,11 +258,15 @@ const HjaelpeMedTabs = () => {
                   </p>
                   <ul className="flex flex-col w-full border-y divide-y">
                     <li className="flex items-center justify-between w-full py-6 md:py-8 px-0 text-left">
-                      <span className="pl-0 md:pl-4 font-light text-sm md:text-md">Traumer</span>
+                      <span className="pl-0 md:pl-4 font-light text-sm md:text-md">
+                        Traumer
+                      </span>
                       <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-gray-300 inline-block mr-0 md:mr-2" />
                     </li>
                     <li className="flex items-center justify-between w-full py-6 md:py-8 px-0 text-left">
-                      <span className="pl-0 md:pl-4 font-light text-sm md:text-md">ADHD</span>
+                      <span className="pl-0 md:pl-4 font-light text-sm md:text-md">
+                        ADHD
+                      </span>
                       <span className="w-4 h-4 md:w-6 md:h-6 rounded-full bg-gray-300 inline-block mr-0 md:mr-2" />
                     </li>
                     <li className="flex items-center justify-between w-full py-6 md:py-8 px-0 text-left">

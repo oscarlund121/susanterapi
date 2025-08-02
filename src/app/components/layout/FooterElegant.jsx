@@ -23,15 +23,14 @@ const FooterElegant = () => {
   return (
     <footer className="bg-white border-t border-gray-100">
       <div className="max-w-7xl mx-auto px-8 py-16">
-        
         {/* Øverste sektion - hexagon centreret */}
-        <div className="flex flex-col items-center text-center mb-16">
-          <div className="mb-8">
+        <div className="flex flex-col items-center justify-center text-center mb-16">
             <LuHexagon
               size={80}
               className="text-gray-700 rotate-[30deg] mb-6"
               strokeWidth={0.8}
-            />
+              />
+          <div className="mb-8">
             <h3 className="text-2xl font-light text-gray-800 tracking-wide mb-3">
               {footerContent.tagline}
             </h3>

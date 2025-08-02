@@ -13,6 +13,10 @@ const Header = () => {
     setIsMobileMenuOpen(!isMobileMenuOpen);
   };
 
+  const closeMobileMenu = () => {
+    setIsMobileMenuOpen(false);
+  };
+
   useEffect(() => {
     if (isMobileMenuOpen) {
       document.body.classList.add("no-scroll");
@@ -102,11 +106,11 @@ const Header = () => {
                 v. Susan Albertsen
               </h2>
               <div className="flex flex-col gap-8 items-center font-light mb-12 text-base">
-                <Link href="/">Forside</Link>
-                <Link href="/ydelser">Terapi</Link>
-                <Link href="/ommig">Om mig</Link>
-                <Link href="/priser">Priser</Link>
-                <Link href="/kontakt">Kontakt</Link>
+                <Link href="/" onClick={closeMobileMenu}>Forside</Link>
+                <Link href="/ydelser" onClick={closeMobileMenu}>Terapi</Link>
+                <Link href="/ommig" onClick={closeMobileMenu}>Om mig</Link>
+                <Link href="/priser" onClick={closeMobileMenu}>Priser</Link>
+                <Link href="/kontakt" onClick={closeMobileMenu}>Kontakt</Link>
               </div>
               <div className="flex gap-4">
                 <Link

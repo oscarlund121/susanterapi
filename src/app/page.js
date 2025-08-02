@@ -1,10 +1,8 @@
 import Image from 'next/image';
 import Hero from './components/forside/Hero';
 // Hero varianter - DSE REVIEW
-import HeroElegant from './components/forside/HeroElegant';
-import HeroElegantFlow from './components/forside/HeroElegantFlow';
+
 import HeroElegantMinimal from './components/forside/HeroElegantMinimal';
-import HeroElegantBreathing from './components/forside/HeroElegantBreathing';
 // Tjenester varianter
 import TjenesterSektion from './components/forside/tjenester/TjenesterSektion';
 // Hjælpe Med varianter
@@ -12,6 +10,7 @@ import HjaelpeMedTabs from './components/forside/hjaelpe-med/HjaelpeMedTabs';
 // Session Forløb varianter
 import SessionForloebVertical from './components/forside/session-forloeb/SessionForloebVertical';
 // Klient Udtalelser varianter
+import KlientUdtalelser from './components/forside/klient-udtalelser/KlientUdtalelser';
 // Priser varianter
 import MetodeHorizontal from './components/forside/metode/MetodeHorizontal';
 // Om mig varianter
@@ -57,9 +56,8 @@ export default function Home() {
 
 
       {/* =========== ANDRE SEKTIONER (afventer DSE review) =========== */}
-      {/* Klient Udtalelser: KlientUdtalelser | KlientUdtalelserBase | KlientUdtalelserGrid | KlientUdtalelserMinimal */}
-      {/* Priser: PriserForside | PriserBase | PriserCards | PriserMinimal */}
-      
+      {/* Klient Udtalelser */}
+      {/* <KlientUdtalelser /> */}
       {/* Metode sektion */}
       <OmMig />
 
