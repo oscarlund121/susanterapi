@@ -1,0 +1,42 @@
+"use client";
+import React from "react";
+import LandingHero from "./LandingHero";
+import LandingTilbyder from "./LandingTilbyder";
+import LandingOmSusan from "./LandingOmSusan";
+import LandingMetoder from "./LandingMetoder"; 
+import LandingProblemer from "./LandingProblemer";
+import LandingMaalgrupper from "./LandingMaalgrupper";
+import LandingUdtalelser from "./LandingUdtalelser";
+import LandingForloeb from "./LandingForloeb";
+
+const LandingPage = () => {
+  return (
+    <div className="min-h-screen bg-white">
+      {/* Hero med Susans vision */}
+      <LandingHero />
+      
+      {/* Hvad jeg tilbyder - simpelt 2-kolonne layout */}
+      <LandingTilbyder />
+      
+      {/* Om Susan - baggrund og erfaring */}
+      <LandingOmSusan />
+      
+      {/* Detaljerede behandlingsmetoder */}
+      <LandingMetoder />
+      
+      {/* Konkrete problemområder */}
+      <LandingProblemer />
+      
+      {/* Hvem jeg hjælper - tre målgrupper */}
+      <LandingMaalgrupper />
+      
+      {/* Klientudtalelser */}
+      <LandingUdtalelser />
+      
+      {/* Session forløb og priser */}
+      <LandingForloeb />
+    </div>
+  );
+};
+
+export default LandingPage;
