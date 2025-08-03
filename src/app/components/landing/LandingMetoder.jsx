@@ -56,12 +56,30 @@ const LandingMetoder = () => {
               <div className="bg-gray-50 p-6 space-y-3">
                 <h4 className="font-light text-gray-800">Hjælper med:</h4>
                 <div className="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div>• Traumer og PTSD</div>
-                  <div>• Angst og fobier</div>
-                  <div>• Chok og kriser</div>
-                  <div>• Fastlåsthed</div>
-                  <div>• Negative tankemønstre</div>
-                  <div>• Uforklarlige reaktioner</div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Traumer og PTSD</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Angst og fobier</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Chok og kriser</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Fastlåsthed</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Negative tankemønstre</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Uforklarlige reaktioner</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -118,12 +136,30 @@ const LandingMetoder = () => {
               <div className="bg-gray-50 p-6 space-y-3">
                 <h4 className="font-light text-gray-800">Anvendes til:</h4>
                 <div className="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div>• Familie- og parterapi</div>
-                  <div>• Forældreguidning</div>
-                  <div>• Relationsproblemer</div>
-                  <div>• Kommunikationsvanskeligheder</div>
-                  <div>• Følelsesregulering</div>
-                  <div>• Uro i familien</div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Familie- og parterapi</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Forældreguidning</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Relationsproblemer</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Kommunikationsvanskeligheder</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Følelsesregulering</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Uro i familien</div>
+                  </div>
                 </div>
               </div>
             </div>
@@ -164,12 +200,30 @@ const LandingMetoder = () => {
               <div className="bg-gray-50 p-6 space-y-3">
                 <h4 className="font-light text-gray-800">Skaber:</h4>
                 <div className="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
-                  <div>• Indre ro og balance</div>
-                  <div>• Klarhed og indsigt</div>
-                  <div>• Forbindelse til intuition</div>
-                  <div>• Energi og vitalitet</div>
-                  <div>• Spirituel udvikling</div>
-                  <div>• Manifestation af ønsker</div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Indre ro og balance</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Klarhed og indsigt</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Forbindelse til intuition</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Energi og vitalitet</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Spirituel udvikling</div>
+                  </div>
+                  <div className="flex items-start space-x-3">
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div>Manifestation af ønsker</div>
+                  </div>
                 </div>
               </div>
             </div>

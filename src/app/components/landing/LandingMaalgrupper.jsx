@@ -35,10 +35,22 @@ const LandingMaalgrupper = () => {
                 Børn & Familier
               </h3>
               <div className="text-sm text-gray-600 space-y-2">
-                <div>• Familiedynamikker og relationer</div>
-                <div>• Skolefravær og læringsvanskeligheder</div>
-                <div>• ADHD og følelsesmæssige udfordringer</div>
-                <div>• Mentaliserende forældreguidning</div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Familiedynamikker og relationer</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Skolefravær og læringsvanskeligheder</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>ADHD og følelsesmæssige udfordringer</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Mentaliserende forældreguidning</div>
+                </div>
               </div>
             </div>
           </div>
@@ -58,10 +70,22 @@ const LandingMaalgrupper = () => {
                 Unge & Studerende
               </h3>
               <div className="text-sm text-gray-600 space-y-2">
-                <div>• Præstationsangst og eksamenstress</div>
-                <div>• Sociale udfordringer og gruppedannelser</div>
-                <div>• Usikkerhed og lavt selvværd</div>
-                <div>• Overgange og nye miljøer</div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Præstationsangst og eksamenstress</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Sociale udfordringer og gruppedannelser</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Usikkerhed og lavt selvværd</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Overgange og nye miljøer</div>
+                </div>
               </div>
             </div>
           </div>
@@ -81,10 +105,22 @@ const LandingMaalgrupper = () => {
                 Voksne & Par
               </h3>
               <div className="text-sm text-gray-600 space-y-2">
-                <div>• Stress, angst og depression</div>
-                <div>• Parforhold og kæresteproblematikker</div>
-                <div>• Traumer og sorg</div>
-                <div>• Personlig udvikling og selvværd</div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Stress, angst og depression</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Parforhold og kæresteproblematikker</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Traumer og sorg</div>
+                </div>
+                <div className="flex items-start space-x-3">
+                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                  <div>Personlig udvikling og selvværd</div>
+                </div>
               </div>
             </div>
           </div>

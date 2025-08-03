@@ -26,13 +26,10 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* =========== NY SAMMENHÆNGENDE LANDING PAGE =========== */}
-      <div className="border-b-4 border-green-500 mb-12">
-        <div className="bg-green-50 text-center py-4 mb-8">
-          <h3 className="text-2xl font-light text-green-800">✨ NY: Sammenhængende Landing Page</h3>
-          <p className="text-green-600">Færre features, mere flow og harmoni</p>
-        </div>
+     
+      
         <LandingPage />
-      </div>
+    
 
       {/* =========== GAMLE KOMPONENTER TIL SAMMENLIGNING =========== */}
       <div className="bg-gray-50 py-8">

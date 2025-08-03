@@ -17,7 +17,8 @@ const Button = ({
     secondary: "border border-gray-800 text-gray-800 hover:bg-gray-800 hover:text-white",
     ghost: "text-white/80 hover:text-white bg-white/10 backdrop-blur-sm border border-white/20 hover:bg-white/20",
     light: "bg-white/95 backdrop-blur-sm text-gray-800 shadow-lg hover:shadow-xl hover:bg-white border border-gray-100",
-    inverted: "bg-white text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white hover:border-white"
+    inverted: "bg-white text-gray-800 border border-gray-800 hover:bg-gray-800 hover:text-white hover:border-white",
+    hero: "bg-white/80 text-gray-800 shadow-lg hover:bg-white hover:shadow-xl tracking-[0.15em] uppercase"
   };
   
   const sizes = {
