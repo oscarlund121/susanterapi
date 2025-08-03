@@ -26,52 +26,14 @@ export default function Home() {
   return (
     <main className="min-h-screen bg-white">
       {/* =========== NY SAMMENHÆNGENDE LANDING PAGE =========== */}
-     
-      
-        <LandingPage />
-    
 
-      {/* =========== GAMLE KOMPONENTER TIL SAMMENLIGNING =========== */}
-      <div className="bg-gray-50 py-8">
-        <div className="text-center mb-8">
-          <h3 className="text-2xl font-light text-gray-500">📋 Gamle komponenter (til sammenligning)</h3>
-        </div>
-      </div>
+      <HeroElegantMinimal />
+      <LandingPage />
 
-      {/* =========== DSE REVIEW: HERO SEKTION (ZEN VARIANTER) =========== */}
-      <div className="border-b border-gray-200 pb-8 mb-8">
-        <div className="text-center mb-8">
-          <h3 className="text-xl font-light text-gray-500">GAMMEL: HeroElegantMinimal</h3>
-        </div>
-        <HeroElegantMinimal />
-      </div>
 
-      {/* =========== TJENESTER SAMMENLIGNING =========== */}
-      
-      {/* 1. Original TjenesterSektion */}
-      <div className="border-b border-gray-200 pb-8 mb-8">
-        <div className="text-center mb-8">
-          <h3 className="text-xl font-light text-gray-500">GAMMEL: TjenesterSektion</h3>
-        </div>
-        <TjenesterSektion />
-      </div>
-      
-      {/* 2. Ny TjenesterGrid (3 målgrupper) */}
-      <div className="border-b border-gray-200 pb-8 mb-8">
-        <div className="text-center mb-8">
-          <h3 className="text-xl font-light text-gray-500">GAMMEL: TjenesterGrid</h3>
-        </div>
-        <TjenesterGrid />
-      </div>
-      
-      {/* Andre gamle komponenter (skjulte for nu) */}
-      <div style={{ display: 'none' }}>
-        <HjaelpeMedTabs />
-        <SessionForloebVertical />
-        <KlientUdtalelser />
-        <OmMig />
-        <MetodeHorizontal />
-      </div>
+   
+ 
+   
     </main>
   );
 }

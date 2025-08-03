@@ -79,19 +79,19 @@ const LandingOmSusan = () => {
                 <h4 className="font-light text-gray-800">Specialiseringer:</h4>
                 <div className="space-y-1 text-gray-600">
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Essentiel Integrativ Psykoterapi</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>EMDR (WHO-anerkendt)</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Mentaliserende tilgang</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Chok- og traumeforløsning</div>
                   </div>
                 </div>
@@ -101,19 +101,19 @@ const LandingOmSusan = () => {
                 <h4 className="font-light text-gray-800">Teoretisk fundament:</h4>
                 <div className="space-y-1 text-gray-600">
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Jung's analytiske psykologi</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Systemisk tænkning</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>NLP metoden</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Intuition og energiarbejde</div>
                   </div>
                 </div>

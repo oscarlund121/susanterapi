@@ -117,7 +117,7 @@ const LandingProblemer = () => {
                 <div className="space-y-3">
                   {area.problems.map((problem, idx) => (
                     <div key={idx} className="flex items-start space-x-3">
-                      <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                      <div className="bullet-point"></div>
                       <span className="text-sm text-gray-700 font-light">
                         {problem}
                       </span>

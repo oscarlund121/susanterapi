@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import LandingHero from "./LandingHero";
+
 import LandingTilbyder from "./LandingTilbyder";
 import LandingOmSusan from "./LandingOmSusan";
 import LandingMetoder from "./LandingMetoder"; 
@@ -12,8 +12,7 @@ import LandingForloeb from "./LandingForloeb";
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
-      {/* Hero med Susans vision */}
-      <LandingHero />
+   
       
       {/* Hvad jeg tilbyder - simpelt 2-kolonne layout */}
       <LandingTilbyder />

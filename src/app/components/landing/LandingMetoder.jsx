@@ -57,27 +57,27 @@ const LandingMetoder = () => {
                 <h4 className="font-light text-gray-800">Hjælper med:</h4>
                 <div className="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Traumer og PTSD</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Angst og fobier</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Chok og kriser</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Fastlåsthed</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Negative tankemønstre</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Uforklarlige reaktioner</div>
                   </div>
                 </div>
@@ -137,27 +137,27 @@ const LandingMetoder = () => {
                 <h4 className="font-light text-gray-800">Anvendes til:</h4>
                 <div className="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Familie- og parterapi</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Forældreguidning</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Relationsproblemer</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Kommunikationsvanskeligheder</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Følelsesregulering</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Uro i familien</div>
                   </div>
                 </div>
@@ -201,27 +201,27 @@ const LandingMetoder = () => {
                 <h4 className="font-light text-gray-800">Skaber:</h4>
                 <div className="grid md:grid-cols-2 gap-2 text-sm text-gray-600">
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Indre ro og balance</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Klarhed og indsigt</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Forbindelse til intuition</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Energi og vitalitet</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Spirituel udvikling</div>
                   </div>
                   <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
+                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
                     <div>Manifestation af ønsker</div>
                   </div>
                 </div>
