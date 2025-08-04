@@ -38,12 +38,12 @@ const Header = () => {
             className="text-black rotate-[30deg]"
             strokeWidth={1}
           />
-          <h1 className="font-normal text-4xl text-center ">
+          <h2 className="font-normal text-4xl text-center ">
             Psykoterapi
-          </h1>
-          <h2 className="font-light text-xl mb-12 text-center">
-            v. Susan Albertsen
           </h2>
+          <h4 className="font-light text-xl mb-12 text-center">
+            v. Susan Albertsen
+          </h4>
           <div className="flex flex-col gap-8 items-center font-light mb-12 text-base">
             <Link href="/">Forside</Link>
             <Link href="/ydelser">Terapi</Link>

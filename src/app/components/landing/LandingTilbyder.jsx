@@ -7,7 +7,7 @@ const LandingTilbyder = () => {
     <section className="py-20 md:py-32">
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center flex flex-col items- justify-center mb-16 md:mb-24">
+        <div className="text-left flex flex-col items- justify-center mb-16 md:mb-24">
           <h2 className="text-4xl md:text-5xl lg:text-6xl font-light text-gray-800 mb-8">
             Hvad jeg tilbyder
           </h2>

@@ -13,12 +13,12 @@ const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
    
+      {/* Om Susan - baggrund og erfaring */}
+      <LandingOmSusan />
       
       {/* Hvad jeg tilbyder - simpelt 2-kolonne layout */}
       <LandingTilbyder />
       
-      {/* Om Susan - baggrund og erfaring */}
-      <LandingOmSusan />
       
       {/* Detaljerede behandlingsmetoder */}
       <LandingMetoder />
