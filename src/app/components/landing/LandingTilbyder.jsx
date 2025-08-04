@@ -26,15 +26,15 @@ const LandingTilbyder = () => {
         {/* Fire hovedområder */}
         <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 px-6">
           {/* Psykoterapi */}
-          <div className="bg-white shadow-sm overflow-hidden rounded-lg">
+          <div className="bg-white shadow-sm overflow-hidden ">
             <div className="relative h-48">
               <Image
                 src="/images/tree-touch.jpg"
                 alt="Psykoterapi"
                 fill
-                className="object-cover rounded-t-lg"
+                className="object-cover "
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-t-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
             <div className="p-6 space-y-4">
               <h5 className="text-xl font-light text-gray-800">
@@ -55,15 +55,15 @@ const LandingTilbyder = () => {
           </div>
 
           {/* Chok-forløsning */}
-          <div className="bg-white shadow-sm overflow-hidden rounded-lg">
+          <div className="bg-white shadow-sm overflow-hidden ">
             <div className="relative h-48">
               <Image
                 src="/images/hand-on-chest-2.jpg"
                 alt="Chok-forløsning"
                 fill
-                className="object-cover rounded-t-lg"
+                className="object-cover "
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-t-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
             <div className="p-6 space-y-4">
               <h5 className="text-xl font-light text-gray-800">
@@ -83,15 +83,15 @@ const LandingTilbyder = () => {
           </div>
 
           {/* Meditation */}
-          <div className="bg-white shadow-sm overflow-hidden rounded-lg">
+          <div className="bg-white shadow-sm overflow-hidden ">
             <div className="relative h-48">
               <Image
                 src="/images/sitting-closed.jpg"
                 alt="Meditation"
                 fill
-                className="object-cover rounded-t-lg"
+                className="object-cover "
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-t-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
             <div className="p-6 space-y-4">
               <h5 className="text-xl font-light text-gray-800">
@@ -111,15 +111,15 @@ const LandingTilbyder = () => {
           </div>
 
           {/* Familie- og parterapi */}
-          <div className="bg-white shadow-sm overflow-hidden rounded-lg">
+          <div className="bg-white shadow-sm overflow-hidden ">
             <div className="relative h-48">
               <Image
                 src="/images/walk.jpg"
                 alt="Familie- og parterapi"
                 fill
-                className="object-cover rounded-t-lg"
+                className="object-cover "
               />
-              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent rounded-t-lg"></div>
+              <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
             <div className="p-6 space-y-4">
               <h5 className="text-xl font-light text-gray-800">
