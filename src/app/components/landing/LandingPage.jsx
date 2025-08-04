@@ -8,18 +8,22 @@ import LandingProblemer from "./LandingProblemer";
 import LandingMaalgrupper from "./LandingMaalgrupper";
 import LandingUdtalelser from "./LandingUdtalelser";
 import LandingForloeb from "./LandingForloeb";
+import LandingQuote from "./LandingQuote";
 
 const LandingPage = () => {
   return (
     <div className="min-h-screen bg-white">
    
-      {/* Om Susan - baggrund og erfaring */}
-      <LandingOmSusan />
       
       {/* Hvad jeg tilbyder - simpelt 2-kolonne layout */}
       <LandingTilbyder />
       
-      
+      {/* Om Susan - baggrund og erfaring */}
+      <LandingOmSusan />
+
+      {/* Quote - LandingQuote */}
+      <LandingQuote />
+
       {/* Detaljerede behandlingsmetoder */}
       <LandingMetoder />
       

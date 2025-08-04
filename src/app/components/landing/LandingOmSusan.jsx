@@ -1,128 +1,143 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import { IoCheckmark } from "react-icons/io5";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const LandingOmSusan = () => {
   return (
-    <section className="py-20 md:py-32 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
-        <div className="grid lg:grid-cols-2 gap-16 items-center">
-          
-          {/* Billede */}
-          <div className="relative">
-            <div className="relative h-96 lg:h-[500px]">
-              <Image
-                src="/images/profile.jpg"
-                alt="Susan Albertsen - Psykoterapeut"
-                fill
-                className="object-cover shadow-lg"
-              />
-              <div className="absolute inset-0 bg-black/5"></div>
-            </div>
-            
-            {/* Kredibilitet badge */}
-            <div className="absolute -bottom-8 -right-8 bg-white shadow-lg p-6 max-w-xs">
-              <div className="text-center">
-                <div className="text-2xl font-light text-gray-800 mb-2">20+ år</div>
-                <div className="text-sm text-gray-600 font-light">erfaring med børn, unge og familier</div>
-              </div>
-            </div>
-          </div>
-
-          {/* Indhold */}
-          <div className="space-y-8">
-            <div>
-              <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
-                Om Susan Albertsen
-              </h2>
-              <div className="w-16 h-px bg-gray-800 mb-8"></div>
-            </div>
-
-            <div className="space-y-6 text-gray-700 font-light leading-relaxed">
-              <p className="text-lg">
-                Mit navn er Susan Albertsen og jeg er uddannet psykoterapeut hos 
-                Essentiel integrativ essens, psyke, krop og helbredsterapi (EIP), 
-                ved Karen Aaes på Essentielt institut i Århus.
-              </p>
-              
-              <p>
-                Jeg har arbejdet i skoleverdenen i næsten 20 år og har derigennem 
-                fået stor indblik i børn, unge og familier. Det er her jeg har 
-                erhvervet mine erfaringer teoretisk og i praksis med mentalisering.
-              </p>
-
-              <p>
-                Essentielt institut er godkendt af og medlem af EAIP (European 
-                Association for Integrative Psychotherapy) siden 2004. De metoder 
-                jeg bruger i terapien er anerkendt både i Danmark og i udlandet.
-              </p>
-            </div>
-
-            {/* Uddannelse og tilgang */}
-            <div className="bg-white p-8 shadow-sm">
-              <h3 className="text-xl font-light text-gray-800 mb-4">
-                Min tilgang
-              </h3>
-              <blockquote className="text-gray-600 font-light italic leading-relaxed border-l-2 border-gray-300 pl-6">
-                "Vi kan kun skabe varig transformationer i os selv, hvis vi gør det 
-                ud fra ren ubetinget kærlighed. Essens i terapien er at være helhjertet 
-                – at have hele hjertet med."
-                <footer className="text-sm text-gray-500 mt-2 not-italic">
-                  - Karen Aaes, Essentielt Institut
-                </footer>
-              </blockquote>
-            </div>
-
-            {/* Metoder */}
-            <div className="grid md:grid-cols-2 gap-6 text-sm">
-              <div className="space-y-2">
-                <h4 className="font-light text-gray-800">Specialiseringer:</h4>
-                <div className="space-y-1 text-gray-600">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
-                    <div>Essentiel Integrativ Psykoterapi</div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
-                    <div>EMDR (WHO-anerkendt)</div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
-                    <div>Mentaliserende tilgang</div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
-                    <div>Chok- og traumeforløsning</div>
-                  </div>
-                </div>
-              </div>
-              
-              <div className="space-y-2">
-                <h4 className="font-light text-gray-800">Teoretisk fundament:</h4>
-                <div className="space-y-1 text-gray-600">
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
-                    <div>Jung's analytiske psykologi</div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
-                    <div>Systemisk tænkning</div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
-                    <div>NLP metoden</div>
-                  </div>
-                  <div className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0 rounded-full"></div>
-                    <div>Intuition og energiarbejde</div>
-                  </div>
-                </div>
+    <div className="max-w-7xl mx-auto px-4 py-10 mt-10 ">
+      <div className="grid lg:grid-cols-2 gap-16">
+        <div className="relative h-96 lg:h-[500px]">
+          <Image
+            src="/images/momma-smile.jpg"
+            alt="Susan Albertsen - Psykoterapeut"
+            fill
+            className="object-cover object-[50%_20%] shadow"
+          />
+          <div className="absolute -bottom-8 -right-8 bg-white/50 rounded-2xl shadow-sm p-6 ">
+            <div className="text-center">
+              <div className="text-2xl font-light mb-2">20+ år</div>
+              <div className="text-base  font-light">
+                erfaring med børn, unge og familier
               </div>
             </div>
           </div>
         </div>
+
+        {/* Indhold */}
+        <div className="flex flex-col">
+          <div className="space-y-8">
+            <div>
+              <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
+                Om mig
+              </h2>
+              <div className="w-16 h-px bg-black mb-8"></div>
+            </div>
+
+            <div className="space-y-6 text-gray-700 font-light leading-relaxed">
+              <p className="text-lg">
+                Mit navn er Susan Albertsen og jeg er uddannet psykoterapeut hos
+                Essentiel integrativ essens, psyke, krop og helbredsterapi
+                (EIP), ved Karen Aaes på Essentielt institut i Århus.
+              </p>
+
+              <p>
+                Jeg har arbejdet i skoleverdenen i næsten 20 år og har
+                derigennem fået stor indblik i børn, unge og familier. Det er
+                her jeg har erhvervet mine erfaringer teoretisk og i praksis med
+                mentalisering.
+              </p>
+
+              <p>
+                Essentielt institut er godkendt af og medlem af EAIP (European
+                Association for Integrative Psychotherapy) siden 2004. De
+                metoder jeg bruger i terapien er anerkendt både i Danmark og i
+                udlandet.
+              </p>
+            </div>
+
+            {/* Metoder */}
+            <div className="max-h-96 overflow-y-auto">
+              <Accordion type="single" collapsible className="w-full space-y-2">
+                <AccordionItem value="specialiseringer" className="border-gray-100">
+                  <AccordionTrigger className="text-left hover:no-underline py-3">
+                    <span className="text-base font-medium text-white">Specialiseringer</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pt-2 pb-4">
+                    <ul className="space-y-2 px-2">
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-black">Essentiel Integativ Psykoterapi</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-black">EMDR (WHO-anerkendt)</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-black">Mentaliserende tilgang</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-black">Chok- og traumeforløsning</span>
+                      </li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="fundament" className="border-gray-100">
+                  <AccordionTrigger className="text-left hover:no-underline py-3">
+                    <span className="text-base font-medium text-white">Teoretisk fundament</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pt-2 pb-4">
+                    <ul className="space-y-2">
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-black">Jung's analytiske psykologi</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-black">Systemisk tænkning</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-black">NLP metoden</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-black">Intuition og energiarbejde</span>
+                      </li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+              </Accordion>
+            </div>
+          </div>
+        </div>
       </div>
-    </section>
+    </div>
   );
 };
 
