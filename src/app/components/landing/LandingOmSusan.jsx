@@ -11,7 +11,7 @@ import {
 
 const LandingOmSusan = () => {
   return (
-    <div className="max-w-7xl mx-auto px-4 py-10 mt-10 ">
+    <div className="max-w-7xl mx-auto px-0 py-10 mt-10 ">
       <div className="grid lg:grid-cols-2 gap-16">
         <div className="relative h-96 lg:h-[500px]">
           <Image
@@ -34,10 +34,13 @@ const LandingOmSusan = () => {
         <div className="flex flex-col">
           <div className="space-y-8">
             <div>
+              <span className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
+                Din terapeut
+              </span>
               <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
                 Om mig
               </h2>
-              <div className="w-16 h-px bg-black mb-8"></div>
+              <div className="w-20 h-0.5 bg-green-600 mb-8"></div>
             </div>
 
             <div className="space-y-6 text-gray-700 font-light leading-relaxed">
@@ -65,69 +68,69 @@ const LandingOmSusan = () => {
             {/* Metoder */}
             <div className="max-h-96 overflow-y-auto">
               <Accordion type="single" collapsible className="w-full space-y-2">
-                <AccordionItem value="specialiseringer" className="border-gray-100">
-                  <AccordionTrigger className="text-left hover:no-underline py-3">
-                    <span className="text-base font-medium text-white">Specialiseringer</span>
+                <AccordionItem value="specialiseringer" className="border-gray-100 bg-white rounded-lg">
+                  <AccordionTrigger className="text-left hover:no-underline py-3 px-4">
+                    <span className="text-base font-medium text-gray-800">Specialiseringer</span>
                   </AccordionTrigger>
-                  <AccordionContent className="pt-2 pb-4">
-                    <ul className="space-y-2 px-2">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-black">Essentiel Integativ Psykoterapi</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-black">EMDR (WHO-anerkendt)</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-black">Mentaliserende tilgang</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-black">Chok- og traumeforløsning</span>
-                      </li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="fundament" className="border-gray-100">
-                  <AccordionTrigger className="text-left hover:no-underline py-3">
-                    <span className="text-base font-medium text-white">Teoretisk fundament</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="pt-2 pb-4">
+                  <AccordionContent className="pt-2 pb-4 px-4">
                     <ul className="space-y-2">
                       <li className="flex items-start space-x-3">
                         <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <IoCheckmark className="text-green-600" size={14} />
                         </div>
-                        <span className="text-base text-black">Jung's analytiske psykologi</span>
+                        <span className="text-base text-gray-800">Essentiel Integativ Psykoterapi</span>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <IoCheckmark className="text-green-600" size={14} />
                         </div>
-                        <span className="text-base text-black">Systemisk tænkning</span>
+                        <span className="text-base text-gray-800">EMDR (WHO-anerkendt)</span>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <IoCheckmark className="text-green-600" size={14} />
                         </div>
-                        <span className="text-base text-black">NLP metoden</span>
+                        <span className="text-base text-gray-800">Mentaliserende tilgang</span>
                       </li>
                       <li className="flex items-start space-x-3">
                         <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
                           <IoCheckmark className="text-green-600" size={14} />
                         </div>
-                        <span className="text-base text-black">Intuition og energiarbejde</span>
+                        <span className="text-base text-gray-800">Chok- og traumeforløsning</span>
+                      </li>
+                    </ul>
+                  </AccordionContent>
+                </AccordionItem>
+
+                <AccordionItem value="fundament" className="border-gray-100 bg-white rounded-lg">
+                  <AccordionTrigger className="text-left hover:no-underline py-3 px-4">
+                    <span className="text-base font-medium text-gray-800">Teoretisk fundament</span>
+                  </AccordionTrigger>
+                  <AccordionContent className="pt-2 pb-4 px-4">
+                    <ul className="space-y-2">
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-gray-800">Jung's analytiske psykologi</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-gray-800">Systemisk tænkning</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-gray-800">NLP metoden</span>
+                      </li>
+                      <li className="flex items-start space-x-3">
+                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
+                          <IoCheckmark className="text-green-600" size={14} />
+                        </div>
+                        <span className="text-base text-gray-800">Intuition og energiarbejde</span>
                       </li>
                     </ul>
                   </AccordionContent>
