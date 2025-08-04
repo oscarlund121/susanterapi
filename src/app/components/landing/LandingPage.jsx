@@ -24,11 +24,11 @@ const LandingPage = () => {
       {/* Quote - LandingQuote */}
       <LandingQuote />
 
-      {/* Detaljerede behandlingsmetoder */}
-      <LandingMetoder />
-      
       {/* Konkrete problemområder */}
       <LandingProblemer />
+      
+      {/* Detaljerede behandlingsmetoder */}
+      <LandingMetoder />
       
       {/* Hvem jeg hjælper - tre målgrupper */}
       <LandingMaalgrupper />

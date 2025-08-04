@@ -8,51 +8,49 @@ const LandingMetoder = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col items-start mb-16 md:mb-20">
-          <span className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 text-green-600 border-green-600 border-2 rounded-md text-sm font-medium mb-10">
             Mine metoder
           </span>
-          <h2 className="text-gray-800 mb-6">
-            Behandlingsmetoder
-          </h2>
+          <h2 className="text-gray-800 mb-6">Behandlingsmetoder</h2>
           <div className="w-20 h-0.5 bg-green-600 mb-8"></div>
           <p className="text-lg md:text-xl font-light text-gray-600 max-w-3xl leading-relaxed">
-            Jeg anvender evidensbaserede metoder der er anerkendt internationalt 
+            Jeg anvender evidensbaserede metoder der er anerkendt internationalt
             og tilpasset den enkelte klients behov.
           </p>
         </div>
 
         {/* Hovedmetoder */}
         <div className="space-y-20">
-          
           {/* EMDR / Chok-forløsning */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div className="space-y-2">
               <div className="flex items-center space-x-4 mb-6">
-                <span className="bg-green-600 text-white px-4 py-2 text-3xl font-light tracking-wider">
+                <span className="bg-green-600 rounded-xl text-white px-4 py-2 text-3xl font-light tracking-wider flex items-center justify-center min-w-[60px] h-[60px]">
                   01
                 </span>
-                <h3 className="text-2xl md:text-3xl font-light text-gray-800">
-                  EMDR & Chok-forløsning
-                </h3>
+                <h4 className="text-gray-800 mb-0">EMDR & Chok-forløsning</h4>
               </div>
-              
+
               <div className="space-y-4 text-gray-700 font-light leading-relaxed">
                 <p className="text-lg">
-                  <strong className="font-normal">Eye Movement Desensitization and Reprocessing (EMDR)</strong> 
-                  er anerkendt af World Health Organization (WHO) som et effektivt værktøj 
-                  til behandling af traumer og chok.
+                  <strong className="font-normal">
+                    Eye Movement Desensitization and Reprocessing (EMDR)
+                  </strong>
+                  er anerkendt af World Health Organization (WHO) som et
+                  effektivt værktøj til behandling af traumer og chok.
                 </p>
-                
+
                 <p>
-                  Chok, der er lagret i din krop fra oplevelser i dit liv, kan ses som en 
-                  række små programmer, der er blevet installeret i dig. Disse programmer 
-                  aktiveres igen og igen i situationer, der minder om dem, der skabte 
-                  overbelastningen.
+                  Chok, der er lagret i din krop fra oplevelser i dit liv, kan
+                  ses som en række små programmer, der er blevet installeret i
+                  dig. Disse programmer aktiveres igen og igen i situationer,
+                  der minder om dem, der skabte overbelastningen.
                 </p>
-                
+
                 <p>
-                  Gennem chok-forløsning lokaliserer vi disse programmationer, forløser dem 
-                  og hjælper dig til en fornyet energi med følelse af ro, glæde, frihed og kærlighed.
+                  Gennem chok-forløsning lokaliserer vi disse programmationer,
+                  forløser dem og hjælper dig til en fornyet energi med følelse
+                  af ro, glæde, frihed og kærlighed.
                 </p>
               </div>
 
@@ -77,16 +75,20 @@ const LandingMetoder = () => {
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Negative tankemønstre</span>
+                    <span className="text-sm text-black">
+                      Negative tankemønstre
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Uforklarlige reaktioner</span>
+                    <span className="text-sm text-black">
+                      Uforklarlige reaktioner
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
-            
+
             <div className="relative h-96">
               <Image
                 src="/images/hand-on-chest-2.jpg"
@@ -108,32 +110,34 @@ const LandingMetoder = () => {
                   Mentalisering
                 </h3>
               </div>
-              
+
               <div className="space-y-4 text-gray-700 font-light leading-relaxed">
                 <p className="text-lg">
-                  Mentaliserende tilgang hjælper os til at forstå egen og andres adfærd 
-                  ud fra mentale tilstande som følelser, tanker og behov.
+                  Mentaliserende tilgang hjælper os til at forstå egen og andres
+                  adfærd ud fra mentale tilstande som følelser, tanker og behov.
                 </p>
-                
+
                 <p>
-                  At have andres sind på sinde og skabe sikkerhed i relationerne. 
-                  Denne tilgang er særligt effektiv i familie- og parterapi, hvor 
-                  vi arbejder med at forstå dynamikker og skabe tryggere relationer.
+                  At have andres sind på sinde og skabe sikkerhed i
+                  relationerne. Denne tilgang er særligt effektiv i familie- og
+                  parterapi, hvor vi arbejder med at forstå dynamikker og skabe
+                  tryggere relationer.
                 </p>
-                
+
                 <p>
-                  Gennem mentalisering lærer familier at regulere følelser, skabe mening 
-                  i relationerne og åbenhed for læring og vækst.
+                  Gennem mentalisering lærer familier at regulere følelser,
+                  skabe mening i relationerne og åbenhed for læring og vækst.
                 </p>
               </div>
-            
 
               <div className="space-y-3">
                 <h6 className="text-gray-800">Anvendes til:</h6>
                 <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Familie- og parterapi</span>
+                    <span className="text-sm text-black">
+                      Familie- og parterapi
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
@@ -141,15 +145,21 @@ const LandingMetoder = () => {
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Relationsproblemer</span>
+                    <span className="text-sm text-black">
+                      Relationsproblemer
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Kommunikationsvanskeligheder</span>
+                    <span className="text-sm text-black">
+                      Kommunikationsvanskeligheder
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Følelsesregulering</span>
+                    <span className="text-sm text-black">
+                      Følelsesregulering
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
@@ -158,7 +168,7 @@ const LandingMetoder = () => {
                 </ul>
               </div>
             </div>
-                <div className="relative h-96 order-1">
+            <div className="relative h-96 order-1">
               <Image
                 src="/images/walk.jpg"
                 alt="Mentalisering og familieterapi"
@@ -179,24 +189,24 @@ const LandingMetoder = () => {
                   Meditation & Bevidsthed
                 </h3>
               </div>
-              
+
               <div className="space-y-4 text-gray-700 font-light leading-relaxed">
                 <p className="text-lg">
-                  Meditativ fordybelse for harmoni, balance, ro og fred i både krop, 
-                  tanker og følelser. At komme bag om det bevidste sind og ind i en 
-                  dyb indadvendt fokuseret opmærksomhed.
+                  Meditativ fordybelse for harmoni, balance, ro og fred i både
+                  krop, tanker og følelser. At komme bag om det bevidste sind og
+                  ind i en dyb indadvendt fokuseret opmærksomhed.
                 </p>
-                
+
                 <p>
-                  En oplevelse hvor du føler en intens forbindelse med universet eller 
-                  din egen sjæl. Det kan være en følelse af kroppens og visdommens 
-                  reservoir af gemte ressourcer og indsigter.
+                  En oplevelse hvor du føler en intens forbindelse med universet
+                  eller din egen sjæl. Det kan være en følelse af kroppens og
+                  visdommens reservoir af gemte ressourcer og indsigter.
                 </p>
-                
+
                 <p>
-                  Arbejde med loven om tiltrækning og bevidsthed - at få fokus på det 
-                  du gerne vil tiltrække, så det i kroppen flyder naturligt og giver 
-                  god mening i hele dig.
+                  Arbejde med loven om tiltrækning og bevidsthed - at få fokus
+                  på det du gerne vil tiltrække, så det i kroppen flyder
+                  naturligt og giver god mening i hele dig.
                 </p>
               </div>
 
@@ -205,32 +215,44 @@ const LandingMetoder = () => {
                 <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2">
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Indre ro og balance</span>
+                    <span className="text-sm text-black">
+                      Indre ro og balance
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Klarhed og indsigt</span>
+                    <span className="text-sm text-black">
+                      Klarhed og indsigt
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Forbindelse til intuition</span>
+                    <span className="text-sm text-black">
+                      Forbindelse til intuition
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Energi og vitalitet</span>
+                    <span className="text-sm text-black">
+                      Energi og vitalitet
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Spirituel udvikling</span>
+                    <span className="text-sm text-black">
+                      Spirituel udvikling
+                    </span>
                   </li>
                   <li className="flex items-start space-x-3">
                     <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Manifestation af ønsker</span>
+                    <span className="text-sm text-black">
+                      Manifestation af ønsker
+                    </span>
                   </li>
                 </ul>
               </div>
             </div>
-            
+
             <div className="relative h-96">
               <Image
                 src="/images/sitting-closed.jpg"

@@ -8,7 +8,7 @@ const LandingMaalgrupper = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
-          <span className="inline-block px-4 py-2 bg-green-100 text-green-700 rounded-full text-sm font-medium mb-4">
+          <span className="inline-block px-4 py-2 text-green-600 border-green-600 border-2 rounded-md text-sm font-medium mb-10">
             Målgrupper
           </span>
           <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
