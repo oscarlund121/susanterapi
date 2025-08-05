@@ -6,8 +6,8 @@ import BulletList from "../layout/BulletList";
 
 const LandingMaalgrupper = () => {
   return (
-    <section className=" px-22 py-16 bg-gray-50">
-      <div className="">
+    <section className="section-padding bg-gray-50">
+      <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
         <div className="mb-16 md:mb-20">
           <SectionBadge>
@@ -24,7 +24,7 @@ const LandingMaalgrupper = () => {
         </div>
 
         {/* Tre målgrupper */}
-        <div className="grid md:grid-cols-3 gap-8 py-6  items-stretch">
+        <div className="grid md:grid-cols-3 gap-8 items-stretch">
           
           {/* Børn & Familier */}
           <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">

@@ -80,8 +80,8 @@ const LandingProblemer = () => {
   ];
 
   return (
-    <section className=" shadow-md mx-12 mt-15 ">
-      <div className="py-10 px-10 ">
+    <section className="section-padding">
+      <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
         <div className="mb-16 md:mb-20">
           <SectionBadge>
@@ -139,7 +139,7 @@ const LandingProblemer = () => {
         */}
 
         {/* OPTION 2: Badge Header Cards */}
-        <div className="mb-32 px-6">
+        <div className="mb-32">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {problemAreas.map((area, index) => (
               <div key={index} className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col" style={{ minHeight: '450px' }}>

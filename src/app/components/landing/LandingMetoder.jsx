@@ -6,8 +6,8 @@ import BulletList from "../layout/BulletList";
 
 const LandingMetoder = () => {
   return (
-    <section className="py-20 ">
-      <div className="px-22">
+    <section className="section-padding">
+      <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
         <div className="mb-16 md:mb-20">
           <SectionBadge>Mine metoder</SectionBadge>

@@ -5,18 +5,18 @@ import SectionBadge from "../layout/SectionBadge";
 
 const LandingTilbyder = () => {
   return (
-    <section className="py-10 px-10 mt-15  mx-12">
-      <div>
+    <section className="section-padding">
+      <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
         <div className="flex flex-col items-start mb-16 md:mb-20">
           <SectionBadge>
             Terapi hos mig
           </SectionBadge>
-          <h2 className="text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvad jeg tilbyder
           </h2>
           <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-          <p className="text-base md:text-lg font-light text-gray-600  md:max-w-xl leading-relaxed">
+          <p className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
             Jeg tilbyder psykoterapi, chok-forløsning, arbejder med intuition
             og energier, og en mentaliserende tilgang. Gennem terapien lærer
             du at give slip på destruktive følelser, fastlåsthed og
@@ -25,7 +25,7 @@ const LandingTilbyder = () => {
         </div>
 
         {/* Fire hovedområder */}
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 px-6 items-stretch">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-stretch">
           {/* Psykoterapi */}
           <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
             <div className="relative h-48">
@@ -157,8 +157,6 @@ const LandingTilbyder = () => {
           </div>
         </div>
       </div>
-
-        {/* Bundtekst */}
     </section>
   );
 };
