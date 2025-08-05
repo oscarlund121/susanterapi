@@ -50,7 +50,9 @@ const LandingMaalgrupper = () => {
                 />
               </div>
               <div className="flex justify-end mt-4">
-                <YellowButton text="Læs mere" size="small" />
+                <a href="/ydelser" className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto">
+                  Læs mere →
+                </a>
               </div>
             </div>
           </div>
