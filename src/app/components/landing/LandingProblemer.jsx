@@ -83,19 +83,19 @@ const LandingProblemer = () => {
     <section className="section-padding">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
-        <div className="mb-16 md:mb-20">
+        <div className="flex flex-col items-start mb-2 md:mb-6">
           <SectionBadge>
             Problemområder
           </SectionBadge>
           <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvad jeg kan hjælpe med
           </h2>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-          <p className="text-base md:text-lg font-light text-gray-600 max-w-xl">
+          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
             Jeg arbejder med børn, unge og voksne og hjælper med alle former for ubehag. 
             Et chok er bredt defineret og individuelt - mærker du dig fastlåst, ude af 
             dig selv eller ved siden af dig selv, kan vi arbejde med det.
-          </p>
+          </h6>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
         </div>
 
         {/* OPTION 1: Modern Green Cards */}

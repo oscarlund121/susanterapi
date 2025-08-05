@@ -9,18 +9,18 @@ const LandingMaalgrupper = () => {
     <section className="section-padding bg-gray-50">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
-        <div className="mb-16 md:mb-20">
+        <div className="flex flex-col items-start mb-2 md:mb-6">
           <SectionBadge>
             Målgrupper
           </SectionBadge>
           <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvem jeg hjælper
           </h2>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-          <p className="text-base md:text-lg font-light text-gray-600 max-w-xl">
+          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
             Jeg arbejder med børn, unge og voksne og hjælper med alle former for ubehag 
             og fastlåsthed i livet.
-          </p>
+          </h6>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
         </div>
 
         {/* Tre målgrupper */}

@@ -49,29 +49,28 @@ const LandingForloeb = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="section-padding">
+      <div className="max-w-7xl mx-auto container-padding">
         <div className="grid lg:grid-cols-2 gap-16">
           
           {/* Hvordan foregår en session */}
           <div className="space-y-8">
-            <div>
+            <div className="flex flex-col items-start mb-2 md:mb-6">
               <SectionBadge>
                 Session forløb
               </SectionBadge>
               <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
                 Hvordan foregår en session?
               </h2>
-              <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-            </div>
-
-            <div className="space-y-6 text-gray-700 font-light leading-relaxed">
-              <p className="text-lg">
+              <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
                 En terapisession hos mig er en samtale, hvor vi sammen finder frem til 
                 det du ønsker at arbejde med, tale om og komme af med, så du i eget 
                 tempo kommer hen til det du ønsker.
-              </p>
-              
+              </h6>
+              <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
+            </div>
+
+            <div className="space-y-6 text-gray-700 font-light leading-relaxed">              
               <p>
                 Terapisessionerne ser forskelligt ud fordi bevægelsen i terapien for den 
                 enkelte klient er en begyndelse på at åbne op for et højere niveau i dig, 

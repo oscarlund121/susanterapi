@@ -15,16 +15,19 @@ const LandingUdtalelser = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="section-padding">
+      <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
-        <div className="mb-16 md:mb-20">
+        <div className="flex flex-col items-start mb-2 md:mb-6">
           <SectionBadge>
             Anbefalinger
           </SectionBadge>
           <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvad siger klienterne
           </h2>
+          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
+            Her kan du læse hvad tidligere klienter siger om deres oplevelse med terapien.
+          </h6>
           <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
         </div>
 

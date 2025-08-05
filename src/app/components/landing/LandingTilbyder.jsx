@@ -8,20 +8,20 @@ const LandingTilbyder = () => {
     <section className="section-padding">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
-        <div className="flex flex-col items-start mb-16 md:mb-20">
+        <div className="flex flex-col items-start mb-2 md:mb-6">
           <SectionBadge>
             Terapi hos mig
           </SectionBadge>
           <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvad jeg tilbyder
           </h2>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-          <p className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
+          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
             Jeg tilbyder psykoterapi, chok-forløsning, arbejder med intuition
             og energier, og en mentaliserende tilgang. Gennem terapien lærer
             du at give slip på destruktive følelser, fastlåsthed og
             overbevisninger.
-          </p>
+          </h6>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
         </div>
 
         {/* Fire hovedområder */}

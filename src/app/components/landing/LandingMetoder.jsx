@@ -9,14 +9,14 @@ const LandingMetoder = () => {
     <section className="section-padding">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
-        <div className="mb-16 md:mb-20">
+        <div className="flex flex-col items-start mb-2 md:mb-6">
           <SectionBadge>Mine metoder</SectionBadge>
           <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">Behandlingsmetoder</h2>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-          <p className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
+          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
             Jeg anvender evidensbaserede metoder der er anerkendt internationalt
             og tilpasset den enkelte klients behov.
-          </p>
+          </h6>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
         </div>
 
         {/* Metoder som cards */}
