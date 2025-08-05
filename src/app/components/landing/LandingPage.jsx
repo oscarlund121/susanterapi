@@ -8,7 +8,6 @@ import LandingProblemer from "./LandingProblemer";
 import LandingMaalgrupper from "./LandingMaalgrupper";
 import LandingUdtalelser from "./LandingUdtalelser";
 import LandingForloeb from "./LandingForloeb";
-import LandingQuote from "./LandingQuote";
 
 const LandingPage = () => {
   return (
@@ -18,11 +17,8 @@ const LandingPage = () => {
       {/* Hvad jeg tilbyder - simpelt 2-kolonne layout */}
       <LandingTilbyder />
       
-      {/* Om Susan - baggrund og erfaring */}
+      {/* Om Susan - baggrund og erfaring (nu med quote inkluderet) */}
       <LandingOmSusan />
-
-      {/* Quote - LandingQuote */}
-      <LandingQuote />
 
       {/* Konkrete problemområder */}
       <LandingProblemer />

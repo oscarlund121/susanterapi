@@ -5,8 +5,8 @@ import SectionBadge from "../layout/SectionBadge";
 
 const LandingTilbyder = () => {
   return (
-    <section className="py-20">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 px-10 mt-32 shadow-sm mx-12">
+      <div className="  px-4 ">
         {/* Header */}
         <div className="flex flex-col items-start mb-16 md:mb-20">
           <SectionBadge>
@@ -16,7 +16,7 @@ const LandingTilbyder = () => {
             Hvad jeg tilbyder
           </h2>
           <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-          <p className="text-lg md:text-xl font-light text-gray-600 max-w-3xl leading-relaxed">
+          <p className="text-base md:text-lg font-light text-gray-600  md:max-w-xl leading-relaxed">
             Jeg tilbyder psykoterapi, chok-forløsning, arbejder med intuition
             og energier, og en mentaliserende tilgang. Gennem terapien lærer
             du at give slip på destruktive følelser, fastlåsthed og
@@ -139,11 +139,9 @@ const LandingTilbyder = () => {
             </div>
           </div>
         </div>
-
-        {/* Bundtekst */}
-        <div className="text-center mt-16 md:mt-24">
+        <div className="flex items-center justify-center mt-16 md:mt-24">
           <div className="max-w-3xl mx-auto">
-            <p className="text-lg md:text-xl font-light text-gray-300 leading-relaxed">
+            <p className="text-base md:text-lg font-light text-gray-800 max-w-xl mx-auto text-center leading-relaxed">
               I terapien kan du, dit barn, familien eller din partner få åbnet
               op for kroppens naturlige intelligens og med lethed udfolde dine
               ønsker og drømme.
@@ -151,6 +149,8 @@ const LandingTilbyder = () => {
           </div>
         </div>
       </div>
+
+        {/* Bundtekst */}
     </section>
   );
 };

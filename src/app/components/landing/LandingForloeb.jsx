@@ -59,7 +59,7 @@ const LandingForloeb = () => {
               <SectionBadge>
                 Session forløb
               </SectionBadge>
-              <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
+              <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
                 Hvordan foregår en session?
               </h2>
               <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
@@ -133,7 +133,7 @@ const LandingForloeb = () => {
           {/* Priser og pakker */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
+              <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
                 Priser & Varighed
               </h2>
               <div className="w-16 h-px bg-gray-800 mb-8"></div>

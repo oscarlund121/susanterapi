@@ -80,18 +80,18 @@ const LandingProblemer = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 bg-gray-50">
+    <section className="py-20 md:py-32 shadow-lg mx-12">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="mb-16 md:mb-20">
           <SectionBadge>
             Problemområder
           </SectionBadge>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvad jeg kan hjælpe med
           </h2>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl font-light text-gray-600 max-w-4xl mx-auto">
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
+          <p className="text-base md:text-lg font-light text-gray-600 max-w-xl">
             Jeg arbejder med børn, unge og voksne og hjælper med alle former for ubehag. 
             Et chok er bredt defineret og individuelt - mærker du dig fastlåst, ude af 
             dig selv eller ved siden af dig selv, kan vi arbejde med det.

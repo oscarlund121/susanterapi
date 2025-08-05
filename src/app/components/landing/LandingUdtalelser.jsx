@@ -22,7 +22,7 @@ const LandingUdtalelser = () => {
           <SectionBadge>
             Anbefalinger
           </SectionBadge>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
+          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvad siger klienterne
           </h2>
           <div className="w-20 h-0.5 bg-[#1cc18e] mx-auto mb-8"></div>
@@ -33,7 +33,7 @@ const LandingUdtalelser = () => {
           {testimonials.map((testimonial, index) => (
             <div key={index} className="max-w-4xl mx-auto">
               <div className="text-center">
-                <blockquote className="text-lg md:text-xl font-light text-gray-700 leading-relaxed mb-8 italic">
+                <blockquote className="text-base md:text-lg font-light text-gray-700 leading-relaxed mb-8 italic">
                   "{testimonial.text}"
                 </blockquote>
                 <div className="flex justify-center items-center space-x-4">

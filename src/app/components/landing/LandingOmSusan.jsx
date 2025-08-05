@@ -4,23 +4,19 @@ import Image from "next/image";
 import { IoCheckmark } from "react-icons/io5";
 import SectionBadge from "../layout/SectionBadge";
 import BulletList from "../layout/BulletList";
-import {
-  Accordion,
-  AccordionContent,
-  AccordionItem,
-  AccordionTrigger,
-} from "@/components/ui/accordion";
+import { Accordion, AccordionSummary, AccordionDetails } from '@mui/material';
+import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const LandingOmSusan = () => {
   return (
     <section className="py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="mb-16 md:mb-20">
           <SectionBadge>Din terapeut</SectionBadge>
-          <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">Om mig</h2>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mx-auto mb-8"></div>
-          <p className="text-lg md:text-xl font-light text-gray-600 max-w-4xl mx-auto">
+          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">Om mig</h2>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
+          <p className="text-base md:text-lg font-light text-gray-600 max-w-xl">
             Mit navn er Susan Albertsen og jeg er uddannet psykoterapeut med 20+ års 
             erfaring i arbejdet med børn, unge og familier.
           </p>
@@ -33,7 +29,7 @@ const LandingOmSusan = () => {
               {/* Top badge */}
               <div className="bg-[#1cc18e]/10 border-b border-[#1cc18e]/20 p-6">
                 <div className="flex items-center space-x-3 mb-3">
-                  <span className="inline-block px-3 py-1 border rounded-md text-xs font-medium">
+                  <span className="inline-block px-3 py-1 border rounded-md text-xs font-light">
                     01
                   </span>
                 </div>
@@ -75,25 +71,123 @@ const LandingOmSusan = () => {
                     ]} 
                   />
 
-                  <BulletList 
-                    title="Specialiseringer:" 
-                    items={[
-                      "Essentiel Integrativ Psykoterapi",
-                      "EMDR (WHO-anerkendt)",
-                      "Mentaliserende tilgang", 
-                      "Chok- og traumeforløsning"
-                    ]} 
-                  />
+                  <div className="mt-6 space-y-4">
+                    <Accordion 
+                      elevation={0} 
+                      sx={{ 
+                        boxShadow: 'none', 
+                        '&:before': { display: 'none' },
+                        backgroundColor: '#1cc18e/50',
+                        border: '1px solid #1cc18e',
+                        '&:hover': {
+                          backgroundColor: '#1cc18e',
+                          '& .MuiAccordionSummary-content div': {
+                            color: 'white !important',
+                          }
+                        },
+                        '& .MuiAccordionSummary-root': {
+                          padding: '4px 0',
+                          minHeight: 'auto',
+                          '&:hover': {
+                            backgroundColor: 'transparent',
+                          }
+                        }
+                      }}
+                    >
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        sx={{ 
+                          padding: '12px',
+                          minHeight: 'auto',
+                          '& .MuiAccordionSummary-content': {
+                            margin: '8px 0'
+                          },
+                          '& .MuiAccordionSummary-expandIconWrapper': {
+                            color: '#1cc18e',
+                            fontSize: '1rem',
+                            marginTop: '8px',
+                            marginBottom: '8px',
+                            '&.Mui-expanded': {
+                              transform: 'rotate(180deg)',
+                            }
+                          },
+                          '&:hover': {
+                            backgroundColor: 'transparent',
+                          }
+                        }}
+                      >
+                        <div className="text-gray-700 font-bold px-6 text-xs">Specialiseringer:</div>
+                      </AccordionSummary>
+                      <AccordionDetails sx={{ padding: '0 0 12px 12px' }}>
+                        <BulletList 
+                          items={[
+                            "Essentiel Integrativ Psykoterapi",
+                            "EMDR (WHO-anerkendt)",
+                            "Mentaliserende tilgang", 
+                            "Chok- og traumeforløsning"
+                          ]} 
+                        />
+                      </AccordionDetails>
+                    </Accordion>
 
-                  <BulletList 
-                    title="Funderet i:" 
-                    items={[
-                      "Jung's analytiske psykologi",
-                      "Systemisk tænkning",
-                      "NLP metoden",
-                      "Intuition og energiarbejde"
-                    ]} 
-                  />
+                    <Accordion 
+                      elevation={0} 
+                      sx={{ 
+                        boxShadow: 'none', 
+                        '&:before': { display: 'none' },
+                        backgroundColor: 'transparent',
+                        border: '1px solid #1cc18e',
+                        '&:hover': {
+                          backgroundColor: '#1cc18e',
+                          '& .MuiAccordionSummary-content div': {
+                            color: 'white !important',
+                          }
+                        },
+                        '& .MuiAccordionSummary-root': {
+                          padding: '4px 0',
+                          minHeight: 'auto',
+                          '&:hover': {
+                            backgroundColor: 'transparent',
+                          }
+                        }
+                      }}
+                    >
+                      <AccordionSummary
+                        expandIcon={<ExpandMoreIcon />}
+                        sx={{ 
+                          padding: '12px',
+                          minHeight: 'auto',
+                          '& .MuiAccordionSummary-content': {
+                            margin: '8px 0'
+                          },
+                          '& .MuiAccordionSummary-expandIconWrapper': {
+                            color: '#1cc18e',
+                            fontSize: '1rem',
+                            marginTop: '8px',
+                            marginBottom: '8px',
+                            '&.Mui-expanded': {
+                              transform: 'rotate(180deg)',
+                            }
+                          },
+                          '&:hover': {
+                            backgroundColor: 'transparent',
+                          }
+                        }}
+                      >
+                        <div className="text-gray-800 font-bold px-6 text-xs">Teoretisk fundament:</div>
+                      </AccordionSummary>
+                      <AccordionDetails sx={{ padding: '0 0 12px 0' }}>
+                        <BulletList 
+                          items={[
+                            "Jung's analytiske psykologi",
+                            "Systemisk tænkning",
+                            "NLP metoden",
+                            "Intuition og energiarbejde"
+                          ]} 
+                        />
+                      </AccordionDetails>
+                    </Accordion>
+                  </div>
                 </div>
               </div>
             </div>
@@ -106,6 +200,26 @@ const LandingOmSusan = () => {
               fill
               className="object-cover object-[50%_20%] rounded-lg shadow-lg"
             />
+          </div>
+        </div>
+
+        {/* Quote section */}
+        <div className="mt-16 md:mt-20">
+          <div className="max-w-4xl mx-auto">
+            <div className="text-center">
+              <blockquote className="font-light text-gray-800 leading-relaxed mb-8 italic">
+                "Vi kan kun skabe varig transformationer i os selv, hvis vi gør det ud
+                fra ren ubetinget kærlighed. Essens i terapien er at være helhjertet –
+                at have hele hjertet med."
+              </blockquote>
+              <div className="flex justify-center items-center space-x-4">
+                <div className="w-8 h-px bg-gray-300"></div>
+                <cite className="text-gray-500 font-light not-italic tracking-wide text-sm">
+                  Karen Aaes, Essentielt Institut
+                </cite>
+                <div className="w-8 h-px bg-gray-300"></div>
+              </div>
+            </div>
           </div>
         </div>
       </div>
