@@ -1,6 +1,7 @@
 import { Geist, Geist_Mono, Work_Sans, EB_Garamond } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
+import NavStandard from "./components/layout/NavStandard";
 import Footer from "./components/layout/Footer";
 import FooterElegant from "./components/layout/FooterElegant";
 
@@ -24,7 +25,8 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      <body
+      {/* Remote header */}
+      {/*    <body
         className={`${workSans.variable} ${ebGaramond.variable} antialiased`}
       >
         <div className="grid lg:grid-cols-5 grid-cols-1">
@@ -38,6 +40,21 @@ export default function RootLayout({ children }) {
    
           </main>
         </div>
+      </body> */}
+
+      {/* Standard header */}
+      <body
+        className={`${workSans.variable} ${ebGaramond.variable} antialiased`}
+      >
+
+        <NavStandard />
+        <main >
+          {children}
+
+
+        </main>
+        <FooterElegant />
+
       </body>
     </html>
   );
