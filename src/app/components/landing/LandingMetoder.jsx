@@ -6,8 +6,8 @@ import BulletList from "../layout/BulletList";
 
 const LandingMetoder = () => {
   return (
-    <section className="py-20 md:py-32">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20 ">
+      <div className="px-22">
         {/* Header */}
         <div className="mb-16 md:mb-20">
           <SectionBadge>Mine metoder</SectionBadge>
@@ -23,7 +23,7 @@ const LandingMetoder = () => {
         <div className="space-y-12 md:space-y-16">
           {/* EMDR / Chok-forløsning */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-8">
+            <div >
               <div className="bg-white shadow-sm rounded-lg overflow-hidden h-full">
                 {/* Top badge */}
                 <div className="bg-[#1cc18e]/10 border-b border-[#1cc18e]/20 p-6">

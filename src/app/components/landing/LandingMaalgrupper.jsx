@@ -2,11 +2,12 @@
 import React from "react";
 import Image from "next/image";
 import SectionBadge from "../layout/SectionBadge";
+import BulletList from "../layout/BulletList";
 
 const LandingMaalgrupper = () => {
   return (
-    <section className="py-20 md:py-32 bg-gray-50">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className=" px-22 py-16 bg-gray-50">
+      <div className="">
         {/* Header */}
         <div className="mb-16 md:mb-20">
           <SectionBadge>
@@ -23,10 +24,10 @@ const LandingMaalgrupper = () => {
         </div>
 
         {/* Tre målgrupper */}
-        <div className="grid md:grid-cols-3 gap-8">
+        <div className="grid md:grid-cols-3 gap-8 py-6  items-stretch">
           
           {/* Børn & Familier */}
-          <div className="bg-white shadow-sm rounded-lg overflow-hidden">
+          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
             <div className="relative h-48">
               <Image
                 src="/images/flower.jpg"
@@ -35,33 +36,25 @@ const LandingMaalgrupper = () => {
                 className="object-cover"
               />
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex-grow flex flex-col">
               <h3 className="text-xl font-light text-gray-800">
                 Børn & Familier
               </h3>
-              <div className="text-sm text-gray-600 space-y-2 font-light">
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Familiedynamikker og relationer</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Skolefravær og læringsvanskeligheder</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>ADHD og følelsesmæssige udfordringer</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Mentaliserende forældreguidning</div>
-                </div>
+              <div className="flex-grow">
+                <BulletList 
+                  items={[
+                    "Familiedynamikker og relationer",
+                    "Skolefravær og læringsvanskeligheder",
+                    "ADHD og følelsesmæssige udfordringer",
+                    "Mentaliserende forældreguidning"
+                  ]} 
+                />
               </div>
             </div>
           </div>
 
           {/* Unge & Studerende */}
-          <div className="bg-white shadow-sm rounded-lg overflow-hidden">
+          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
             <div className="relative h-48">
               <Image
                 src="/images/sitting.jpg"
@@ -70,33 +63,25 @@ const LandingMaalgrupper = () => {
                 className="object-cover"
               />
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex-grow flex flex-col">
               <h3 className="text-xl font-light text-gray-800">
                 Unge & Studerende
               </h3>
-              <div className="text-sm text-gray-600 space-y-2 font-light">
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Præstationsangst og eksamenstress</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Sociale udfordringer og gruppedannelser</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Usikkerhed og lavt selvværd</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Overgange og nye miljøer</div>
-                </div>
+              <div className="flex-grow">
+                <BulletList 
+                  items={[
+                    "Præstationsangst og eksamenstress",
+                    "Sociale udfordringer og gruppedannelser",
+                    "Usikkerhed og lavt selvværd",
+                    "Overgange og nye miljøer"
+                  ]} 
+                />
               </div>
             </div>
           </div>
 
           {/* Voksne & Par */}
-          <div className="bg-white shadow-sm rounded-lg overflow-hidden">
+          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
             <div className="relative h-48">
               <Image
                 src="/images/hand-on-chest.jpg"
@@ -105,45 +90,25 @@ const LandingMaalgrupper = () => {
                 className="object-cover"
               />
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex-grow flex flex-col">
               <h3 className="text-xl font-light text-gray-800">
                 Voksne & Par
               </h3>
-              <div className="text-sm text-gray-600 space-y-2 font-light">
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Stress, angst og depression</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Parforhold og kæresteproblematikker</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Traumer og sorg</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-[#1cc18e] mt-2 flex-shrink-0 rounded-full"></div>
-                  <div>Personlig udvikling og selvværd</div>
-                </div>
+              <div className="flex-grow">
+                <BulletList 
+                  items={[
+                    "Stress, angst og depression",
+                    "Parforhold og kæresteproblematikker",
+                    "Traumer og sorg",
+                    "Personlig udvikling og selvværd"
+                  ]} 
+                />
               </div>
             </div>
           </div>
         </div>
 
-        {/* Bundsektion */}
-        <div className="text-center mt-16">
-          <div className="max-w-3xl mx-auto space-y-6">
-            <p className="text-gray-600 font-light leading-relaxed">
-              Kender du fornemmelsen af ikke at føle dig anerkendt som den du er, 
-              eller fastlåst i en situation? Jeg hjælper dig med at finde vej til 
-              frihed, glæde og fornyet energi.
-            </p>
-            <div className="flex justify-center">
-              <div className="w-16 h-px bg-[#1cc18e]"></div>
-            </div>
-          </div>
-        </div>
+    
       </div>
     </section>
   );

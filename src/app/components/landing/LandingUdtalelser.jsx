@@ -16,16 +16,16 @@ const LandingUdtalelser = () => {
 
   return (
     <section className="py-20 md:py-32">
-      <div className="max-w-5xl mx-auto px-4">
+      <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="text-center mb-16 md:mb-20">
+        <div className="mb-16 md:mb-20">
           <SectionBadge>
             Anbefalinger
           </SectionBadge>
           <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvad siger klienterne
           </h2>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mx-auto mb-8"></div>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
         </div>
 
         {/* Testimonials */}

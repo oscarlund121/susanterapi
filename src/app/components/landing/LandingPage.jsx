@@ -30,10 +30,10 @@ const LandingPage = () => {
       <LandingMaalgrupper />
       
       {/* Klientudtalelser */}
-      <LandingUdtalelser />
+      {/* <LandingUdtalelser /> */}
       
       {/* Session forløb og priser */}
-      <LandingForloeb />
+      {/* <LandingForloeb /> */}
     </div>
   );
 };

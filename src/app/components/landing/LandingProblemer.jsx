@@ -80,8 +80,8 @@ const LandingProblemer = () => {
   ];
 
   return (
-    <section className="py-20 md:py-32 shadow-lg mx-12">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className=" shadow-md mx-12 mt-15 ">
+      <div className="py-10 px-10 ">
         {/* Header */}
         <div className="mb-16 md:mb-20">
           <SectionBadge>
@@ -139,35 +139,35 @@ const LandingProblemer = () => {
         */}
 
         {/* OPTION 2: Badge Header Cards */}
-        <div className="mb-32">
-          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
+        <div className="mb-32 px-6">
+          <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {problemAreas.map((area, index) => (
-              <div key={index} className="bg-white shadow-sm rounded-lg overflow-hidden h-full">
-                {/* Top badge */}
-                <div className="bg-[#1cc18e]/10 border-b border-[#1cc18e]/20 p-6">
+              <div key={index} className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col" style={{ minHeight: '450px' }}>
+                {/* Top badge - consistent height */}
+                <div className="bg-[#1cc18e]/10 border-b border-[#1cc18e]/20 p-6 flex-shrink-0" style={{ minHeight: '140px' }}>
                   <div className="flex items-center space-x-3 mb-3">
-                    <span className="inline-block px-3 py-1  border rounded-md text-xs font-medium">
+                    <span className="inline-block px-3 py-1 border rounded-md text-xs font-medium">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </div>
-                  <h4 className="text-xl font-light text-gray-800 mb-2">
-                    {area.category}
-                  </h4>
-                  <p className="text-sm text-gray-600 font-light leading-relaxed">
-                    {area.description}
-                  </p>
+                  <div className="flex flex-col justify-between h-full">
+                    <h5 className="text-xl font-light text-gray-800 mb-2">
+                      {area.category}
+                    </h5>
+                    <p className="text-sm text-gray-600 font-light leading-relaxed">
+                      {area.description}
+                    </p>
+                  </div>
                 </div>
 
-                {/* Content */}
-                <div className="p-6">
+                {/* Content - equal distribution */}
+                <div className="p-6 flex-1 flex flex-col justify-center">
                   <BulletList items={area.problems} />
                 </div>
               </div>
             ))}
           </div>
-        </div>
-
-        {/* OPTION 3: Minimal Border Cards */}
+        </div>        {/* OPTION 3: Minimal Border Cards */}
         {/*
         <div className="mb-32">
           <h3 className="text-2xl font-light text-gray-800 mb-8 text-center">Option 3: Minimal Border Cards</h3>

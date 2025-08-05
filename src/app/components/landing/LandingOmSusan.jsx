@@ -9,22 +9,22 @@ import ExpandMoreIcon from '@mui/icons-material/ExpandMore';
 
 const LandingOmSusan = () => {
   return (
-    <section className="py-20 md:py-32">
-      <div className="max-w-7xl mx-auto px-4">
+    <section className="py-20  md:py-32">
+      <div className=" mx-16 px-4">
         {/* Header */}
         <div className="mb-16 md:mb-20">
           <SectionBadge>Din terapeut</SectionBadge>
           <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">Om mig</h2>
           <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-          <p className="text-base md:text-lg font-light text-gray-600 max-w-xl">
+          <p className="text-base md:text-lg font-light text-gray-600 max-w-lg">
             Mit navn er Susan Albertsen og jeg er uddannet psykoterapeut med 20+ års 
             erfaring i arbejdet med børn, unge og familier.
           </p>
         </div>
 
         {/* Enkelt Card */}
-        <div className="grid lg:grid-cols-2 gap-12 items-center">
-          <div className="space-y-8">
+        <div className="grid lg:grid-cols-2 gap-8 px-6 items-center">
+          <div className="">
             <div className="bg-white shadow-sm rounded-lg overflow-hidden h-full">
               {/* Top badge */}
               <div className="bg-[#1cc18e]/10 border-b border-[#1cc18e]/20 p-6">
@@ -77,20 +77,23 @@ const LandingOmSusan = () => {
                       sx={{ 
                         boxShadow: 'none', 
                         '&:before': { display: 'none' },
-                        backgroundColor: '#1cc18e/50',
+                        backgroundColor: 'white',
                         border: '1px solid #1cc18e',
                         '&:hover': {
-                          backgroundColor: '#1cc18e',
-                          '& .MuiAccordionSummary-content div': {
-                            color: 'white !important',
+                          backgroundColor: 'white',
+                          '& .MuiAccordionSummary-root': {
+                            backgroundColor: '#1cc18e',
+                            '& .MuiAccordionSummary-content div': {
+                              color: 'white !important',
+                            },
+                            '& .MuiAccordionSummary-expandIconWrapper': {
+                              color: 'white !important',
+                            }
                           }
                         },
                         '& .MuiAccordionSummary-root': {
                           padding: '4px 0',
                           minHeight: 'auto',
-                          '&:hover': {
-                            backgroundColor: 'transparent',
-                          }
                         }
                       }}
                     >
@@ -135,20 +138,23 @@ const LandingOmSusan = () => {
                       sx={{ 
                         boxShadow: 'none', 
                         '&:before': { display: 'none' },
-                        backgroundColor: 'transparent',
+                        backgroundColor: 'white',
                         border: '1px solid #1cc18e',
                         '&:hover': {
-                          backgroundColor: '#1cc18e',
-                          '& .MuiAccordionSummary-content div': {
-                            color: 'white !important',
+                          backgroundColor: 'white',
+                          '& .MuiAccordionSummary-root': {
+                            backgroundColor: '#1cc18e',
+                            '& .MuiAccordionSummary-content div': {
+                              color: 'white !important',
+                            },
+                            '& .MuiAccordionSummary-expandIconWrapper': {
+                              color: 'white !important',
+                            }
                           }
                         },
                         '& .MuiAccordionSummary-root': {
                           padding: '4px 0',
                           minHeight: 'auto',
-                          '&:hover': {
-                            backgroundColor: 'transparent',
-                          }
                         }
                       }}
                     >

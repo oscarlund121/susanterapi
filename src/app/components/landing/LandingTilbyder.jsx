@@ -5,8 +5,8 @@ import SectionBadge from "../layout/SectionBadge";
 
 const LandingTilbyder = () => {
   return (
-    <section className="py-20 px-10 mt-32 shadow-sm mx-12">
-      <div className="  px-4 ">
+    <section className="py-10 px-10 mt-15  mx-12">
+      <div>
         {/* Header */}
         <div className="flex flex-col items-start mb-16 md:mb-20">
           <SectionBadge>
@@ -25,9 +25,9 @@ const LandingTilbyder = () => {
         </div>
 
         {/* Fire hovedområder */}
-        <div className="grid md:grid-cols-2 gap-4 md:gap-8 px-6">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 px-6 items-stretch">
           {/* Psykoterapi */}
-          <div className="bg-white shadow-sm overflow-hidden ">
+          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
             <div className="relative h-48">
               <Image
                 src="/images/tree-touch.jpg"
@@ -37,18 +37,20 @@ const LandingTilbyder = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex-grow flex flex-col">
               <h5 className="text-xl font-light text-gray-800">
                 Psykoterapi
               </h5>
-              <p className="text-gray-600 font-light leading-relaxed">
-                Gennem helhjertet terapi lærer du at give slip på destruktive
-                følelser og fastlåsthed. Oplev frihed, glæde og en fornyet
-                energi.
-              </p>
+              <div className="flex-grow">
+                <p className="text-gray-600 font-light leading-relaxed">
+                  Gennem helhjertet terapi lærer du at give slip på destruktive
+                  følelser og fastlåsthed. Oplev frihed, glæde og en fornyet
+                  energi.
+                </p>
+              </div>
               <a 
                 href="/ydelser" 
-                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200"
+                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto"
               >
                 Læs mere →
               </a>
@@ -56,7 +58,7 @@ const LandingTilbyder = () => {
           </div>
 
           {/* Chok-forløsning */}
-          <div className="bg-white shadow-sm overflow-hidden ">
+          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
             <div className="relative h-48">
               <Image
                 src="/images/hand-on-chest-2.jpg"
@@ -66,17 +68,19 @@ const LandingTilbyder = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex-grow flex flex-col">
               <h5 className="text-xl font-light text-gray-800">
                 Chok- og traumeforløsning
               </h5>
-              <p className="text-gray-600 font-light leading-relaxed">
-                EMDR metode til at forløse chok lagret i kroppen. Genvind
-                balance og oplevelse af ro og kærlighed.
-              </p>
+              <div className="flex-grow">
+                <p className="text-gray-600 font-light leading-relaxed">
+                  EMDR metode til at forløse chok lagret i kroppen. Genvind
+                  balance og oplevelse af ro og kærlighed.
+                </p>
+              </div>
               <a 
                 href="/ydelser" 
-                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200"
+                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto"
               >
                 Læs mere →
               </a>
@@ -84,7 +88,7 @@ const LandingTilbyder = () => {
           </div>
 
           {/* Meditation */}
-          <div className="bg-white shadow-sm overflow-hidden ">
+          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
             <div className="relative h-48">
               <Image
                 src="/images/sitting-closed.jpg"
@@ -94,17 +98,19 @@ const LandingTilbyder = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex-grow flex flex-col">
               <h5 className="text-xl font-light text-gray-800">
                 Meditation
               </h5>
-              <p className="text-gray-600 font-light leading-relaxed">
-                Meditativ fordybelse for harmoni og balance. Kom bag om det
-                bevidste sind og oplev intens forbindelse med din sjæl.
-              </p>
+              <div className="flex-grow">
+                <p className="text-gray-600 font-light leading-relaxed">
+                  Meditativ fordybelse for harmoni og balance. Kom bag om det
+                  bevidste sind og oplev intens forbindelse med din sjæl.
+                </p>
+              </div>
               <a 
                 href="/ydelser" 
-                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200"
+                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto"
               >
                 Læs mere →
               </a>
@@ -112,7 +118,7 @@ const LandingTilbyder = () => {
           </div>
 
           {/* Familie- og parterapi */}
-          <div className="bg-white shadow-sm overflow-hidden ">
+          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
             <div className="relative h-48">
               <Image
                 src="/images/walk.jpg"
@@ -122,17 +128,19 @@ const LandingTilbyder = () => {
               />
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
-            <div className="p-6 space-y-4">
+            <div className="p-6 space-y-4 flex-grow flex flex-col">
               <h5 className="text-xl font-light text-gray-800">
                 Familie- og parterapi
               </h5>
-              <p className="text-gray-600 font-light">
-                Mentaliserende tilgang til relationer. Forstå dynamikker og skab
-                sikkerhed i familien og parforhold.
-              </p>
+              <div className="flex-grow">
+                <p className="text-gray-600 font-light leading-relaxed">
+                  Mentaliserende tilgang til relationer. Forstå dynamikker og skab
+                  sikkerhed i familien og parforhold.
+                </p>
+              </div>
               <a 
                 href="/ydelser" 
-                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200"
+                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto"
               >
                 Læs mere →
               </a>
