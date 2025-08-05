@@ -25,32 +25,32 @@ const HeroElegantMinimal = () => (
     {/* Content overlay */}
     <div className="relative z-10 mx-8 px-4">
       <div className="h-[80vh] md:h-[85vh] py-6 md:py-10 flex items-top">
-        
         {/* Left side - Content */}
         <div className=" space-y-8">
           <div className="space-y-6">
-            <SectionBadge >Velkommen</SectionBadge>
+            <SectionBadge>Velkommen</SectionBadge>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-light text-white leading-tight">
               Susan Albertsen
             </h1>
-            <h2>Psykoterapi</h2>           
+            <h2>Psykoterapi</h2>
             <div className="w-20 h-0.5 bg-[#1cc18e]"></div>
-            <p className="text-lg md:text-xl font-light text-white/90 max-w-xl leading-relaxed">
-              Psykoterapi for børn, unge og voksne. Specialist i EMDR, 
+            <p className="text-lg md:text-xl font-light shadow-black shadow-2xl text-white/90 max-w-xl leading-relaxed">
+              Psykoterapi for børn, unge og voksne. Specialist i EMDR,
               mentalisering og chok-forløsning med 20+ års erfaring.
             </p>
           </div>
 
-          <div className="space-y-4 mt-8">
-            <YellowButton 
-              href="/kontakt" 
+          <div className="space-y-4 mt-8 px-6">
+            <YellowButton
+              href="/kontakt"
               text="Book en session"
               size="large"
-              className="shadow-lg"
+              className="shadow-black shadow-2xl "
+              variant="green"
+              direction="right"
             />
           </div>
         </div>
-
       </div>
     </div>
   </div>

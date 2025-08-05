@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import SectionBadge from "../layout/SectionBadge";
+import SectionHeader from "../layout/SectionHeader";
 import BulletList from "../layout/BulletList";
 
 const YdelserSpecialiseringer = ({ ydelser }) => {

@@ -19,6 +19,9 @@ const LandingPage = () => {
       
       {/* Om Susan - baggrund og erfaring (nu med quote inkluderet) */}
       <LandingOmSusan />
+      
+      {/* Hvem jeg hjælper - tre målgrupper */}
+      <LandingMaalgrupper />
 
       {/* Konkrete problemområder */}
       <LandingProblemer />
@@ -26,8 +29,6 @@ const LandingPage = () => {
       {/* Detaljerede behandlingsmetoder */}
       <LandingMetoder />
       
-      {/* Hvem jeg hjælper - tre målgrupper */}
-      <LandingMaalgrupper />
       
       {/* Klientudtalelser */}
       {/* <LandingUdtalelser /> */}

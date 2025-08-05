@@ -3,6 +3,8 @@ import React, { useState } from 'react';
 import Link from 'next/link';
 import { FaCircleChevronRight } from "react-icons/fa6";
 import { FaChevronRight } from "react-icons/fa6";
+import { FaChevronLeft } from "react-icons/fa6";
+
 
 
 const YellowButton = ({
@@ -11,7 +13,8 @@ const YellowButton = ({
   text = 'Book tid nu',
   size = 'medium',
   iconOnly = false,
-  variant = 'yellow' // Ny prop - 'yellow' eller 'green'
+  variant = 'yellow', // 'yellow' eller 'green'
+  direction = 'right' // Ny prop - 'right' eller 'left'
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   
@@ -70,35 +73,49 @@ const YellowButton = ({
           `}
       >
         
+        {/* Tekst i midten */}
         {!iconOnly && (
           <span 
             className={`
               overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out
               ${isHovered 
-                ? 'max-w-[200px] opacity-100 ml-3 underline' 
-                : 'max-w-0 opacity-0 ml-0'
+                ? 'max-w-[200px] opacity-100 mx-3 underline' 
+                : 'max-w-0 opacity-0 mx-0'
               }
             `}
             >
             {text}
           </span>
         )}
-        <FaChevronRight 
-          className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-300 ${isHovered ? 'translate-x-0' : ''}`} 
-        />
+        {/* Pil til venstre, når direction er 'left' */}
+        {direction === 'left' && (
+          <FaChevronLeft 
+            className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-300 ${isHovered ? 'translate-x-0' : ''}`} 
+          />
+        )}
+        
+        
+        {/* Pil til højre, når direction er 'right' (standard) */}
+        {direction === 'right' && (
+          <FaChevronRight 
+            className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-300 ${isHovered ? 'translate-x-0' : ''}`} 
+          />
+        )}
       </div>
     </Link>
   );
 };
 
 // Eksempel på brug:
-// <YellowButton />                        - Standard gul knap med standardtekst
+// <YellowButton />                        - Standard gul knap med pil til højre
+// <YellowButton direction="left" />       - Gul knap med pil til venstre
 // <YellowButton variant="green" />        - Grøn knap med hvid tekst og ikon
+// <YellowButton variant="green" direction="left" /> - Grøn knap med venstre-pil
 // <YellowButton text="Læs mere" />        - Knap med tilpasset tekst
 // <YellowButton size="small" />           - Mindre knap
 // <YellowButton size="large" />           - Større knap 
 // <YellowButton iconOnly={true} />        - Kun ikon, ingen tekst ved hover
 // <YellowButton href="/om-mig" />         - Tilpasset link destination
-// <YellowButton variant="green" size="large" text="Kontakt mig" /> - Kombination
+// <YellowButton variant="green" size="large" direction="left" text="Tilbage" /> - Kombination
 
 export default YellowButton;

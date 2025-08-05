@@ -2,27 +2,24 @@
 import React from "react";
 import Image from "next/image";
 import SectionBadge from "../layout/SectionBadge";
+import SectionHeader from "../layout/SectionHeader";
 
 const LandingTilbyder = () => {
   return (
     <section className="section-padding">
       <div className="max-w-7xl mx-auto container-padding">
-        {/* Header */}
-        <div className="flex flex-col items-start mb-2 md:mb-6">
-          <SectionBadge>
-            Terapi hos mig
-          </SectionBadge>
-          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
-            Hvad jeg tilbyder
-          </h2>
-          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
-            Jeg tilbyder psykoterapi, chok-forløsning, arbejder med intuition
-            og energier, og en mentaliserende tilgang. Gennem terapien lærer
-            du at give slip på destruktive følelser, fastlåsthed og
-            overbevisninger.
-          </h6>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-        </div>
+        {/* Brug det genbrugelige SectionHeader-komponent med gul knap */}
+        <SectionHeader 
+        className="shadow-black shadow-xl "
+          badgeText="Terapi hos mig"
+          title="Hvad jeg tilbyder"
+          description="Jeg tilbyder psykoterapi, chok-forløsning, arbejder med intuition og energier, og en mentaliserende tilgang. Gennem terapien lærer du at give slip på destruktive følelser, fastlåsthed og overbevisninger."
+          buttonText="Book tid nu"
+          buttonHref="/ydelser"
+          buttonVariant="yellow"
+          buttonDirection="right"
+          buttonSize="large"
+        />
 
         {/* Fire hovedområder */}
         <div className="grid md:grid-cols-2 gap-4 md:gap-8 items-stretch">
