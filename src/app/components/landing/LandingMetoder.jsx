@@ -1,38 +1,38 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import SectionBadge from "../layout/SectionBadge";
+import BulletList from "../layout/BulletList";
 
 const LandingMetoder = () => {
   return (
     <section className="py-20 md:py-32">
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
-        <div className="flex flex-col items-start mb-16 md:mb-20">
-          <span className="inline-block px-4 py-2 text-green-600 border-green-600 border-2 rounded-md text-sm font-medium mb-10">
-            Mine metoder
-          </span>
+        <div className="flex flex-col items-start px-6 mb-5 md:mb-20">
+          <SectionBadge>Mine metoder</SectionBadge>
           <h2 className="text-gray-800 mb-6">Behandlingsmetoder</h2>
-          <div className="w-20 h-0.5 bg-green-600 mb-8"></div>
-          <p className="text-lg md:text-xl font-light text-gray-600 max-w-3xl leading-relaxed">
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
+          <p className="text-lg md:text-xl font-light text-gray-800 max-w-3xl leading-relaxed">
             Jeg anvender evidensbaserede metoder der er anerkendt internationalt
             og tilpasset den enkelte klients behov.
           </p>
         </div>
 
         {/* Hovedmetoder */}
-        <div className="space-y-20">
+        <div className="space-y-12 md:space-y-20 px-2">
           {/* EMDR / Chok-forløsning */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-2">
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="bg-green-600 rounded-xl text-white px-4 py-2 text-3xl font-light tracking-wider flex items-center justify-center min-w-[60px] h-[60px]">
+          <div className="grid lg:grid-cols-2 items-center">
+            <div className="space-y-0">
+              <div className="flex flex-col items-start px-6 py-4 bg-[#1cc18e]/10">
+                <span className="inline-block px-3 py-1  mb-4 border rounded-md text-xs font-medium">
                   01
                 </span>
-                <h4 className="text-gray-800 mb-0">EMDR & Chok-forløsning</h4>
+                <h4 className="text-2xl md:text-3xl font-light text-gray-800 mb-0">EMDR & Chok-forløsning</h4>
               </div>
 
-              <div className="space-y-4 text-gray-700 font-light leading-relaxed">
-                <p className="text-lg">
+              <div className="space-y-2 text-gray-700 font-light px-6 pb-4 bg-[#1cc18e]/10 leading-relaxed">
+                <p>
                   <strong className="font-normal">
                     Eye Movement Desensitization and Reprocessing (EMDR)
                   </strong>
@@ -54,42 +54,23 @@ const LandingMetoder = () => {
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <h6 className="text-gray-800">Hjælper med:</h6>
-                <ul className="space-y-4 grid grid-cols-1 md:grid-cols-2">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Traumer og PTSD</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Angst og fobier</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Chok og kriser</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Fastlåsthed</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Negative tankemønstre
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Uforklarlige reaktioner
-                    </span>
-                  </li>
-                </ul>
+              <div className="space-y-5 mt-6 px-6 mb-6 ">
+                <BulletList 
+                  title="Hjælper med:" 
+                  variant="grid"
+                  items={[
+                    "Traumer og PTSD",
+                    "Angst og fobier", 
+                    "Chok og kriser",
+                    "Fastlåsthed",
+                    "Negative tankemønstre",
+                    "Uforklarlige reaktioner"
+                  ]} 
+                />
               </div>
             </div>
 
-            <div className="relative h-96">
+            <div className="relative h-full min-h-[400px]">
               <Image
                 src="/images/hand-on-chest-2.jpg"
                 alt="EMDR og chok-forløsning"
@@ -100,10 +81,10 @@ const LandingMetoder = () => {
           </div>
 
           {/* Mentalisering */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6 lg:order-2">
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="bg-green-600 text-white px-4 py-2 text-3xl font-light tracking-wider">
+          <div className="grid lg:grid-cols-2 items-center lg:shadow-lg">
+            <div className="space-y-0 lg:order-2 ">
+              <div className="flex flex-col items-start px-6 py-4 space-x-4  bg-[#1cc18e]/10">
+                <span className="inline-block px-3 py-1  mb-4 border rounded-md text-xs font-medium">
                   02
                 </span>
                 <h3 className="text-2xl md:text-3xl font-light text-gray-800">
@@ -111,8 +92,8 @@ const LandingMetoder = () => {
                 </h3>
               </div>
 
-              <div className="space-y-4 text-gray-700 font-light leading-relaxed">
-                <p className="text-lg">
+              <div className="space-y-4 text-gray-700 font-light px-6 pb-4 bg-[#1cc18e]/10 leading-relaxed">
+                <p>
                   Mentaliserende tilgang hjælper os til at forstå egen og andres
                   adfærd ud fra mentale tilstande som følelser, tanker og behov.
                 </p>
@@ -130,59 +111,36 @@ const LandingMetoder = () => {
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <h6 className="text-gray-800">Anvendes til:</h6>
-                <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Familie- og parterapi
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Forældreguidning</span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Relationsproblemer
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Kommunikationsvanskeligheder
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Følelsesregulering
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">Uro i familien</span>
-                  </li>
-                </ul>
+              <div className="space-y-5 my-6 px-6 ">
+                <BulletList 
+                  title="Anvendes til:" 
+                  variant="grid"
+                  items={[
+                    "Familie- og parterapi",
+                    "Forældreguidning",
+                    "Relationsproblemer", 
+                    "Kommunikationsvanskeligheder",
+                    "Følelsesregulering",
+                    "Uro i familien"
+                  ]} 
+                />
               </div>
             </div>
-            <div className="relative h-96 order-1">
+            <div className="relative order-1 h-full min-h-[400px]">
               <Image
                 src="/images/walk.jpg"
                 alt="Mentalisering og familieterapi"
                 fill
-                className="object-cover shadow-lg"
+                className="object-cover shadow-lg w-full h-full"
               />
             </div>
           </div>
 
           {/* Meditation & Bevidsthed */}
-          <div className="grid lg:grid-cols-2 gap-12 items-center">
-            <div className="space-y-6">
-              <div className="flex items-center space-x-4 mb-6">
-                <span className="bg-green-600 text-white px-4 py-2 text-3xl font-light tracking-wider">
+          <div className="grid lg:grid-cols-2 items-center">
+            <div className="space-y-0">
+              <div className="flex flex-col items-start px-6 py-4 bg-[#1cc18e]/10">
+                <span className="inline-block px-3 py-1  mb-4 border rounded-md text-xs font-medium">
                   03
                 </span>
                 <h3 className="text-2xl md:text-3xl font-light text-gray-800">
@@ -190,8 +148,8 @@ const LandingMetoder = () => {
                 </h3>
               </div>
 
-              <div className="space-y-4 text-gray-700 font-light leading-relaxed">
-                <p className="text-lg">
+              <div className="space-y-4 text-gray-700 font-light px-6 pb-4 bg-[#1cc18e]/10 leading-relaxed">
+                <p>
                   Meditativ fordybelse for harmoni, balance, ro og fred i både
                   krop, tanker og følelser. At komme bag om det bevidste sind og
                   ind i en dyb indadvendt fokuseret opmærksomhed.
@@ -210,50 +168,23 @@ const LandingMetoder = () => {
                 </p>
               </div>
 
-              <div className="space-y-3">
-                <h6 className="text-gray-800">Skaber:</h6>
-                <ul className="space-y-2 grid grid-cols-1 md:grid-cols-2">
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Indre ro og balance
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Klarhed og indsigt
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Forbindelse til intuition
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Energi og vitalitet
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Spirituel udvikling
-                    </span>
-                  </li>
-                  <li className="flex items-start space-x-3">
-                    <div className="w-2 h-2 bg-green-600 mt-2 flex-shrink-0 rounded-full"></div>
-                    <span className="text-sm text-black">
-                      Manifestation af ønsker
-                    </span>
-                  </li>
-                </ul>
+              <div className="space-y-5 mt-6 px-10 mb-6">
+                <BulletList 
+                  title="Skaber:" 
+                  variant="grid"
+                  items={[
+                    "Indre ro og balance",
+                    "Klarhed og indsigt",
+                    "Forbindelse til intuition",
+                    "Energi og vitalitet", 
+                    "Spirituel udvikling",
+                    "Manifestation af ønsker"
+                  ]} 
+                />
               </div>
             </div>
 
-            <div className="relative h-96">
+            <div className="relative h-full min-h-[400px]">
               <Image
                 src="/images/sitting-closed.jpg"
                 alt="Meditation og bevidsthed"

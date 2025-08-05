@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import SectionBadge from "../layout/SectionBadge";
 
 const LandingTilbyder = () => {
   return (
@@ -8,13 +9,13 @@ const LandingTilbyder = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="flex flex-col items-start mb-16 md:mb-20">
-          <span className="inline-block px-4 py-2 text-green-600 border-green-600 border-2 rounded-md text-sm font-medium mb-10">
+          <SectionBadge>
             Terapi hos mig
-          </span>
+          </SectionBadge>
           <h2 className="text-gray-800 mb-6">
             Hvad jeg tilbyder
           </h2>
-          <div className="w-20 h-0.5 bg-green-600 mb-8"></div>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
           <p className="text-lg md:text-xl font-light text-gray-600 max-w-3xl leading-relaxed">
             Jeg tilbyder psykoterapi, chok-forløsning, arbejder med intuition
             og energier, og en mentaliserende tilgang. Gennem terapien lærer
@@ -24,7 +25,7 @@ const LandingTilbyder = () => {
         </div>
 
         {/* Fire hovedområder */}
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-4 md:gap-8 px-6">
+        <div className="grid md:grid-cols-2 gap-4 md:gap-8 px-6">
           {/* Psykoterapi */}
           <div className="bg-white shadow-sm overflow-hidden ">
             <div className="relative h-48">
@@ -47,7 +48,7 @@ const LandingTilbyder = () => {
               </p>
               <a 
                 href="/ydelser" 
-                className="inline-block text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200"
               >
                 Læs mere →
               </a>
@@ -75,7 +76,7 @@ const LandingTilbyder = () => {
               </p>
               <a 
                 href="/ydelser" 
-                className="inline-block text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200"
               >
                 Læs mere →
               </a>
@@ -103,7 +104,7 @@ const LandingTilbyder = () => {
               </p>
               <a 
                 href="/ydelser" 
-                className="inline-block text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200"
               >
                 Læs mere →
               </a>
@@ -131,7 +132,7 @@ const LandingTilbyder = () => {
               </p>
               <a 
                 href="/ydelser" 
-                className="inline-block text-green-600 hover:text-green-700 font-medium transition-colors duration-200"
+                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200"
               >
                 Læs mere →
               </a>

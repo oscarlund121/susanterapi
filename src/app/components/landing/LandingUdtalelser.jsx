@@ -1,5 +1,6 @@
 "use client";
 import React from "react";
+import SectionBadge from "../layout/SectionBadge";
 
 const LandingUdtalelser = () => {
   const testimonials = [
@@ -18,13 +19,13 @@ const LandingUdtalelser = () => {
       <div className="max-w-5xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
-          <span className="inline-block px-4 py-2 text-green-600 border-green-600 border-2 rounded-md text-sm font-medium mb-10">
+          <SectionBadge>
             Anbefalinger
-          </span>
+          </SectionBadge>
           <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
             Hvad siger klienterne
           </h2>
-          <div className="w-20 h-0.5 bg-green-600 mx-auto mb-8"></div>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mx-auto mb-8"></div>
         </div>
 
         {/* Testimonials */}

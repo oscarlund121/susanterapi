@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import SectionBadge from "../layout/SectionBadge";
 
 const LandingMaalgrupper = () => {
   return (
@@ -8,13 +9,13 @@ const LandingMaalgrupper = () => {
       <div className="max-w-6xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
-          <span className="inline-block px-4 py-2 text-green-600 border-green-600 border-2 rounded-md text-sm font-medium mb-10">
+          <SectionBadge>
             Målgrupper
-          </span>
+          </SectionBadge>
           <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
             Hvem jeg hjælper
           </h2>
-          <div className="w-20 h-0.5 bg-green-600 mx-auto mb-8"></div>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-light text-gray-600 max-w-3xl mx-auto">
             Jeg arbejder med børn, unge og voksne og hjælper med alle former for ubehag 
             og fastlåsthed i livet.

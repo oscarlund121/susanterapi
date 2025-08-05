@@ -27,11 +27,11 @@ export default function RootLayout({ children }) {
       <body
         className={`${workSans.variable} ${ebGaramond.variable} antialiased`}
       >
-        <div className="grid lg:grid-cols-5 grid-cols-1">
+        <div className="grid lg:grid-cols-6 grid-cols-1">
             <div className=" lg:col-span-1">
               <Header />
             </div>
-          <main className="lg:col-span-4 col-span-1">
+          <main className="lg:col-span-5 col-span-1">
             {children}
        
    {     <FooterElegant />}

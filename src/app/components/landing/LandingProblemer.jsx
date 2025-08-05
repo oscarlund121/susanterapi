@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import SectionBadge from "../layout/SectionBadge";
+import BulletList from "../layout/BulletList";
 
 const LandingProblemer = () => {
   const problemAreas = [
@@ -82,13 +84,13 @@ const LandingProblemer = () => {
       <div className="max-w-7xl mx-auto px-4">
         {/* Header */}
         <div className="text-center mb-16 md:mb-20">
-          <span className="inline-block px-4 py-2 text-green-600 border-green-600 border-2 rounded-md text-sm font-medium mb-10">
+          <SectionBadge>
             Problemområder
-          </span>
+          </SectionBadge>
           <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">
             Hvad jeg kan hjælpe med
           </h2>
-          <div className="w-20 h-0.5 bg-green-600 mx-auto mb-8"></div>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mx-auto mb-8"></div>
           <p className="text-lg md:text-xl font-light text-gray-600 max-w-4xl mx-auto">
             Jeg arbejder med børn, unge og voksne og hjælper med alle former for ubehag. 
             Et chok er bredt defineret og individuelt - mærker du dig fastlåst, ude af 
@@ -102,14 +104,14 @@ const LandingProblemer = () => {
           <h3 className="text-2xl font-light text-gray-800 mb-8 text-center">Option 1: Modern Green Cards</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {problemAreas.map((area, index) => (
-              <div key={index} className="bg-white border border-green-200 rounded-lg p-8 h-full hover:shadow-md transition-shadow duration-200">
+              <div key={index} className="bg-white border border-[#1cc18e]/20 rounded-lg p-8 h-full hover:shadow-md transition-shadow duration-200">
                 <div className="space-y-6">
                   <div>
                     <div className="flex items-center justify-between mb-4">
-                      <span className="bg-green-600 text-white px-3 py-1 rounded-full text-xs font-medium">
+                      <span className="bg-[#1cc18e] text-white px-3 py-1 rounded-full text-xs font-medium">
                         {String(index + 1).padStart(2, '0')}
                       </span>
-                      <div className="w-8 h-0.5 bg-green-600"></div>
+                      <div className="w-8 h-0.5 bg-[#1cc18e]"></div>
                     </div>
                     <h3 className="text-xl font-light text-gray-800 mb-3">
                       {area.category}
@@ -122,7 +124,7 @@ const LandingProblemer = () => {
                   <div className="space-y-3">
                     {area.problems.map((problem, idx) => (
                       <div key={idx} className="flex items-start space-x-3">
-                        <div className="w-1.5 h-1.5 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
+                        <div className="w-1.5 h-1.5 bg-#1cc18e rounded-full mt-2 flex-shrink-0"></div>
                         <span className="text-sm text-gray-700 font-light">
                           {problem}
                         </span>
@@ -142,15 +144,15 @@ const LandingProblemer = () => {
             {problemAreas.map((area, index) => (
               <div key={index} className="bg-white shadow-sm rounded-lg overflow-hidden h-full">
                 {/* Top badge */}
-                <div className="bg-green-50 border-b border-green-200 p-6">
+                <div className="bg-[#1cc18e]/10 border-b border-[#1cc18e]/20 p-6">
                   <div className="flex items-center space-x-3 mb-3">
-                    <span className="inline-block px-3 py-1 text-green-600 border-green-600 border rounded-md text-xs font-medium">
+                    <span className="inline-block px-3 py-1  border rounded-md text-xs font-medium">
                       {String(index + 1).padStart(2, '0')}
                     </span>
                   </div>
-                  <h3 className="text-xl font-light text-gray-800 mb-2">
+                  <h4 className="text-xl font-light text-gray-800 mb-2">
                     {area.category}
-                  </h3>
+                  </h4>
                   <p className="text-sm text-gray-600 font-light leading-relaxed">
                     {area.description}
                   </p>
@@ -158,16 +160,7 @@ const LandingProblemer = () => {
 
                 {/* Content */}
                 <div className="p-6">
-                  <div className="space-y-3">
-                    {area.problems.map((problem, idx) => (
-                      <div key={idx} className="flex items-start space-x-3">
-                        <div className="w-2 h-2 bg-green-600 rounded-full mt-2 flex-shrink-0"></div>
-                        <span className="text-sm text-gray-700 font-light">
-                          {problem}
-                        </span>
-                      </div>
-                    ))}
-                  </div>
+                  <BulletList items={area.problems} />
                 </div>
               </div>
             ))}
@@ -180,11 +173,11 @@ const LandingProblemer = () => {
           <h3 className="text-2xl font-light text-gray-800 mb-8 text-center">Option 3: Minimal Border Cards</h3>
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8">
             {problemAreas.map((area, index) => (
-              <div key={index} className="bg-white border-l-4 border-green-600 shadow-sm p-8 h-full">
+              <div key={index} className="bg-white border-l-4 border-#1cc18e shadow-sm p-8 h-full">
                 <div className="space-y-6">
                   <div>
                     <div className="mb-4">
-                      <span className="text-green-600 text-sm font-medium">
+                      <span className="text-#1cc18e text-sm font-medium">
                         {String(index + 1).padStart(2, '0')}
                       </span>
                     </div>
@@ -194,13 +187,13 @@ const LandingProblemer = () => {
                     <p className="text-sm text-gray-600 font-light leading-relaxed mb-4">
                       {area.description}
                     </p>
-                    <div className="w-12 h-0.5 bg-green-600"></div>
+                    <div className="w-12 h-0.5 bg-#1cc18e"></div>
                   </div>
 
                   <div className="space-y-3">
                     {area.problems.map((problem, idx) => (
                       <div key={idx} className="flex items-start space-x-3">
-                        <span className="text-green-600 text-xs mt-1">•</span>
+                        <span className="text-#1cc18e text-xs mt-1">•</span>
                         <span className="text-sm text-gray-700 font-light">
                           {problem}
                         </span>

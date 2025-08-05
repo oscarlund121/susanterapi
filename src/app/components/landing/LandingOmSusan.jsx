@@ -2,6 +2,8 @@
 import React from "react";
 import Image from "next/image";
 import { IoCheckmark } from "react-icons/io5";
+import SectionBadge from "../layout/SectionBadge";
+import BulletList from "../layout/BulletList";
 import {
   Accordion,
   AccordionContent,
@@ -11,136 +13,103 @@ import {
 
 const LandingOmSusan = () => {
   return (
-    <div className="max-w-7xl mx-auto px-0 py-10 mt-10 ">
-      <div className="grid lg:grid-cols-2 gap-16">
-        <div className="relative h-96 lg:h-[500px]">
-          <Image
-            src="/images/momma-smile.jpg"
-            alt="Susan Albertsen - Psykoterapeut"
-            fill
-            className="object-cover object-[50%_20%] shadow"
-          />
-          <div className="absolute -bottom-8 -right-8 bg-white/50 rounded-2xl shadow-sm p-6 ">
-            <div className="text-center">
-              <div className="text-2xl font-light mb-2">20+ år</div>
-              <div className="text-base  font-light">
-                erfaring med børn, unge og familier
+    <section className="py-20 md:py-32">
+      <div className="max-w-7xl mx-auto px-4">
+        {/* Header */}
+        <div className="text-center mb-16 md:mb-20">
+          <SectionBadge>Din terapeut</SectionBadge>
+          <h2 className="text-4xl md:text-5xl font-light text-gray-800 mb-6">Om mig</h2>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mx-auto mb-8"></div>
+          <p className="text-lg md:text-xl font-light text-gray-600 max-w-4xl mx-auto">
+            Mit navn er Susan Albertsen og jeg er uddannet psykoterapeut med 20+ års 
+            erfaring i arbejdet med børn, unge og familier.
+          </p>
+        </div>
+
+        {/* Enkelt Card */}
+        <div className="grid lg:grid-cols-2 gap-12 items-center">
+          <div className="space-y-8">
+            <div className="bg-white shadow-sm rounded-lg overflow-hidden h-full">
+              {/* Top badge */}
+              <div className="bg-[#1cc18e]/10 border-b border-[#1cc18e]/20 p-6">
+                <div className="flex items-center space-x-3 mb-3">
+                  <span className="inline-block px-3 py-1 border rounded-md text-xs font-medium">
+                    01
+                  </span>
+                </div>
+                <h4 className="text-xl font-light text-gray-800 mb-2">
+                  Min baggrund
+                </h4>
+                <p className="text-sm text-gray-600 font-light leading-relaxed">
+                  Uddannet psykoterapeut med stor erfaring inden for børn, unge og familier
+                </p>
+              </div>
+
+              {/* Content */}
+              <div className="p-6">
+                <div className="space-y-6">
+                  <div className="space-y-3 text-gray-700 font-light text-sm leading-relaxed">
+                    <p>
+                      Mit navn er Susan Albertsen og jeg er uddannet psykoterapeut hos
+                      Essentiel integrativ essens, psyke, krop og helbredsterapi (EIP),
+                      ved Karen Aaes på Essentielt institut i Århus.
+                    </p>
+
+                    <p>
+                      Jeg har arbejdet i skoleverdenen i næsten 20 år og har derigennem
+                      fået stor indblik i børn, unge og familier.
+                    </p>
+
+                    <p>
+                      Essentielt institut er godkendt af og medlem af EAIP siden 2004.
+                    </p>
+                  </div>
+
+                  <BulletList 
+                    title="Erfaring med:" 
+                    items={[
+                      "Børn og unge",
+                      "Familier", 
+                      "Skoleverdenen",
+                      "Integrativ terapi"
+                    ]} 
+                  />
+
+                  <BulletList 
+                    title="Specialiseringer:" 
+                    items={[
+                      "Essentiel Integrativ Psykoterapi",
+                      "EMDR (WHO-anerkendt)",
+                      "Mentaliserende tilgang", 
+                      "Chok- og traumeforløsning"
+                    ]} 
+                  />
+
+                  <BulletList 
+                    title="Funderet i:" 
+                    items={[
+                      "Jung's analytiske psykologi",
+                      "Systemisk tænkning",
+                      "NLP metoden",
+                      "Intuition og energiarbejde"
+                    ]} 
+                  />
+                </div>
               </div>
             </div>
           </div>
-        </div>
 
-        {/* Indhold */}
-        <div className="flex flex-col">
-          <div className="space-y-8">
-            <div>
-              <span className="inline-block px-4 py-2 text-green-600 border-green-600 border-2 rounded-md text-sm font-medium mb-10">
-                Din terapeut
-              </span>
-              <h2 className="text-4xl md:text-5xl font-light text-black mb-6">
-                Om mig
-              </h2>
-              <div className="w-20 h-0.5 bg-green-600 mb-8"></div>
-            </div>
-
-            <div className="space-y-6 text-gray-700 font-light leading-relaxed">
-              <p className="text-lg">
-                Mit navn er Susan Albertsen og jeg er uddannet psykoterapeut hos
-                Essentiel integrativ essens, psyke, krop og helbredsterapi
-                (EIP), ved Karen Aaes på Essentielt institut i Århus.
-              </p>
-
-              <p>
-                Jeg har arbejdet i skoleverdenen i næsten 20 år og har
-                derigennem fået stor indblik i børn, unge og familier. Det er
-                her jeg har erhvervet mine erfaringer teoretisk og i praksis med
-                mentalisering.
-              </p>
-
-              <p>
-                Essentielt institut er godkendt af og medlem af EAIP (European
-                Association for Integrative Psychotherapy) siden 2004. De
-                metoder jeg bruger i terapien er anerkendt både i Danmark og i
-                udlandet.
-              </p>
-            </div>
-
-            {/* Metoder */}
-            <div className="max-h-96 overflow-y-auto">
-              <Accordion type="single" collapsible className="w-full space-y-2">
-                <AccordionItem value="specialiseringer" className="border-gray-100 bg-white rounded-lg">
-                  <AccordionTrigger className="text-left hover:no-underline py-3 px-4">
-                    <span className="text-base font-medium text-gray-800">Specialiseringer</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="pt-2 pb-4 px-4">
-                    <ul className="space-y-2">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-gray-800">Essentiel Integativ Psykoterapi</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-gray-800">EMDR (WHO-anerkendt)</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-gray-800">Mentaliserende tilgang</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-gray-800">Chok- og traumeforløsning</span>
-                      </li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-
-                <AccordionItem value="fundament" className="border-gray-100 bg-white rounded-lg">
-                  <AccordionTrigger className="text-left hover:no-underline py-3 px-4">
-                    <span className="text-base font-medium text-gray-800">Teoretisk fundament</span>
-                  </AccordionTrigger>
-                  <AccordionContent className="pt-2 pb-4 px-4">
-                    <ul className="space-y-2">
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-gray-800">Jung's analytiske psykologi</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-gray-800">Systemisk tænkning</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-gray-800">NLP metoden</span>
-                      </li>
-                      <li className="flex items-start space-x-3">
-                        <div className="w-6 h-6 rounded-full bg-green-100 flex items-center justify-center flex-shrink-0 mt-0.5">
-                          <IoCheckmark className="text-green-600" size={14} />
-                        </div>
-                        <span className="text-base text-gray-800">Intuition og energiarbejde</span>
-                      </li>
-                    </ul>
-                  </AccordionContent>
-                </AccordionItem>
-              </Accordion>
-            </div>
+          <div className="relative h-full min-h-[600px]">
+            <Image
+              src="/images/momma-smile.jpg"
+              alt="Susan Albertsen - Psykoterapeut"
+              fill
+              className="object-cover object-[50%_20%] rounded-lg shadow-lg"
+            />
           </div>
         </div>
       </div>
-    </div>
+    </section>
   );
 };
 

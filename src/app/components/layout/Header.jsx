@@ -48,7 +48,7 @@ const Header = () => {
               className="text-black rotate-[30deg] mb-2"
               strokeWidth={0.8}
             />
-            <h2 className=" text-4xl text-center ">Psykoterapi</h2>
+            <h4 className=" text-4xl text-center ">Psykoterapi</h4>
             <h6 className=" text-xl mb-12 text-center">v. Susan Albertsen</h6>
           </div>
           <div className="flex flex-col gap-8 items-center w-full mb-12 text-base">
