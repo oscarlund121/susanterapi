@@ -28,8 +28,6 @@ const MetoderAccordion = ({ ydelser }) => {
               value={`ydelse-${index}`}
               className="border border-gray-200 bg-white shadow-sm"
             > 
-                value={`ydelse-${index}`}
-                className="border border-gray-200 bg-white shadow-sm"
               <AccordionTrigger className="px-6 py-4 text-left hover:no-underline">
                 <div className="flex items-center space-x-4">
                   <div className="w-12 h-12 bg-gray-100 flex items-center justify-center text-gray-600 font-light text-lg">

@@ -3,10 +3,11 @@ import React from "react";
 import Image from "next/image";
 import SectionBadge from "../layout/SectionBadge";
 import BulletList from "../layout/BulletList";
+import YellowButton from "../ui/YellowButton";
 
 const LandingMaalgrupper = () => {
   return (
-    <section className="section-padding bg-gray-50">
+    <section className="section-padding bg-[#fff100]/10 rounded-tr-[250px] rounded-bl-[250px]">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
         <div className="flex flex-col items-start mb-2 md:mb-6">
@@ -20,6 +21,9 @@ const LandingMaalgrupper = () => {
             Jeg arbejder med børn, unge og voksne og hjælper med alle former for ubehag 
             og fastlåsthed i livet.
           </h6>
+          <div className="mt-6 mb-2">
+            <YellowButton text="Book en samtale" href="/kontakt" size="large" />
+          </div>
           <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
         </div>
 
@@ -50,6 +54,9 @@ const LandingMaalgrupper = () => {
                   ]} 
                 />
               </div>
+              <div className="flex justify-end mt-4">
+                <YellowButton text="Læs mere" size="small" />
+              </div>
             </div>
           </div>
 
@@ -76,6 +83,9 @@ const LandingMaalgrupper = () => {
                     "Overgange og nye miljøer"
                   ]} 
                 />
+              </div>
+              <div className="flex justify-end mt-4">
+                <YellowButton text="Læs mere" size="small" />
               </div>
             </div>
           </div>

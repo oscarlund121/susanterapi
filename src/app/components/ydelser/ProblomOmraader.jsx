@@ -1,5 +1,7 @@
 "use client";
 import React from "react";
+import SectionBadge from "../layout/SectionBadge";
+import BulletList from "../layout/BulletList";
 
 const ProblomOmraader = () => {
   const målgrupper = [
@@ -58,31 +60,28 @@ const ProblomOmraader = () => {
   ];
 
   return (
-    <section className="py-16 lg:py-24 bg-gray-50/30">
-      <div className="max-w-6xl mx-auto px-8">
-        <div className="text-center mb-16">
-          <h2 className="text-3xl lg:text-4xl font-light text-gray-800 mb-6">
+    <section className="section-padding">
+      <div className="max-w-7xl mx-auto container-padding">
+        {/* Header */}
+        <div className="flex flex-col items-start mb-2 md:mb-6">
+          <SectionBadge>
+            Målgrupper
+          </SectionBadge>
+          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
             Hvem arbejder jeg med?
           </h2>
-          <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto">
+          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
             Jeg tilbyder terapi til alle aldersgrupper og arbejder med en bred vifte af udfordringer. 
             Her er nogle af de mest almindelige problemer jeg hjælper med.
-          </p>
+          </h6>
+          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
         </div>
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {målgrupper.map((gruppe, index) => (
-            <div key={index} className="bg-white shadow-sm p-8 space-y-6">
+            <div key={index} className="bg-white shadow-sm rounded-lg p-8 space-y-6">
               <h3 className="text-2xl font-light text-gray-800">{gruppe.titel}</h3>
-              
-              <div className="space-y-3">
-                {gruppe.problemer.map((problem, idx) => (
-                  <div key={idx} className="flex items-start space-x-3">
-                    <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                    <div className="text-gray-600 text-sm">{problem}</div>
-                  </div>
-                ))}
-              </div>
+              <BulletList items={gruppe.problemer} />
             </div>
           ))}
         </div>

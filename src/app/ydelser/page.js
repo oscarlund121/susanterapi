@@ -6,6 +6,11 @@ import ProblomOmraader from '../components/ydelser/ProblomOmraader';
 import YdelserHeroMinimal from '../components/ydelser/YdelserHeroMinimal';
 import YdelserHeroText from '../components/ydelser/YdelserHeroText';
 import YdelserHeroCard from '../components/ydelser/YdelserHeroCard';
+import SectionBadge from '../components/layout/SectionBadge';
+import BulletList from '../components/layout/BulletList';
+import PrakiskInfo from '../components/ydelser/PraktiskInfo';
+import YdelserPhilosophy from '../components/ydelser/YdelserPhilosophy';
+import YdelserSpecialiseringer from '../components/ydelser/YdelserSpecialiseringer';
 
 export default function YdelserPage() {
   const ydelser = [
@@ -103,55 +108,17 @@ export default function YdelserPage() {
   ];
 
   return (
-    <main className="min-h-screen bg-white pt-24">
-      {/* Hero Option 1: Minimal med billede */}
-  
+    <main className="min-h-screen bg-white">
+      {/* Hero Section - 3 options to choose from */}
       <YdelserHeroText />
-      
-      {/* Hero Option 2: Ren tekst med linjer */}
-      {/* <YdelserHeroText /> */}
-      
-      {/* Hero Option 3: Card layout */}
+      {/* <YdelserHeroMinimal /> */}
       {/* <YdelserHeroCard /> */}
       
-      {/* Original filosofi sektion - kan bruges med alle heroes */}
-      <section className="py-8 lg:py-16">
-        <div className="max-w-6xl mx-auto px-8">
-          <Card className="p-8 lg:p-12 bg-gray-50/50">
-            <div className="text-center space-y-6">
-              <h2 className="text-2xl lg:text-3xl font-light text-gray-800">
-                Min filosofi
-              </h2>
-              <blockquote className="text-xl font-light text-gray-600 italic">
-                "Jeg tror på, at hvert menneske har en indre visdom og helende kraft. 
-                Min rolle er at skabe et trygt rum, hvor denne kraft kan blomstre, 
-                og guide dig tilbage til din autentiske selv - fuld af glæde, frihed og kærlighed."
-              </blockquote>
-            </div>
-          </Card>
-        </div>
-      </section>
+      {/* Philosophy Section */}
+      <YdelserPhilosophy />
 
-      {/* Ydelser Cards */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-6xl mx-auto px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-light text-gray-800 mb-6">
-              Specialiseringer
-            </h2>
-            <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto">
-              Hver ydelse er tilpasset dine individuelle behov og kan kombineres 
-              for at skabe det mest effektive terapiforløb for dig.
-            </p>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            {ydelser.map((ydelse, index) => (
-              <YdelseCard key={index} ydelse={ydelse} index={index} />
-            ))}
-          </div>
-        </div>
-      </section>
+      {/* Specialiseringer Section */}
+      <YdelserSpecialiseringer ydelser={ydelser} />
 
       {/* Session forløb */}
       <SessionForloeb />
@@ -160,82 +127,30 @@ export default function YdelserPage() {
       <ProblomOmraader />
 
       {/* Praktiske informationer */}
-      <section className="py-16 lg:py-24">
-        <div className="max-w-4xl mx-auto px-8">
-          <div className="text-center mb-16">
-            <h2 className="text-3xl lg:text-4xl font-light text-gray-800 mb-6">
-              Praktiske informationer
-            </h2>
-          </div>
-          
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
-            <Card className="p-8 space-y-6">
-              <h3 className="text-2xl font-light text-gray-800">Sessions</h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-600">Varighed: 1 til 1,5 time pr. session</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-600">Hyppighed: Typisk ugentligt eller hver 14. dag</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-600">Antal: 3-10 sessioner alt efter behov</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-600">Online eller fysisk fremmøde muligt</div>
-                </div>
-              </div>
-            </Card>
-            
-            <Card className="p-8 space-y-6">
-              <h3 className="text-2xl font-light text-gray-800">Forventninger</h3>
-              <div className="space-y-4">
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-600">Åbenhed og ærlig kommunikation</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-600">Villighed til at udforske og eksperimentere</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-600">Respekt for din egen proces og timing</div>
-                </div>
-                <div className="flex items-start space-x-3">
-                  <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                  <div className="text-gray-600">Engagement i hjemmeopgaver mellem sessioner</div>
-                </div>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
+      <PrakiskInfo />
 
       {/* CTA sektion */}
-      <section className="py-16 lg:py-24 bg-gray-50/30">
-        <div className="max-w-4xl mx-auto px-8">
-          <Card className="p-12 text-center space-y-8">
-            <h2 className="text-3xl lg:text-4xl font-light text-gray-800">
-              Klar til at begynde din rejse?
-            </h2>
-            <p className="text-xl font-light text-gray-600 max-w-2xl mx-auto">
-              Jeg glæder mig til at støtte dig på din vej mod healing, vækst og en mere autentisk måde at leve på. 
-              Tag det første skridt i dag.
-            </p>
-            <div className="flex flex-col sm:flex-row gap-4 justify-center">
-              <Button href="/kontakt" size="large">
-                Book en samtale
-              </Button>
-              <Button href="/priser" variant="secondary" size="large">
-                Se priser
-              </Button>
-            </div>
-          </Card>
+      <section className="section-padding bg-gray-50/30">
+        <div className="max-w-7xl mx-auto container-padding">
+          <div className="text-center max-w-4xl mx-auto">
+            <Card className="p-8 md:p-12 space-y-8">
+              <h2 className="text-3xl md:text-4xl font-light text-gray-800">
+                Klar til at begynde din rejse?
+              </h2>
+              <p className="text-base md:text-lg font-light text-gray-600 leading-relaxed max-w-2xl mx-auto">
+                Jeg glæder mig til at støtte dig på din vej mod healing, vækst og en mere autentisk måde at leve på. 
+                Tag det første skridt i dag.
+              </p>
+              <div className="flex flex-col sm:flex-row gap-4 justify-center">
+                <Button href="/kontakt" size="large">
+                  Book en samtale
+                </Button>
+                <Button href="/priser" variant="secondary" size="large">
+                  Se priser
+                </Button>
+              </div>
+            </Card>
+          </div>
         </div>
       </section>
     </main>

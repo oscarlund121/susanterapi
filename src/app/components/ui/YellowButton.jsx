@@ -1,0 +1,104 @@
+"use client";
+import React, { useState } from 'react';
+import Link from 'next/link';
+import { FaCircleChevronRight } from "react-icons/fa6";
+import { FaChevronRight } from "react-icons/fa6";
+
+
+const YellowButton = ({
+  href = '/kontakt', 
+  className = '',
+  text = 'Book tid nu',
+  size = 'medium',
+  iconOnly = false,
+  variant = 'yellow' // Ny prop - 'yellow' eller 'green'
+}) => {
+  const [isHovered, setIsHovered] = useState(false);
+  
+  // Størrelse-konfiguration
+  const sizeClasses = {
+    small: {
+      button: isHovered ? 'pl-5 pr-6 py-2' : 'p-2',
+      icon: 'text-lg',
+    },
+    medium: {
+      button: isHovered ? 'pl-6 pr-8 py-3' : 'p-3',
+      icon: 'text-xl',
+    },
+    large: {
+      button: isHovered ? 'pl-7 pr-10 py-4' : 'p-4',
+      icon: 'text-2xl',
+    },
+  };
+
+  // Farve-konfiguration baseret på variant
+  const variantClasses = {
+    yellow: {
+      bg: 'bg-[#fff100]',
+      text: 'text-black',
+      iconColor: 'text-black',
+    },
+    green: {
+      bg: 'bg-[#1cc18e]',
+      text: 'text-white',
+      iconColor: 'text-white',
+    }
+  };
+
+  // Vælg det relevante størrelsessæt og farvesæt
+  const currentSize = sizeClasses[size] || sizeClasses.medium;
+  const currentVariant = variantClasses[variant] || variantClasses.yellow;
+
+  return (
+    <Link 
+      href={href} 
+      className={`inline-block ${className}`}
+      onMouseEnter={() => setIsHovered(true)}
+      onMouseLeave={() => setIsHovered(false)}
+      onFocus={() => setIsHovered(true)}
+      onBlur={() => setIsHovered(false)}
+    >
+      <div 
+        className={`
+          group flex items-center transition-all duration-300 ease-in-out 
+          ${currentVariant.bg} ${currentVariant.text} font-medium shadow-md hover:shadow-lg
+          ${currentSize.button}
+          ${isHovered 
+            ? 'rounded-full' 
+            : 'rounded-full'
+          }
+          `}
+      >
+        
+        {!iconOnly && (
+          <span 
+            className={`
+              overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out
+              ${isHovered 
+                ? 'max-w-[200px] opacity-100 ml-3 underline' 
+                : 'max-w-0 opacity-0 ml-0'
+              }
+            `}
+            >
+            {text}
+          </span>
+        )}
+        <FaChevronRight 
+          className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-300 ${isHovered ? 'translate-x-0' : ''}`} 
+        />
+      </div>
+    </Link>
+  );
+};
+
+// Eksempel på brug:
+// <YellowButton />                        - Standard gul knap med standardtekst
+// <YellowButton variant="green" />        - Grøn knap med hvid tekst og ikon
+// <YellowButton text="Læs mere" />        - Knap med tilpasset tekst
+// <YellowButton size="small" />           - Mindre knap
+// <YellowButton size="large" />           - Større knap 
+// <YellowButton iconOnly={true} />        - Kun ikon, ingen tekst ved hover
+// <YellowButton href="/om-mig" />         - Tilpasset link destination
+// <YellowButton variant="green" size="large" text="Kontakt mig" /> - Kombination
+
+export default YellowButton;

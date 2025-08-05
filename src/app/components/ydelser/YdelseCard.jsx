@@ -1,10 +1,11 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import BulletList from "../layout/BulletList";
 
 const YdelseCard = ({ ydelse, index }) => {
   return (
-    <div className="bg-white shadow-sm overflow-hidden">
+    <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col">
       <div className="relative h-64">
         <Image
           src={ydelse.image}
@@ -12,39 +13,45 @@ const YdelseCard = ({ ydelse, index }) => {
           fill
           className="object-cover"
         />
+        <div className="absolute inset-0 bg-gradient-to-t from-black/30 to-transparent"></div>
       </div>
-      <div className="p-8 space-y-6">
-        <div className="space-y-4">
-          <div className="flex items-center gap-4">
-            <div className="w-8 h-8 bg-gray-800/50 text-white flex items-center justify-center text-sm font-light">
-              {String(index + 1).padStart(2, '0')}
+      
+      <div className="p-8 flex-1 flex flex-col">
+        <div className="space-y-6">
+          <div className="space-y-4">
+            <div className="flex items-center gap-4">
+              <div className="w-8 h-8 bg-[#1cc18e] text-white flex items-center justify-center text-sm font-medium rounded">
+                {String(index + 1).padStart(2, '0')}
+              </div>
+              <h3 className="text-2xl font-light text-gray-800">{ydelse.title}</h3>
             </div>
-            <h3 className="text-2xl font-light text-gray-800">{ydelse.title}</h3>
+            <p className="text-gray-600 font-light leading-relaxed">{ydelse.description}</p>
           </div>
-          <p className="text-gray-600 font-light">{ydelse.description}</p>
-        </div>
-        
-        <div className="space-y-4">
-          <h4 className="text-lg font-light text-gray-800">Hvad vi arbejder med:</h4>
-          <div className="space-y-2">
-            {ydelse.fokusområder.map((område, idx) => (
-              <div key={idx} className="flex items-start space-x-3">
-                <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                <div className="text-gray-600 text-sm">{område}</div>
-              </div>
-            ))}
-          </div>
-        </div>
-        
-        <div className="space-y-4">
-          <h4 className="text-lg font-light text-gray-800">Metoder:</h4>
-          <div className="space-y-2">
-            {ydelse.metoder.map((metode, idx) => (
-              <div key={idx} className="flex items-start space-x-3">
-                <div className="w-1.5 h-1.5 bg-gray-400 mt-2 flex-shrink-0"></div>
-                <div className="text-gray-600 text-sm">{metode}</div>
-              </div>
-            ))}
+          
+          <div className="grid md:grid-cols-2 gap-6 mt-auto">
+            <div>
+              <h4 className="text-lg font-medium text-gray-800 mb-3">
+                Fokusområder:
+              </h4>
+              <BulletList items={ydelse.fokusområder.slice(0, 4)} />
+              {ydelse.fokusområder.length > 4 && (
+                <div className="text-sm text-gray-500 mt-2">
+                  + {ydelse.fokusområder.length - 4} flere områder
+                </div>
+              )}
+            </div>
+            
+            <div>
+              <h4 className="text-lg font-medium text-gray-800 mb-3">
+                Metoder:
+              </h4>
+              <BulletList items={ydelse.metoder.slice(0, 4)} />
+              {ydelse.metoder.length > 4 && (
+                <div className="text-sm text-gray-500 mt-2">
+                  + {ydelse.metoder.length - 4} flere metoder
+                </div>
+              )}
+            </div>
           </div>
         </div>
       </div>

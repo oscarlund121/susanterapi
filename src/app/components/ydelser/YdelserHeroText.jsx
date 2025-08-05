@@ -3,20 +3,20 @@ import React from "react";
 
 const YdelserHeroText = () => {
   return (
-    <section>
-      <div className="max-w-4xl mx-auto px-8 text-center">
+    <section className="section-padding">
+      <div className="max-w-7xl mx-auto container-padding text-center">
         <div className="space-y-8">
-          <div className="space-y-12">
+          <div className="space-y-8">
             <h1 className="text-4xl lg:text-5xl xl:text-6xl font-light text-gray-800">
               Mine ydelser
             </h1>
             <div className="flex justify-center items-center space-x-6">
-              <div className="w-16 h-px bg-gray-300"></div>
-              <div className="w-16 h-px bg-gray-300"></div>
+              <div className="w-20 h-px bg-[#1cc18e]"></div>
+              <div className="w-20 h-px bg-[#1cc18e]"></div>
             </div>
           </div>
           
-          <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto">
+          <p className="text-xl font-light text-gray-600 max-w-3xl mx-auto leading-relaxed">
             En holistisk tilgang til healing der kombinerer evidensbaserede metoder 
             med intuitive og spirituelle elementer for dyb transformation.
           </p>
