@@ -5,6 +5,7 @@ import SectionBadge from "../layout/SectionBadge";
 import SectionHeader from "../layout/SectionHeader";
 import BulletList from "../layout/BulletList";
 import YellowButton from "../ui/YellowButton";
+import LandingMaalCard from "./LandingMaalCard";
 
 const LandingMaalgrupper = () => {
   return (
@@ -26,96 +27,40 @@ const LandingMaalgrupper = () => {
         <div className="grid md:grid-cols-3 gap-8 items-stretch">
           
           {/* Børn & Familier */}
-          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
-            <div className="relative h-48">
-              <Image
-                src="/images/flower.jpg"
-                alt="Børn og familier"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6 space-y-4 flex-grow flex flex-col">
-              <h4 className="text-xl font-light text-gray-800">
-                Børn & Familier
-              </h4>
-              <div className="h-32 flex items-center">
-                <BulletList 
-                  items={[
-                    "Familiedynamikker og relationer",
-                    "Skolefravær og læringsvanskeligheder",
-                    "ADHD og følelsesmæssige udfordringer",
-                    "Mentaliserende forældreguidning"
-                  ]} 
-                />
-              </div>
-              <div className="flex justify-end mt-4">
-                <a href="/ydelser" className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto">
-                  Læs mere →
-                </a>
-              </div>
-            </div>
-          </div>
+          <LandingMaalCard 
+            title="Børn & Familier"
+            items={[
+              "Familiedynamikker og relationer",
+              "Skolefravær og læringsvanskeligheder",
+              "ADHD og følelsesmæssige udfordringer",
+              "Mentaliserende forældreguidning"
+            ]}
+            variant="minimal"
+          />
 
           {/* Unge & Studerende */}
-          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
-            <div className="relative h-48">
-              <Image
-                src="/images/sitting.jpg"
-                alt="Unge og studerende"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6 space-y-4 flex-grow flex flex-col">
-              <h4 className="text-xl font-light text-gray-800">
-                Unge & Studerende
-              </h4>
-              <div className="h-32 flex items-start">
-                <BulletList 
-                  items={[
-                    "Præstationsangst og eksamenstress",
-                    "Sociale udfordringer og gruppedannelser",
-                    "Usikkerhed og lavt selvværd",
-                    "Overgange og nye miljøer"
-                  ]} 
-                />
-              </div>
-              <div className="flex justify-end mt-4">
-                <YellowButton text="Læs mere" size="small" />
-              </div>
-            </div>
-          </div>
+          <LandingMaalCard 
+            title="Unge & Studerende"
+            items={[
+              "Præstationsangst og eksamenstress",
+              "Sociale udfordringer og gruppedannelser",
+              "Usikkerhed og lavt selvværd",
+              "Overgange og nye miljøer"
+            ]}
+            variant="icon"
+          />
 
           {/* Voksne & Par */}
-          <div className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col h-full">
-            <div className="relative h-48">
-              <Image
-                src="/images/hand-on-chest.jpg"
-                alt="Voksne og par"
-                fill
-                className="object-cover"
-              />
-            </div>
-            <div className="p-6 space-y-4 flex-grow flex flex-col">
-              <h4 className="text-xl font-light text-gray-800">
-                Voksne & Par
-              </h4>
-              <div className="h-32 flex items-start">
-                <BulletList 
-                  items={[
-                    "Stress, angst og depression",
-                    "Parforhold og kæresteproblematikker",
-                    "Traumer og sorg",
-                    "Personlig udvikling og selvværd"
-                  ]} 
-                />
-              </div>
-              <div className="flex justify-end mt-4">
-                <YellowButton text="Læs mere" size="small" />
-              </div>
-            </div>
-          </div>
+          <LandingMaalCard 
+            title="Voksne & Par"
+            items={[
+              "Stress, angst og depression",
+              "Parforhold og kæresteproblematikker",
+              "Traumer og sorg",
+              "Personlig udvikling og selvværd"
+            ]}
+            variant="gradient"
+          />
         </div>
 
     

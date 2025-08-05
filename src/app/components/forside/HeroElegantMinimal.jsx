@@ -19,7 +19,7 @@ const HeroElegantMinimal = () => (
         className="object-cover object-[center_20%]"
       />
       {/* Dark overlay for better text readability */}
-      <div className="absolute inset-0 bg-black/20"></div>
+      <div className="absolute inset-0 bg-[#fff100/20"></div>
     </div>
 
     {/* Content overlay */}
