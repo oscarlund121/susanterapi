@@ -28,7 +28,7 @@ const NavStandard = () => {
       {/* Menu button - All screen sizes */}
       <button
         onClick={toggleMenu}
-        className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white/90 border border-white/20 text-gray-700 hover:bg-white transition-all duration-200 shadow-lg"
+        className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white border border-white/20 hover:text-white hover:bg-[#1cc18e] transition-all duration-600 shadow-lg"
         aria-label="Toggle menu"
       >
         <HiMenuAlt3 className="h-5 w-5" />
@@ -40,7 +40,7 @@ const NavStandard = () => {
           <>
             {/* Background Overlay - Green tint with less opacity */}
             <div 
-              className={`fixed inset-0 bg-[#1cc18e]/30 backdrop-blur-sm z-40 transition-opacity duration-500 ${
+              className={`fixed inset-0 bg-[#fff100]/10 backdrop-blur-sm z-40 transition-opacity duration-600 ${
                 isMenuOpen ? 'opacity-100' : 'opacity-0'
               }`}
               onClick={() => setIsMenuOpen(false)}
@@ -53,25 +53,13 @@ const NavStandard = () => {
                 <div className="w-[100%] md:w-[70%] bg-white/95 backdrop-blur-md shadow-2xl animate-smooth-slide-in rounded-tl-[40px] rounded-bl-[40px] overflow-hidden">
                   
                   {/* Menu Header - Simplified */}
-                  <div className="flex items-center justify-between p-8 border-b border-gray-100">
-                    <div className="flex items-center space-x-3">
-                      <div className="w-10 h-10 bg-gradient-to-br from-[#fff100] to-[#1cc18e] rounded-xl flex items-center justify-center">
-                        <span className="text-lg font-bold text-gray-800">S</span>
-                      </div>
-                      <div>
-                        <span className="text-xl font-light text-gray-800 block">
-                          Susan Albertsen
-                        </span>
-                        <span className="text-sm text-gray-500">
-                          Psykoterapeut
-                        </span>
-                      </div>
-                    </div>
+                  <div className="flex items-end justify-end py-4 border-b border-gray-100">
+                  
                     <button
                       onClick={() => setIsMenuOpen(false)}
-                      className="w-10 h-10 rounded-full bg-gray-100 hover:bg-gray-200 flex items-center justify-center transition-colors duration-200"
+                      className="w-10 h-10 rounded-full bg-white hover:bg-[#1cc18e] flex items-center px-6 py-6 justify-center transition duration-400"
                     >
-                      <HiX className="h-5 w-5 text-gray-600" />
+                      <HiX className="h-6 w-6" />
                     </button>
                   </div>
 
