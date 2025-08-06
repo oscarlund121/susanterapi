@@ -10,14 +10,13 @@ const LandingTilbyder = () => {
       <div className="max-w-7xl mx-auto container-padding">
         {/* Brug det genbrugelige SectionHeader-komponent med gul knap */}
         <SectionHeader 
-        className="shadow-black shadow-xl "
           badgeText="Terapi hos mig"
           title="Hvad jeg tilbyder"
-          description="Jeg tilbyder psykoterapi, chok-forløsning, arbejder med intuition og energier, og en mentaliserende tilgang. Gennem terapien lærer du at give slip på destruktive følelser, fastlåsthed og overbevisninger."
+          description="Jeg tilbyder evidensbaseret psykoterapi med fokus på helhedsorienteret behandling og personlig udvikling."
           buttonText="Book tid nu"
           buttonHref="/ydelser"
           buttonVariant="yellow"
-          buttonDirection="right"
+          buttonDirection="left"
           buttonSize="large"
         />
 

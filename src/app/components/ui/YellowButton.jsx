@@ -21,15 +21,15 @@ const YellowButton = ({
   // Størrelse-konfiguration
   const sizeClasses = {
     small: {
-      button: isHovered ? 'pl-5 pr-6 py-2' : 'p-2',
+      button: isHovered ? 'pl-5 pr-6 py-2' : 'pl-5 pr-6 py-2 sm:p-2', // Åben på små skærme
       icon: 'text-lg',
     },
     medium: {
-      button: isHovered ? 'pl-6 pr-8 py-3' : 'p-3',
+      button: isHovered ? 'pl-6 pr-8 py-3' : 'pl-6 pr-8 py-3 sm:p-3', // Åben på små skærme
       icon: 'text-xl',
     },
     large: {
-      button: isHovered ? 'pl-7 pr-10 py-4' : 'p-4',
+      button: isHovered ? 'pl-7 pr-10 py-4' : 'pl-7 pr-10 py-4 sm:p-4', // Åben på små skærme
       icon: 'text-2xl',
     },
   };
@@ -63,8 +63,8 @@ const YellowButton = ({
     >
       <div 
         className={`
-          group flex items-center transition-all duration-300 ease-in-out 
-          ${currentVariant.bg} ${currentVariant.text} font-medium shadow-md hover:shadow-lg
+          group flex items-start transition-all duration-600 ease-in-out 
+          ${currentVariant.bg} ${currentVariant.text} font-medium
           ${currentSize.button}
           ${isHovered 
             ? 'rounded-full' 
@@ -73,24 +73,24 @@ const YellowButton = ({
           `}
       >
         
+        {/* Pil til venstre, når direction er 'left' */}
         {/* Tekst i midten */}
         {!iconOnly && (
-          <span 
+          <button 
             className={`
-              overflow-hidden whitespace-nowrap transition-all duration-300 ease-in-out
+              overflow-hidden  whitespace-nowrap transition-all duration-600 ease-in-out
               ${isHovered 
                 ? 'max-w-[200px] opacity-100 mx-3 underline' 
-                : 'max-w-0 opacity-0 mx-0'
+                : 'max-w-[200px] opacity-100 mx-3 sm:max-w-0 sm:opacity-0 sm:mx-0'
               }
             `}
             >
             {text}
-          </span>
+          </button>
         )}
-        {/* Pil til venstre, når direction er 'left' */}
         {direction === 'left' && (
           <FaChevronLeft 
-            className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-300 ${isHovered ? 'translate-x-0' : ''}`} 
+            className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-600 ${isHovered ? 'translate-x-0' : ''}`} 
           />
         )}
         
@@ -98,7 +98,7 @@ const YellowButton = ({
         {/* Pil til højre, når direction er 'right' (standard) */}
         {direction === 'right' && (
           <FaChevronRight 
-            className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-300 ${isHovered ? 'translate-x-0' : ''}`} 
+            className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-600 ${isHovered ? 'translate-x-0' : ''}`} 
           />
         )}
       </div>

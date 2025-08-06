@@ -1,5 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Archivo:ital,wght@0,100..900;1,100..900&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,100..900;1,9..144,100..900&display=swap");
 @import "tailwindcss";
+
+:root {
+  --font-fraunces: "Fraunces", serif;
+}
 
 body {
   background: #ffffff;
@@ -8,11 +13,13 @@ body {
   margin: 0;
 }
 
-
-
-
-h1, h2, h3, h4, h5, h6 {
-  font-family: 'Archivo', sans-serif;
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Archivo", sans-serif;
 }
 
 /* Typography System */
@@ -65,7 +72,7 @@ h6 {
 }
 
 p {
-  font-family: var(--font-eb-garamond), serif;
+  font-family: var(--font-fraunces), serif;
   font-size: clamp(16px, 2vw, 18px);
   line-height: 150%;
   letter-spacing: normal;
@@ -74,17 +81,16 @@ p {
 }
 
 li {
-  font-family: 'Archivo', sans-serif;
+  font-family: "Archivo", sans-serif;
   font-size: clamp(16px, 1.8vw, 20px);
   line-height: 150%;
   letter-spacing: normal;
   font-weight: 300;
   margin: 0;
-  
 }
 
 blockquote {
-  font-family: var(--font-eb-garamond), serif;
+  font-family: var(--font-fraunces), serif;
   font-size: clamp(16px, 2.5vw, 18px);
   line-height: 140%;
   letter-spacing: normal;
@@ -114,18 +120,9 @@ button {
   line-height: 130%;
   letter-spacing: normal;
   font-weight: 500;
-  text-transform: uppercase;
-  padding: 8px 20px;
-  border-radius: 4px;
-  background-color: black;
-  color: white;
+
   border: none;
   cursor: pointer;
-  transition: background-color 0.2s ease;
-}
-
-button:hover {
-  background-color: #404040;
 }
 
 /* Spacing System */
@@ -135,99 +132,99 @@ button:hover {
 
 /* Base container padding - Mobile first */
 .container-padding {
-  padding-left: 20px;  /* px-4 */
+  padding-left: 20px; /* px-4 */
   padding-right: 20px; /* px-4 */
 }
 
 /* Responsive container padding */
 @media (min-width: 640px) {
   .container-padding {
-    padding-left: 24px;  /* px-6 */
+    padding-left: 24px; /* px-6 */
     padding-right: 24px; /* px-6 */
   }
 }
 
 @media (min-width: 768px) {
   .container-padding {
-    padding-left: 32px;  /* px-8 */
+    padding-left: 32px; /* px-8 */
     padding-right: 32px; /* px-8 */
   }
 }
 
 @media (min-width: 1024px) {
   .container-padding {
-    padding-left: 48px;  /* px-12 */
+    padding-left: 48px; /* px-12 */
     padding-right: 48px; /* px-12 */
   }
 }
 
 @media (min-width: 1280px) {
   .container-padding {
-    padding-left: 64px;  /* px-16 */
+    padding-left: 64px; /* px-16 */
     padding-right: 64px; /* px-16 */
   }
 }
 
 /* Variationer af standard padding */
 .container-padding-sm {
-  padding-left: 12px;  /* px-3 */
+  padding-left: 12px; /* px-3 */
   padding-right: 12px; /* px-3 */
 }
 
 @media (min-width: 640px) {
   .container-padding-sm {
-    padding-left: 20px;  /* px-4 */
+    padding-left: 20px; /* px-4 */
     padding-right: 20px; /* px-4 */
   }
 }
 
 @media (min-width: 1024px) {
   .container-padding-sm {
-    padding-left: 24px;  /* px-6 */
+    padding-left: 24px; /* px-6 */
     padding-right: 24px; /* px-6 */
   }
 }
 
 .container-padding-lg {
-  padding-left: 24px;  /* px-6 */
+  padding-left: 24px; /* px-6 */
   padding-right: 24px; /* px-6 */
 }
 
 @media (min-width: 640px) {
   .container-padding-lg {
-    padding-left: 48px;  /* px-12 */
+    padding-left: 48px; /* px-12 */
     padding-right: 48px; /* px-12 */
   }
 }
 
 @media (min-width: 1024px) {
   .container-padding-lg {
-    padding-left: 80px;  /* px-20 */
+    padding-left: 80px; /* px-20 */
     padding-right: 80px; /* px-20 */
   }
 }
 
 /* Section vertical padding */
 .section-padding {
-  padding-top: 80px;    /* py-20 */
+  padding-top: 80px; /* py-20 */
   padding-bottom: 80px; /* py-20 */
 }
 
 @media (min-width: 768px) {
   .section-padding {
-    padding-top: 128px;    /* py-32 */
+    padding-top: 128px; /* py-32 */
     padding-bottom: 128px; /* py-32 */
   }
 }
 
 .section-padding-sm {
-  padding-top: 48px;    /* py-12 */
+  padding-top: 48px; /* py-12 */
   padding-bottom: 48px; /* py-12 */
 }
 
 @media (min-width: 768px) {
   .section-padding-sm {
-    padding-top: 64px;    /* py-16 */
+    padding-top: 64px; /* py-16 */
     padding-bottom: 64px; /* py-16 */
   }
 }
@@ -254,28 +251,39 @@ button:hover {
 }
 
 /* Legacy card/container support */
-.card, .container {
+.card,
+.container {
   padding: 32px; /* p-8 equivalent */
 }
 
 /* Automatic spacing between elements */
-h1 + p, h2 + p, h3 + p, h4 + p, h5 + p, h6 + p {
+h1 + p,
+h2 + p,
+h3 + p,
+h4 + p,
+h5 + p,
+h6 + p {
   margin-top: 20px; /* mb-4 - mellem overskrift og brødtekst */
 }
 
-p + a, p + button, p + .link {
+p + a,
+p + button,
+p + .link {
   margin-top: 32px; /* mb-8 - mellem brødtekst og link/button */
 }
 
 /* Spacing for stacked elements */
-h1 + h2, h2 + h3, h3 + h4, h4 + h5, h5 + h6 {
+h1 + h2,
+h2 + h3,
+h3 + h4,
+h4 + h5,
+h5 + h6 {
   margin-top: 24px; /* mellem headings */
 }
 
 p + p {
   margin-top: 20px; /* mellem paragraffer */
 }
-
 
 .no-scroll {
   overflow: hidden;
@@ -293,60 +301,32 @@ p + p {
   border: 1px solid rgba(255, 255, 255, 0.18);
 }
 
-/* Custom Swiper Styles */
-.testimonial-swiper {
-  padding-bottom: 60px !important;
+@keyframes smooth-slide-in {
+  0% {
+    transform: translateX(100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateX(0);
+    opacity: 1;
+  }
 }
 
-.testimonial-swiper .swiper-pagination {
-  bottom: 0 !important;
+.animate-smooth-slide-in {
+  animation: smooth-slide-in 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
 }
 
-.swiper-pagination-bullet-custom {
-  width: 8px !important;
-  height: 8px !important;
-  background: #d1d5db !important;
-  opacity: 1 !important;
-  border-radius: 50% !important;
-  transition: all 0.3s ease !important;
-  cursor: pointer !important;
-  margin: 0 6px !important;
+@keyframes fade-in-up {
+  0% {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
 }
 
-.swiper-pagination-bullet-active-custom {
-  background: #374151 !important;
-  width: 32px !important;
-  border-radius: 4px !important;
+.animate-fade-in-up {
+  animation: fade-in-up 1.2s ease-out;
 }
-
-.swiper-pagination-bullet-custom:hover {
-  background: #9ca3af !important;
-}
-
-/* Custom scrollbar styling */
-.scrollbar-thin::-webkit-scrollbar {
-  height: 6px;
-}
-
-.scrollbar-track-gray-100::-webkit-scrollbar-track {
-  background: #f3f4f6;
-  border-radius: 3px;
-}
-
-.scrollbar-thumb-gray-300::-webkit-scrollbar-thumb {
-  background: #d1d5db;
-  border-radius: 3px;
-  transition: background-color 0.2s ease;
-}
-
-.scrollbar-thumb-gray-300::-webkit-scrollbar-thumb:hover {
-  background: #9ca3af;
-}
-
-/* Firefox scrollbar */
-.scrollbar-thin {
-  scrollbar-width: thin;
-  scrollbar-color: #d1d5db #f3f4f6;
-}
-
-

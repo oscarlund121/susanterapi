@@ -16,7 +16,7 @@ const SectionHeader = ({
 }) => {
   return (
     <div className="mb-8">
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex justify-between items-center ">
         <SectionBadge>{badgeText}</SectionBadge>
         {showButton && (
           <YellowButton 
@@ -29,13 +29,13 @@ const SectionHeader = ({
         )}
       </div>
       
-      <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
+      <h2 className=" font-light text-gray-800 mb-6">
         {title}
       </h2>
       <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed mb-6">
         {description}
       </h6>
-      <div className="w-20 h-0.5 bg-[#1cc18e] mb-4"></div>
+    
     </div>
   );
 };
