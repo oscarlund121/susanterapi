@@ -11,18 +11,17 @@ import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const LandingOmSusan = () => {
   return (
-    <section className="section-padding">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section className="section-padding relative">
+      {/* Gul baggrund - fylder 50% til højre og 60% af højden */}
+      <div className="absolute top-1/4 bottom-1/4 right-0 w-2/3 bg-[#fff100]/20 rounded-tl-[200px] rounded-bl-[200px]"></div>
+      
+      <div className="max-w-7xl mx-auto container-padding relative z-10">
         {/* Header */}
         <SectionHeader
           badgeText="Din terapeut"
           title="Om mig"
-         
-          buttonText="Start din rejse"
-          buttonHref="/kontakt"
-          buttonDirection="left"
-          buttonVariant="yellow"
-          buttonSize="large"
+          showButton={false}
+ 
         />
 
         {/* Enkelt Card */}
@@ -40,7 +39,7 @@ const LandingOmSusan = () => {
               {/* Content */}
               <div className="p-6">
                 <div className="space-y-6">
-                  <div className="space-y-3 text-gray-700 font-light text-sm leading-relaxed">
+                  <div className="space-y-3 text-gray-800 font-light text-sm leading-relaxed">
                     <p>
                       Mit navn er Susan Albertsen og jeg er uddannet
                       psykoterapeut hos Essentiel integrativ essens, psyke, krop

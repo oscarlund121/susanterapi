@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Work_Sans, EB_Garamond } from "next/font/google";
+import { Geist, Geist_Mono, Work_Sans, EB_Garamond, Fraunces } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import NavStandard from "./components/layout/NavStandard";
@@ -16,6 +16,11 @@ const ebGaramond = EB_Garamond({
   variable: "--font-eb-garamond",
   subsets: ["latin"],
 });
+
+const fraunces = Fraunces({
+  variable: "--font-fraunces",
+  subsets: ["latin"],
+})
 
 export const metadata = {
   title: "Susan Albertsen Psykoterapi",
@@ -44,7 +49,7 @@ export default function RootLayout({ children }) {
 
       {/* Standard header */}
       <body
-        className={`${workSans.variable} ${ebGaramond.variable} antialiased`}
+        className={`${workSans.variable} ${fraunces.variable} antialiased`}
       >
 
         <NavStandard />

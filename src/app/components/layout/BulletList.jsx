@@ -4,14 +4,14 @@ const BulletList = ({ title, items, variant = "default", className = "" }) => {
   const getListClassName = () => {
     switch (variant) {
       case "grid":
-        return "space-y-3 grid grid-cols-1 lg:grid-cols-2";
+        return "space-y-1 grid grid-cols-1 lg:grid-cols-2";
       default:
-        return "space-y-3";
+        return "space-y-1";
     }
   };
 
   return (
-    <div className={`space-y-4  ${className}`}>
+    <div className={`space-y-  ${className}`}>
       {title && (
         <h5 className="text-gray-800 font-medium text-sm">{title}</h5>
       )}
