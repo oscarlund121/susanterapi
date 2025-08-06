@@ -2,7 +2,7 @@
 import React from "react";
 import BulletList from "../layout/BulletList";
 import CardHeader from "../ui/CardHeader";
-import YellowButton from "../ui/YellowButton";
+import ReadMoreButton from "../ui/ReadMoreButton";
 
 const LandingMaalCard = ({ 
   title, 
@@ -38,7 +38,7 @@ const LandingMaalCard = ({
           <div className="text-sm  font-light">
             Specialiseret vejledning
           </div>
-          <YellowButton 
+          <ReadMoreButton 
             text={buttonText}
             href={href}
             size={buttonSize}

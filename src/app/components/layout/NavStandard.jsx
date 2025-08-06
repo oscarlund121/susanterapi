@@ -50,7 +50,7 @@ const NavStandard = () => {
             <div className="fixed inset-0 z-50">
               <div className="flex h-full justify-end">
                 {/* Menu Panel - Cleaner design */}
-                <div className="w-[100%] md:w-[70%] bg-white/95 backdrop-blur-md shadow-2xl animate-smooth-slide-in rounded-tl-[40px] rounded-bl-[40px] overflow-hidden">
+                <div className="w-[100%] md:w-[70%] bg-white/95 backdrop-blur- shadow-2xl animate-smooth-slide-in rounded-tl-[200px] rounded-bl-[200px] overflow-hidden">
                   
                   {/* Menu Header - Simplified */}
                   <div className="flex items-end justify-end  mx-6 my-6 border-b border-gray-100">
@@ -79,7 +79,7 @@ const NavStandard = () => {
                             <Link
                               key={item.name}
                               href={item.href}
-                              className="block text-gray-800 hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
+                              className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
                               onClick={() => setIsMenuOpen(false)}
                             >
                               {item.name}
@@ -98,7 +98,7 @@ const NavStandard = () => {
                             <Link
                               key={item.name}
                               href={item.href}
-                              className="block text-gray-800 hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
+                              className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
                               onClick={() => setIsMenuOpen(false)}
                             >
                               {item.name}
@@ -116,7 +116,7 @@ const NavStandard = () => {
                           <div className="space-y-4">
                             <Link
                               href="/kontakt"
-                              className="block text-gray-800 hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
+                              className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
                               onClick={() => setIsMenuOpen(false)}
                             >
                               Book tid

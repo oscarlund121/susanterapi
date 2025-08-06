@@ -14,7 +14,7 @@ const SectionHeader = ({
   
   return (
     <div className={`space-y-4 ${className}`} {...props}>
-      <h2 className={`${titleSizes[titleSize]} font-light text-gray-800 leading-tight tracking-wide`}>
+      <h2 className={`${titleSizes[titleSize]} font-light text-[#333333] leading-tight tracking-wide`}>
         {title}
       </h2>
       {subtitle && (

@@ -73,7 +73,7 @@ const LandingForloeb = () => {
 
             {/* Forløbet step-by-step */}
             <div className="bg-gray-50 p-8 space-y-6">
-              <h3 className="text-xl font-light text-gray-800 mb-6">
+              <h3 className="text-xl font-light text-[#333333] mb-6">
                 Sådan kommer du i gang:
               </h3>
               
@@ -105,7 +105,7 @@ const LandingForloeb = () => {
                       {item.step}
                     </span>
                     <div>
-                      <h4 className="font-light text-gray-800 mb-1">{item.title}</h4>
+                      <h4 className="font-light text-[#333333] mb-1">{item.title}</h4>
                       <p className="text-sm text-gray-600">{item.description}</p>
                     </div>
                   </div>
@@ -114,7 +114,7 @@ const LandingForloeb = () => {
             </div>
 
             <div className="bg-white border border-gray-200 p-6">
-              <h4 className="font-light text-gray-800 mb-3">Anbefalet forløb:</h4>
+              <h4 className="font-light text-[#333333] mb-3">Anbefalet forløb:</h4>
               <p className="text-sm text-gray-600 font-light">
                 Afhængig af det du ønsker at arbejde med er min anbefaling at du har 
                 <strong className="font-normal"> 2 til 10 sessioner</strong> i et forløb.
@@ -125,7 +125,7 @@ const LandingForloeb = () => {
           {/* Priser og pakker */}
           <div className="space-y-8">
             <div>
-              <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
+              <h2 className="text-3xl md:text-4xl font-light text-[#333333] mb-6">
                 Priser & Varighed
               </h2>
               <div className="w-16 h-px bg-gray-800 mb-8"></div>
@@ -133,7 +133,7 @@ const LandingForloeb = () => {
 
             {/* Enkelte sessioner */}
             <div className="space-y-4">
-              <h3 className="text-xl font-light text-gray-800 mb-6">
+              <h3 className="text-xl font-light text-[#333333] mb-6">
                 Enkelte sessioner
               </h3>
               
@@ -141,11 +141,11 @@ const LandingForloeb = () => {
                 <div key={index} className="bg-white border border-gray-200 p-6">
                   <div className="flex justify-between items-start mb-3">
                     <div>
-                      <h4 className="font-light text-gray-800 text-lg">{session.type}</h4>
+                      <h4 className="font-light text-[#333333] text-lg">{session.type}</h4>
                       <p className="text-sm text-gray-600">{session.duration}</p>
                     </div>
                     <div className="text-right">
-                      <div className="text-2xl font-light text-gray-800">{session.price}</div>
+                      <div className="text-2xl font-light text-[#333333]">{session.price}</div>
                     </div>
                   </div>
                   <p className="text-sm text-gray-600 font-light">{session.description}</p>
@@ -155,7 +155,7 @@ const LandingForloeb = () => {
 
             {/* Pakker */}
             <div className="space-y-4">
-              <h3 className="text-xl font-light text-gray-800 mb-6">
+              <h3 className="text-xl font-light text-[#333333] mb-6">
                 Sessionsforløb (spar penge)
               </h3>
               
@@ -163,10 +163,10 @@ const LandingForloeb = () => {
                 <div key={index} className="bg-gray-50 border border-gray-200 p-6">
                   <div className="flex justify-between items-center">
                     <div>
-                      <h4 className="font-light text-gray-800 text-lg">{pkg.sessions}</h4>
+                      <h4 className="font-light text-[#333333] text-lg">{pkg.sessions}</h4>
                       <p className="text-sm text-#1cc18e font-light">{pkg.saving}</p>
                     </div>
-                    <div className="text-2xl font-light text-gray-800">{pkg.price}</div>
+                    <div className="text-2xl font-light text-[#333333]">{pkg.price}</div>
                   </div>
                 </div>
               ))}

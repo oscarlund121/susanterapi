@@ -27,7 +27,7 @@ const SectionHeader = ({
         <div className="lg:grid lg:grid-cols-[3fr_auto_1fr] lg:gap-4">
           {/* Kolonne 1 - Overskrift */}
           <div className="mb-4 lg:mb-0">
-            <h2 className="lg:place-items-end lg:justify-center text-gray-800">
+            <h2 className="lg:place-items-end lg:justify-center text-[#333333]">
               {title}
             </h2>
           </div>
@@ -61,9 +61,9 @@ const SectionHeader = ({
     <div className="m-2 md:mb-8">
       {/* Responsivt layout for badge og button */}
       <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
-        <div className="mb-4 sm:mb-0">
+     
           <SectionBadge>{badgeText}</SectionBadge>
-        </div>
+       
         {showButton && (
           <div className="flex justify-end sm:justify-center lg:justify-end">
             <YellowButton
@@ -77,7 +77,7 @@ const SectionHeader = ({
         )}
       </div>
 
-      <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
+      <h2 className="text-3xl md:text-4xl font-light text-[#333333] mb-6">
         {title}
       </h2>
       <h6 className=" text-gray-400 max-w-xl mb-6">

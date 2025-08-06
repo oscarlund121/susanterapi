@@ -40,7 +40,7 @@ const FooterMinimal = () => {
                     strokeWidth={1}
                   />
                   <div>
-                    <div className="text-lg font-light text-gray-800 tracking-wide">Psykoterapi</div>
+                    <div className="text-lg font-light text-[#333333] tracking-wide">Psykoterapi</div>
                     <div className="text-sm text-gray-500 tracking-wider">v. Susan Albertsen</div>
                   </div>
                 </div>
@@ -63,7 +63,7 @@ const FooterMinimal = () => {
                   <h4 className="text-sm uppercase tracking-widest text-gray-500 font-medium">Kontakt</h4>
                   <div className="space-y-4">
                     <div>
-                      <div className="text-lg text-gray-800 font-light">{footerContent.contact.name}</div>
+                      <div className="text-lg text-[#333333] font-light">{footerContent.contact.name}</div>
                       <div className="text-sm text-gray-600 mt-1">Psykoterapeut</div>
                     </div>
                     <div className="space-y-2">
@@ -84,7 +84,7 @@ const FooterMinimal = () => {
                   <h4 className="text-sm uppercase tracking-widest text-gray-500 font-medium">Klinik</h4>
                   <div className="space-y-4">
                     <div>
-                      <div className="text-lg text-gray-800 font-light">{footerContent.address.clinic}</div>
+                      <div className="text-lg text-[#333333] font-light">{footerContent.address.clinic}</div>
                       <div className="text-sm text-gray-600 mt-1">{footerContent.address.location}</div>
                     </div>
                     <div className="space-y-1 text-gray-700">

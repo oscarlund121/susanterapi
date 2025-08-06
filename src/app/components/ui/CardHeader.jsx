@@ -13,19 +13,19 @@ const CardHeader = ({
     green: {
       bg: "bg-[#1cc18e]/10",
       border: "border-[#1cc18e]/20",
-      text: "text-gray-800",
+      text: "text-[#333333]",
       numberStyle: "border-gray-800"
     },
     yellow: {
       bg: "bg-[#fff100]/10",
       border: "border-[#fff100]/20", 
-      text: "text-gray-800",
+      text: "text-[#333333]",
       numberStyle: "border-gray-800"
     },
     light: {
       bg: "bg-[#1cc18e]/10",
       border: "border-[#1cc18e]/20",
-      text: "text-gray-800",
+      text: "text-[#333333]",
       numberStyle: "border-gray-800"
     },
 

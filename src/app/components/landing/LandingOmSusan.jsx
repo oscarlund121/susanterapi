@@ -9,6 +9,7 @@ import CardHeader from "../ui/CardHeader";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
+
 const LandingOmSusan = () => {
   return (
     <section className="section-padding relative">
@@ -39,7 +40,7 @@ const LandingOmSusan = () => {
               {/* Content */}
               <div className="p-6">
                 <div className="space-y-6">
-                  <div className="space-y-3 text-gray-800 font-light text-sm leading-relaxed">
+                  <div className="space-y-3 text-[#333333] font-light text-sm leading-relaxed">
                     <p>
                       Mit navn er Susan Albertsen og jeg er uddannet
                       psykoterapeut hos Essentiel integrativ essens, psyke, krop
@@ -220,7 +221,7 @@ const LandingOmSusan = () => {
         <div className="mt-16 md:mt-20">
           <div className="max-w-4xl mx-auto">
             <div className="text-center">
-              <blockquote className="font-light text-gray-800 leading-relaxed mb-8 italic">
+              <blockquote className="font-light text-[#333333] leading-relaxed mb-8 italic">
                 "Vi kan kun skabe varig transformationer i os selv, hvis vi gør
                 det ud fra ren ubetinget kærlighed. Essens i terapien er at være
                 helhjertet – at have hele hjertet med."

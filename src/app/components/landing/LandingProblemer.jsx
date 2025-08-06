@@ -127,7 +127,7 @@ const LandingProblemer = () => {
         {/* Bundtekst */}
         <div className="text-center mt-16 md:mt-20">
           <div className="max-w-4xl mx-auto bg-white shadow-md p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-light text-gray-800 mb-6">
+            <h3 className="text-2xl md:text-3xl font-light text-[#333333] mb-6">
               Kender du fornemmelsen?
             </h3>
             <p className="text-lg font-light text-gray-700 leading-relaxed mb-8">

@@ -13,13 +13,13 @@ const BulletList = ({ title, items, variant = "default", className = "" }) => {
   return (
     <div className={`space-y-  ${className}`}>
       {title && (
-        <h5 className="text-gray-800 font-medium text-sm">{title}</h5>
+        <h5 className="text-[#333333] font-medium text-sm">{title}</h5>
       )}
       <ul className={getListClassName()}>
         {items.map((item, idx) => (
           <li key={idx} className="flex items-start py-1 pr-1 space-x-3">
             <div className="w-2 h-2 bg-[#1cc18e] rounded-full mt-2 flex-shrink-0"></div>
-            <span className="text-sm text-gray-800 font-base">
+            <span className="text-sm text-[#333333] font-base">
               {item}
             </span>
           </li>

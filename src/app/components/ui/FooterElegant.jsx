@@ -9,7 +9,7 @@ const FooterElegant = () => {
         <div className="grid grid-cols-1 md:grid-cols-3 gap-12 text-center md:text-left">
           {/* Kontakt */}
           <div className="space-y-4">
-            <h4 className="text-xs font-light text-gray-800 uppercase mb-6">
+            <h4 className="text-xs font-light text-[#333333] uppercase mb-6">
               Kontakt
             </h4>
             <div className="space-y-3">
@@ -18,7 +18,7 @@ const FooterElegant = () => {
               </p>
               <p className="text-gray-600 text-sm">
                 Telefon:{" "}
-                <a href="tel:+4525392539" className="hover:text-gray-800">
+                <a href="tel:+4525392539" className="hover:text-[#333333]">
                   25 39 25 39
                 </a>
               </p>
@@ -26,7 +26,7 @@ const FooterElegant = () => {
                 E-mail:{" "}
                 <a
                   href="mailto:susanalbertsen69@gmail.com"
-                  className="hover:text-gray-800"
+                  className="hover:text-[#333333]"
                 >
                   susanalbertsen69@gmail.com
                 </a>
@@ -36,7 +36,7 @@ const FooterElegant = () => {
 
           {/* Adresse */}
           <div className="space-y-4">
-            <h4 className="text-xs font-light text-gray-800 uppercase mb-6">
+            <h4 className="text-xs font-light text-[#333333] uppercase mb-6">
               Adresse
             </h4>
             <address className="space-y-3 not-italic">
@@ -51,7 +51,7 @@ const FooterElegant = () => {
 
           {/* Services */}
           <div className="space-y-4">
-            <h4 className="text-xs font-light text-gray-800 uppercase mb-6">
+            <h4 className="text-xs font-light text-[#333333] uppercase mb-6">
               Behandling
             </h4>
             <ul className="space-y-3 text-sm text-gray-600">

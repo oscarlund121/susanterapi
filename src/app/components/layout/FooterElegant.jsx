@@ -31,7 +31,7 @@ const FooterElegant = () => {
               strokeWidth={0.8}
               />
           <div className="mb-8">
-            <h3 className="text-2xl font-light text-gray-800 tracking-wide mb-3">
+            <h3 className="text-2xl font-light text-[#333333] tracking-wide mb-3">
               {footerContent.tagline}
             </h3>
             <p className="text-sm text-gray-500 italic tracking-wider max-w-sm mx-auto">
@@ -46,7 +46,7 @@ const FooterElegant = () => {
           
           {/* Kontakt */}
           <div className="space-y-4">
-            <h4 className="text-xs font-light text-gray-800 tracking-wide uppercase mb-6">Kontakt</h4>
+            <h4 className="text-xs font-light text-[#333333] tracking-wide uppercase mb-6">Kontakt</h4>
             <div className="space-y-3">
               <div className="text-gray-700 font-light text-lg">{footerContent.contact.name}</div>
               <div className="text-gray-600 text-sm">Telefon: {footerContent.contact.phone}</div>
@@ -56,7 +56,7 @@ const FooterElegant = () => {
 
           {/* Adresse */}
           <div className="space-y-4">
-            <h4 className="text-xs font-light text-gray-800 tracking-wide uppercase mb-6">Adresse</h4>
+            <h4 className="text-xs font-light text-[#333333] tracking-wide uppercase mb-6">Adresse</h4>
             <div className="space-y-3">
               <div className="text-gray-700 text-sm">{footerContent.address.clinic}</div>
               <div className="text-gray-600 text-sm">{footerContent.address.location}</div>
@@ -67,7 +67,7 @@ const FooterElegant = () => {
 
           {/* Social/ekstra */}
           <div className="space-y-4">
-            <h4 className="text-xs font-light text-gray-800 tracking-wide uppercase mb-6">Behandling</h4>
+            <h4 className="text-xs font-light text-[#333333] tracking-wide uppercase mb-6">Behandling</h4>
             <div className="space-y-3 text-sm text-gray-600">
               <div>Psykoterapi</div>
               <div>Traumeforløsning</div>

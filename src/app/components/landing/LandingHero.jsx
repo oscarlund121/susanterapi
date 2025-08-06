@@ -25,7 +25,7 @@ const LandingHero = () => {
               Susan Albertsen
             </h1>
             <div className="flex justify-center">
-              <div className="bg-white/50 text-gray-800 px-8 py-4 text-lg md:text-xl font-light">
+              <div className="bg-white/50 text-[#333333] px-8 py-4 text-lg md:text-xl font-light">
                 PSYKOTERAPI
               </div>
             </div>

@@ -3,6 +3,7 @@ import React from "react";
 import Image from "next/image";
 import SectionBadge from "../layout/SectionBadge";
 import SectionHeader from "../layout/SectionHeader";
+import ReadMoreButton from "../ui/ReadMoreButton";
 
 const LandingTilbyder = () => {
   return (
@@ -35,7 +36,7 @@ const LandingTilbyder = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
             <div className="p-6 space-y-4 flex-grow flex flex-col">
-              <h5 className="text-xl font-light text-gray-800">
+              <h5 className="text-xl font-light text-[#333333]">
                 Psykoterapi
               </h5>
               <div className="flex-grow">
@@ -45,12 +46,12 @@ const LandingTilbyder = () => {
                   energi.
                 </p>
               </div>
-              <a 
-                href="/ydelser" 
-                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto"
-              >
-                Læs mere →
-              </a>
+              <ReadMoreButton 
+                href="/ydelser"
+                text="Læs mere"
+                variant="green"
+                size="medium"
+              />
             </div>
           </div>
 
@@ -66,7 +67,7 @@ const LandingTilbyder = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
             <div className="p-6 space-y-4 flex-grow flex flex-col">
-              <h5 className="text-xl font-light text-gray-800">
+              <h5 className="text-xl font-light text-[#333333]">
                 Chok- og traumeforløsning
               </h5>
               <div className="flex-grow">
@@ -75,12 +76,12 @@ const LandingTilbyder = () => {
                   balance og oplevelse af ro og kærlighed.
                 </p>
               </div>
-              <a 
-                href="/ydelser" 
-                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto"
-              >
-                Læs mere →
-              </a>
+              <ReadMoreButton 
+                href="/ydelser"
+                text="Læs mere" 
+                variant="greenLight"
+                size="medium"
+              />
             </div>
           </div>
 
@@ -96,7 +97,7 @@ const LandingTilbyder = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
             <div className="p-6 space-y-4 flex-grow flex flex-col">
-              <h5 className="text-xl font-light text-gray-800">
+              <h5 className="text-xl font-light text-[#333333]">
                 Meditation
               </h5>
               <div className="flex-grow">
@@ -105,12 +106,12 @@ const LandingTilbyder = () => {
                   bevidste sind og oplev intens forbindelse med din sjæl.
                 </p>
               </div>
-              <a 
-                href="/ydelser" 
-                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto"
-              >
-                Læs mere →
-              </a>
+              <ReadMoreButton 
+                href="/ydelser"
+                text="Læs mere"
+                variant="yellow"
+                size="medium"
+              />
             </div>
           </div>
 
@@ -126,7 +127,7 @@ const LandingTilbyder = () => {
               <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent "></div>
             </div>
             <div className="p-6 space-y-4 flex-grow flex flex-col">
-              <h5 className="text-xl font-light text-gray-800">
+              <h5 className="text-xl font-light text-[#333333]">
                 Familie- og parterapi
               </h5>
               <div className="flex-grow">
@@ -135,18 +136,18 @@ const LandingTilbyder = () => {
                   sikkerhed i familien og parforhold.
                 </p>
               </div>
-              <a 
-                href="/ydelser" 
-                className="inline-block text-[#1cc18e] hover:text-[#159e7e] font-medium transition-colors duration-200 mt-auto"
-              >
-                Læs mere →
-              </a>
+              <ReadMoreButton 
+                href="/ydelser"
+                text="Læs mere"
+                variant="green"
+                size="medium"
+              />
             </div>
           </div>
         </div>
         <div className="flex items-center justify-center mt-16 md:mt-24">
           <div className="max-w-3xl mx-auto">
-            <p className="text-base md:text-lg font-light text-gray-800 max-w-xl mx-auto text-center leading-relaxed">
+            <p className="text-base md:text-lg font-light text-[#333333] max-w-xl mx-auto text-center leading-relaxed">
               I terapien kan du, dit barn, familien eller din partner få åbnet
               op for kroppens naturlige intelligens og med lethed udfolde dine
               ønsker og drømme.

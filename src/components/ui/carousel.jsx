@@ -144,7 +144,7 @@ function CarouselItem({
 
 function CarouselPrevious({
   className,
-  variant = "ghost",
+  variant = "outline",
   size = "icon",
   ...props
 }) {
@@ -156,16 +156,16 @@ function CarouselPrevious({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-12 rounded-full bg-white/80 text-gray-600 hover:bg-white hover:text-gray-800 shadow-md border-0 backdrop-blur-sm",
+        "absolute size-12 rounded-full border-2 border-[#1cc18e] bg-white hover:bg-[#1cc18e] hover:text-white transition-all duration-300 shadow-lg", 
         orientation === "horizontal"
-          ? "top-1/2 -left-6 -translate-y-1/2"
-          : "-top-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "top-1/2 -left-16 -translate-y-1/2"
+          : "-top-16 left-1/2 -translate-x-1/2 rotate-90", 
         className
       )}
       disabled={!canScrollPrev}
       onClick={scrollPrev}
       {...props}>
-      <ArrowLeft className="w-5 h-5" />
+      <ArrowLeft className="h-6 w-6" />
       <span className="sr-only">Previous slide</span>
     </Button>
   );
@@ -173,7 +173,7 @@ function CarouselPrevious({
 
 function CarouselNext({
   className,
-  variant = "ghost",
+  variant = "outline",
   size = "icon",
   ...props
 }) {
@@ -185,16 +185,16 @@ function CarouselNext({
       variant={variant}
       size={size}
       className={cn(
-        "absolute size-12 rounded-full bg-white/80 text-gray-600 hover:bg-white hover:text-gray-800 shadow-md border-0 backdrop-blur-sm",
+        "absolute size-12 rounded-full border-2 border-[#1cc18e] bg-white hover:bg-[#1cc18e] hover:text-white transition-all duration-300 shadow-lg",
         orientation === "horizontal"
-          ? "top-1/2 -right-6 -translate-y-1/2"
-          : "-bottom-12 left-1/2 -translate-x-1/2 rotate-90",
+          ? "top-1/2 -right-16 -translate-y-1/2"
+          : "-bottom-16 left-1/2 -translate-x-1/2 rotate-90",
         className
       )}
       disabled={!canScrollNext}
       onClick={scrollNext}
       {...props}>
-      <ArrowRight className="w-5 h-5" />
+      <ArrowRight className="h-6 w-6" />
       <span className="sr-only">Next slide</span>
     </Button>
   );

@@ -35,11 +35,11 @@ const Footer = () => {
               <div className="flex flex-col items-center space-y-6">
                 <LuHexagon
                   size={70}
-                  className="text-gray-800 rotate-[30deg]"
+                  className="text-[#333333] rotate-[30deg]"
                   strokeWidth={1}
                 />
                 <div className="space-y-3">
-                  <h3 className="text-3xl font-light text-gray-800 tracking-wide">
+                  <h3 className="text-3xl font-light text-[#333333] tracking-wide">
                     {footerContent.tagline}
                   </h3>
                   <p className="text-base font-light text-gray-500 tracking-wider italic max-w-md">
@@ -55,7 +55,7 @@ const Footer = () => {
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 lg:gap-24">
                 {/* Kontakt */}
                 <div className="text-center lg:text-left">
-                  <h4 className="text-xl font-light text-gray-800 tracking-wide mb-6">Kontakt</h4>
+                  <h4 className="text-xl font-light text-[#333333] tracking-wide mb-6">Kontakt</h4>
                   <div className="space-y-3 text-gray-600">
                     <div className="text-lg font-light">{footerContent.contact.name}</div>
                     <div className="text-base">Telefon: {footerContent.contact.phone}</div>
@@ -65,7 +65,7 @@ const Footer = () => {
 
                 {/* Adresse */}
                 <div className="text-center lg:text-right">
-                  <h4 className="text-xl font-light text-gray-800 tracking-wide mb-6">Adresse</h4>
+                  <h4 className="text-xl font-light text-[#333333] tracking-wide mb-6">Adresse</h4>
                   <div className="space-y-3 text-gray-600">
                     <div className="text-base">{footerContent.address.clinic}</div>
                     <div className="text-base">{footerContent.address.location}</div>

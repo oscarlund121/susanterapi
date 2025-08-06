@@ -1,15 +1,13 @@
 "use client";
 import React, { useState } from 'react';
 import Link from 'next/link';
-import { FaCircleChevronRight } from "react-icons/fa6";
-import { FaChevronRight } from "react-icons/fa6";
-import { FaChevronLeft } from "react-icons/fa6";
+import { HiOutlineChevronRight, HiOutlineChevronLeft } from "react-icons/hi2";
 
 
 
 const YellowButton = ({
   href = '/kontakt', 
-  className = '',
+  className = 'inline-block',
   text = 'Book tid nu',
   size = 'medium',
   iconOnly = false,
@@ -21,16 +19,16 @@ const YellowButton = ({
   // Størrelse-konfiguration
   const sizeClasses = {
     small: {
-      button: isHovered ? 'pl-5 pr-6 py-2' : 'pl-5 pr-6 py-2 sm:p-2', // Åben på små skærme
-      icon: 'text-lg',
+      button: isHovered ? 'pl-3 pr-4 py-1.5' : 'pl-3 pr-4 py-1.5 sm:p-1.5', // Åben på små skærme
+      icon: 'text-sm',
     },
     medium: {
-      button: isHovered ? 'pl-6 pr-8 py-3' : 'pl-6 pr-8 py-3 sm:p-3', // Åben på små skærme
-      icon: 'text-xl',
+      button: isHovered ? 'pl-4 pr-5 py-2' : 'pl-4 pr-5 py-2 sm:p-2', // Åben på små skærme
+      icon: 'text-base',
     },
     large: {
-      button: isHovered ? 'pl-7 pr-10 py-4' : 'pl-7 pr-10 py-4 sm:p-4', // Åben på små skærme
-      icon: 'text-2xl',
+      button: isHovered ? 'pl-5 pr-6 py-2.5' : 'pl-5 pr-6 py-2.5 sm:p-2.5', // Åben på små skærme
+      icon: 'text-lg',
     },
   };
 
@@ -61,6 +59,7 @@ const YellowButton = ({
       onFocus={() => setIsHovered(true)}
       onBlur={() => setIsHovered(false)}
     >
+      <div className="inline-block">
       <div 
         className={`
           group flex items-start transition-all duration-600 ease-in-out 
@@ -89,7 +88,7 @@ const YellowButton = ({
           </button>
         )}
         {direction === 'left' && (
-          <FaChevronLeft 
+          <HiOutlineChevronLeft 
             className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-600 ${isHovered ? 'translate-x-0' : ''}`} 
           />
         )}
@@ -97,10 +96,11 @@ const YellowButton = ({
         
         {/* Pil til højre, når direction er 'right' (standard) */}
         {direction === 'right' && (
-          <FaChevronRight 
+          <HiOutlineChevronRight 
             className={`${currentVariant.iconColor} ${currentSize.icon} transform transition-transform duration-600 ${isHovered ? 'translate-x-0' : ''}`} 
           />
         )}
+      </div>
       </div>
     </Link>
   );
