@@ -28,7 +28,7 @@ const NavStandard = () => {
       {/* Menu button - All screen sizes */}
       <button
         onClick={toggleMenu}
-        className="flex items-center space-x-2 px-4 py-2 rounded-full bg-white border border-white/20 hover:text-white hover:bg-[#1cc18e] transition-all duration-600 shadow-lg"
+        className="flex items-center space-x-1 px-2 py-2 rounded-full h-20 w-20 bg-white border border-white/20 hover:text-white hover:bg-[#1cc18e] transition-all duration-600 shadow-lg"
         aria-label="Toggle menu"
       >
         <HiMenuAlt3 className="h-5 w-5" />
@@ -53,11 +53,11 @@ const NavStandard = () => {
                 <div className="w-[100%] md:w-[70%] bg-white/95 backdrop-blur-md shadow-2xl animate-smooth-slide-in rounded-tl-[40px] rounded-bl-[40px] overflow-hidden">
                   
                   {/* Menu Header - Simplified */}
-                  <div className="flex items-end justify-end py-4 border-b border-gray-100">
+                  <div className="flex items-end justify-end  mx-6 my-6 border-b border-gray-100">
                   
                     <button
                       onClick={() => setIsMenuOpen(false)}
-                      className="w-10 h-10 rounded-full bg-white hover:bg-[#1cc18e] flex items-center px-6 py-6 justify-center transition duration-400"
+                      className="w-20 h-20 rounded-full bg-white hover:bg-[#1cc18e] flex items-center  justify-center transition duration-400"
                     >
                       <HiX className="h-6 w-6" />
                     </button>
