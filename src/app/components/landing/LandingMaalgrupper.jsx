@@ -11,59 +11,50 @@ const LandingMaalgrupper = () => {
   return (
     <section className="section-padding bg-[#fff100]/10 rounded-tr-[250px] rounded-bl-[250px]">
       <div className="max-w-7xl mx-auto container-padding">
-        {/* Brug det genbrugelige SectionHeader-komponent */}
-        <SectionHeader 
-          badgeText="Målgrupper"
-          title="Hvem jeg hjælper"
-          description="Jeg arbejder med børn, unge og voksne og hjælper med alle former for ubehag og fastlåsthed i livet."
-          buttonText="Book en samtale"
-          buttonHref="/kontakt"
-          buttonDirection="left"
-          buttonVariant="green"
-          buttonSize="large"
-        />
-
-        {/* Tre målgrupper */}
-        <div className="grid md:grid-cols-3 gap-8 items-stretch">
+        {/* Layout med whitespace til venstre og indhold til højre */}
+        <div className="grid lg:grid-cols-2 gap-16 items-start">
           
-          {/* Børn & Familier */}
-          <LandingMaalCard 
-            title="Børn & Familier"
-            items={[
-              "Familiedynamikker og relationer",
-              "Skolefravær og læringsvanskeligheder",
-              "ADHD og følelsesmæssige udfordringer",
-              "Mentaliserende forældreguidning"
-            ]}
-            variant="minimal"
-          />
+          {/* Venstre kolonne - Whitespace og header */}
+          <div className="space-y-8">
+            <SectionHeader 
+              badgeText="Målgrupper"
+              title="Hvem jeg hjælper"
+              description="Jeg arbejder primært med unge og studerende, men hjælper også børn, familier og voksne med alle former for ubehag og fastlåsthed i livet."
+              showButton={false}
+            />
+            
+            {/* Ekstra whitespace og eventuelt decorativ content */}
+            <div className="hidden lg:block">
+              <div className="w-24 h-1 bg-[#1cc18e] rounded-full mb-6"></div>
+              <p className="text-gray-600 font-light leading-relaxed">
+                Specialiseret vejledning tilpasset din livssituation og behov.
+              </p>
+            </div>
+          </div>
 
-          {/* Unge & Studerende */}
-          <LandingMaalCard 
-            title="Unge & Studerende"
-            items={[
-              "Præstationsangst og eksamenstress",
-              "Sociale udfordringer og gruppedannelser",
-              "Usikkerhed og lavt selvværd",
-              "Overgange og nye miljøer"
-            ]}
-            variant="icon"
-          />
-
-          {/* Voksne & Par */}
-          <LandingMaalCard 
-            title="Voksne & Par"
-            items={[
-              "Stress, angst og depression",
-              "Parforhold og kæresteproblematikker",
-              "Traumer og sorg",
-              "Personlig udvikling og selvværd"
-            ]}
-            variant="gradient"
-          />
+          {/* Højre kolonne - Enkelt samlet card */}
+          <div>
+            <LandingMaalCard 
+              title="Unge & Studerende Focus"
+              description="Specialiseret terapi for unge i udvikling, studerende og alle der navigerer livets udfordringer"
+              items={[
+                "Eksamensangst og studieproblemer",
+                "Præstationsangst og perfektionisme", 
+                "Sociale udfordringer og ensomhed",
+                "Identitetsudvikling og fremtidsangst",
+                "Overgang til voksenliv",
+                "Stress og udbrændthed",
+                "Parforhold og kærlighed",
+                "Familiekonflikter og kommunikation",
+                "Selvværd og selvtillid",
+                "Angst og depression"
+              ]}
+              buttonText="Book samtale"
+              href="/kontakt"
+              buttonSize="large"
+            />
+          </div>
         </div>
-
-    
       </div>
     </section>
   );

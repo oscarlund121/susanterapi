@@ -18,6 +18,7 @@ const LandingTilbyder = () => {
           buttonVariant="yellow"
           buttonDirection="left"
           buttonSize="large"
+            variant="horizontal"
         />
 
         {/* Fire hovedområder */}
