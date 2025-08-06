@@ -32,19 +32,19 @@ const ReadMoreButton = ({
 
   const sizes = {
     small: {
-      padding: "px-4 py-2",
+      padding: "px-3 py-1.5",
+      text: "text-xs",
+      icon: "text-xs"
+    },
+    medium: {
+      padding: "px-4 py-2", 
       text: "text-sm",
       icon: "text-sm"
     },
-    medium: {
-      padding: "px-6 py-3", 
-      text: "text-base",
-      icon: "text-base"
-    },
     large: {
-      padding: "px-8 py-4",
-      text: "text-lg", 
-      icon: "text-lg"
+      padding: "px-6 py-3",
+      text: "text-base", 
+      icon: "text-base"
     }
   };
 
@@ -58,7 +58,7 @@ const ReadMoreButton = ({
         inline-flex items-center space-x-3 
         ${currentVariant.bg} ${currentVariant.text} ${currentVariant.hover}
         ${currentSize.padding} ${currentSize.text}
-        rounded-full font-medium 
+        rounded-full font-base 
         transition-all duration-300 ease-in-out
         hover:shadow-lg hover:scale-105
         focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-[#1cc18e]

@@ -4,6 +4,7 @@ import Image from "next/image";
 import SectionBadge from "../layout/SectionBadge";
 import SectionHeader from "../layout/SectionHeader";
 import ReadMoreButton from "../ui/ReadMoreButton";
+import YellowButton from "../ui/YellowButton";
 
 const LandingTilbyder = () => {
   return (
@@ -46,11 +47,11 @@ const LandingTilbyder = () => {
                   energi.
                 </p>
               </div>
-              <ReadMoreButton 
+              <YellowButton 
                 href="/ydelser"
                 text="Læs mere"
                 variant="green"
-                size="medium"
+                size="small"
               />
             </div>
           </div>
@@ -76,11 +77,11 @@ const LandingTilbyder = () => {
                   balance og oplevelse af ro og kærlighed.
                 </p>
               </div>
-              <ReadMoreButton 
+              <YellowButton 
                 href="/ydelser"
                 text="Læs mere" 
-                variant="greenLight"
-                size="medium"
+                variant="green"
+                size="small"
               />
             </div>
           </div>
@@ -106,11 +107,11 @@ const LandingTilbyder = () => {
                   bevidste sind og oplev intens forbindelse med din sjæl.
                 </p>
               </div>
-              <ReadMoreButton 
+              <YellowButton 
                 href="/ydelser"
                 text="Læs mere"
                 variant="yellow"
-                size="medium"
+                size="small"
               />
             </div>
           </div>
@@ -136,11 +137,11 @@ const LandingTilbyder = () => {
                   sikkerhed i familien og parforhold.
                 </p>
               </div>
-              <ReadMoreButton 
+              <YellowButton 
                 href="/ydelser"
                 text="Læs mere"
                 variant="green"
-                size="medium"
+                size="small"
               />
             </div>
           </div>

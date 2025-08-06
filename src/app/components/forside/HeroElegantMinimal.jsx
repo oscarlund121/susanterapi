@@ -26,7 +26,7 @@ const HeroElegantMinimal = () => (
       <div className="max-w-7xl mx-auto container-padding">
         {/* Top section with badge aligned to menu */}
 
-        <div className="h-[85vh] md:h-[95vh] py-8 md:py-12 flex items-end ">
+        <div className="h-[85vh] md:h-[95vh] py-8 md:py-12 flex items-top ">
           {/* Left side - Content */}
           <div className="max-w-2xl space-y-8 animate-fade-in-up">
            
@@ -44,7 +44,7 @@ const HeroElegantMinimal = () => (
               </p>
             </div>
 
-            <div className="flex flex-col justify-end items- sm:flex-row gap-4 md:gap-8">
+            <div className="flex flex-col justify-top sm:flex-row gap-4 md:gap-8">
               <YellowButton
                 href="/kontakt"
                 text="Book en session"

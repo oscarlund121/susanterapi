@@ -19,16 +19,16 @@ const YellowButton = ({
   // Størrelse-konfiguration
   const sizeClasses = {
     small: {
+      button: isHovered ? 'pl-2 pr-3 py-1' : 'pl-2 pr-3 py-1 sm:p-1', // Åben på små skærme
+      icon: 'text-xs',
+    },
+    medium: {
       button: isHovered ? 'pl-3 pr-4 py-1.5' : 'pl-3 pr-4 py-1.5 sm:p-1.5', // Åben på små skærme
       icon: 'text-sm',
     },
-    medium: {
+    large: {
       button: isHovered ? 'pl-4 pr-5 py-2' : 'pl-4 pr-5 py-2 sm:p-2', // Åben på små skærme
       icon: 'text-base',
-    },
-    large: {
-      button: isHovered ? 'pl-5 pr-6 py-2.5' : 'pl-5 pr-6 py-2.5 sm:p-2.5', // Åben på små skærme
-      icon: 'text-lg',
     },
   };
 
@@ -63,7 +63,7 @@ const YellowButton = ({
       <div 
         className={`
           group flex items-start transition-all duration-600 ease-in-out 
-          ${currentVariant.bg} ${currentVariant.text} font-medium
+          ${currentVariant.bg} ${currentVariant.text} font-medium text-sm
           ${currentSize.button}
           ${isHovered 
             ? 'rounded-full' 

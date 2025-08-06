@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
@@ -9,6 +9,20 @@ const NavStandard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 
   const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+
+  // Forhindre scroll når menu er åben
+  useEffect(() => {
+    if (isMenuOpen) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+
+    // Cleanup når component unmounts
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [isMenuOpen]);
 
   const mainMenuItems = [
     { name: "Hjem", href: "/" },
@@ -24,15 +38,15 @@ const NavStandard = () => {
   ];
 
   return (
-    <nav className="absolute top-0 right-0 z-50 p-6">
+    <nav className="fixed top-0 right-0 z-50 p-4 sm:p-6">
       {/* Menu button - All screen sizes */}
       <button
         onClick={toggleMenu}
-        className="flex items-center space-x-1 px-2 py-2 rounded-full h-20 w-20 bg-white border border-white/20 hover:text-white hover:bg-[#1cc18e] transition-all duration-600 shadow-lg"
+        className="flex items-center space-x-1 px-2 py-2 rounded-full h-16 w-16 sm:h-20 sm:w-20 bg-white border border-white/20 hover:text-white hover:bg-[#1cc18e] transition-all duration-600 shadow-lg"
         aria-label="Toggle menu"
       >
-        <HiMenuAlt3 className="h-5 w-5" />
-        <span className="text-sm font-light">Menu</span>
+        <HiMenuAlt3 className="h-4 w-4 sm:h-5 sm:w-5" />
+        <span className="text-xs sm:text-sm font-light hidden sm:inline">Menu</span>
       </button>
 
         {/* Mobile Navigation Overlay - All screen sizes */}
@@ -47,19 +61,19 @@ const NavStandard = () => {
             />
             
             {/* Menu Content */}
-            <div className="fixed inset-0 z-50">
+            <div className="fixed inset-0 z-50 overflow-hidden">
               <div className="flex h-full justify-end">
                 {/* Menu Panel - Cleaner design */}
-                <div className="w-[100%] md:w-[70%] bg-white/95 backdrop-blur- shadow-2xl animate-smooth-slide-in rounded-tl-[200px] rounded-bl-[200px] overflow-hidden">
+                <div className="w-full sm:w-[90%] md:w-[70%] bg-white/95 backdrop-blur-md shadow-2xl animate-smooth-slide-in rounded-tl-[100px] sm:rounded-tl-[200px] rounded-bl-[100px] sm:rounded-bl-[200px] overflow-hidden">
                   
                   {/* Menu Header - Simplified */}
-                  <div className="flex items-end justify-end  mx-6 my-6 border-b border-gray-100">
+                  <div className="flex items-end justify-end mx-4 sm:mx-6 my-4 sm:my-6 border-b border-gray-100">
                   
                     <button
                       onClick={() => setIsMenuOpen(false)}
-                      className="w-20 h-20 rounded-full bg-white hover:bg-[#1cc18e] flex items-center  justify-center transition duration-400"
+                      className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white hover:bg-[#1cc18e] flex items-center justify-center transition duration-400"
                     >
-                      <HiX className="h-6 w-6" />
+                      <HiX className="h-5 w-5 sm:h-6 sm:w-6" />
                     </button>
                   </div>
 

@@ -19,7 +19,7 @@ const SectionHeader = ({
     return (
       <div className="mb-8">
         {/* Badge på egen række til venstre */}
-        <div className="mb-1">
+        <div className="mb-1 ">
           <SectionBadge>{badgeText}</SectionBadge>
         </div>
 
@@ -60,20 +60,17 @@ const SectionHeader = ({
   return (
     <div className="m-2 md:mb-8">
       {/* Responsivt layout for badge og button */}
-      <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center mb-6">
-     
-          <SectionBadge>{badgeText}</SectionBadge>
-       
+      <div className="flex justify-between items-center mb-6">
+        <SectionBadge>{badgeText}</SectionBadge>
+
         {showButton && (
-          <div className="flex justify-end sm:justify-center lg:justify-end">
-            <YellowButton
-              text={buttonText}
-              href={buttonHref}
-              size={buttonSize}
-              direction={buttonDirection}
-              variant={buttonVariant}
-            />
-          </div>
+          <YellowButton
+            text={buttonText}
+            href={buttonHref}
+            size={buttonSize}
+            direction={buttonDirection}
+            variant={buttonVariant}
+          />
         )}
       </div>
 
