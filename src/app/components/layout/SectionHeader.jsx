@@ -24,24 +24,24 @@ const SectionHeader = ({
         </div>
 
         {/* Overskrift, tekst og button på samme række */}
-        <div className="grid grid-cols-[2fr_2fr_1fr] gap-0 ">
+        <div className="grid grid-cols-[3fr_auto_1fr] gap-4 ">
           {/* Kolonne 1 - Overskrift */}
           <div>
-            <h2 className="place-items-start  text-gray-800 ">
+            <h2 className="place-items-end justify-center   text-gray-800 ">
               {title}
             </h2>
           </div>
           
           {/* Kolonne 2 - Beskrivelsestekst */}
-          <div className="place-items-end">
-            <h6 className="text-base md:text-lg font-light text-gray-600 leading-relaxed">
+          <div className="flex justify-center place-items-end max-w-md">
+            <h6 className="text-base md:text-lg font-light  text-gray-400 leading-relaxed">
               {description}
             </h6>
           </div>
 
           {/* Kolonne 3 - Button (fast bredde) */}
           {showButton && (
-            <div className="flex justify-end place-items-end pb-4">
+            <div className="flex justify-end items-end pb-4">
               <YellowButton
                 text={buttonText}
                 href={buttonHref}
@@ -75,7 +75,7 @@ const SectionHeader = ({
       <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
         {title}
       </h2>
-      <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed mb-6">
+      <h6 className="text-base md:text-lg font-light text-gray-400 max-w-xl leading-relaxed mb-6">
         {description}
       </h6>
     </div>

@@ -32,11 +32,12 @@ h1 {
 }
 
 h2 {
-  font-size: clamp(32px, 4vw, 49px);
+  font-size: clamp(40px, 4vw, 60px);
   line-height: 110%;
   letter-spacing: -0.02em;
   font-weight: 600;
   margin-bottom: 20px;
+   
 }
 
 h3 {
@@ -314,12 +315,13 @@ p + p {
 
 .animate-smooth-slide-in {
   animation: smooth-slide-in 1.2s cubic-bezier(0.25, 0.46, 0.45, 0.94) forwards;
+  
 }
 
 @keyframes fade-in-up {
   0% {
     opacity: 0;
-    transform: translateY(30px);
+    transform: translateY(300px);
   }
   100% {
     opacity: 1;
@@ -328,5 +330,21 @@ p + p {
 }
 
 .animate-fade-in-up {
-  animation: fade-in-up 1.2s ease-out;
+  animation: fade-in-up 1.5s ease-out;
+  animation-delay: 0.5s;
+}
+
+@keyframes fade-in-down {
+  0% {
+    opacity: 0;
+    transform: translateX(1080px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+.animate-fade-in-down {
+  animation: fade-in-down 0.8s ease-in;
 }

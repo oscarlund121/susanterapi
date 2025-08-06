@@ -9,7 +9,7 @@ import { IoArrowForward } from "react-icons/io5";
 const HeroElegantMinimal = () => (
   <div className="relative w-full bg-white h-[85vh] md:h-[90vh]">
     {/* Background Image */}
-    <div className="absolute inset-0 rounded-bl-[200px] overflow-hidden">
+    <div className="absolute inset-0 rounded-bl-[200px] overflow-hidden animate-fade-in-down">
       <Image
         src="/images/hero-img-hd.jpg"
         alt="Susan Albertsen - Psykoterapeut"

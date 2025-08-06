@@ -14,7 +14,7 @@ const LandingMaalCard = ({
 }) => {
   
   return (
-    <div className="bg-white shadow-lg rounded-2xl overflow-hidden border  hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
+    <div className="bg-white shadow-lg rounded-2xl overflow-hidden  hover:shadow-xl transition-all duration-500 transform hover:-translate-y-1">
       {/* Elegant header with gradient */}
       <CardHeader 
         number="01"
