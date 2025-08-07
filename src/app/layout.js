@@ -1,4 +1,4 @@
-import { Geist, Geist_Mono, Work_Sans, EB_Garamond, Fraunces } from "next/font/google";
+import { Geist, Geist_Mono, Work_Sans, EB_Garamond, Fraunces, Archivo, Syne } from "next/font/google";
 import "./globals.css";
 import Header from "./components/layout/Header";
 import NavStandard from "./components/layout/NavStandard";
@@ -7,18 +7,20 @@ import FooterElegant from "./components/layout/FooterElegant";
 
 
 
-const workSans = Work_Sans({
-  variable: "--font-work-sans",
-  subsets: ["latin"],
-});
 
-const ebGaramond = EB_Garamond({
-  variable: "--font-eb-garamond",
-  subsets: ["latin"],
-});
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
+  subsets: ["latin"],
+})
+
+const archivo = Archivo({
+  variable: "--font-archivo",
+  subsets: ["latin"],
+})
+
+const syne = Syne({
+  variable: "--font-syne",
   subsets: ["latin"],
 })
 
@@ -49,7 +51,7 @@ export default function RootLayout({ children }) {
 
       {/* Standard header */}
       <body
-        className={`${workSans.variable} ${fraunces.variable} antialiased`}
+        className={`${fraunces.variable} ${archivo.variable} ${syne.variable} antialiased`}
       >
 
         <NavStandard />

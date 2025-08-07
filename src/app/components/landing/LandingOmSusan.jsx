@@ -14,7 +14,7 @@ const LandingOmSusan = () => {
   return (
     <section className="section-padding relative">
       {/* Gul baggrund - fylder 50% til højre og 60% af højden */}
-      <div className="absolute top-1/4 bottom-1/4 right-0 w-2/3 bg-[#fff100]/20 rounded-tl-[200px] rounded-bl-[200px]"></div>
+     
       
       <div className="max-w-7xl mx-auto container-padding relative z-10">
         {/* Header */}

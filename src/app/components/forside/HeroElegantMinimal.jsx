@@ -7,9 +7,9 @@ import SectionBadge from "../layout/SectionBadge";
 import { IoArrowForward } from "react-icons/io5";
 
 const HeroElegantMinimal = () => (
-  <div className="relative w-full bg-[#fff100]/20 h-[85vh] md:h-[90vh] ">
+  <div className="relative w-full h-[85vh] md:h-[90vh] ">
     {/* Background Image */}
-    <div className="absolute inset-0 rounded-bl-[150px]  overflow-hidden animate-fade-in-down">
+    <div className="absolute inset-0  overflow-hidden animate-fade-in-down">
       <Image
         src="/images/hero-img-hd.jpg"
         alt="Susan Albertsen - Psykoterapeut"

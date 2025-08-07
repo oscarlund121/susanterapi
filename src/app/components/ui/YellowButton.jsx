@@ -12,7 +12,8 @@ const YellowButton = ({
   size = 'medium',
   iconOnly = false,
   variant = 'yellow', // 'yellow' eller 'green'
-  direction = 'right' // Ny prop - 'right' eller 'left'
+  direction = 'right', // Ny prop - 'right' eller 'left'
+  alwaysOpen = false // Ny prop - holder knappen åben altid
 }) => {
   const [isHovered, setIsHovered] = useState(false);
   
@@ -35,14 +36,14 @@ const YellowButton = ({
   // Farve-konfiguration baseret på variant
   const variantClasses = {
     yellow: {
-      bg: 'bg-[#fff100]',
-      text: 'text-black',
-      iconColor: 'text-black',
+      bg: 'bg-[#fff100] hover:bg-white',
+      text: 'text-[#333333] hover:text-[#333333]',
+      iconColor: 'text-[#333333] hover:text-[#333333]',
     },
     green: {
-      bg: 'bg-[#1cc18e]',
-      text: 'text-white',
-      iconColor: 'text-white',
+      bg: 'bg-[#1cc18e] hover:bg-white',
+      text: 'text-{#333333} hover:text-[#333333]',
+      iconColor: 'text-{#333333} hover:text-[#333333]',
     }
   };
 
@@ -78,9 +79,11 @@ const YellowButton = ({
           <button 
             className={`
               overflow-hidden  whitespace-nowrap transition-all duration-600 ease-in-out
-              ${isHovered 
-                ? 'max-w-[200px] opacity-100 mx-3 underline' 
-                : 'max-w-[200px] opacity-100 mx-3 sm:max-w-0 sm:opacity-0 sm:mx-0'
+              ${alwaysOpen 
+                ? 'max-w-[200px] opacity-100 mx-3' 
+                : isHovered 
+                  ? 'max-w-[200px] opacity-100 mx-3 underline' 
+                  : 'max-w-[200px] opacity-100 mx-3 sm:max-w-0 sm:opacity-0 sm:mx-0'
               }
             `}
             >

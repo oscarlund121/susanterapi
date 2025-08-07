@@ -8,7 +8,8 @@ const CallToActionBox = ({
   buttonHref = "/kontakt",
   buttonVariant = "yellow",
   buttonSize = "small",
-  buttonDirection = "left"
+  buttonDirection = "left",
+  buttonAlwaysOpen = true
 }) => {
   return (
     <div className="flex flex-col items-center justify-center mt-8">
@@ -17,13 +18,14 @@ const CallToActionBox = ({
           <h4 className="text-base md:text-lg font-light text-white leading-relaxed flex-1">
             {title}
           </h4>
-          <div className="flex items-end justify-end w-40 mb-6 flex-shrink-0">
+          <div className="flex items-end justify-end w-18 mb-6 flex-shrink-0">
             <YellowButton 
               href={buttonHref}
               text={buttonText}
               variant={buttonVariant}
               size={buttonSize}
               direction={buttonDirection}
+              alwaysOpen={buttonAlwaysOpen}
             />
           </div>
         </div>
