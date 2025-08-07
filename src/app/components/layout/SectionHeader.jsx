@@ -27,11 +27,11 @@ const SectionHeader = ({
         <div className="lg:grid lg:grid-cols-[3fr_auto_1fr] lg:gap-4">
           {/* Kolonne 1 - Overskrift */}
           <div className="mb-4 lg:mb-0">
-            <h2 className="lg:place-items-end lg:justify-center text-[#333333]">
+            <h2 className="lg:place-items-start lg:justify-end text-[#333333]">
               {title}
             </h2>
           </div>
-          
+
           {/* Kolonne 2 - Beskrivelsestekst */}
           <div className="mb-6 lg:mb-0 lg:flex lg:justify-center lg:place-items-end lg:max-w-md">
             <h6 className="text-base md:text-lg font-light text-gray-400 leading-relaxed">
@@ -41,7 +41,7 @@ const SectionHeader = ({
 
           {/* Kolonne 3 - Button */}
           {showButton && (
-            <div className="flex justify-start md:justify-center lg:justify-end lg:items-end lg:pb-4">
+            <div className="flex justify-start  md:justify-end lg:items-end lg:pb-4">
               <YellowButton
                 text={buttonText}
                 href={buttonHref}
@@ -58,28 +58,25 @@ const SectionHeader = ({
 
   // Default variant (original layout)
   return (
-    <div className="m-2 md:mb-8">
+    <div className="m-2 md:mb-8 ">
       {/* Responsivt layout for badge og button */}
-      <div className="flex justify-between items-center mb-6">
+      <div className="flex flex-col justify-between items-left  mb-6">
         <SectionBadge>{badgeText}</SectionBadge>
-
-        {showButton && (
-          <YellowButton
-            text={buttonText}
-            href={buttonHref}
-            size={buttonSize}
-            direction={buttonDirection}
-            variant={buttonVariant}
-          />
-        )}
+        <h2 className="text-3xl md:text-4xl font-light inline-block text-[#333333] mb-6">
+          {title}
+        </h2>
+        <h6 className=" text-gray-400 max-w-xl mb-6">{description}</h6>
       </div>
 
-      <h2 className="text-3xl md:text-4xl font-light text-[#333333] mb-6">
-        {title}
-      </h2>
-      <h6 className=" text-gray-400 max-w-xl mb-6">
-        {description}
-      </h6>
+      {showButton && (
+        <YellowButton
+          text={buttonText}
+          href={buttonHref}
+          size={buttonSize}
+          direction={buttonDirection}
+          variant={buttonVariant}
+        />
+      )}
     </div>
   );
 };

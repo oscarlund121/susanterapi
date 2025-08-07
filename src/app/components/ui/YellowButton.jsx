@@ -62,7 +62,7 @@ const YellowButton = ({
       <div className="inline-block">
       <div 
         className={`
-          group flex items-start transition-all duration-600 ease-in-out 
+          group flex items-center transition-all duration-600 ease-in-out 
           ${currentVariant.bg} ${currentVariant.text} font-medium text-sm
           ${currentSize.button}
           ${isHovered 

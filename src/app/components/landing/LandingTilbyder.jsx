@@ -6,6 +6,7 @@ import SectionHeader from "../layout/SectionHeader";
 import ReadMoreButton from "../ui/ReadMoreButton";
 import YellowButton from "../ui/YellowButton";
 import TilbyderCard from "./TilbyderCard";
+import CallToActionBox from "../layout/CallToActionBox";
 
 const LandingTilbyder = () => {
   return (
@@ -21,70 +22,55 @@ const LandingTilbyder = () => {
           buttonVariant="yellow"
           buttonDirection="left"
           buttonSize="large"
-            
+          variant="horizontal"
         />
 
         {/* Fire hovedområder */}
         <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4 md:gap-8 ">
-          {/* Psykoterapi */}
+          {/* Psykoterapi - Første card */}
           <TilbyderCard 
             title="Psykoterapi"
             image="/images/tree-touch.jpg"
             imageAlt="Psykoterapi"
-            variant="default"
+            imageBorderRadius="rounded-tl-[50px] rounded-tr-xl rounded-b-xl"
             buttonText="Læs mere"
             buttonHref="/ydelser"
           />
 
-          {/* Chok-forløsning */}
+          {/* Chok-forløsning - Andet card */}
           <TilbyderCard 
             title="Chok- og traumeforløsning"
             image="/images/hand-on-chest-2.jpg"
             imageAlt="Chok-forløsning"
-            variant="rounded"
+            imageBorderRadius="rounded-bl-[50px] rounded-t-xl rounded-br-xl"
             buttonText="Læs mere"
             buttonHref="/ydelser"
           />
 
-          {/* Meditation */}
+          {/* Meditation - Tredje card */}
           <TilbyderCard 
             title="Meditation"
             image="/images/sitting-closed.jpg"
             imageAlt="Meditation"
-            variant="asymmetric"
+            imageBorderRadius="rounded-l-xl rounded-tr-[50px] rounded-br-xl"
             buttonText="Læs mere"
             buttonHref="/ydelser"
           />
 
-          {/* Familie- og parterapi */}
+          {/* Familie- og parterapi - Fjerde card */}
           <TilbyderCard 
             title="Familie- og parterapi"
             image="/images/walk.jpg"
             imageAlt="Familie- og parterapi"
-            variant="rounded"
+            imageBorderRadius="rounded-l-xl rounded-tr-xl rounded-br-[50px]"
             buttonText="Læs mere"
             buttonHref="/ydelser"
           />
         </div>
-        <div className="flex flex-col items-center justify-center mt-8">
-          <div className="bg-[#333333] px-6 py-4 rounded-xl shadow-lg">
-            <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-              <h4 className="text-base md:text-lg font-light text-white leading-relaxed">
-                I terapien kan du, dit barn, familien eller din partner få åbnet
-                op for kroppens naturlige intelligens og med lethed udfolde dine
-                ønsker og drømme.
-              </h4>
-              <div className="flex items-end justify-end">
-                <YellowButton 
-                  href="/kontakt"
-                  text="Kontakt mig"
-                  variant="yellow"
-                  size="small"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
+        
+        <CallToActionBox 
+          title="I terapien kan du, dit barn, familien eller din partner få åbnet op for kroppens naturlige intelligens og med lethed udfolde dine ønsker og drømme."
+        />
       </div>
     </section>
   );

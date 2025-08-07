@@ -9,10 +9,27 @@ const TilbyderCard = ({
   imageAlt,
   variant = "default", // default, rounded, asymmetric
   buttonText = "Læs mere",
-  buttonHref = "/ydelser"
+  buttonHref = "/ydelser",
+  // Custom border radius props for image
+  imageBorderRadius, // Direkte CSS string f.eks. "rounded-3xl"
+  imageTopLeftRadius,   // f.eks. "rounded-tl-[50px]"
+  imageTopRightRadius,  // f.eks. "rounded-tr-xl"
+  imageBottomLeftRadius, // f.eks. "rounded-bl-xl"
+  imageBottomRightRadius // f.eks. "rounded-br-xl"
 }) => {
-  // Forskellige hjørne-styles baseret på variant
-  const getCardStyles = () => {
+  // Forskellige hjørne-styles for billedet baseret på props
+  const getImageStyles = () => {
+    // Hvis der er sendt en direkte imageBorderRadius prop
+    if (imageBorderRadius) {
+      return imageBorderRadius;
+    }
+    
+    // Hvis der er sendt individuelle hjørne-props
+    if (imageTopLeftRadius || imageTopRightRadius || imageBottomLeftRadius || imageBottomRightRadius) {
+      return `${imageTopLeftRadius || ''} ${imageTopRightRadius || ''} ${imageBottomLeftRadius || ''} ${imageBottomRightRadius || ''}`.trim();
+    }
+    
+    // Ellers brug variant system
     switch (variant) {
       case "rounded":
         return "rounded-2xl";
@@ -25,9 +42,9 @@ const TilbyderCard = ({
 
   return (
     <div className="group cursor-pointer">
-      <div className={`bg-white overflow-hidden flex flex-col h-96 transition-transform duration-300 hover:scale-[1.02] ${getCardStyles()}`}>
-        {/* Større billede med action icons */}
-        <div className="relative h-66 overflow-hidden">
+      <div className="bg-white overflow-hidden flex flex-col h-76  rounded-xl">
+        {/* Større billede med custom border radius */}
+        <div className={`relative h-66 overflow-hidden ${getImageStyles()}`}>
           <Image
             src={image}
             alt={imageAlt || title}
@@ -37,17 +54,12 @@ const TilbyderCard = ({
         </div>
         
         {/* Kompakt content område */}
-        <div className="p-4 flex-1 flex flex-col">
-          <h5 className="text-lg font-light text-[#333333] mb-1 underline-animate">
+        <div className="p-4 flex-1 flex h-8 flex-col">
+          <h5 className="text-lg font-light text-[#333333]  mb-1 underline-animate">
             {title}
           </h5>
           <div className="mt-auto">
-            <YellowButton 
-              href={buttonHref}
-              text={buttonText}
-              variant="green"
-              size="small"
-            />
+           
           </div>
         </div>
       </div>
