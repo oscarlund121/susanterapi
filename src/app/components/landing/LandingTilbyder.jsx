@@ -19,7 +19,7 @@ const LandingTilbyder = () => {
           description="Jeg tilbyder evidensbaseret psykoterapi med fokus på helhedsorienteret behandling og personlig udvikling."
           buttonText="Book tid nu"
           buttonHref="/ydelser"
-          buttonVariant="yellow"
+          buttonVariant="green"
           buttonDirection="left"
           buttonSize="large"
           variant="horizontal"

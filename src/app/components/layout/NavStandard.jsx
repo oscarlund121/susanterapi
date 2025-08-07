@@ -42,7 +42,7 @@ const NavStandard = () => {
       {/* Menu button - All screen sizes */}
       <button
         onClick={toggleMenu}
-        className="flex items-center space-x-1 px-2 py-2 rounded-full h-16 w-16 sm:h-20 sm:w-20 bg-white border border-white/20 hover:text-white hover:bg-[#1cc18e] transition-all duration-600 shadow-lg"
+        className="flex items-center space-x-1 px-2 py-2 rounded-full h-20 w-20  bg-white border border-white/20 hover:text-white hover:bg-[#1cc18e] transition-all duration-600 shadow-lg"
         aria-label="Toggle menu"
       >
         <HiMenuAlt3 className="h-4 w-4 sm:h-5 sm:w-5" />

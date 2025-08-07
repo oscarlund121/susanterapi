@@ -2,8 +2,8 @@
 
 import Image from "next/image";
 import Button from "../ui/Button.jsx";
-import YellowButton from "../ui/YellowButton";
-import SectionBadge from "../layout/SectionBadge";
+import YellowButton from "../ui/YellowButton.jsx";
+import SectionBadge from "./SectionBadge.jsx";
 import { IoArrowForward } from "react-icons/io5";
 
 const HeroElegantMinimal = () => (
@@ -15,10 +15,9 @@ const HeroElegantMinimal = () => (
         alt="Susan Albertsen - Psykoterapeut"
         width={1920}
         height={1080}
-        className="object-cover  object-[center_20%] w-full h-full"
+        className="object-cover  object-[center_40%] w-full h-full"
       />
-      {/* Dark overlay for better text readability */}
-     {/*  <div className="absolute inset-0 bg-[#fff100]/5"></div> */}
+  
     </div>
 
     {/* Content overlay */}
@@ -56,7 +55,7 @@ const HeroElegantMinimal = () => (
                 href="/ydelser"
                 text="Se mine ydelser"
                 size="large"
-                variant="outline-white"
+                variant="yellow"
                 direction="right"
               />
             </div>

@@ -49,7 +49,7 @@ const LandingUdtalelser = () => {
         {/* Call to action */}
         <div className="text-center mt-16 md:mt-20">
           <div className="space-y-8">
-            <p className="text-lg font-light text-gray-600 max-w-2xl mx-auto">
+            <p className="text-lg font-light  max-w-2xl mx-auto">
               En terapisession hos mig er en samtale, hvor vi sammen finder frem til 
               det du ønsker at arbejde med, så du i eget tempo kommer hen til det du ønsker.
             </p>

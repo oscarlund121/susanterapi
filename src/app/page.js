@@ -1,8 +1,6 @@
 import Image from 'next/image';
-import Hero from './components/old-site/Hero';
-// Hero varianter - DSE REVIEW
 
-import HeroElegantMinimal from './components/forside/HeroElegantMinimal';
+import HeroElegantMinimal from './components/layout/Hero';
 // Tjenester varianter
 
 // NY SAMMENHÆNGENDE LANDING PAGE

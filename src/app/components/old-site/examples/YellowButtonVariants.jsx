@@ -1,6 +1,6 @@
 "use client";
 import React from "react";
-import YellowButton from "../ui/YellowButton";
+import YellowButton from "../../ui/YellowButton";
 
 const YellowButtonVariants = () => {
   return (
