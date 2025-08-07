@@ -22,9 +22,9 @@ const LandingMaalCard = ({
     <div className="bg-white shadow-lg rounded-2xl overflow-hidden w-full">
       {/* Billede header hvis billede er givet */}
       {image && (
-        <div className="relative h-48 sm:h-56 md:h-64">
+        <div className="relative h-48  sm:h-56 md:h-64">
           <Image src={image} alt={title} fill className="object-cover" />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/20 to-transparent"></div>
+          
         </div>
       )}
 
@@ -39,15 +39,10 @@ const LandingMaalCard = ({
       {/* Content area with organized sections */}
       <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 md:space-y-8">
         {/* Main content with better spacing */}
-        <div className="space-y-4 sm:space-y-6">
-          <BulletList items={items} variant="clean" />
-        </div>
-
+     
         {/* Call to action area */}
-        <div className="flex flex-col sm:flex-row sm:justify-between sm:items-center gap-4 pt-4 sm:pt-6 border-t">
-          <div className="text-xs sm:text-sm font-light text-center sm:text-left">
-            Specialiseret vejledning
-          </div>
+      
+        
           <YellowButton
             text={buttonText}
             href={buttonHref}
@@ -55,7 +50,7 @@ const LandingMaalCard = ({
             direction={buttonDirection}
             variant={buttonVariant}
           />
-        </div>
+      
       </div>
     </div>
   );

@@ -351,3 +351,23 @@ p + p {
   animation: fade-in-down 0.8s ease-in;
   
 }
+
+/* TilbyderCard underline animation */
+.underline-animate {
+  position: relative;
+}
+
+.underline-animate::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  width: 0;
+  height: 1px;
+  background: #333333;
+  transition: width 0.4s ease;
+}
+
+.group:hover .underline-animate::after {
+  width: 100%;
+}

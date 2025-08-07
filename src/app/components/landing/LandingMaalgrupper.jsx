@@ -102,7 +102,8 @@ const LandingMaalgrupper = () => {
     });
   }, [api]);
   return (
-    <section className="section-padding bg-[#fff100]/10 rounded-tr-[100px] sm:rounded-tr-[150px] lg:rounded-tr-[250px] rounded-bl-[100px] sm:rounded-bl-[150px] lg:rounded-bl-[250px]">
+    <div className=" bg-[#fff100]/10  rounded-tr-[100px] sm:rounded-tr-[150px] lg:rounded-tr-[250px] rounded-bl-[100px] sm:rounded-bl-[150px] lg:rounded-bl-[250px]">
+    <section className="section-padding ">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Layout med whitespace til venstre og indhold til højre */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
@@ -168,8 +169,8 @@ const LandingMaalgrupper = () => {
             </div>
 
             {/* Carousel med enkelt card */}
-            <div className="w-full">
-              <Carousel setApi={setApi} className="w-full">
+            <div className="w-full m-8 rounded-2xl bg-[#1cc18e]/30">
+              <Carousel setApi={setApi} className="w-full p-16">
                 <CarouselContent >
                   {maalgrupper.map((gruppe, index) => (
                     <CarouselItem key={gruppe.id} >
@@ -193,6 +194,7 @@ const LandingMaalgrupper = () => {
         </div>
       </div>
     </section>
+    </div>
   );
 };
 
