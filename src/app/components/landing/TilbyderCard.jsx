@@ -41,8 +41,8 @@ const TilbyderCard = ({
   };
 
   return (
-    <div className="group cursor-pointer">
-      <div className="bg-white overflow-hidden flex flex-col h-76  rounded-xl">
+    <div className="group cursor-pointer mb-6 md:mb-0">
+      <div className="bg-white overflow-hidden flex flex-col h-96  rounded-xl">
         {/* Større billede med custom border radius */}
         <div className={`relative h-66 overflow-hidden ${getImageStyles()}`}>
           <Image

@@ -17,7 +17,7 @@ const CallToActionBox = ({
           <h4 className="text-base md:text-lg font-light text-white leading-relaxed flex-1">
             {title}
           </h4>
-          <div className="flex items-end justify-end w-20 flex-shrink-0">
+          <div className="flex items-end justify-end w-40 mb-6 flex-shrink-0">
             <YellowButton 
               href={buttonHref}
               text={buttonText}
