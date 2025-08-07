@@ -376,3 +376,7 @@ p + p {
 .group:hover .underline-animate::after {
   width: 100%;
 }
+
+.underline-animate:hover::after {
+  width: 100%;
+}

@@ -49,15 +49,9 @@ const HeroElegantMinimal = () => (
                 text="Book en session"
                 size="large"
                 variant="green"
-                direction="right"
+                direction="left"
               />
-              <YellowButton
-                href="/ydelser"
-                text="Se mine ydelser"
-                size="large"
-                variant="yellow"
-                direction="right"
-              />
+            
             </div>
           </div>
         </div>

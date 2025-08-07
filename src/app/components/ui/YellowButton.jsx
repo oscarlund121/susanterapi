@@ -20,16 +20,16 @@ const YellowButton = ({
   // Størrelse-konfiguration
   const sizeClasses = {
     small: {
-      button: isHovered ? 'pl-2 pr-3 py-1' : 'pl-2 pr-3 py-1 sm:p-1', // Åben på små skærme
-      icon: 'text-xs',
+      button: isHovered ? 'pl-2 pr-3 py-1' : 'pl-3 pr-4 py-2 sm:p-2', // Større når ikke hovered
+      icon: isHovered ? 'text-xs' : 'text-sm', // Større ikon når ikke hovered
     },
     medium: {
-      button: isHovered ? 'pl-3 pr-4 py-1.5' : 'pl-3 pr-4 py-1.5 sm:p-1.5', // Åben på små skærme
-      icon: 'text-sm',
+      button: isHovered ? 'pl-3 pr-4 py-1.5' : 'pl-4 pr-5 py-3 sm:p-3', // Større når ikke hovered
+      icon: isHovered ? 'text-sm' : 'text-base', // Større ikon når ikke hovered
     },
     large: {
-      button: isHovered ? 'pl-4 pr-5 py-2' : 'pl-4 pr-5 py-2 sm:p-2', // Åben på små skærme
-      icon: 'text-base',
+      button: isHovered ? 'pl-4 pr-5 py-2' : 'pl-5 pr-6 py-4 sm:p-4', // Større når ikke hovered
+      icon: isHovered ? 'text-base' : 'text-lg', // Større ikon når ikke hovered
     },
   };
 
@@ -42,8 +42,8 @@ const YellowButton = ({
     },
     green: {
       bg: 'bg-[#1cc18e] hover:bg-white',
-      text: 'text-{#333333} hover:text-[#333333]',
-      iconColor: 'text-{#333333} hover:text-[#333333]',
+      text: 'text-white hover:text-[#333333]',
+      iconColor: 'text-white hover:text-[#333333]',
     }
   };
 
@@ -78,11 +78,11 @@ const YellowButton = ({
         {!iconOnly && (
           <button 
             className={`
-              overflow-hidden  whitespace-nowrap transition-all duration-600 ease-in-out
+              overflow-hidden  whitespace-nowrap transition-all duration-600 ease-in-out underline-animate
               ${alwaysOpen 
                 ? 'max-w-[200px] opacity-100 mx-3' 
                 : isHovered 
-                  ? 'max-w-[200px] opacity-100 mx-3 underline' 
+                  ? 'max-w-[200px] opacity-100 mx-3' 
                   : 'max-w-[200px] opacity-100 mx-3 sm:max-w-0 sm:opacity-0 sm:mx-0'
               }
             `}
