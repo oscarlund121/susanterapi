@@ -4,6 +4,7 @@ import React, { useState, useEffect } from "react";
 import Link from "next/link";
 import { HiMenuAlt3, HiX } from "react-icons/hi";
 import { FaInstagram, FaFacebookF } from "react-icons/fa";
+import StaticButton from "../ui/StaticButton";
 
 const NavStandard = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -24,178 +25,222 @@ const NavStandard = () => {
     };
   }, [isMenuOpen]);
 
-  const mainMenuItems = [
-    { name: "Hjem", href: "/" },
-    { name: "Om mig", href: "/ommig" },
-    { name: "Priser", href: "/priser" },
-  ];
-
-  const therapyItems = [
-    { name: "EMDR Terapi", href: "/ydelser#emdr" },
-    { name: "Mentalisering", href: "/ydelser#mentalisering" },
-    { name: "Chok-forløsning", href: "/ydelser#chok" },
-    { name: "Familieterapi", href: "/ydelser#familie" },
-  ];
-
   return (
     <nav className="fixed top-0 right-0 z-50 p-4 sm:p-6">
-      {/* Menu button - All screen sizes */}
+      {/* Menu button - Moderne design */}
       <button
         onClick={toggleMenu}
-        className="flex items-center space-x-1 px-2 py-2 rounded-full h-20 w-20  bg-white border border-white/20 hover:text-white hover:bg-[#1cc18e] transition-all duration-600 shadow-lg"
+        className="flex items-center justify-center space-x-2 px-4 py-3 rounded-full bg-white/90 backdrop-blur-sm border border-gray-200 hover:bg-[#1cc18e] hover:text-white transition-all duration-300 shadow-lg group"
         aria-label="Toggle menu"
       >
-        <HiMenuAlt3 className="h-4 w-4 sm:h-5 sm:w-5" />
-        <span className="text-xs sm:text-sm font-light hidden sm:inline">Menu</span>
+        <HiMenuAlt3 className="h-5 w-5 transition-transform group-hover:scale-110" />
+        <span className="text-sm font-medium">Menu</span>
       </button>
 
-        {/* Mobile Navigation Overlay - All screen sizes */}
-        {isMenuOpen && (
-          <>
-            {/* Background Overlay - Green tint with less opacity */}
-            <div 
-              className={`fixed inset-0 bg-[#fff100]/10 backdrop-blur-sm z-40 transition-opacity duration-600 ${
-                isMenuOpen ? 'opacity-100' : 'opacity-0'
-              }`}
-              onClick={() => setIsMenuOpen(false)}
-            />
-            
-            {/* Menu Content */}
-            <div className="fixed inset-0 z-50 overflow-hidden">
-              <div className="flex h-full justify-end">
-                {/* Menu Panel - Cleaner design */}
-                <div className="w-full sm:w-[90%] md:w-[70%] bg-white/95 backdrop-blur-md shadow-2xl animate-smooth-slide-in rounded-tl-[100px] sm:rounded-tl-[200px] rounded-bl-[100px] sm:rounded-bl-[200px] overflow-hidden">
-                  
-                  {/* Menu Header - Simplified */}
-                  <div className="flex items-end justify-end mx-4 sm:mx-6 my-4 sm:my-6 border-b border-gray-100">
-                  
-                    <button
-                      onClick={() => setIsMenuOpen(false)}
-                      className="w-16 h-16 sm:w-20 sm:h-20 rounded-full bg-white hover:bg-[#1cc18e] flex items-center justify-center transition duration-400"
-                    >
-                      <HiX className="h-5 w-5 sm:h-6 sm:w-6" />
-                    </button>
-                  </div>
+      {/* Navigation Overlay */}
+      {isMenuOpen && (
+        <>
+          {/* Background Overlay */}
+          <div 
+            className="fixed inset-0 bg-black/20 backdrop-blur-sm z-40 transition-opacity duration-300"
+            onClick={() => setIsMenuOpen(false)}
+          />
+          
+          {/* Menu Content - Elegant moderne design */}
+          <div className="fixed inset-0 z-50 overflow-hidden">
+            <div className="flex h-full justify-end">
+              <div className="w-full sm:w-[90%] lg:w-[75%] bg-white shadow-2xl animate-smooth-slide-in overflow-hidden">
+                
+                {/* Menu Header - Minimalistisk */}
+                <div className="flex items-center justify-end p-8">
+                  <button
+                    onClick={() => setIsMenuOpen(false)}
+                    className="w-16 h-16 rounded-full bg-gray-50 hover:bg-[#1cc18e] hover:text-white flex items-center justify-center transition-all duration-300 shadow-sm"
+                  >
+                    <HiX className="h-6 w-6" />
+                  </button>
+                </div>
 
-                  {/* Menu Content - Redesigned */}
-                  <div className="flex-1 p-8 overflow-y-auto">
+                {/* Menu Content - Ny elegant layout */}
+                <div className="flex-1 px-8 pb-8 overflow-y-auto">
+                  
+                  {/* Navigation Grid - Større spacing */}
+                  <div className="grid lg:grid-cols-2 gap-16 mb-16">
                     
-                    {/* Navigation Grid - Simplified */}
-                    <div className="grid md:grid-cols-3 gap-8 mb-12">
-                      
-                      {/* Navigation Column 1 - Hovedmenu */}
-                      <div className="space-y-4">
-                        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">
-                          Hovedmenu
-                        </h3>
-                        <div className="space-y-3">
-                          {mainMenuItems.map((item, index) => (
-                            <Link
-                              key={item.name}
-                              href={item.href}
-                              className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
+                    {/* Venstre side - Navigation */}
+                    <div className="space-y-12">
+                      {/* Hovedmenu */}
+                      <div>
+                        <div className="space-y-6">
+                          <Link
+                            href="/"
+                            className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-300 text-3xl py-2 underline-animate"
+                            style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Hjem
+                          </Link>
+                          <Link
+                            href="/ommig"
+                            className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-300 text-3xl py-2 underline-animate"
+                            style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Om mig
+                          </Link>
+                          <Link
+                            href="/ydelser"
+                            className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-300 text-3xl py-2 underline-animate"
+                            style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Ydelser
+                          </Link>
+                          <Link
+                            href="/priser"
+                            className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-300 text-3xl py-2 underline-animate"
+                            style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            Priser
+                          </Link>
                         </div>
                       </div>
 
-                      {/* Navigation Column 2 - Terapi */}
-                      <div className="space-y-4">
-                        <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">
-                          Terapi
+                      {/* Terapi Former - Elegant styling */}
+                      <div>
+                        <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-8" style={{ fontFamily: 'var(--font-archivo)' }}>
+                          Terapi Former
                         </h3>
-                        <div className="space-y-3">
-                          {therapyItems.map((item, index) => (
-                            <Link
-                              key={item.name}
-                              href={item.href}
-                              className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              {item.name}
-                            </Link>
-                          ))}
-                        </div>
-                      </div>
-
-                      {/* Navigation Column 3 - Kontakt & Social */}
-                      <div className="space-y-6">
-                        <div>
-                          <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">
-                            Kontakt
-                          </h3>
-                          <div className="space-y-4">
-                            <Link
-                              href="/kontakt"
-                              className="block text-[#333333] hover:text-[#1cc18e] transition-colors duration-200 text-lg font-light py-1"
-                              onClick={() => setIsMenuOpen(false)}
-                            >
-                              Book tid
-                            </Link>
-                            <div className="text-gray-600">
-                              <p className="text-sm text-gray-400 mb-1">Email</p>
-                              <p className="text-base font-light">info@susanterapi.dk</p>
-                            </div>
-                            <div className="text-gray-600">
-                              <p className="text-sm text-gray-400 mb-1">Telefon</p>
-                              <p className="text-base font-light">+45 XX XX XX XX</p>
-                            </div>
-                          </div>
-                        </div>
-
-                        {/* Social Media */}
-                        <div>
-                          <h3 className="text-xs font-semibold text-gray-400 uppercase tracking-widest mb-6">
-                            Følg med
-                          </h3>
-                          <div className="flex space-x-4">
-                            <a
-                              href="https://instagram.com/susanterapi"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="w-10 h-10 bg-gradient-to-br from-pink-500 to-orange-400 rounded-xl flex items-center justify-center text-white hover:scale-105 transition-transform duration-200"
-                            >
-                              <FaInstagram className="h-5 w-5" />
-                            </a>
-                            <a
-                              href="https://facebook.com/susanterapi"
-                              target="_blank"
-                              rel="noopener noreferrer"
-                              className="w-10 h-10 bg-blue-600 rounded-xl flex items-center justify-center text-white hover:scale-105 transition-transform duration-200"
-                            >
-                              <FaFacebookF className="h-5 w-5" />
-                            </a>
-                          </div>
+                        <div className="space-y-4">
+                          <Link
+                            href="/ydelser#emdr"
+                            className="flex items-center space-x-4 group py-2"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <span className="inline-block text-xs px-3 py-2 bg-[#1cc18e] text-white rounded-full font-medium tracking-wide">
+                              01
+                            </span>
+                            <span className="text-[#333333] group-hover:text-[#1cc18e] transition-colors duration-300 text-xl underline-animate" style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}>
+                              EMDR Terapi
+                            </span>
+                          </Link>
+                          
+                          <Link
+                            href="/ydelser#mentalisering"
+                            className="flex items-center space-x-4 group py-2"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <span className="inline-block text-xs px-3 py-2 bg-[#1cc18e] text-white rounded-full font-medium tracking-wide">
+                              02
+                            </span>
+                            <span className="text-[#333333] group-hover:text-[#1cc18e] transition-colors duration-300 text-xl underline-animate" style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}>
+                              Mentalisering
+                            </span>
+                          </Link>
+                          
+                          <Link
+                            href="/ydelser#chok"
+                            className="flex items-center space-x-4 group py-2"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <span className="inline-block text-xs px-3 py-2 bg-[#1cc18e] text-white rounded-full font-medium tracking-wide">
+                              03
+                            </span>
+                            <span className="text-[#333333] group-hover:text-[#1cc18e] transition-colors duration-300 text-xl underline-animate" style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}>
+                              Chok-forløsning
+                            </span>
+                          </Link>
+                          
+                          <Link
+                            href="/ydelser#familie"
+                            className="flex items-center space-x-4 group py-2"
+                            onClick={() => setIsMenuOpen(false)}
+                          >
+                            <span className="inline-block text-xs px-3 py-2 bg-[#1cc18e] text-white rounded-full font-medium tracking-wide">
+                              04
+                            </span>
+                            <span className="text-[#333333] group-hover:text-[#1cc18e] transition-colors duration-300 text-xl underline-animate" style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}>
+                              Familieterapi
+                            </span>
+                          </Link>
                         </div>
                       </div>
                     </div>
 
-                    {/* CTA Section - Simplified */}
-                    <div className="flex flex-col sm:flex-row gap-4 pt-8 border-t border-gray-100">
-                      <Link
-                        href="/kontakt"
-                        className="inline-flex items-center justify-center bg-[#1cc18e] text-white px-8 py-4 rounded-2xl hover:bg-[#1cc18e]/90 transition-all duration-200 font-medium text-lg hover:scale-[1.02] shadow-lg"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Book en samtale
-                      </Link>
-                      <Link
-                        href="/ydelser"
-                        className="inline-flex items-center justify-center border-2 border-gray-200 text-gray-700 px-8 py-4 rounded-2xl hover:bg-gray-50 hover:border-gray-300 transition-all duration-200 font-medium text-lg hover:scale-[1.02]"
-                        onClick={() => setIsMenuOpen(false)}
-                      >
-                        Se terapi former
-                      </Link>
+                    {/* Højre side - Kontakt & CTA */}
+                    <div className="space-y-12">
+                      {/* Kontakt Information */}
+                      <div>
+                        <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-8" style={{ fontFamily: 'var(--font-archivo)' }}>
+                          Kontakt
+                        </h3>
+                        <div className="space-y-6">
+                          <div>
+                            <p className="text-sm text-gray-400 mb-2" style={{ fontFamily: 'var(--font-archivo)' }}>Email</p>
+                            <p className="text-lg text-[#333333]" style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}>info@susanterapi.dk</p>
+                          </div>
+                          <div>
+                            <p className="text-sm text-gray-400 mb-2" style={{ fontFamily: 'var(--font-archivo)' }}>Telefon</p>
+                            <p className="text-lg text-[#333333]" style={{ fontFamily: 'var(--font-syne)', fontWeight: '300' }}>+45 XX XX XX XX</p>
+                          </div>
+                        </div>
+                      </div>
+
+                      {/* Social Media - Elegant styling */}
+                      <div>
+                        <h3 className="text-sm text-gray-400 uppercase tracking-widest mb-8" style={{ fontFamily: 'var(--font-archivo)' }}>
+                          Følg med
+                        </h3>
+                        <div className="flex space-x-4">
+                          <a
+                            href="https://instagram.com/susanterapi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-14 h-14 border border-gray-200 rounded-full flex items-center justify-center text-[#333333] hover:border-[#1cc18e] hover:text-[#1cc18e] hover:bg-gray-50 transition-all duration-300"
+                          >
+                            <FaInstagram className="h-6 w-6" />
+                          </a>
+                          <a
+                            href="https://facebook.com/susanterapi"
+                            target="_blank"
+                            rel="noopener noreferrer"
+                            className="w-14 h-14 border border-gray-200 rounded-full flex items-center justify-center text-[#333333] hover:border-[#1cc18e] hover:text-[#1cc18e] hover:bg-gray-50 transition-all duration-300"
+                          >
+                            <FaFacebookF className="h-6 w-6" />
+                          </a>
+                        </div>
+                      </div>
+
+                      {/* CTA Buttons - Elegant placering */}
+                      <div className="pt-8">
+                        <div className="space-y-4">
+                          <StaticButton
+                            text="Book en session"
+                            href="/kontakt"
+                            variant="green"
+                            size="large"
+                            direction="left"
+                            iconDirection="right"
+                          />
+                          <StaticButton
+                            text="Se alle ydelser"
+                            href="/ydelser"
+                            variant="yellow"
+                            size="large"
+                            direction="left"
+                            iconDirection="right"
+                          />
+                        </div>
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
-          </>
-        )}
+          </div>
+        </>
+      )}
     </nav>
   );
 };

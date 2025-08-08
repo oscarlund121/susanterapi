@@ -26,9 +26,10 @@ const LandingTilbyder = () => {
         />
 
         {/* Fire hovedområder */}
-        <div className="grid xl:grid-cols-4 lg:grid-cols-3 md:grid-cols-2 gap-4 md:gap-8 ">
+        <div className="grid xl:grid-cols-4 lg:grid-cols-3 grid-cols-2 gap-4 md:gap-8 ">
           {/* Psykoterapi - Første card */}
           <TilbyderCard 
+            number="01"
             title="Psykoterapi"
             image="/images/tree-touch.jpg"
             imageAlt="Psykoterapi"
@@ -39,6 +40,7 @@ const LandingTilbyder = () => {
 
           {/* Chok-forløsning - Andet card */}
           <TilbyderCard 
+            number="02"
             title="Chok- og traumeforløsning"
             image="/images/hand-on-chest-2.jpg"
             imageAlt="Chok-forløsning"
@@ -49,6 +51,7 @@ const LandingTilbyder = () => {
 
           {/* Meditation - Tredje card */}
           <TilbyderCard 
+            number="03"
             title="Meditation"
             image="/images/sitting-closed.jpg"
             imageAlt="Meditation"
@@ -59,6 +62,7 @@ const LandingTilbyder = () => {
 
           {/* Familie- og parterapi - Fjerde card */}
           <TilbyderCard 
+            number="04"
             title="Familie- og parterapi"
             image="/images/walk.jpg"
             imageAlt="Familie- og parterapi"
@@ -68,9 +72,9 @@ const LandingTilbyder = () => {
           />
         </div>
         
-        <CallToActionBox 
+       {/*  <CallToActionBox 
           title="I terapien kan du, dit barn, familien eller din partner få åbnet op for kroppens naturlige intelligens og med lethed udfolde dine ønsker og drømme."
-        />
+        /> */}
       </div>
     </section>
   );

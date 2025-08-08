@@ -11,7 +11,7 @@
 
 body {
   background: #ffffff;
-  color: black;
+  color: #333333;
 
   margin: 0;
 }
@@ -29,11 +29,11 @@ h6 {
 
 /* Typography System */
 h1 {
-  font-size: clamp(48px, 6vw, 100px);
+  font-size: clamp(48px, 6vw, 130px);
   line-height: 100%;
   letter-spacing: -0.02em;
   font-weight: 700;
-  margin-bottom: 20px;
+  margin-bottom: 5px;
 }
 
 h2 {
@@ -48,9 +48,30 @@ h2 {
 h3 {
   font-size: clamp(28px, 3.5vw, 39px);
   line-height: 110%;
-  letter-spacing: -0.015em;
+  color: #333333;
   font-weight: 600;
-  margin-bottom: 20px;
+  margin-bottom: 15px;
+}
+
+/* Underline Animation for Links */
+.underline-animate {
+  position: relative;
+  text-decoration: none;
+}
+
+.underline-animate::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 1px;
+  bottom: -2px;
+  left: 0;
+  background-color: #1cc18e;
+  transition: width 0.3s ease;
+}
+
+.underline-animate:hover::after {
+  width: 100%;
 }
 
 h4 {

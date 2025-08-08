@@ -6,6 +6,7 @@ import LandingOmSusan from "./LandingOmSusan";
 import LandingMetoder from "./LandingMetoder"; 
 import LandingProblemer from "./LandingProblemer";
 import LandingMaalgrupper from "./LandingMaalgrupper";
+import CallToActionBox from "../layout/CallToActionBox";
 import LandingUdtalelser from "./LandingUdtalelser";
 import LandingForloeb from "./LandingForloeb";
 
@@ -16,6 +17,15 @@ const LandingPage = () => {
       
       {/* Hvad jeg tilbyder - simpelt 2-kolonne layout */}
       <LandingTilbyder />
+
+      {/* Call to Action - centreret under tilbyder sektion */}
+      <div className="container-padding section-padding-sm">
+        <div className="max-w-4xl mx-auto">
+          <CallToActionBox 
+            title="I terapien kan du, dit barn, familien eller din partner få åbnet op for kroppens naturlige intelligens og med lethed udfolde dine ønsker og drømme."
+          />
+        </div>
+      </div>
       
       {/* Om Susan - baggrund og erfaring (nu med quote inkluderet) */}
       <LandingOmSusan />

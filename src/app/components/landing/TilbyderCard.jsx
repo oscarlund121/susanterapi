@@ -4,6 +4,7 @@ import Image from "next/image";
 import YellowButton from "../ui/YellowButton";
 
 const TilbyderCard = ({
+  number = "01", // Nyt prop for nummer
   title,
   image,
   imageAlt,
@@ -42,9 +43,9 @@ const TilbyderCard = ({
 
   return (
     <div className="group cursor-pointer mb-6 md:mb-0">
-      <div className="bg-white overflow-hidden flex flex-col h-96  rounded-xl">
+      <div className="bg-white overflow-hidden flex flex-col md:h-96 rounded-xl">
         {/* Større billede med custom border radius */}
-        <div className={`relative h-66 overflow-hidden ${getImageStyles()}`}>
+        <div className={`relative md:h-66 h-40 overflow-hidden ${getImageStyles()}`}>
           <Image
             src={image}
             alt={imageAlt || title}
@@ -55,6 +56,12 @@ const TilbyderCard = ({
         
         {/* Kompakt content område */}
         <div className="p-4 flex-1 flex h-8 flex-col">
+          {/* Nummer badge mellem billede og overskrift */}
+          <div className="mb-2">
+            <span className="inline-block text-xs px-3 py-1 border-black border-1 rounded-bl-full rounded-tr-full rounded-br-full font-light">
+              {number}
+            </span>
+          </div>
           <h5 className="text-lg font-light text-[#333333]  mb-1 underline-animate">
             {title}
           </h5>

@@ -32,22 +32,7 @@ export const metadata = {
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
-      {/* Remote header */}
-      {/*    <body
-        className={`${workSans.variable} ${ebGaramond.variable} antialiased`}
-      >
-        <div className="grid lg:grid-cols-5 grid-cols-1">
-            <div className=" lg:col-span-1">
-              <Header />
-            </div>
-          <main className="lg:col-span-4 col-span-1">
-            {children}
-       
-   {     <FooterElegant />}
-   
-          </main>
-        </div>
-      </body> */}
+
 
       {/* Standard header */}
       <body

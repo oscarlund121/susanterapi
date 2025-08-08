@@ -2,7 +2,7 @@
 
 import Image from "next/image";
 import Button from "../ui/Button.jsx";
-import YellowButton from "../ui/YellowButton.jsx";
+import StaticButton from "../ui/StaticButton.jsx";
 import SectionBadge from "./SectionBadge.jsx";
 import { IoArrowForward } from "react-icons/io5";
 
@@ -30,28 +30,29 @@ const HeroElegantMinimal = () => (
           <div className="max-w-2xl space-y-8 animate-fade-in-up">
            
 
-            <div className="space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-white leading-tight">
+            <div className="space-y-3">
+              <h1 className="text-4xl md:text-5xl lg:text-7xl font-light text-[] ">
                 Susan Albertsen
               </h1>
-              <h2 className="text-2xl md:text-3xl font-light text-gray-800">
+              <h2 className="text-2xl md:text-3xl  !text-[#fff100]">
                 Psykoterapi
               </h2>
-              <p className="text-lg md:text-xl font-light text-gray-800 max-w-2xl leading-relaxed">
+              <p className="text-lg md:text-xl font-light  max-w-2xl leading-relaxed">
                 Psykoterapi for børn, unge og voksne. Specialist i EMDR,
                 mentalisering og chok-forløsning med 20+ års erfaring.
               </p>
             </div>
 
             <div className="flex flex-col justify-top sm:flex-row gap-4 md:gap-8">
-              <YellowButton
+              <StaticButton
                 href="/kontakt"
                 text="Book en session"
                 size="large"
                 variant="green"
                 direction="left"
+                iconDirection="right"
+                textColor="white"
               />
-            
             </div>
           </div>
         </div>

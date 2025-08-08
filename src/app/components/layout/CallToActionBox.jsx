@@ -12,13 +12,13 @@ const CallToActionBox = ({
   buttonAlwaysOpen = true
 }) => {
   return (
-    <div className="flex flex-col items-center justify-center mt-8">
+    <div className="flex flex-col items-center justify-center mt-4">
       <div className="bg-[#333333] px-6 py-4 rounded-xl shadow-lg">
         <div className="flex flex-col md:flex-row md:items-end md:justify-between gap-4">
           <h4 className="text-base md:text-lg font-light text-white leading-relaxed flex-1">
             {title}
           </h4>
-          <div className="flex items-end justify-end w-18 mb-6 flex-shrink-0">
+          <div className="flex items-end justify-end flex-shrink-0">
             <YellowButton 
               href={buttonHref}
               text={buttonText}
