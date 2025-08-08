@@ -15,7 +15,7 @@ const LandingMaalCard = ({
   buttonHref = "/kontakt",
   buttonVariant = "green",
   buttonDirection = "left",
-  buttonSize = "large",
+  buttonSize = "small",
   showButton = true,
 }) => {
   return (

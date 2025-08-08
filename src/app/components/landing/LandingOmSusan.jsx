@@ -9,32 +9,37 @@ import CardHeader from "../ui/CardHeader";
 import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
 import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
-
 const LandingOmSusan = () => {
   return (
     <section className="section-padding relative">
       {/* Gul baggrund - fylder 50% til højre og 60% af højden */}
-     
-      
+
       <div className="max-w-7xl mx-auto container-padding relative z-10">
         {/* Header */}
         <SectionHeader
           badgeText="Din terapeut"
           title="Om mig"
           showButton={false}
- 
         />
 
         {/* Enkelt Card */}
-        <div className="grid lg:grid-cols-2 gap-8 items-center">
+        <div className="grid lg:grid-cols-2 gap-0 items-center">
+          <div className="relative h-full min-h-[600px]">
+            <Image
+              src="/images/momma-smile.jpg"
+              alt="Susan Albertsen - Psykoterapeut"
+              fill
+              className="object-cover object-[50%_20%] rounded-l-xl"
+            />
+          </div>
           <div className="">
             <div className="bg-white shadow-sm rounded-lg overflow-hidden h-full">
               {/* Top badge */}
-              <CardHeader 
+              <CardHeader
                 number="01"
                 title="Min baggrund"
                 description="Uddannet psykoterapeut med stor erfaring inden for børn, unge og familier"
-                variant="light"
+                variant="green"
               />
 
               {/* Content */}
@@ -62,7 +67,7 @@ const LandingOmSusan = () => {
                   <BulletList
                     title="Erfaring med:"
                     items={[
-                      "Børn og unge",
+                      "Børn & unge",
                       "Familier",
                       "Skoleverdenen",
                       "Integrativ terapi",
@@ -205,15 +210,6 @@ const LandingOmSusan = () => {
                 </div>
               </div>
             </div>
-          </div>
-
-          <div className="relative h-full min-h-[600px]">
-            <Image
-              src="/images/momma-smile.jpg"
-              alt="Susan Albertsen - Psykoterapeut"
-              fill
-              className="object-cover object-[50%_20%] rounded-lg shadow-lg"
-            />
           </div>
         </div>
 

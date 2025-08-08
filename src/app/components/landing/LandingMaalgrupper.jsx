@@ -6,6 +6,7 @@ import SectionHeader from "../layout/SectionHeader";
 import BulletList from "../layout/BulletList";
 import YellowButton from "../ui/YellowButton";
 import LandingMaalCard from "./LandingMaalCard";
+import MaalCard from "./MaalCard";
 import {
   Carousel,
   CarouselContent,
@@ -25,14 +26,13 @@ const LandingMaalgrupper = () => {
       label: "Børn",
       title: "Børn & Terapi",
       description: "Specialiseret terapi for børn med fokus på tryghed og udvikling",
-      image: "/images/flower.jpg", // Blid blomst for børn
+      image: "/images/flower.jpg",
+      number: "01",
       items: [
         "Angst og bekymringer",
         "Skolevægring og skoleproblemer", 
         "Sociale udfordringer",
-        "Selvværd og selvtillid",
-        "Følelsesregulering",
-        "Familiedynamikker"
+        "Selvværd og selvtillid"
       ]
     },
     {
@@ -40,14 +40,13 @@ const LandingMaalgrupper = () => {
       label: "Unge",
       title: "Unge & Studerende",
       description: "Specialiseret terapi for unge i udvikling og studerende",
-      image: "/images/wheat.jpg", // Kornmark for vækst og udvikling
+      image: "/images/wheat.jpg",
+      number: "02",
       items: [
         "Eksamensangst og studieproblemer",
         "Præstationsangst og perfektionisme",
         "Sociale udfordringer og ensomhed",
-        "Identitetsudvikling og fremtidsangst",
-        "Overgang til voksenliv",
-        "Stress og udbrændthed"
+        "Identitetsudvikling og fremtidsangst"
       ]
     },
     {
@@ -55,14 +54,13 @@ const LandingMaalgrupper = () => {
       label: "Voksne", 
       title: "Voksne & Arbejdsliv",
       description: "Terapi for voksne med fokus på balance og velvære",
-      image: "/images/tree-touch.jpg", // Træ for stabilitet og vækst
+      image: "/images/tree-touch.jpg",
+      number: "03",
       items: [
         "Stress og udbrændthed",
         "Arbejdsrelaterede udfordringer",
         "Angst og depression",
-        "Parforhold og familieliv",
-        "Livskriser og forandringer",
-        "Selvrealisering og mening"
+        "Parforhold og familieliv"
       ]
     },
     {
@@ -70,14 +68,13 @@ const LandingMaalgrupper = () => {
       label: "Familier",
       title: "Familie & Relationer", 
       description: "Familieterapi med fokus på kommunikation og samhørighed",
-      image: "/images/beach-walk.jpg", // Strandgang for sammen-tid
+      image: "/images/beach-walk.jpg",
+      number: "04",
       items: [
         "Familiekonflikter",
         "Kommunikationsudfordringer",
         "Forældrerollen",
-        "Søskenderivaliseringer",
-        "Skilsmisse og separation",
-        "Blended families"
+        "Søskenderivaliseringer"
       ]
     }
   ];
@@ -102,9 +99,14 @@ const LandingMaalgrupper = () => {
     });
   }, [api]);
   return (
-    <div className=" bg-[#fff100]/10  rounded-tr-[100px] sm:rounded-tr-[150px] lg:rounded-tr-[250px] rounded-bl-[100px] sm:rounded-bl-[150px] lg:rounded-bl-[250px]">
-    <section className="section-padding ">
-      <div className="max-w-7xl mx-auto container-padding">
+    <div className="relative">
+      {/* Baggrund der starter 50% fra højre */}
+      <div className="absolute inset-0 bg-[#fff100]/10 rounded-l-[150px]" style={{ left: '50%' }}></div>
+      
+      {/* Content */}
+      <div className="relative">
+        <section className="section-padding">
+          <div className="max-w-7xl mx-auto container-padding">
         {/* Layout med whitespace til venstre og indhold til højre */}
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-start">
           {/* Venstre kolonne - Whitespace og header */}
@@ -113,76 +115,45 @@ const LandingMaalgrupper = () => {
               badgeText="Målgrupper"
               title="Hvem jeg hjælper"
               description="Jeg arbejder primært med unge og studerende, men hjælper også børn, familier og voksne med alle former for ubehag og fastlåsthed i livet."
-              showButton={false}
+              buttonText="Book samtale" 
+              buttonHref="/kontakt"
+              buttonVariant="yellow"
+              buttonDirection="left"
             />
 
-          
-            {/* Ekstra whitespace og eventuelt decorativ content */}
-            <div className="hidden lg:block">
-            
-              <p className="text-gray-600 font-light leading-relaxed">
-                Specialiseret vejledning tilpasset din livssituation og behov.
-              </p>
-            </div>
           </div>
 
           {/* Højre kolonne - Carousel med indikatorer */}
           <div className="w-full">
-            {/* Indikatorer og Navigation knapper på samme linje */}
-            <div className="flex flex-col sm:flex-row justify-between items-center sm:items-center gap-4 mb-4">
-              {/* Navigation knapper - først på mobile */}
-              <div className="flex gap-10 sm:gap-6 mb-0 sm:mb-2 justify-start sm:order-2 sm:justify-end w-full sm:w-auto">
-                <button 
-                  onClick={scrollPrev}
-                  className="size-10 sm:size-12 rounded-full border-2 border-[#333333] bg-[#fff100] hover:bg-[#333333] hover:text-white transition-all duration-300 shadow-lg flex items-center justify-center group flex-shrink-0"
-                >
-                  <svg className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 group-hover:text-white text-[#333333]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M15 19l-7-7 7-7" />
-                  </svg>
-                </button>
-                <button 
-                  onClick={scrollNext}
-                  className="size-10 sm:size-12 rounded-full border-2 border-[#333333] bg-[#fff100] hover:bg-[#333333] hover:text-white transition-all duration-300 shadow-lg flex items-center justify-center group flex-shrink-0"
-                >
-                  <svg className="h-6 w-6 sm:h-8 sm:w-8 md:h-10 md:w-10 group-hover:text-white text-[#333333]" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={1} d="M9 5l7 7-7 7" />
-                  </svg>
-                </button>
-              </div>
-
-              {/* 4 grønne indikatorer/badges - andet på mobile */}
-              <div className="flex flex-wrap gap-2 sm:gap-3 w-full sm:w-auto sm:order-1">
-                {maalgrupper.map((gruppe, index) => (
-                  <button
-                    key={gruppe.id}
-                    onClick={() => scrollTo(index)}
-                    className={`px-2 sm:px-3 py-1 rounded-xl text-sm sm:text-base font-bold transition-all duration-300 flex-shrink-0 ${
-                      current === index
-                        ? "bg-[#1cc18e] text-white shadow-lg transform "
-                        : "bg-white text-[#333333] hover:bg-[#1cc18e]/30"
-                    }`}
-                  >
-                    {gruppe.label}
-                  </button>
-                ))}
-              </div>
+            {/* Elegante indikatorer - små dots i stedet for tunge buttons */}
+            <div className="flex justify-center items-center max-w-sm gap-4 mb-8">
+              {maalgrupper.map((gruppe, index) => (
+                <button
+                  key={gruppe.id}
+                  onClick={() => scrollTo(index)}
+                  className={`transition-all duration-300 ${
+                    current === index
+                      ? "w-8 h-3 bg-[#1cc18e] rounded-full"
+                      : "w-3 h-3 bg-gray-300 rounded-full hover:bg-[#1cc18e]/50"
+                  }`}
+                />
+              ))}
             </div>
 
-            {/* Carousel med enkelt card */}
-            <div className="w-full m-8 rounded-2xl bg-[#1cc18e]/30">
-              <Carousel setApi={setApi} className="w-full p-16">
-                <CarouselContent >
+            {/* Clean carousel uden tung baggrund */}
+            <div className="w-full ">
+              <Carousel setApi={setApi} className="w-full">
+                <CarouselContent>
                   {maalgrupper.map((gruppe, index) => (
-                    <CarouselItem key={gruppe.id} >
-                      <div className="h-full">
-                        <LandingMaalCard
+                    <CarouselItem key={gruppe.id}>
+                      <div className="h-full px-2">
+                        <MaalCard
+                          number={gruppe.number}
                           title={gruppe.title}
                           description={gruppe.description}
                           items={gruppe.items}
-                          image={gruppe.image}
                           buttonText="Book samtale"
-                          href="/kontakt"
-                          buttonSize="small"
+                          buttonHref="/kontakt"
                         />
                       </div>
                     </CarouselItem>
@@ -190,10 +161,31 @@ const LandingMaalgrupper = () => {
                 </CarouselContent>
               </Carousel>
             </div>
+
+            {/* Elegante navigation buttons */}
+            <div className="flex justify-center gap-6 mt-8">
+              <button 
+                onClick={scrollPrev}
+                className="w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-[#1cc18e] hover:text-white hover:border-[#1cc18e] transition-all duration-300 flex items-center justify-center group"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 19l-7-7 7-7" />
+                </svg>
+              </button>
+              <button 
+                onClick={scrollNext}
+                className="w-12 h-12 rounded-full border border-gray-300 bg-white hover:bg-[#1cc18e] hover:text-white hover:border-[#1cc18e] transition-all duration-300 flex items-center justify-center group"
+              >
+                <svg className="h-5 w-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                  <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                </svg>
+              </button>
+            </div>
           </div>
         </div>
+        </div>
+      </section>
       </div>
-    </section>
     </div>
   );
 };

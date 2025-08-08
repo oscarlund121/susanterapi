@@ -73,7 +73,7 @@ const CardHeader = ({
           {number}
         </span>
       </div>
-      <h4 className={`${currentSize.titleSize} font-light mb-2 ${currentVariant.text}`}>
+      <h4 className={`${currentSize.titleSize} mb-2 ${currentVariant.text}`}>
         {title}
       </h4>
       <span className={`${currentSize.descSize} font-bold leading-relaxed ${
