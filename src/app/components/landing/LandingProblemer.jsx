@@ -97,6 +97,7 @@ const LandingProblemer = () => {
           buttonDirection="left"
           buttonVariant="yellow"
           buttonSize="large"
+          variant="horizontal"
         />
      
         <div className="mb-32">

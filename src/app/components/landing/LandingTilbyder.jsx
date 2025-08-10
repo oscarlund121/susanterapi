@@ -41,7 +41,7 @@ const LandingTilbyder = () => {
           {/* Chok-forløsning - Andet card */}
           <TilbyderCard 
             number="02"
-            title="Chok- og traumeforløsning"
+            title="Chok- & traumeforløsning"
             image="/images/hand-on-chest-2.jpg"
             imageAlt="Chok-forløsning"
             imageBorderRadius="rounded-bl-[50px] rounded-t-xl rounded-br-xl"
@@ -72,9 +72,9 @@ const LandingTilbyder = () => {
           />
         </div>
         
-       {/*  <CallToActionBox 
+        <CallToActionBox 
           title="I terapien kan du, dit barn, familien eller din partner få åbnet op for kroppens naturlige intelligens og med lethed udfolde dine ønsker og drømme."
-        /> */}
+        />
       </div>
     </section>
   );

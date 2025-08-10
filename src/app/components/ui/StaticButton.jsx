@@ -17,8 +17,8 @@ const StaticButton = ({
   // Størrelse-konfiguration
   const sizeClasses = {
     small: {
-      text: 'text-sm',
-      circle: 'w-8 h-8',
+      text: 'text-xs',
+      circle: 'w-6 h-6',
       icon: 'text-xs',
       gap: 'gap-1'
     },
@@ -39,7 +39,7 @@ const StaticButton = ({
   // Farve-konfiguration for den runde knap
   const variantClasses = {
     yellow: {
-      bg: 'bg-[#fff100] hover:bg-white',
+      bg: 'bg-[#F18805] hover:bg-white',
       iconColor: 'text-[#333333]',
     },
     green: {
@@ -61,7 +61,7 @@ const StaticButton = ({
     >
       {/* Tekst - altid synlig med transparent baggrund */}
       {direction === 'right' && (
-        <span className={`${textColorClass} font-medium bg-transparent underline-animate transition-all duration-300`}>
+        <span className={`${textColorClass} font-light bg-transparent underline-animate transition-all duration-300`}>
           {text}
         </span>
       )}

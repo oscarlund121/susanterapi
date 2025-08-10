@@ -20,15 +20,27 @@ const LandingMaalCard = ({
 }) => {
   return (
     <div className="bg-white shadow-lg rounded-2xl overflow-hidden w-full">
-      {/* Billede header hvis billede er givet */}
+      {/* Billede som baggrund med bullet list overlay */}
       {image && (
-        <div className="relative h-48  sm:h-56 md:h-64">
+        <div className="relative h-48 sm:h-56 md:h-64">
           <Image src={image} alt={title} fill className="object-cover" />
           
+          {/* Bullet list overlay på billedet */}
+          {items && items.length > 0 && (
+            <div className="absolute inset-0 bg-black/30 flex items-center justify-center p-4">
+              <div className="text-white">
+                <BulletList 
+                  items={items}
+                  variant="simple"
+                  className="text-white"
+                />
+              </div>
+            </div>
+          )}
         </div>
       )}
 
-      {/* Elegant header with gradient */}
+      {/* Overskrift under billedet */}
       <CardHeader
         number="01"
         title={title}
@@ -36,21 +48,15 @@ const LandingMaalCard = ({
         variant="light"
       />
 
-      {/* Content area with organized sections */}
-      <div className="p-4 sm:p-6 md:p-8 space-y-4 sm:space-y-6 md:space-y-8">
-        {/* Main content with better spacing */}
-     
-        {/* Call to action area */}
-      
-        
-          <YellowButton
-            text={buttonText}
-            href={buttonHref}
-            size={buttonSize}
-            direction={buttonDirection}
-            variant={buttonVariant}
-          />
-      
+      {/* Content area med button */}
+      <div className="p-4 sm:p-6 md:p-8">
+        <YellowButton
+          text={buttonText}
+          href={buttonHref}
+          size={buttonSize}
+          direction={buttonDirection}
+          variant={buttonVariant}
+        />
       </div>
     </div>
   );

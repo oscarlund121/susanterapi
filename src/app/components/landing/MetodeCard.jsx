@@ -56,12 +56,13 @@ const MetodeCard = ({
   );
 
   const renderImage = () => (
-    <div className="relative h-full min-h-[600px]">
+    <div className="relative h-full min-h-[400px] md:min-h-[500px] w-full">
       <Image
         src={imageUrl}
         alt={imageAlt}
         fill
-        className={`object-cover ${imageShape}`}
+        className={`object-cover w-full h-full ${imageShape}`}
+        sizes="(max-width: 768px) 100vw, (max-width: 1024px) 50vw, 50vw"
       />
     </div>
   );
@@ -71,25 +72,25 @@ const MetodeCard = ({
     return renderContent();
   }
 
-  // Image variants
+  // Image variants (side by side on large screens)
   return (
-    <div className="grid lg:grid-cols-2 gap-12 items-center">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-center">
       {variant === "imageLeft" ? (
         <>
-          <div className="lg:order-1">
+          <div className="lg:order-1 order-2">
             {renderImage()}
           </div>
-          <div className="lg:order-2">
+          <div className="lg:order-2 order-1">
             {renderContent()}
           </div>
         </>
       ) : (
         // imageRight (default)
         <>
-          <div>
+          <div className="order-1">
             {renderContent()}
           </div>
-          <div>
+          <div className="order-2">
             {renderImage()}
           </div>
         </>

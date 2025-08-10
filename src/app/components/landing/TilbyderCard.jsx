@@ -2,6 +2,7 @@
 import React from "react";
 import Image from "next/image";
 import YellowButton from "../ui/YellowButton";
+import StaticButton from "../ui/StaticButton";
 
 const TilbyderCard = ({
   number = "01", // Nyt prop for nummer
@@ -11,6 +12,7 @@ const TilbyderCard = ({
   variant = "default", // default, rounded, asymmetric
   buttonText = "Læs mere",
   buttonHref = "/ydelser",
+  showButton = true, // Ny prop til at vise/skjule button
   // Custom border radius props for image
   imageBorderRadius, // Direkte CSS string f.eks. "rounded-3xl"
   imageTopLeftRadius,   // f.eks. "rounded-tl-[50px]"
@@ -42,10 +44,10 @@ const TilbyderCard = ({
   };
 
   return (
-    <div className="group cursor-pointer mb-6 md:mb-0">
-      <div className="bg-white overflow-hidden flex flex-col md:h-96 rounded-xl">
+    <div className="group cursor-pointer">
+      <div className={`overflow-hidden flex flex-col rounded-xl ${showButton ? 'md:h-110' : 'md:h-72'}`}>
         {/* Større billede med custom border radius */}
-        <div className={`relative md:h-66 h-40 overflow-hidden ${getImageStyles()}`}>
+        <div className={`relative h-40 overflow-hidden ${getImageStyles()} ${showButton ? 'md:h-66' : 'md:h-48'}`}>
           <Image
             src={image}
             alt={imageAlt || title}
@@ -55,7 +57,7 @@ const TilbyderCard = ({
         </div>
         
         {/* Kompakt content område */}
-        <div className="p-4 flex-1 flex h-8 flex-col">
+        <div className={`p-4 flex-1 flex flex-col ${showButton ? 'h-20' : 'h-16'}`}>
           {/* Nummer badge mellem billede og overskrift */}
           <div className="mb-2">
             <span className="inline-block text-xs px-3 py-1 border-black border-1 rounded-bl-full rounded-tr-full rounded-br-full font-light">
@@ -66,7 +68,18 @@ const TilbyderCard = ({
             {title}
           </h5>
           <div className="mt-auto">
-           
+            {showButton && (
+              <div className="flex justify-end">
+                <StaticButton
+                  text={buttonText}
+                  href={buttonHref}
+                  variant="yellow"
+                  size="small"
+                  direction="left"
+                  iconDirection="right"
+                />
+              </div>
+            )}
           </div>
         </div>
       </div>
