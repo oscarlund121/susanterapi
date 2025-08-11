@@ -17,12 +17,12 @@ const LandingTilbyder = () => {
           badgeText="Terapi hos mig"
           title="Hvad jeg tilbyder"
           description="Jeg tilbyder evidensbaseret psykoterapi med fokus på helhedsorienteret behandling og personlig udvikling."
-          buttonText="Book tid nu"
+          buttonText="Book en session"
           buttonHref="/ydelser"
           buttonVariant="green"
           buttonDirection="left"
           buttonSize="large"
-          variant="horizontal"
+          /* variant="horizontal" */
         />
 
         {/* Fire hovedområder */}

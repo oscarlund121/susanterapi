@@ -69,21 +69,24 @@ const SectionHeader = ({
         {title}
       </h2>
       
-      {/* Beskrivelse */}
-      <h6 className="text-gray-400 max-w-xl mb-6 leading-relaxed">
-        {description}
-      </h6>
-
-      {/* Button */}
-      {showButton && (
-        <StaticButton
-          text={buttonText}
-          href={buttonHref}
-          size={buttonSize}
-          direction={buttonDirection}
-          variant={buttonVariant}
-        />
-      )}
+      {/* Beskrivelse og Button på samme linje */}
+      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
+        <h6 className="text-gray-400 max-w-xl leading-relaxed">
+          {description}
+        </h6>
+        
+        {showButton && (
+          <div className="flex-shrink-0">
+            <StaticButton
+              text={buttonText}
+              href={buttonHref}
+              size={buttonSize}
+              direction={buttonDirection}
+              variant={buttonVariant}
+            />
+          </div>
+        )}
+      </div>
     </div>
   );
 };

@@ -73,7 +73,7 @@ const TilbyderCard = ({
                 <StaticButton
                   text={buttonText}
                   href={buttonHref}
-                  variant="yellow"
+                  variant="green"
                   size="small"
                   direction="left"
                   iconDirection="right"

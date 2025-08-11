@@ -92,8 +92,9 @@ const LandingMaalgrupper = () => {
                   description="Jeg arbejder primært med unge og studerende, men hjælper også børn, familier og voksne med alle former for ubehag og fastlåsthed i livet."
                   buttonText="Book samtale"
                   buttonHref="/kontakt"
-                  buttonVariant="yellow"
+                  buttonVariant="green"
                   buttonDirection="left"
+                  showButton={false}
                 />
               </div>
 

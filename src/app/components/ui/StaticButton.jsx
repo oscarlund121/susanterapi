@@ -8,7 +8,7 @@ const StaticButton = ({
   className = 'inline-block',
   text = 'Book tid nu',
   size = 'medium',
-  variant = 'yellow', // 'yellow' eller 'green'
+  variant = 'green', // 'yellow' eller 'green'
   direction = 'right', // 'right' eller 'left' - layout direction
   iconDirection = 'right', // 'right' eller 'left' - icon direction (uafhængig af layout)
   textColor = 'dark' // 'dark' (#333333) eller 'white'
@@ -49,7 +49,7 @@ const StaticButton = ({
   };
 
   const currentSize = sizeClasses[size] || sizeClasses.medium;
-  const currentVariant = variantClasses[variant] || variantClasses.yellow;
+  const currentVariant = variantClasses[variant] || variantClasses.green;
   
   // Text farve baseret på textColor prop
   const textColorClass = textColor === 'white' ? 'text-white' : 'text-[#333333]';

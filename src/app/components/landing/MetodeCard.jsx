@@ -4,7 +4,7 @@ import Image from "next/image";
 import CardHeader from "../ui/CardHeader";
 import BulletList from "../layout/BulletList";
 
-const MetodeCard = ({ 
+const MetodeCard = ({
   number = "01",
   title,
   description,
@@ -14,41 +14,37 @@ const MetodeCard = ({
   imageUrl,
   imageAlt,
   variant = "imageRight", // "imageRight", "imageLeft", "noImage"
-  cardVariant = "light", // CardHeader variant
+  headerVariant = "green", // CardHeader variant
   imageShape = "rounded-lg",
 }) => {
-  
   const renderContent = () => (
     <div className="space-y-8">
       <div className="bg-white shadow-sm rounded-lg overflow-hidden h-full">
         {/* Card Header */}
-        <CardHeader 
+        <CardHeader
           number={number}
           title={title}
           description={description}
-          variant={cardVariant}
+          variant={headerVariant}
         />
 
         {/* Content */}
-        <div className="p-6">
+        <div>
           <div className="space-y-6">
             {/* Text Content */}
             {content.length > 0 && (
-              <div className="space-y-3 text-gray-700 font-light text-sm leading-relaxed">
+              <div className="space-y-3 p-6 shadow-sm">
                 {content.map((paragraph, index) => (
                   <p key={index}>{paragraph}</p>
                 ))}
               </div>
             )}
 
-            {/* Bullet List */}
-            {bulletItems.length > 0 && (
-              <BulletList 
-                title={bulletTitle}
-                variant="grid"
-                items={bulletItems}
-              />
-            )}
+            <div className="px-6 pb-6">
+              {bulletItems.length > 0 && (
+                <BulletList title={bulletTitle} items={bulletItems} />
+              )}
+            </div>
           </div>
         </div>
       </div>
@@ -56,7 +52,7 @@ const MetodeCard = ({
   );
 
   const renderImage = () => (
-    <div className="relative h-full min-h-[400px] md:min-h-[500px] w-full">
+    <div className="relative h-full w-full">
       <Image
         src={imageUrl}
         alt={imageAlt}
@@ -74,25 +70,17 @@ const MetodeCard = ({
 
   // Image variants (side by side on large screens)
   return (
-    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-center">
+    <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 lg:items-stretch">
       {variant === "imageLeft" ? (
         <>
-          <div className="lg:order-1 order-2">
-            {renderImage()}
-          </div>
-          <div className="lg:order-2 order-1">
-            {renderContent()}
-          </div>
+          <div className="lg:order-1 order-2">{renderImage()}</div>
+          <div className="lg:order-2 order-1">{renderContent()}</div>
         </>
       ) : (
         // imageRight (default)
         <>
-          <div className="order-1">
-            {renderContent()}
-          </div>
-          <div className="order-2">
-            {renderImage()}
-          </div>
+          <div className="order-1">{renderContent()}</div>
+          <div className="order-2">{renderImage()}</div>
         </>
       )}
     </div>

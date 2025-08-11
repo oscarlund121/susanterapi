@@ -226,7 +226,7 @@ const NavStandard = () => {
                           <StaticButton
                             text="Se alle ydelser"
                             href="/ydelser"
-                            variant="yellow"
+                            variant="green"
                             size="large"
                             direction="left"
                             iconDirection="right"

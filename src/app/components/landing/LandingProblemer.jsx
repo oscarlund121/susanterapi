@@ -95,7 +95,7 @@ const LandingProblemer = () => {
           buttonText="Start din rejse"
           buttonHref="/kontakt"
           buttonDirection="left"
-          buttonVariant="yellow"
+          buttonVariant="green"
           buttonSize="large"
           variant="horizontal"
         />
@@ -113,11 +113,11 @@ const LandingProblemer = () => {
                   number={String(index + 1).padStart(2, "0")}
                   title={area.category}
                   description={area.description}
-                  variant="light"
+                  variant="green"
                 />
 
                 {/* Content - equal distribution */}
-                <div className="p-6 flex-1 flex flex-col justify-center">
+                <div className="p-6 flex-1 flex flex-col justify-center h-30 md:h-80">
                   <BulletList items={area.problems} />
                 </div>
               </div>

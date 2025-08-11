@@ -17,11 +17,11 @@ const LandingMetoder = () => {
           buttonVariant="green"
           buttonDirection="left"
           buttonSize="medium"
-          
+            
         />
 
         {/* Metoder som cards */}
-        <div className="space-y-12 md:space-y-16">
+        <div className="space-y-12 md:space-y-16 mt-12">
           {/* EMDR / Chok-forløsning */}
           <MetodeCard
             number="01"
@@ -45,7 +45,7 @@ const LandingMetoder = () => {
             imageUrl="/images/hand-on-chest-2.jpg"
             imageAlt="EMDR og chok-forløsning"
             variant="imageRight"
-            cardVariant="light"
+            headerVariant="green"
           />
 
           {/* Mentalisering */}
@@ -71,7 +71,7 @@ const LandingMetoder = () => {
             imageUrl="/images/walk.jpg"
             imageAlt="Mentalisering og familieterapi"
             variant="imageLeft"
-            cardVariant="blue"
+            headerVariant="green"
           />
 
           {/* Meditation & Bevidsthed */}
@@ -97,7 +97,7 @@ const LandingMetoder = () => {
             imageUrl="/images/sitting-closed.jpg"
             imageAlt="Meditation og bevidsthed"
             variant="imageRight"
-            cardVariant="green"
+            headerVariant="green"
           />
         </div>
       </div>

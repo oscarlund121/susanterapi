@@ -6,8 +6,7 @@ import SectionBadge from "../layout/SectionBadge";
 import SectionHeader from "../layout/SectionHeader";
 import BulletList from "../layout/BulletList";
 import CardHeader from "../ui/CardHeader";
-import { Accordion, AccordionSummary, AccordionDetails } from "@mui/material";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
+import SimpleAccordion from "../ui/SimpleAccordion";
 
 const LandingOmSusan = () => {
   return (
@@ -23,7 +22,7 @@ const LandingOmSusan = () => {
         />
 
         {/* Enkelt Card */}
-        <div className="grid lg:grid-cols-2 gap-0 items-center">
+        <div className="grid lg:grid-cols-2 gap-8 items-center">
           <div className="relative h-full min-h-[600px]">
             <Image
               src="/images/momma-smile.jpg"
@@ -75,137 +74,27 @@ const LandingOmSusan = () => {
                   />
 
                   <div className="mt-6 space-y-4">
-                    <Accordion
-                      elevation={0}
-                      sx={{
-                        boxShadow: "none",
-                        "&:before": { display: "none" },
-                        backgroundColor: "white",
-                        border: "1px solid #1cc18e",
-                        borderRadius: "8px",
-                        "&:hover": {
-                          backgroundColor: "white",
-                          "& .MuiAccordionSummary-root": {
-                            backgroundColor: "#1cc18e",
-                            "& .MuiAccordionSummary-content div": {
-                              color: "white !important",
-                            },
-                            "& .MuiAccordionSummary-expandIconWrapper": {
-                              color: "white !important",
-                            },
-                          },
-                        },
-                        "& .MuiAccordionSummary-root": {
-                          padding: "16px 20px",
-                          minHeight: "auto",
-                          margin: 0,
-                        },
-                        "& .MuiAccordionDetails-root": {
-                          padding: "0 20px 20px 20px",
-                          margin: 0,
-                        },
-                      }}
-                    >
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        sx={{
-                          minHeight: "auto",
-                          "& .MuiAccordionSummary-content": {
-                            margin: "0",
-                          },
-                          "& .MuiAccordionSummary-expandIconWrapper": {
-                            color: "#1cc18e",
-                            fontSize: "1.2rem",
-                            "&.Mui-expanded": {
-                              transform: "rotate(180deg)",
-                            },
-                          },
-                          "&:hover": {
-                            backgroundColor: "transparent",
-                          },
-                        }}
-                      >
-                        <div className="text-gray-700 font-semibold text-sm">
-                          Specialiseringer
-                        </div>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        <BulletList
-                          items={[
-                            "Essentiel Integrativ Psykoterapi",
-                            "EMDR (WHO-anerkendt)",
-                            "Mentaliserende tilgang",
-                            "Chok- og traumeforløsning",
-                          ]}
-                        />
-                      </AccordionDetails>
-                    </Accordion>
+                    <SimpleAccordion title="Specialiseringer">
+                      <BulletList
+                        items={[
+                          "Essentiel Integrativ Psykoterapi",
+                          "EMDR (WHO-anerkendt)",
+                          "Mentaliserende tilgang",
+                          "Chok- og traumeforløsning",
+                        ]}
+                      />
+                    </SimpleAccordion>
 
-                    <Accordion
-                      elevation={0}
-                      sx={{
-                        boxShadow: "none",
-                        "&:before": { display: "none" },
-                        backgroundColor: "white",
-                        border: "1px solid #1cc18e",
-                        borderRadius: "8px",
-                        "&:hover": {
-                          backgroundColor: "white",
-                          "& .MuiAccordionSummary-root": {
-                            backgroundColor: "#1cc18e",
-                            "& .MuiAccordionSummary-content div": {
-                              color: "white !important",
-                            },
-                            "& .MuiAccordionSummary-expandIconWrapper": {
-                              color: "white !important",
-                            },
-                          },
-                        },
-                        "& .MuiAccordionSummary-root": {
-                          padding: "16px 20px",
-                          minHeight: "auto",
-                          margin: 0,
-                        },
-                        "& .MuiAccordionDetails-root": {
-                          padding: "0 20px 20px 20px",
-                          margin: 0,
-                        },
-                      }}
-                    >
-                      <AccordionSummary
-                        expandIcon={<ExpandMoreIcon />}
-                        sx={{
-                          minHeight: "auto",
-                          "& .MuiAccordionSummary-content": {
-                            margin: "0",
-                          },
-                          "& .MuiAccordionSummary-expandIconWrapper": {
-                            color: "#1cc18e",
-                            fontSize: "1.2rem",
-                            "&.Mui-expanded": {
-                              transform: "rotate(180deg)",
-                            },
-                          },
-                          "&:hover": {
-                            backgroundColor: "transparent",
-                          },
-                        }}
-                      >
-                        <div className="text-gray-700 font-semibold text-sm">
-                          Teoretisk fundament
-                        </div>
-                      </AccordionSummary>
-                      <AccordionDetails>
-                        <BulletList
-                          items={[
-                            "Jung's analytiske psykologi",
-                            "Systemisk tænkning",
-                            "NLP metoden",
-                            "Intuition og energiarbejde",
-                          ]}
-                        />
-                      </AccordionDetails>
-                    </Accordion>
+                    <SimpleAccordion title="Teoretisk fundament">
+                      <BulletList
+                        items={[
+                          "Jung's analytiske psykologi",
+                          "Systemisk tænkning",
+                          "NLP metoden",
+                          "Intuition og energiarbejde",
+                        ]}
+                      />
+                    </SimpleAccordion>
                   </div>
                 </div>
               </div>

@@ -41,7 +41,7 @@ const LandingPage = () => {
       
       
       {/* Klientudtalelser */}
-      {/* <LandingUdtalelser /> */}
+      <LandingUdtalelser />
       
       {/* Session forløb og priser */}
       {/* <LandingForloeb /> */}
