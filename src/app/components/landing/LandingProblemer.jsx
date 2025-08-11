@@ -4,6 +4,7 @@ import SectionBadge from "../layout/SectionBadge";
 import SectionHeader from "../layout/SectionHeader";
 import BulletList from "../layout/BulletList";
 import CardHeader from "../ui/CardHeader";
+import CallToActionBox from "../layout/CallToActionBox";
 
 const LandingProblemer = () => {
   const problemAreas = [
@@ -125,29 +126,15 @@ const LandingProblemer = () => {
           </div>
         </div>{" "}
        
-        {/* Bundtekst */}
-        <div className="text-center mt-16 md:mt-20">
-          <div className="max-w-4xl mx-auto bg-white shadow-md p-8 md:p-12">
-            <h3 className="text-2xl md:text-3xl font-light text-[#333333] mb-6">
-              Kender du fornemmelsen?
-            </h3>
-            <p className="text-lg font-light text-gray-700 leading-relaxed mb-8">
-              Ikke at føle dig anerkendt som den du er eller fastlåst i en
-              situation, som du ikke kan komme ud af? Måske er du et sted i
-              livet, hvor du føler dig alene og mærker sorg, angst, vrede eller
-              frygt. Din krop føles som om, den konstant er i alarmberedskab og
-              forhindrer dig i at leve livet fuldt ud.
-            </p>
-            <div className="space-y-4">
-              <p className="text-gray-600 font-light">
-                Ved at finde frem til dine blokeringer finder vi ind til roden
-                af problemet, forløser det og hjælper dig til en bedre
-                fornemmelse i kroppen.
-              </p>
-              <div className="w-12 h-px bg-gray-800 mx-auto"></div>
-            </div>
-          </div>
-        </div>
+        {/* CallToActionBox i stedet for bundtekst */}
+        <CallToActionBox 
+          title="Kender du fornemmelsen af ikke at føle dig anerkendt som den du er eller fastlåst i en situation? Ved at finde frem til dine blokeringer finder vi ind til roden af problemet og hjælper dig til en bedre fornemmelse i kroppen."
+          buttonText="Start din rejse"
+          buttonHref="/kontakt"
+          buttonVariant="green"
+          buttonSize="large"
+          buttonDirection="left"
+        />
       </div>
     </section>
   );

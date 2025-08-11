@@ -1,53 +1,67 @@
 "use client";
 import React from "react";
+import Image from "next/image";
 import SectionBadge from "../layout/SectionBadge";
 
 const TestimonialCard = ({ testimonial, onReadMore }) => {
-  // Kort version (kun text property)
-  if (testimonial.text) {
-    return (
-      <div className="h-full">
-        <div className="text-center bg-white rounded-lg border border-gray-200 p-6 h-full flex flex-col justify-center">
-          <blockquote className="text-sm md:text-base font-light text-gray-700 leading-relaxed mb-6 italic">
-            "{testimonial.text}"
-          </blockquote>
-          <div className="flex justify-center items-center space-x-4">
-            <div className="w-6 h-px bg-gray-300"></div>
-            <cite className="text-gray-600 font-light not-italic tracking-wide text-sm">
-              {testimonial.name}
-            </cite>
-            <div className="w-6 h-px bg-gray-300"></div>
-          </div>
-        </div>
-      </div>
-    );
-  }
+  // Forskellige hjørne-styles for billedet baseret på props (kopieret fra TilbyderCard)
+  const getImageStyles = () => {
+    // Hvis der er sendt en direkte imageBorderRadius prop
+    if (testimonial.imageBorderRadius) {
+      return testimonial.imageBorderRadius;
+    }
+    
+    // Hvis der er sendt individuelle hjørne-props
+    if (testimonial.imageTopLeftRadius || testimonial.imageTopRightRadius || testimonial.imageBottomLeftRadius || testimonial.imageBottomRightRadius) {
+      return `${testimonial.imageTopLeftRadius || ''} ${testimonial.imageTopRightRadius || ''} ${testimonial.imageBottomLeftRadius || ''} ${testimonial.imageBottomRightRadius || ''}`.trim();
+    }
+    
+    // Default fallback
+    return "rounded-xl";
+  };
 
-  // Lang version (preview + læs mere)
+  // Kun én version med billede - følger TilbyderCard design
   return (
-    <div className="h-full">
-      <div className="bg-white rounded-lg border border-gray-200 p-6 hover:shadow-sm transition-shadow duration-200 h-full flex flex-col">
-        {testimonial.category && (
-          <div className="mb-4">
-            <SectionBadge>{testimonial.category}</SectionBadge>
+    <div className="group cursor-pointer h-full">
+      <div className="overflow-hidden flex flex-col rounded-xl md:h-96">
+        {/* SectionBadge til venstre uden baggrund */}
+        <div className="p-4">
+          <SectionBadge variant="small">{testimonial.category || "Klientoplevelse"}</SectionBadge>
+        </div>
+        
+        {/* Content område som i TilbyderCard - mindre spacing */}
+        <div className="p-4 flex-1 flex flex-col">
+          {/* Badge mellem billede og indhold - udkommenteret */}
+          {/*
+          <div className="mb-2">
+            <span className="inline-block text-xs px-3 py-1 border-black border-1 rounded-bl-full rounded-tr-full rounded-br-full font-light">
+              Klientoplevelse
+            </span>
           </div>
-        )}
-        
-        <blockquote className="text-gray-700 leading-relaxed mb-6 italic flex-1 text-sm">
-          "{testimonial.preview}"
-        </blockquote>
-        
-        <div className="flex justify-between items-center">
-          <cite className="text-gray-600 font-light not-italic tracking-wide text-sm">
-            — {testimonial.name}
-          </cite>
-          <button
-            onClick={() => onReadMore(testimonial)}
-            className="text-xs font-medium hover:underline"
-            style={{ color: '#1cc18e' }}
-          >
-            Læs hele oplevelsen →
-          </button>
+          */}
+          
+          {/* Preview tekst */}
+          <blockquote className="text-sm italic mb-2 line-clamp-2 !border-l-0 !pl-0">
+            "{testimonial.preview}"
+          </blockquote>
+          
+          {/* Navn og alder - større og gray-300 */}
+          <div className="text-sm text-gray-400 mb-1">
+            <strong>{testimonial.name}</strong>
+            {testimonial.age && <span>, {testimonial.age} år</span>}
+          </div>
+          
+          {/* Læs mere knap - tættere på */}
+          <div className="mt-1">
+            <div className="flex justify-end">
+              <button
+                onClick={() => onReadMore(testimonial)}
+                className="text-xs underline-animate hover:underline"
+              >
+                Læs hele oplevelsen →
+              </button>
+            </div>
+          </div>
         </div>
       </div>
     </div>

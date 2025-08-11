@@ -120,10 +120,10 @@ li {
 
 blockquote {
   font-family: var(--font-fraunces), serif;
-  font-size: clamp(16px, 2.5vw, 18px);
+  font-size: clamp(14px, 2.5vw, 16px);
   line-height: 140%;
   letter-spacing: normal;
-  font-weight: 400;
+  font-weight: 300;
   font-style: italic;
   margin: 0;
   padding-left: 32px;
@@ -145,10 +145,11 @@ a:hover {
 }
 
 button {
-  
+  font-family: var(--font-archivo), sans-serif;
+  font-size: clamp(14px, 1.5vw, 16px);
   line-height: 130%;
   letter-spacing: normal;
-  
+  font-weight: 100;
   border: none;
   cursor: pointer;
 }

@@ -4,6 +4,7 @@ import Header from "./components/layout/Header";
 import NavStandard from "./components/layout/NavStandard";
 import Footer from "./components/layout/Footer";
 import FooterElegant from "./components/layout/FooterElegant";
+import NavigationMenuComponent from "./components/layout/NavigationMenu";
 
 
 
@@ -39,7 +40,7 @@ export default function RootLayout({ children }) {
         className={`${fraunces.variable} ${archivo.variable} ${syne.variable} antialiased`}
       >
 
-        <NavStandard />
+        <NavigationMenuComponent />
         <main >
           {children}
 

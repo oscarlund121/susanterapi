@@ -19,13 +19,13 @@ const CardHeader = ({
       }`}
     >
       <div className="mb-3">
-        <SectionBadge>{number}</SectionBadge>
+        <SectionBadge variant="small">{number}</SectionBadge>
       </div>
       <div className="h-25 md:h-40  flex flex-col">
-        <h3 className="text-xl mb-2">{title}</h3>
-        <div className="flex-1 flex items-end">
+        <h4 className="text-xl mb-2 underline-animate">{title}</h4>
+        <div className="flex-1 flex items-start">
           <h6
-            className={`text-base font-normal flex justify-end items-end leading-relaxed ${
+            className={`text-base font-normal flex justify-end items-end ${
               isGreen ? "text-gray-600" : "text-white/90"
             }`}
           >

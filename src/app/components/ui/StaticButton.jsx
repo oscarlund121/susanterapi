@@ -61,9 +61,9 @@ const StaticButton = ({
     >
       {/* Tekst - altid synlig med transparent baggrund */}
       {direction === 'right' && (
-        <span className={`${textColorClass} font-light bg-transparent underline-animate transition-all duration-300`}>
+        <button className={`${textColorClass} bg-transparent underline-animate transition-all duration-300`}>
           {text}
-        </span>
+        </button>
       )}
       
       {/* Rund knap med ikon */}
@@ -83,9 +83,9 @@ const StaticButton = ({
 
       {/* Tekst til venstre når direction er 'left' */}
       {direction === 'left' && (
-        <span className={`${textColorClass} font-medium bg-transparent underline-animate transition-all duration-300`}>
+        <button className={`${textColorClass} bg-transparent underline-animate transition-all duration-300`}>
           {text}
-        </span>
+        </button>
       )}
     </Link>
   );
