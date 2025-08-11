@@ -1,46 +1,65 @@
 "use client";
 import React from "react";
 import Image from "next/image";
+import StaticButton from "../ui/StaticButton";
+import BulletList from "../layout/BulletList";
 
 const YdelserHeroCard = () => {
   return (
-    <section className="section-padding bg-gray-50/30">
-      <div className="max-w-7xl mx-auto container-padding">
-        <div className="bg-white shadow-sm rounded-lg overflow-hidden">
-          <div className="grid lg:grid-cols-2 gap-0">
-            {/* Image Section */}
-            <div className="relative h-64 lg:h-96">
-              <Image
-                src="/images/hand-on-chest.jpg"
-                alt="Healing journey"
-                fill
-                className="object-cover object-[50%_30%]"
-              />
-              <div className="absolute inset-0 bg-gradient-to-r from-transparent to-black/10"></div>
-            </div>
-            
-            {/* Content Section */}
-            <div className="p-8 lg:p-12 flex flex-col justify-center space-y-8">
-              <div className="space-y-6">
-                <h1 className="text-3xl lg:text-4xl xl:text-5xl font-light text-gray-800">
-                  Mine ydelser
-                </h1>
-                <div className="w-20 h-0.5 bg-[#1cc18e]"></div>
-                <p className="text-lg font-light text-gray-600 leading-relaxed">
-                  Jeg tilbyder psykoterapi der integrerer krop, sind og sjæl gennem 
-                  evidensbaserede metoder kombineret med intuitive tilgange.
-                </p>
-              </div>
-              
-              <div className="flex items-center space-x-4">
-                <div className="flex space-x-2">
-                  <div className="w-2 h-2 bg-[#1cc18e] rounded-full"></div>
-                  <div className="w-2 h-2 bg-[#1cc18e]/50 rounded-full"></div>
-                  <div className="w-2 h-2 bg-[#1cc18e]/30 rounded-full"></div>
+    <section className="relative w-full h-[80vh] min-h-[600px]">
+      {/* Content */}
+      <div className="relative z-10 h-full">
+        <div className="h-full">
+          {/* Grid Layout - samme som forsiden */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 h-full">
+            {/* Left side - Content */}
+            <div className="flex items-center px-6 md:px-12 lg:px-16 bg-gray-50/30">
+              <div className="max-w-2xl">
+                <div className="space-y-2 mb-4">
+                  <h1 className="text-2xl md:text-3xl font-light text-[#333333]">Mine ydelser</h1>
+                  <h2 className="text-xl md:text-2xl text-[#1cc18e] font-light">
+                    Holistisk psykoterapi
+                  </h2>
+
+                  <div className="mb-6">
+                    <p className="text-lg font-light text-[#333333] leading-relaxed pt-4">
+                      Jeg tilbyder evidensbaserede metoder kombineret med intuitive tilgange:
+                    </p>
+                  </div>
+                  <BulletList
+                    items={[
+                      "Essentiel Integrativ Psykoterapi",
+                      "EMDR - Chok og traumeforløsning", 
+                      "Mentaliserende tilgang til relationer",
+                      "Meditation og spirituel udvikling",
+                    ]}
+                  />
                 </div>
-                <span className="text-sm font-light text-gray-500 tracking-wider">
-                  HOLISTISK HEALING
-                </span>
+
+                <div className="flex flex-col justify-start items-start sm:flex-row gap-4">
+                  <StaticButton
+                    href="/kontakt"
+                    text="Book en session"
+                    size="large"
+                    variant="green"
+                    direction="left"
+                    iconDirection="right"
+                    textColor="dark"
+                    className="mt-6"
+                  />
+                </div>
+              </div>
+            </div>
+
+            {/* Right side - Image */}
+            <div className="flex items-center justify-center lg:justify-end h-full">
+              <div className="relative w-full h-full overflow-hidden">
+                <Image
+                  src="/images/tree-touch.jpg"
+                  alt="Holistisk psykoterapi - naturens kraft i healing"
+                  fill
+                  className="object-cover object-center"
+                />
               </div>
             </div>
           </div>

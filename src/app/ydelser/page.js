@@ -1,16 +1,7 @@
-import Button from '../components/ui/Button';
-import Card from '../components/ui/Card';
-import YdelseCard from '../components/ydelser/YdelseCard';
-import SessionForloeb from '../components/ydelser/SessionForloeb';
-import ProblomOmraader from '../components/ydelser/ProblomOmraader';
 import YdelserHeroMinimal from '../components/ydelser/YdelserHeroMinimal';
-import YdelserHeroText from '../components/ydelser/YdelserHeroText';
-import YdelserHeroCard from '../components/ydelser/YdelserHeroCard';
-import SectionBadge from '../components/layout/SectionBadge';
-import BulletList from '../components/layout/BulletList';
-import PrakiskInfo from '../components/ydelser/PraktiskInfo';
-import YdelserPhilosophy from '../components/ydelser/YdelserPhilosophy';
 import YdelserSpecialiseringer from '../components/ydelser/YdelserSpecialiseringer';
+import SessionForloeb from '../components/ydelser/SessionForloeb';
+import CallToActionBox from '../components/layout/CallToActionBox';
 
 export default function YdelserPage() {
   const ydelser = [
@@ -109,50 +100,24 @@ export default function YdelserPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero Section - 3 options to choose from */}
-      <YdelserHeroText />
-      {/* <YdelserHeroMinimal /> */}
-      {/* <YdelserHeroCard /> */}
+      {/* Hero - Introducerer ydelserne */}
+      <YdelserHeroMinimal />
       
-      {/* Philosophy Section */}
-      <YdelserPhilosophy />
-
-      {/* Specialiseringer Section */}
+      {/* Hovedindhold - De 4 specialiseringer */}
       <YdelserSpecialiseringer ydelser={ydelser} />
-
-      {/* Session forløb */}
+      
+      {/* Praktisk info om sessioner og priser */}
       <SessionForloeb />
-
-      {/* Problem områder */}
-      <ProblomOmraader />
-
-      {/* Praktiske informationer */}
-      <PrakiskInfo />
-
-      {/* CTA sektion */}
-      <section className="section-padding bg-gray-50/30">
-        <div className="max-w-7xl mx-auto container-padding">
-          <div className="text-center max-w-4xl mx-auto">
-            <Card className="p-8 md:p-12 space-y-8">
-              <h2 className="text-3xl md:text-4xl font-light text-gray-800">
-                Klar til at begynde din rejse?
-              </h2>
-              <p className="text-base md:text-lg font-light text-gray-600 leading-relaxed max-w-2xl mx-auto">
-                Jeg glæder mig til at støtte dig på din vej mod healing, vækst og en mere autentisk måde at leve på. 
-                Tag det første skridt i dag.
-              </p>
-              <div className="flex flex-col sm:flex-row gap-4 justify-center">
-                <Button href="/kontakt" size="large">
-                  Book en samtale
-                </Button>
-                <Button href="/priser" variant="secondary" size="large">
-                  Se priser
-                </Button>
-              </div>
-            </Card>
-          </div>
-        </div>
-      </section>
+      
+      {/* Call to action */}
+      <CallToActionBox 
+        title="Jeg glæder mig til at støtte dig på din vej mod healing, vækst og en mere autentisk måde at leve på. Tag det første skridt i dag."
+        buttonText="Book en samtale"
+        buttonHref="/kontakt"
+        buttonVariant="green"
+        buttonSize="large"
+        buttonDirection="left"
+      />
     </main>
   );
 }

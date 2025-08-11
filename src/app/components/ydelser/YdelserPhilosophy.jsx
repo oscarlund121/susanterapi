@@ -2,25 +2,19 @@
 import React from "react";
 import Card from "../ui/Card";
 import SectionBadge from "../layout/SectionBadge";
+import SectionHeader from "../layout/SectionHeader";
 
 const YdelserPhilosophy = () => {
   return (
     <section className="section-padding bg-gray-50/30">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
-        <div className="flex flex-col items-start mb-2 md:mb-6">
-          <SectionBadge>
-            Min tilgang
-          </SectionBadge>
-          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
-            Min filosofi
-          </h2>
-          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
-            Grundlaget for mit terapeutiske arbejde bygger på respekt, tillid og 
-            troen på hvert menneskes indre helende kraft.
-          </h6>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-        </div>
+        <SectionHeader
+          badge="Min tilgang"
+          title="Min filosofi"
+          subtitle="Grundlaget for mit terapeutiske arbejde bygger på respekt, tillid og troen på hvert menneskes indre helende kraft."
+          align="center"
+        />
 
         <div className="max-w-4xl mx-auto">
           <div className="bg-white shadow-sm rounded-lg p-8 md:p-12">

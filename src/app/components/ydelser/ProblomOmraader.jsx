@@ -1,6 +1,7 @@
 "use client";
 import React from "react";
 import SectionBadge from "../layout/SectionBadge";
+import SectionHeader from "../layout/SectionHeader";
 import BulletList from "../layout/BulletList";
 
 const ProblomOmraader = () => {
@@ -63,19 +64,12 @@ const ProblomOmraader = () => {
     <section className="section-padding">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
-        <div className="flex flex-col items-start mb-2 md:mb-6">
-          <SectionBadge>
-            Målgrupper
-          </SectionBadge>
-          <h2 className="text-3xl md:text-4xl font-light text-gray-800 mb-6">
-            Hvem arbejder jeg med?
-          </h2>
-          <h6 className="text-base md:text-lg font-light text-gray-600 max-w-xl leading-relaxed">
-            Jeg tilbyder terapi til alle aldersgrupper og arbejder med en bred vifte af udfordringer. 
-            Her er nogle af de mest almindelige problemer jeg hjælper med.
-          </h6>
-          <div className="w-20 h-0.5 bg-[#1cc18e] mb-8"></div>
-        </div>
+        <SectionHeader
+          badge="Målgrupper"
+          title="Hvem arbejder jeg med?"
+          subtitle="Jeg tilbyder terapi til alle aldersgrupper og arbejder med en bred vifte af udfordringer. Her er nogle af de mest almindelige problemer jeg hjælper med."
+          align="center"
+        />
         
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-8">
           {målgrupper.map((gruppe, index) => (
