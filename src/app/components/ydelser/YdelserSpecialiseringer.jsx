@@ -3,6 +3,7 @@ import React from "react";
 import SectionBadge from "../layout/SectionBadge";
 import SectionHeader from "../layout/SectionHeader";
 import BulletList from "../layout/BulletList";
+import Link from "next/link";
 
 const YdelserSpecialiseringer = ({ ydelser }) => {
   return (
@@ -18,8 +19,8 @@ const YdelserSpecialiseringer = ({ ydelser }) => {
         {/* Specialiseringer som cards */}
         <div className="space-y-12 md:space-y-16">
           {ydelser.map((ydelse, index) => (
-            <div key={index} className="w-full">
-              <div className="bg-white shadow-sm rounded-lg overflow-hidden h-full">
+            <Link href={`/ydelser/${ydelse.slug}`} key={index} className="block group">
+              <div className="bg-white shadow-sm rounded-lg overflow-hidden h-full group-hover:shadow-lg transition-shadow">
                 {/* Top badge */}
                 <div className="bg-[#1cc18e]/10 border-b border-[#1cc18e]/20 p-6">
                   <div className="flex items-center space-x-3 mb-3">
@@ -64,7 +65,7 @@ const YdelserSpecialiseringer = ({ ydelser }) => {
                   </div>
                 </div>
               </div>
-            </div>
+            </Link>
           ))}
         </div>
       </div>

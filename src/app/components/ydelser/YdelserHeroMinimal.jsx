@@ -21,6 +21,18 @@ const YdelserHeroMinimal = () => {
                     Holistisk psykoterapi
                   </h2>
 
+                  {/* Rektangulært billede under section header */}
+                  <div className="my-6">
+                    <Image
+                      src="/images/hand-on-chest.jpg"
+                      alt="Terapi illustrativt billede"
+                      width={600}
+                      height={300}
+                      className="rounded-xl object-cover w-full h-48 md:h-56 lg:h-64"
+                      priority
+                    />
+                  </div>
+
                   <div className="mb-6">
                     <p className="text-lg font-light text-[#333333] leading-relaxed pt-4">
                       Jeg tilbyder en holistisk tilgang til psykoterapi, hvor vi arbejder med hele mennesket:

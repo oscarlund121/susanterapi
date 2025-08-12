@@ -9,10 +9,10 @@ const LandingMetoder = () => {
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
         <SectionHeader
-          badgeText="Mine metoder"
-          title="Behandlingsmetoder"
+          badgeText="Mine behandlingsmetoder"
+          title="Sådan arbejder jeg"
           description="Jeg anvender evidensbaserede metoder der er anerkendt internationalt og tilpasset den enkelte klients behov."
-          buttonText="Læs mere"
+          buttonText="Se mere"
           buttonHref="/ydelser"
           buttonVariant="green"
           buttonDirection="left"

@@ -1,8 +1,7 @@
 "use client";
 import React from "react";
 import Image from "next/image";
-import YellowButton from "../ui/YellowButton";
-import StaticButton from "../ui/StaticButton";
+import Link from "next/link";
 
 const TilbyderCard = ({
   number = "01", // Nyt prop for nummer
@@ -10,15 +9,15 @@ const TilbyderCard = ({
   image,
   imageAlt,
   variant = "default", // default, rounded, asymmetric
-  buttonText = "Læs mere",
+  buttonText = "Se mere",
   buttonHref = "/ydelser",
   showButton = true, // Ny prop til at vise/skjule button
   // Custom border radius props for image
   imageBorderRadius, // Direkte CSS string f.eks. "rounded-3xl"
-  imageTopLeftRadius,   // f.eks. "rounded-tl-[50px]"
-  imageTopRightRadius,  // f.eks. "rounded-tr-xl"
+  imageTopLeftRadius, // f.eks. "rounded-tl-[50px]"
+  imageTopRightRadius, // f.eks. "rounded-tr-xl"
   imageBottomLeftRadius, // f.eks. "rounded-bl-xl"
-  imageBottomRightRadius // f.eks. "rounded-br-xl"
+  imageBottomRightRadius, // f.eks. "rounded-br-xl"
 }) => {
   // Forskellige hjørne-styles for billedet baseret på props
   const getImageStyles = () => {
@@ -26,12 +25,19 @@ const TilbyderCard = ({
     if (imageBorderRadius) {
       return imageBorderRadius;
     }
-    
+
     // Hvis der er sendt individuelle hjørne-props
-    if (imageTopLeftRadius || imageTopRightRadius || imageBottomLeftRadius || imageBottomRightRadius) {
-      return `${imageTopLeftRadius || ''} ${imageTopRightRadius || ''} ${imageBottomLeftRadius || ''} ${imageBottomRightRadius || ''}`.trim();
+    if (
+      imageTopLeftRadius ||
+      imageTopRightRadius ||
+      imageBottomLeftRadius ||
+      imageBottomRightRadius
+    ) {
+      return `${imageTopLeftRadius || ""} ${imageTopRightRadius || ""} ${
+        imageBottomLeftRadius || ""
+      } ${imageBottomRightRadius || ""}`.trim();
     }
-    
+
     // Ellers brug variant system
     switch (variant) {
       case "rounded":
@@ -44,10 +50,18 @@ const TilbyderCard = ({
   };
 
   return (
-    <div className="group cursor-pointer">
-      <div className={`overflow-hidden flex flex-col rounded-xl ${showButton ? 'md:h-110' : 'md:h-72'}`}>
+    <Link href={buttonHref} className="block group cursor-pointer">
+      <div
+        className={`overflow-hidden flex flex-col rounded-xl ${
+          showButton ? "md:h-110" : "md:h-72"
+        }`}
+      >
         {/* Større billede med custom border radius */}
-        <div className={`relative h-40 overflow-hidden ${getImageStyles()} ${showButton ? 'md:h-66' : 'md:h-48'}`}>
+        <div
+          className={`relative h-40 overflow-hidden ${getImageStyles()} ${
+            showButton ? "md:h-66" : "md:h-48"
+          }`}
+        >
           <Image
             src={image}
             alt={imageAlt || title}
@@ -55,9 +69,11 @@ const TilbyderCard = ({
             className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
           />
         </div>
-        
+
         {/* Kompakt content område */}
-        <div className={`p-4 flex-1 flex flex-col ${showButton ? 'h-20' : 'h-16'}`}>
+        <div
+          className={`p-4 flex-1 flex flex-col ${showButton ? "h-18" : "h-16"}`}
+        >
           {/* Nummer badge mellem billede og overskrift */}
           <div className="mb-2">
             <span className="inline-block text-xs px-3 py-1 border-black border-1 rounded-bl-full rounded-tr-full rounded-br-full font-light">
@@ -67,23 +83,10 @@ const TilbyderCard = ({
           <h5 className="text-lg font-light text-[#333333]  mb-1 underline-animate">
             {title}
           </h5>
-          <div className="mt-auto">
-            {showButton && (
-              <div className="flex justify-end">
-                <StaticButton
-                  text={buttonText}
-                  href={buttonHref}
-                  variant="green"
-                  size="small"
-                  direction="left"
-                  iconDirection="right"
-                />
-              </div>
-            )}
-          </div>
+          {/* Ingen separat Læs mere-link, hele cardet er klikbart */}
         </div>
       </div>
-    </div>
+    </Link>
   );
 };
 

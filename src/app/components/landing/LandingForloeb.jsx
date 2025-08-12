@@ -57,8 +57,8 @@ const LandingForloeb = () => {
           {/* Hvordan foregår en session */}
           <div className="space-y-8">
             <SectionHeader 
-              badgeText="Session forløb"
-              title="Hvordan foregår en session?"
+              badgeText="Sådan fungerer det"
+              title="Start din forandring i dag"
               description="En terapisession hos mig er en samtale, hvor vi sammen finder frem til det du ønsker at arbejde med, tale om og komme af med, så du i eget tempo kommer hen til det du ønsker."
               showButton={false}
             />

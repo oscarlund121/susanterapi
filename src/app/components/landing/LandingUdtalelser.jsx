@@ -67,10 +67,10 @@ const LandingUdtalelser = () => {
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header som i LandingTilbyder */}
         <SectionHeader 
-          badgeText="Oplevelser"
-          title="Klientoplevelser"
+          badgeText="Klient resultater"
+          title="Se hvad mine klienter opnår"
           description="Læs om tidligere klienters oplevelser og resultater med terapien."
-          buttonText="Book en session"
+          buttonText="Book din session nu"
           buttonHref="/kontakt"
           buttonVariant="green"
           buttonDirection="left"

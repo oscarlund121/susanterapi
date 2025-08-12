@@ -14,7 +14,7 @@ const CardHeader = ({
     <div
       className={`p-6 border-b ${
         isGreen
-          ? "bg-[#1cc18e]/30 border-[#1cc18e]/20"
+          ? "bg-[#1cc18e]/10 "
           : "bg-gray-800 border-gray-700 text-white"
       }`}
     >

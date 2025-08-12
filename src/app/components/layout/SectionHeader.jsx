@@ -71,7 +71,7 @@ const SectionHeader = ({
       
       {/* Beskrivelse og Button på samme linje */}
       <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
-        <h6 className="text-gray-400 max-w-xl leading-relaxed">
+        <h6 className="text-[#333333]/70 max-w-xl leading-relaxed">
           {description}
         </h6>
         

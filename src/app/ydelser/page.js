@@ -7,6 +7,7 @@ export default function YdelserPage() {
   const ydelser = [
     {
       title: "Essentiel Integrativ Psykoterapi",
+      slug: "essentiel-integrativ-psykoterapi",
       image: "/images/hand-on-chest.jpg",
       description: "En holistisk tilgang til healing der integrerer krop, sind og sjæl. Gennem denne metode arbejder vi med at finde og forløse mønstre der holder dig tilbage, så du kan opleve mere frihed og autenticitet i dit liv.",
       fokusområder: [
@@ -29,6 +30,7 @@ export default function YdelserPage() {
     },
     {
       title: "EMDR - Chok og Traumeforløsning",
+      slug: "emdr",
       image: "/images/sitting.jpg", 
       description: "EMDR (Eye Movement Desensitization and Reprocessing) er en WHO-anerkendt metode til behandling af traumer. Gennem bilaterale øjenbevægelser hjælper vi hjernen med at forarbejde og integrere traumatiske oplevelser, så de ikke længere påvirker dit daglige liv negativt.",
       fokusområder: [
@@ -52,6 +54,7 @@ export default function YdelserPage() {
     },
     {
       title: "Mentaliserende Tilgang til Relationer",
+      slug: "mentaliserende-tilgang",
       image: "/images/walk.jpg",
       description: "Mentalisering handler om at forstå egen og andres adfærd ud fra mentale tilstande - tanker, følelser, ønsker og intentioner. Denne tilgang styrker din evne til empati og forbedrer kvaliteten af dine relationer markant.",
       fokusområder: [
@@ -75,6 +78,7 @@ export default function YdelserPage() {
     },
     {
       title: "Meditation og Spirituel Udvikling",
+      slug: "meditation-spirituel-udvikling",
       image: "/images/tree-touch.jpg",
       description: "Gennem meditation og spirituelle praksisser åbner vi op for din indre visdom og forbindelse til noget større. Dette arbejde hjælper dig med at finde ro, klarhed og en dybere mening med livet, samt manifestere dine ønsker og drømme.",
       fokusområder: [
@@ -105,19 +109,7 @@ export default function YdelserPage() {
       
       {/* Hovedindhold - De 4 specialiseringer */}
       <YdelserSpecialiseringer ydelser={ydelser} />
-      
-      {/* Praktisk info om sessioner og priser */}
-      <SessionForloeb />
-      
-      {/* Call to action */}
-      <CallToActionBox 
-        title="Jeg glæder mig til at støtte dig på din vej mod healing, vækst og en mere autentisk måde at leve på. Tag det første skridt i dag."
-        buttonText="Book en samtale"
-        buttonHref="/kontakt"
-        buttonVariant="green"
-        buttonSize="large"
-        buttonDirection="left"
-      />
+   
     </main>
   );
 }

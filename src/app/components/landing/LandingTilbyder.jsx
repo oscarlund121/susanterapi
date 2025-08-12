@@ -10,14 +10,14 @@ import CallToActionBox from "../layout/CallToActionBox";
 
 const LandingTilbyder = () => {
   return (
-    <section className="section-padding">
+    <section className="section-padding m-20">
       <div className="max-w-7xl mx-auto container-padding">
         {/* Brug det genbrugelige SectionHeader-komponent med gul knap */}
         <SectionHeader 
-          badgeText="Terapi hos mig"
-          title="Hvad jeg tilbyder"
+          badgeText="Dine behandlingsmuligheder"
+          title="Få den hjælp du har brug for"
           description="Jeg tilbyder evidensbaseret psykoterapi med fokus på helhedsorienteret behandling og personlig udvikling."
-          buttonText="Book en session"
+          buttonText="Book din session nu"
           buttonHref="/ydelser"
           buttonVariant="green"
           buttonDirection="left"
@@ -34,7 +34,7 @@ const LandingTilbyder = () => {
             image="/images/tree-touch.jpg"
             imageAlt="Psykoterapi"
             imageBorderRadius="rounded-tl-[50px] rounded-tr-xl rounded-b-xl"
-            buttonText="Læs mere"
+            buttonText="Se mere"
             buttonHref="/ydelser"
           />
 
@@ -45,7 +45,7 @@ const LandingTilbyder = () => {
             image="/images/hand-on-chest-2.jpg"
             imageAlt="Chok-forløsning"
             imageBorderRadius="rounded-bl-[50px] rounded-t-xl rounded-br-xl"
-            buttonText="Læs mere"
+            buttonText="Se mere"
             buttonHref="/ydelser"
           />
 
@@ -56,7 +56,7 @@ const LandingTilbyder = () => {
             image="/images/sitting-closed.jpg"
             imageAlt="Meditation"
             imageBorderRadius="rounded-l-xl rounded-tr-[50px] rounded-br-xl"
-            buttonText="Læs mere"
+            buttonText="Se mere"
             buttonHref="/ydelser"
           />
 
@@ -67,14 +67,14 @@ const LandingTilbyder = () => {
             image="/images/walk.jpg"
             imageAlt="Familie- og parterapi"
             imageBorderRadius="rounded-l-xl rounded-tr-xl rounded-br-[50px]"
-            buttonText="Læs mere"
+            buttonText="Se mere"
             buttonHref="/ydelser"
           />
         </div>
         
-        <CallToActionBox 
+       {/*  <CallToActionBox 
           title="I terapien kan du, dit barn, familien eller din partner få åbnet op for kroppens naturlige intelligens og med lethed udfolde dine ønsker og drømme."
-        />
+        /> */}
       </div>
     </section>
   );

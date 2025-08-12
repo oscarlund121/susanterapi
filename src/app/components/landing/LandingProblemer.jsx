@@ -90,10 +90,10 @@ const LandingProblemer = () => {
       <div className="max-w-7xl mx-auto container-padding">
         {/* Header */}
         <SectionHeader
-          badgeText="Problemområder"
-          title="Hvad jeg kan hjælpe med"
+          badgeText="Find din løsning"
+          title="Få hjælp til disse udfordringer"
           
-          buttonText="Start din rejse"
+          buttonText="Book din session nu"
           buttonHref="/kontakt"
           buttonDirection="left"
           buttonVariant="green"
@@ -101,7 +101,7 @@ const LandingProblemer = () => {
           variant="horizontal"
         />
      
-        <div className="mb-32">
+        <div className="mb-20">
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 items-start">
             {problemAreas.map((area, index) => (
               <div
@@ -126,15 +126,7 @@ const LandingProblemer = () => {
           </div>
         </div>{" "}
        
-        {/* CallToActionBox i stedet for bundtekst */}
-        <CallToActionBox 
-          title="Kender du fornemmelsen af ikke at føle dig anerkendt som den du er eller fastlåst i en situation? Ved at finde frem til dine blokeringer finder vi ind til roden af problemet og hjælper dig til en bedre fornemmelse i kroppen."
-          buttonText="Start din rejse"
-          buttonHref="/kontakt"
-          buttonVariant="green"
-          buttonSize="large"
-          buttonDirection="left"
-        />
+    
       </div>
     </section>
   );
