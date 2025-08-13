@@ -94,10 +94,6 @@ const LandingUdtalelser = () => {
           onClose={() => setSelectedTestimonial(null)}
         />
 
-        {/* CallToActionBox som i LandingTilbyder */}
-        <CallToActionBox 
-          title="En terapisession hos mig er en samtale, hvor vi sammen finder frem til det du ønsker at arbejde med, så du i eget tempo kommer hen til det du ønsker."
-        />
       </div>
     </section>
   );

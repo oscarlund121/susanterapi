@@ -1,7 +1,5 @@
-import YdelserHeroMinimal from '../components/ydelser/YdelserHeroMinimal';
+import PageHeader from '../components/layout/PageHeader';
 import YdelserSpecialiseringer from '../components/ydelser/YdelserSpecialiseringer';
-import SessionForloeb from '../components/ydelser/SessionForloeb';
-import CallToActionBox from '../components/layout/CallToActionBox';
 
 export default function YdelserPage() {
   const ydelser = [
@@ -104,8 +102,14 @@ export default function YdelserPage() {
 
   return (
     <main className="min-h-screen bg-white">
-      {/* Hero - Introducerer ydelserne */}
-      <YdelserHeroMinimal />
+      {/* Kompakt Header med billede */}
+      <PageHeader 
+        title="Ydelser"
+        subtitle="Holistisk psykoterapi"
+        description="Jeg tilbyder en holistisk tilgang til psykoterapi, hvor vi arbejder med hele mennesket - krop, sind og sjæl. Mine specialiseringer kombinerer evidensbaserede metoder med en empatisk og intuitiv tilgang."
+        buttonText="Book en session"
+        showImage={true}
+      />
       
       {/* Hovedindhold - De 4 specialiseringer */}
       <YdelserSpecialiseringer ydelser={ydelser} />

@@ -106,8 +106,8 @@ const LandingProblemer = () => {
             {problemAreas.map((area, index) => (
               <div
                 key={index}
-                className="bg-white shadow-sm rounded-lg overflow-hidden flex flex-col"
-                style={{ minHeight: "450px" }}
+                className="bg-white  rounded-lg flex flex-col"
+               
               >
                 {/* Top badge - consistent height */}
                 <CardHeader 

@@ -71,9 +71,9 @@ const LandingMaalgrupper = () => {
   ];
 
   return (
-    <div className="relative">
+    <div className="relative ">
       {/* Baggrund der starter 50% fra højre kun på lg+ skærme */}
-      <div className="absolute inset-0 bg-[#1cc18e]/10 rounded-l-[150px] lg:left-1/2 left-0"></div>
+      <div className="absolute inset-0 bg-[#D3D9E5]/20 rounded-l-[150px] lg:left-1/2 left-0"></div>
 
       {/* Content */}
       <div className="relative">
@@ -94,18 +94,11 @@ const LandingMaalgrupper = () => {
                   showButton={false}
                 />
                 {/* Rektangulært naturbillede under section header */}
-                <div className="my-6">
-                  <img
-                    src="/images/tree-touch.jpg"
-                    alt="Natur og terapi"
-                    className="rounded-xl object-cover w-full h-28 md:h-32 lg:h-36"
-                    loading="lazy"
-                  />
-                </div>
+              
               </div>
 
               {/* Højre kolonne - Knapper og Card */}
-              <div className="space-y-6">
+              <div className="space-y-6 pl-0 lg:pl-16">
                 {/* Målgruppe knapper - centreret */}
                 <div className="flex justify-start">
                   <MaalgruppeButtons
@@ -116,13 +109,14 @@ const LandingMaalgrupper = () => {
                 </div>
 
                 {/* Aktiv målgruppe card */}
-                <MaalgruppeCard gruppe={maalgrupper[activeCard]} />
+              
 
                 {/* CTA Buttons - grøn til venstre, StaticButton til højre */}
                 <div className="flex justify-end items-center gap-4">
                   <StaticButton
                     href="/ydelser"
-                    className="text-gray-600 hover:text-[#1cc18e] transition-colors"
+                    direction="left"
+                    iconDirection="right"
                   >
                     Læs mere om mine metoder
                   </StaticButton>

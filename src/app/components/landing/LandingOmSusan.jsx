@@ -23,14 +23,6 @@ const LandingOmSusan = () => {
 
         {/* Enkelt Card */}
         <div className="grid lg:grid-cols-2 gap-8 items-center">
-          <div className="relative h-full min-h-[600px]">
-            <Image
-              src="/images/momma-smile.jpg"
-              alt="Susan Albertsen - Psykoterapeut"
-              fill
-              className="object-cover object-[50%_20%] rounded-l-xl"
-            />
-          </div>
           <div className="">
             <div className="bg-white rounded-lg overflow-hidden h-full">
               {/* Top badge */}
@@ -76,6 +68,16 @@ const LandingOmSusan = () => {
                 </div>
               </div>
             </div>
+          </div>
+          <div className="relative h-full min-h-[600px] overflow-hidden">
+            <Image
+              src="/images/momma-smile-no-bg.jpg"
+              alt="Susan Albertsen - Psykoterapeut"
+              fill
+              className="object-cover px-4"
+            />
+            {/* Gradient overlay for blød overgang i bunden */}
+            <div className="absolute inset-0 bg-gradient-to-b from-transparent via-transparent to-white pointer-events-none"></div>
           </div>
         </div>
 
