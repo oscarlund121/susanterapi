@@ -12,7 +12,7 @@ import LandingForloeb from "./LandingForloeb";
 
 const LandingPage = () => {
   return (
-    <div className="min-h-screen bg-white">
+    <div className="min-h-screen bg-warm-beige-50">
    
       
       {/* Hvad jeg tilbyder - simpelt 2-kolonne layout */}
@@ -41,7 +41,7 @@ const LandingPage = () => {
       
       
       {/* Klientudtalelser */}
-      {/* <LandingUdtalelser /> */}
+      <LandingUdtalelser />
       
       {/* Session forløb og priser */}
       {/* <LandingForloeb /> */}

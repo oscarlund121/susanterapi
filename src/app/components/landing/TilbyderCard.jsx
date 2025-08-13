@@ -51,39 +51,42 @@ const TilbyderCard = ({
 
   return (
     <Link href={buttonHref} className="block group cursor-pointer">
-      <div
-        className={`overflow-hidden flex flex-col rounded-xl ${
-          showButton ? "md:h-110" : "md:h-72"
-        }`}
-      >
-        {/* Større billede med custom border radius */}
-        <div
-          className={`relative h-40 overflow-hidden ${getImageStyles()} ${
-            showButton ? "md:h-66" : "md:h-48"
-          }`}
-        >
+      <div className="transition-all duration-300 hover:-translate-y-2">
+        {/* Større billede uden borders - mere prominent */}
+        <div className={`relative h-64 md:h-72 overflow-hidden rounded-2xl mb-6 ${getImageStyles()}`}>
           <Image
             src={image}
             alt={imageAlt || title}
             fill
-            className="object-cover transition-transform duration-1000 ease-out group-hover:scale-110"
+            className="object-cover transition-transform duration-700 ease-out group-hover:scale-105"
           />
+          
+          {/* Subtil gradient overlay kun i bunden */}
+          <div className="absolute inset-0 bg-gradient-to-t from-black/30 via-transparent to-transparent opacity-60"></div>
+          
+          {/* Nummer badge - mere elegant placering */}
+          <div className="absolute top-6 left-6">
+            <div className="w-12 h-12 bg-white/95 backdrop-blur-sm rounded-full flex items-center justify-center text-text-primary font-bold text-base shadow-lg">
+              {number}
+            </div>
+          </div>
+
+          {/* Flydende titel på billedet */}
+          <div className="absolute bottom-6 left-6 right-6">
+            <h5 className="text-white text-xl font-semibold leading-tight drop-shadow-lg">
+              {title}
+            </h5>
+          </div>
         </div>
 
-        {/* Kompakt content område */}
-        <div
-          className={`p-4 flex-1 flex flex-col ${showButton ? "h-18" : "h-16"}`}
-        >
-          {/* Nummer badge mellem billede og overskrift */}
-          <div className="mb-2">
-            <span className="inline-block text-xs px-3 py-1 border-black border-1 rounded-bl-full rounded-tr-full rounded-br-full font-light">
-              {number}
-            </span>
+        {/* Minimalistisk call-to-action under billedet */}
+        <div className="px-2">
+          <div className="flex items-center gap-3 text-sage-600 group-hover:text-sage-700 font-medium transition-all duration-300 group-hover:gap-4">
+            <span className="text-base">Læs mere om behandlingen</span>
+            <svg className="w-5 h-5 transition-transform duration-300 group-hover:translate-x-1" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M17 8l4 4m0 0l-4 4m4-4H3" />
+            </svg>
           </div>
-          <h5 className="text-lg font-light text-[#333333]  mb-1 underline-animate">
-            {title}
-          </h5>
-          {/* Ingen separat Læs mere-link, hele cardet er klikbart */}
         </div>
       </div>
     </Link>

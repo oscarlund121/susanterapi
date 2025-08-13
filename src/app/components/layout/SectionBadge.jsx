@@ -5,11 +5,12 @@ const SectionBadge = ({ children, className = "", variant = "default" }) => {
   const isSmall = variant === "small";
   
   return (
-    <span className={`inline-block px-2 py-1 text-[#333333] border-[#333333] rounded-br-full rounded-tr-full rounded-bl-full ${
+    <span className={`inline-flex items-center gap-2 px-4 py-2 bg-sage-100/60 text-sage-700 border border-sage-200/50 rounded-full backdrop-blur-sm ${
       isSmall 
-        ? "border text-xs font-normal" 
-        : "border-2 text-xs font-sm"
+        ? "text-xs font-normal" 
+        : "text-sm font-medium"
     } ${className}`}>
+      <div className="w-2 h-2 bg-sage-500 rounded-full"></div>
       {children}
     </span>
   );

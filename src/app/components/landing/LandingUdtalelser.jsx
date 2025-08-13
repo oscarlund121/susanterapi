@@ -63,13 +63,19 @@ const LandingUdtalelser = () => {
   ];
 
   return (
-    <section className="section-padding">
-      <div className="max-w-7xl mx-auto container-padding">
+    <section className="section-padding bg-gradient-to-br from-warm-beige-50 via-sage-50 to-soft-peach-100 relative overflow-hidden">
+      {/* Decorative background elements */}
+      <div className="absolute inset-0 overflow-hidden">
+        <div className="absolute top-20 left-10 w-32 h-32 bg-sage-200/20 rounded-full blur-2xl"></div>
+        <div className="absolute bottom-40 right-20 w-24 h-24 bg-soft-peach-200/30 rounded-full blur-xl"></div>
+      </div>
+
+      <div className="max-w-7xl mx-auto container-padding relative z-10">
         {/* Header som i LandingTilbyder */}
         <SectionHeader 
           badgeText="Klient resultater"
           title="Se hvad mine klienter opnår"
-          description="Læs om tidligere klienters oplevelser og resultater med terapien."
+          description="Læs om tidligere klienters oplevelser og resultater med terapien. Deres historier viser kraften i at arbejde med både krop og sind."
           buttonText="Book din session nu"
           buttonHref="/kontakt"
           buttonVariant="green"
@@ -77,8 +83,8 @@ const LandingUdtalelser = () => {
           buttonSize="large"
         />
 
-        {/* Testimonials grid som i LandingTilbyder */}
-        <div className="grid xl:grid-cols-5 lg:grid-cols-3 grid-cols-2 gap-4 md:gap-8">
+        {/* Testimonials grid - mere elegant layout */}
+        <div className="grid xl:grid-cols-3 lg:grid-cols-2 grid-cols-1 gap-6 md:gap-8">
           {testimonials.map((testimonial, index) => (
             <TestimonialCard 
               key={index}
@@ -86,6 +92,17 @@ const LandingUdtalelser = () => {
               onReadMore={setSelectedTestimonial}
             />
           ))}
+        </div>
+
+        {/* Trust statement */}
+        <div className="mt-16 text-center">
+          <div className="bg-white/60 backdrop-blur-sm border border-sage-200/50 rounded-2xl p-8 max-w-3xl mx-auto">
+            <p className="text-text-secondary text-lg leading-relaxed italic">
+              "Hver historie er unik, men fælles for alle er rejsen mod større trivsel og indre balance. 
+              Jeg er stolt af at kunne være en del af mine klienters healing-proces."
+            </p>
+            <div className="mt-4 text-text-primary font-medium">— Susan Albertsen</div>
+          </div>
         </div>
 
         {/* Modal for full testimonials */}

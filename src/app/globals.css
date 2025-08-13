@@ -7,12 +7,33 @@
   --font-fraunces: "Fraunces", serif;
   --font-syne: "Syne", sans-serif;
   --font-archivo: "Archivo", sans-serif;
+  
+  /* Warm, therapeutic color palette */
+  --sage-50: #f6f8f6;
+  --sage-100: #e8f2e8;
+  --sage-200: #d0e5d1;
+  --sage-300: #a8d1aa;
+  --sage-500: #6ea172;
+  --sage-600: #5a8a5e;
+  --sage-700: #486e4c;
+  
+  --warm-beige-50: #faf9f7;
+  --warm-beige-100: #f4f1ed;
+  --warm-beige-200: #ede7df;
+  --warm-beige-300: #e1d5c7;
+  
+  --soft-peach-100: #fef7f3;
+  --soft-peach-200: #fde9dc;
+  --soft-peach-300: #fbd4bb;
+  
+  --text-primary: #2d4a32;
+  --text-secondary: #5a6b5d;
+  --text-muted: #8b9a8e;
 }
 
 body {
-  background: #ffffff;
-  color: #333333;
-
+  background: var(--warm-beige-50);
+  color: var(--text-primary);
   margin: 0;
 }
 
@@ -46,7 +67,7 @@ h2 {
 h3 {
   font-size: clamp(28px, 3.5vw, 39px);
   line-height: 110%;
-  color: #333333;
+  color: var(--text-primary);
   font-weight: 600;
   margin-bottom: 15px;
 }
@@ -64,7 +85,7 @@ h3 {
   height: 1px;
   bottom: -2px;
   left: 0;
-  background-color: #1cc18e;
+  background-color: var(--sage-500);
   transition: width 0.3s ease;
 }
 
@@ -112,7 +133,7 @@ li {
   letter-spacing: normal;
   font-weight: 400;
   margin: 0;
-  color: #333333;
+  color: var(--text-primary);
 }
 
 blockquote {
@@ -124,7 +145,7 @@ blockquote {
   font-style: italic;
   margin: 0;
   padding-left: 32px;
-  border-left: 4px solid #1cc18e;
+  
  
 }
 
@@ -389,7 +410,7 @@ p + p {
   left: 0;
   width: 0;
   height: 1px;
-  background: #333333;
+  background: var(--text-primary);
   transition: width 0.4s ease;
 }
 

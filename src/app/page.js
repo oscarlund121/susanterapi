@@ -9,7 +9,7 @@ import LandingPage from './components/landing/LandingPage';
 
 export default function Home() {
   return (
-    <main className="min-h-screen bg-white">
+    <main className="min-h-screen bg-warm-beige-50">
       {/* =========== NY SAMMENHÆNGENDE LANDING PAGE =========== */}
 
       <HeroElegantMinimal />

@@ -58,22 +58,27 @@ const SectionHeader = ({
 
   // Default variant (original layout)
   return (
-    <div className="mb-8">
-      {/* Badge */}
-      <div className="mb-4">
+    <div className="mb-12">
+      {/* Badge med ny styling */}
+      <div className="mb-6">
         <SectionBadge>{badgeText}</SectionBadge>
       </div>
       
-      {/* Titel */}
-      <h2 className="text-3xl md:text-4xl font-light text-[#333333] mb-6">
-        {title}
-      </h2>
+      {/* Titel med gradient accent */}
+      <div className="mb-6">
+        <h2 className="text-text-primary mb-4">
+          {title}
+        </h2>
+        <div className="w-24 h-1 bg-gradient-to-r from-sage-500 to-sage-300 rounded-full"></div>
+      </div>
       
-      {/* Beskrivelse og Button på samme linje */}
-      <div className="flex flex-col md:flex-row md:justify-between md:items-center gap-4 mb-6">
-        <h6 className="text-[#333333]/70 max-w-xl leading-relaxed">
-          {description}
-        </h6>
+      {/* Beskrivelse og Button layout */}
+      <div className="flex flex-col lg:flex-row lg:justify-between lg:items-end gap-6 mb-8">
+        <div className="lg:max-w-2xl">
+          <p className="text-text-secondary text-lg leading-relaxed">
+            {description}
+          </p>
+        </div>
         
         {showButton && (
           <div className="flex-shrink-0">
